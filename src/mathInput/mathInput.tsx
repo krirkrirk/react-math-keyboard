@@ -4,8 +4,12 @@ import { isMobile } from "react-device-detect";
 import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
-import "mathquill4keyboard/build/mathquill.css";
-
+// import "mathquill4keyboard/build/mathquill.css";
+//! L'import du css plantait à cause de @,
+//! donc j'ai inclu node_module dans le plugin css webpack;
+//! mais au final ça fait planter l'import...
+//! donc repasser en mode css + fonts mathquill dans le répo
+//! ...mais ca crée le bug de publicPath (que j'ai pas investigué)
 type Props = {
   keyboardProps?: KeyboardProps;
   setValue?: (s: string) => void;
@@ -20,7 +24,7 @@ export const MathInput = ({ keyboardProps, setValue }: Props) => {
   useEffect(() => {
     // window.global ||= window;
     window.jQuery = $;
-
+    require("mathquill4keyboard/build/mathquill.css");
     import("mathquill4keyboard/build/mathquill").then(() => {
       const MQ = window.MathQuill.getInterface(2);
       const mf = MQ.MathField($("#mq-keyboard-field")[0], {

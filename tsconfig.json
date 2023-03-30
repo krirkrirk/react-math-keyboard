@@ -6,7 +6,6 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "declaration": true,
-    "declarationMap": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
