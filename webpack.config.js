@@ -10,6 +10,7 @@ module.exports = (env, argv) => {
       library: "MathInput",
       libraryTarget: "umd",
       libraryExport: "default",
+      globalObject: "this",
     },
     mode: process.env.NODE_ENV || "development",
     resolve: {
