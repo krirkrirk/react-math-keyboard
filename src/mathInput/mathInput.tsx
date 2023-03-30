@@ -4,7 +4,7 @@ import { isMobile } from "react-device-detect";
 import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
-import "./mathquill.css";
+import "mathquill4keyboard/build/mathquill.css";
 
 type Props = {
   keyboardProps?: KeyboardProps;

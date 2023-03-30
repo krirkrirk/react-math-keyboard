@@ -11,6 +11,7 @@ module.exports = (env, argv) => {
       libraryTarget: "umd",
       libraryExport: "default",
       globalObject: "this",
+      publicPath: "",
     },
     mode: process.env.NODE_ENV || "development",
     resolve: {
@@ -31,7 +32,7 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.css$/i,
-          include: path.resolve(__dirname, "src"),
+          // include: path.join(__dirname, "src"),
           use: ["style-loader", "css-loader", "postcss-loader"],
         },
       ],
