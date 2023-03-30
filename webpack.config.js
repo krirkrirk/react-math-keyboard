@@ -3,7 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (env, argv) => {
   return {
-    entry: argv.mode === "development" ? "./examples/home.tsx" : "./src/index.tsx",
+    // entry: argv.mode === "development" ? "./examples/home.tsx" : "./src/index.tsx",
+    entry: "./src/index.tsx",
     output: {
       path: path.join(__dirname, "./dist"),
       filename: "react-math-keyboard.js",
@@ -11,7 +12,6 @@ module.exports = (env, argv) => {
       libraryTarget: "umd",
       libraryExport: "default",
       globalObject: "this",
-      publicPath: "",
     },
     mode: process.env.NODE_ENV || "development",
     resolve: {
@@ -32,7 +32,7 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.css$/i,
-          // include: path.join(__dirname, "src"),
+          include: path.join(__dirname, "src"),
           use: ["style-loader", "css-loader", "postcss-loader"],
         },
       ],

@@ -24,7 +24,7 @@ export const MathInput = ({ keyboardProps, setValue }: Props) => {
   useEffect(() => {
     // window.global ||= window;
     window.jQuery = $;
-    require("mathquill4keyboard/build/mathquill.css");
+    // require("mathquill4keyboard/build/mathquill.css");
     import("mathquill4keyboard/build/mathquill").then(() => {
       const MQ = window.MathQuill.getInterface(2);
       const mf = MQ.MathField($("#mq-keyboard-field")[0], {
