@@ -6,4 +6,4 @@ console.log("render home");
 const MathInput = () => {
   return <div className="bg-red-400">fzrrgef</div>;
 };
-export { MathInput };
+export default MathInput;
