@@ -1,1 +1,0 @@
-{"version":3,"file":"mathInput.d.ts","sourceRoot":"","sources":["mathInput.tsx"],"names":[],"mappings":"AAGA,OAAO,EAAY,aAAa,EAAE,MAAM,sBAAsB,CAAC;AAG/D,OAAO,wCAAwC,CAAC;AAEhD,KAAK,KAAK,GAAG;IACX,aAAa,CAAC,EAAE,aAAa,CAAC;IAC9B,QAAQ,CAAC,EAAE,CAAC,CAAC,EAAE,MAAM,KAAK,IAAI,CAAC;CAChC,CAAC;AAEF,eAAO,MAAM,SAAS,gCAAiC,KAAK,gBAiE3D,CAAC"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"numericLayout.d.ts","sourceRoot":"","sources":["numericLayout.tsx"],"names":[],"mappings":"AAEA,OAAO,EAAW,YAAY,EAAE,MAAM,oBAAoB,CAAC;AAE3D,MAAM,MAAM,kBAAkB,GAAG;IAC/B,YAAY,EAAE,YAAY,CAAC;IAC3B,QAAQ,CAAC,EAAE,MAAM,IAAI,CAAC;CACvB,CAAC;AAEF,eAAO,MAAM,aAAa,+BAAgC,kBAAkB,gBAuC3E,CAAC"}

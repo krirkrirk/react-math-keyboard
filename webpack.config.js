@@ -12,6 +12,7 @@ module.exports = (env, argv) => {
       libraryTarget: "umd",
       libraryExport: "default",
       globalObject: "this",
+      publicPath: "",
     },
     mode: process.env.NODE_ENV || "development",
     resolve: {
