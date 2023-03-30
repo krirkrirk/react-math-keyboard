@@ -1,6 +1,7 @@
 # source code
 src
 index.html
+node_modules
 
 # compiler
 tsconfig.json
