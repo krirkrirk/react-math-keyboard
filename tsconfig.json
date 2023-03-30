@@ -5,6 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "declaration": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -16,5 +17,5 @@
     "noEmit": false,
     "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": ["src", "examples/home.tsx"]
 }
