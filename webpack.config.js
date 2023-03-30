@@ -3,7 +3,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
-  output: { path: path.join(__dirname, "./dist"), filename: "react-math-keyboard.js", library: "MathInput" },
+  output: {
+    path: path.join(__dirname, "./dist"),
+    filename: "react-math-keyboard.js",
+    library: "MathInput",
+    libraryTarget: "commonjs2",
+    libraryExport: "default",
+  },
   mode: process.env.NODE_ENV || "development",
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
