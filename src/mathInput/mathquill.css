@@ -30,14 +30,16 @@
 }
 .mq-editable-field,
 .mq-math-mode .mq-editable-field {
-  border: 1px solid gray;
+  border: 1px solid #ccc;
 }
 .mq-editable-field.mq-focused,
 .mq-math-mode .mq-editable-field.mq-focused {
-  -webkit-box-shadow: #8bd 0 0 1px 2px, inset #6ae 0 0 2px 0;
+  /* -webkit-box-shadow: #8bd 0 0 1px 2px, inset #6ae 0 0 2px 0;
   -moz-box-shadow: #8bd 0 0 1px 2px, inset #6ae 0 0 2px 0;
-  box-shadow: #8bd 0 0 1px 2px, inset #6ae 0 0 2px 0;
-  border-color: #709AC0;
+  box-shadow: #8bd 0 0 1px 2px, inset #6ae 0 0 2px 0; */
+  /* border-color: #709AC0; */
+  border: 1px solid #bbb;
+  outline: 2px solid #bbb;
   border-radius: 1px;
 }
 .mq-math-mode .mq-editable-field {

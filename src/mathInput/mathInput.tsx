@@ -16,7 +16,7 @@ type Props = {
   keyboardProps?: KeyboardProps;
   setValue?: (s: string) => void;
   style?: React.CSSProperties;
-  size?: "small" | "medium" | "large";
+  size?: "small" | "medium";
 };
 
 export const MathInput = ({

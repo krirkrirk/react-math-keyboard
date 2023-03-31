@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scrollbar * {
+  scrollbar-width: thin;
+}
+.scrollbar * ::-webkit-scrollbar {
+  background-color: transparent;
+  height: 0.5rem;
+}
+.scrollbar * ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+}
+
+@media (min-width: 640px) {
+  .scrollbar * ::-webkit-scrollbar {
+    height: 0.8rem;
+  }
+}
