@@ -2,6 +2,7 @@
 src
 index.html
 node_modules
+examples 
 
 # compiler
 tsconfig.json

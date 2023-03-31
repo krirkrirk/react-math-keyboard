@@ -8,7 +8,7 @@ import { MathFieldContext } from "./mathfieldContext";
 //! L'import du css plantait à cause de @,
 //! donc j'ai inclu node_module dans le plugin css webpack;
 //! mais au final ça fait planter l'import...
-//! donc repasser en mode css + fonts mathquill dans le répo
+//! donc je suis repassé en mode css + fonts mathquill dans le répo
 //! ...mais ca crée le bug de publicPath (que j'ai pas investigué)
 
 import "./mathquill.css";
