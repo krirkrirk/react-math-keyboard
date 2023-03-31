@@ -1,4 +1,5 @@
 import { KeyboardProps } from "../keyboard/keyboard";
+import "./mathquill.css";
 type Props = {
     keyboardProps?: KeyboardProps;
     setValue?: (s: string) => void;

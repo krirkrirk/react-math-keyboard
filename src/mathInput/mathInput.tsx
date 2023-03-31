@@ -10,12 +10,21 @@ import { MathFieldContext } from "./mathfieldContext";
 //! mais au final ça fait planter l'import...
 //! donc repasser en mode css + fonts mathquill dans le répo
 //! ...mais ca crée le bug de publicPath (que j'ai pas investigué)
+
+import "./mathquill.css";
 type Props = {
   keyboardProps?: KeyboardProps;
   setValue?: (s: string) => void;
+  style?: React.CSSProperties;
+  size?: "small" | "medium" | "large";
 };
 
-export const MathInput = ({ keyboardProps, setValue }: Props) => {
+export const MathInput = ({
+  keyboardProps,
+  setValue,
+  style,
+  size = "medium",
+}: Props) => {
   const [loaded, setLoaded] = useState(false);
 
   const [showKeyboard, setShowKeyboard] = useState(false);
@@ -64,7 +73,10 @@ export const MathInput = ({ keyboardProps, setValue }: Props) => {
           }
           element = element.parentElement;
         }
-        if (e.target?.parentElement?.id !== "mq-keyboard-field" && !isKeyboardClick) {
+        if (
+          e.target?.parentElement?.id !== "mq-keyboard-field" &&
+          !isKeyboardClick
+        ) {
           setShowKeyboard(false);
         }
       }
@@ -72,9 +84,19 @@ export const MathInput = ({ keyboardProps, setValue }: Props) => {
   }, []);
 
   return (
-    <div>
+    <div {...(style && { style })}>
       {!loaded && <p>Loading...</p>}
-      <span style={{ width: "50%" }} id="mq-keyboard-field"></span>
+      <span
+        style={{
+          width: "100%",
+          borderRadius: "4px",
+          padding: size === "small" ? "8px 4px" : "12px 6px",
+          borderColor: "#ccc",
+          alignItems: "center",
+          display: "flex",
+        }}
+        id="mq-keyboard-field"
+      ></span>
       <MathFieldContext.Provider value={mathfield.current}>
         {showKeyboard && <Keyboard {...keyboardProps} />}
       </MathFieldContext.Provider>
