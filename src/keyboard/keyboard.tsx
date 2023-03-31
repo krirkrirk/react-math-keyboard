@@ -30,7 +30,7 @@ export const Keyboard = ({
     <div
       id="mq-keyboard"
       onMouseDown={(e) => e.preventDefault()}
-      className="absolute z-[1310] flex justify-center bottom-0 left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
+      className="fixed z-[1310] flex justify-center bottom-0 left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
     >
       {currentLayoutType === "numeric" && (
         <NumericLayout onSwitch={onSwitch} {...numericLayoutProps} />

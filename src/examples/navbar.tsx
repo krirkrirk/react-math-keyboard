@@ -19,6 +19,12 @@ export const Navbar = ({ setPage }: NavbarProps) => {
       >
         Example : Container
       </button>
+      <button
+        className="py-1 px-2 bg-slate-700 text-slate-50"
+        onClick={() => setPage(2)}
+      >
+        Example : Sticky
+      </button>
     </div>
   );
 };

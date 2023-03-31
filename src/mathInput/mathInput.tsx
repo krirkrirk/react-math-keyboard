@@ -30,6 +30,7 @@ export const MathInput = ({
   const [showKeyboard, setShowKeyboard] = useState(false);
 
   const mathfield = useRef<MathField>({} as MathField);
+  
   useEffect(() => {
     // window.global ||= window;
     window.jQuery = $;
@@ -69,11 +70,14 @@ export const MathInput = ({
         while (element !== null) {
           if (element.id.includes("mq-keyboard")) {
             isKeyboardClick = true;
+            element.scrollIntoView()
             break;
           }
           element = element.parentElement;
         }
         if (
+          // e.target?.parentElement?.id !== "mq-keyboard-field" &&
+          // ?.contains(event.target);
           e.target?.parentElement?.id !== "mq-keyboard-field" &&
           !isKeyboardClick
         ) {
@@ -100,6 +104,7 @@ export const MathInput = ({
       <MathFieldContext.Provider value={mathfield.current}>
         {showKeyboard && <Keyboard {...keyboardProps} />}
       </MathFieldContext.Provider>
+      {/* <div className={` ${showKeyboard ? "h-[294px]" : "h-0"}`}></div> */}
     </div>
   );
 };
