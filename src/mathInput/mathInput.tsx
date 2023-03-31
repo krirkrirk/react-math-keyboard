@@ -11,7 +11,7 @@ import { MathFieldContext } from "./mathfieldContext";
 //! donc je suis repassé en mode css + fonts mathquill dans le répo
 //! ...mais ca crée le bug de publicPath (que j'ai pas investigué)
 
-import "./mathquill.css";
+// import "./mathquill.css";
 type Props = {
   keyboardProps?: KeyboardProps;
   setValue?: (s: string) => void;

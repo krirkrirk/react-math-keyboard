@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
       path: path.join(__dirname, "./dist"),
       filename: "react-math-keyboard.js",
       library: "MathInput",
-      libraryTarget: "umd",
+      libraryTarget: "commonjs",
       libraryExport: "default",
       globalObject: "this",
       publicPath: "",
