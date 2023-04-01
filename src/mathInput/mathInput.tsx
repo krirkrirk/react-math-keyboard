@@ -84,7 +84,8 @@ export const MathInput = ({
   }, []);
 
   return (
-    <div {...(style && { style })}>
+    // <div {...(style && { style })}>
+    <div>
       {!loaded && <p>Loading...</p>}
       <span
         style={{
@@ -97,9 +98,9 @@ export const MathInput = ({
         }}
         id="mq-keyboard-field"
       ></span>
-      <MathFieldContext.Provider value={mathfield.current}>
+      {/* <MathFieldContext.Provider value={mathfield.current}>
         {showKeyboard && <Keyboard {...keyboardProps} />}
-      </MathFieldContext.Provider>
+      </MathFieldContext.Provider> */}
     </div>
   );
 };
