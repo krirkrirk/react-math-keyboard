@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { NumericLayoutProps } from "./layout/numericLayout";
 export type KeyboardProps = {
     layoutType?: "numeric" | "alphabet";

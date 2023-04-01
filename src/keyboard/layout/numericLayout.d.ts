@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { ToolbarProps } from "../toolbar/toolbar";
 export type NumericLayoutProps = {
     toolbarProps: ToolbarProps;

@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { KeyProps } from "../keys/key";
 import { KeyId } from "../keys/keys";
 export type ToolbarProps = {

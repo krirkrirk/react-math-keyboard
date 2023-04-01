@@ -1,4 +1,3 @@
-/// <reference types="react" />
 export type LetterKeyProps = {
     letter: string;
     isMaj?: boolean;
