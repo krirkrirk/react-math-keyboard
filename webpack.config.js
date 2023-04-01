@@ -12,14 +12,14 @@ module.exports = (env, argv) => {
       path: path.join(__dirname, "./dist"),
       filename: "react-math-keyboard.js",
       library: "MathInput",
-      libraryTarget: "commonjs",
+      libraryTarget: "umd",
       libraryExport: "default",
       globalObject: "this",
       publicPath: "",
     },
     mode: process.env.NODE_ENV || "development",
     resolve: {
-      extensions: [".tsx", ".ts", ".js"],
+      extensions: [".tsx", ".ts", ".js", ".jsx"],
     },
     devServer: { static: path.join(__dirname, "src") },
     module: {
