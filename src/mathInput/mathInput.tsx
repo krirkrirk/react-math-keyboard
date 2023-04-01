@@ -31,60 +31,59 @@ export const MathInput = ({
 
   const mathfield = useRef<MathField>({} as MathField);
   useEffect(() => {
-    // window.global ||= window;
-    // window.jQuery = $;
+    window.jQuery = $;
     // require("mathquill4keyboard/build/mathquill.css");
-    // import("mathquill4keyboard/build/mathquill").then(() => {
-    //   const MQ = window.MathQuill.getInterface(2);
-    //   const mf = MQ.MathField($("#mq-keyboard-field")[0], {
-    //     handlers: {
-    //       edit: function () {
-    //         setValue?.(mf.latex());
-    //         // setLatex(mf.latex());
-    //       },
-    //     },
-    //   }) as MathField;
-    //   // mf.config({
-    //   //   autoCommands: "pi",
-    //   //   substituteTextarea: function () {
-    //   //     return <div></div>;
-    //   //   },
-    //   // });
-    //   mathfield.current = mf;
-    //   const textarea = mf.el().querySelector("textarea");
-    //   isMobile && textarea?.setAttribute("readonly", "readonly");
-    //   textarea?.addEventListener("focusin", () => {
-    //     setShowKeyboard(true);
-    //   });
-    //   setLoaded(true);
-    // });
+    import("mathquill4keyboard/build/mathquill").then(() => {
+      const MQ = window.MathQuill.getInterface(2);
+      const mf = MQ.MathField($("#mq-keyboard-field")[0], {
+        handlers: {
+          edit: function () {
+            setValue?.(mf.latex());
+            // setLatex(mf.latex());
+          },
+        },
+      }) as MathField;
+      // mf.config({
+      //   autoCommands: "pi",
+      //   substituteTextarea: function () {
+      //     return <div></div>;
+      //   },
+      // });
+      mathfield.current = mf;
+      const textarea = mf.el().querySelector("textarea");
+      isMobile && textarea?.setAttribute("readonly", "readonly");
+      textarea?.addEventListener("focusin", () => {
+        setShowKeyboard(true);
+      });
+      setLoaded(true);
+    });
   }, []);
 
-  // useEffect(() => {
-  //   window.addEventListener("click", (e) => {
-  //     if (e.target instanceof HTMLElement) {
-  //       let isKeyboardClick = false;
-  //       let element: HTMLElement | null = e.target;
-  //       while (element !== null) {
-  //         if (element.id.includes("mq-keyboard")) {
-  //           isKeyboardClick = true;
-  //           break;
-  //         }
-  //         element = element.parentElement;
-  //       }
-  //       if (
-  //         e.target?.parentElement?.id !== "mq-keyboard-field" &&
-  //         !isKeyboardClick
-  //       ) {
-  //         setShowKeyboard(false);
-  //       }
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("click", (e) => {
+      if (e.target instanceof HTMLElement) {
+        let isKeyboardClick = false;
+        let element: HTMLElement | null = e.target;
+        while (element !== null) {
+          if (element.id.includes("mq-keyboard")) {
+            isKeyboardClick = true;
+            break;
+          }
+          element = element.parentElement;
+        }
+        if (
+          e.target?.parentElement?.id !== "mq-keyboard-field" &&
+          !isKeyboardClick
+        ) {
+          setShowKeyboard(false);
+        }
+      }
+    });
+  }, []);
 
   return (
-    // <div {...(style && { style })}>
-    <div>
+    <div {...(style && { style })}>
+      {/* <div> */}
       {!loaded && <p>Loading...</p>}
       <span
         style={{
@@ -98,9 +97,9 @@ export const MathInput = ({
         id="mq-keyboard-field"
       ></span>
       <p>peifjzofifle ZApipipzae</p>
-      {/* <MathFieldContext.Provider value={mathfield.current}>
+      <MathFieldContext.Provider value={mathfield.current}>
         {showKeyboard && <Keyboard {...keyboardProps} />}
-      </MathFieldContext.Provider> */}
+      </MathFieldContext.Provider>
     </div>
   );
 };
