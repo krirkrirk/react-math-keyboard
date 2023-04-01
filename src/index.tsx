@@ -5,4 +5,4 @@ console.log("lib loaded prout");
 const Test = () => {
   return <div>test</div>;
 };
-export default Test;
+export default MathInput;
