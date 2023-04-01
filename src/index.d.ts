@@ -1,3 +1,3 @@
 import "./style.css";
-declare const Test: () => JSX.Element;
-export default Test;
+import { MathInput } from "./mathInput/mathInput";
+export default MathInput;
