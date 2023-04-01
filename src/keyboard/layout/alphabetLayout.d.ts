@@ -1,3 +1,4 @@
+/// <reference types="react" />
 export type AlphabetLayoutProps = {
     onSwitch?: () => void;
 };

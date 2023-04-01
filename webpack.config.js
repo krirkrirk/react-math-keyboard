@@ -36,7 +36,7 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.css$/i,
-          include: path.join(__dirname, "src"),
+          // include: path.join(__dirname, "src"),
           use: ["style-loader", "css-loader", "postcss-loader"],
         },
       ],
