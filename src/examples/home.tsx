@@ -7,7 +7,9 @@ const Test = () => {
   return (
     <div>
       Test
-      <MathInput />
+      <p>
+        <MathInput />
+      </p>
     </div>
   );
 };
