@@ -96,7 +96,6 @@ export const MathInput = ({
         }}
         id="mq-keyboard-field"
       ></span>
-      <p>peifjzofifle ZApipipzae</p>
       <MathFieldContext.Provider value={mathfield.current}>
         {showKeyboard && <Keyboard {...keyboardProps} />}
       </MathFieldContext.Provider>
