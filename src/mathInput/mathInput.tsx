@@ -4,7 +4,7 @@ import { isMobile } from "react-device-detect";
 import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
-// import "mathquill4keyboard/build/mathquill.css";
+import "mathquill4keyboard/build/mathquill.css";
 //! L'import du css plantait à cause de @,
 //! donc j'ai inclu node_module dans le plugin css webpack;
 //! mais au final ça fait planter l'import...
