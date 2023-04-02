@@ -33,30 +33,30 @@ export const MathInput = ({
   useEffect(() => {
     window.jQuery = $;
     // require("mathquill4keyboard/build/mathquill.css");
-    import("mathquill4keyboard/build/mathquill").then(() => {
-      const MQ = window.MathQuill.getInterface(2);
-      const mf = MQ.MathField($("#mq-keyboard-field")[0], {
-        handlers: {
-          edit: function () {
-            setValue?.(mf.latex());
-            // setLatex(mf.latex());
-          },
+    require("mathquill4keyboard/build/mathquill");
+    const MQ = window.MathQuill.getInterface(2);
+    console.log("mq passed", MQ);
+    const mf = MQ.MathField($("#mq-keyboard-field")[0], {
+      handlers: {
+        edit: function () {
+          setValue?.(mf.latex());
+          // setLatex(mf.latex());
         },
-      }) as MathField;
-      // mf.config({
-      //   autoCommands: "pi",
-      //   substituteTextarea: function () {
-      //     return <div></div>;
-      //   },
-      // });
-      mathfield.current = mf;
-      const textarea = mf.el().querySelector("textarea");
-      isMobile && textarea?.setAttribute("readonly", "readonly");
-      textarea?.addEventListener("focusin", () => {
-        setShowKeyboard(true);
-      });
-      setLoaded(true);
+      },
+    }) as MathField;
+    // mf.config({
+    //   autoCommands: "pi",
+    //   substituteTextarea: function () {
+    //     return <div></div>;
+    //   },
+    // });
+    mathfield.current = mf;
+    const textarea = mf.el().querySelector("textarea");
+    isMobile && textarea?.setAttribute("readonly", "readonly");
+    textarea?.addEventListener("focusin", () => {
+      setShowKeyboard(true);
     });
+    setLoaded(true);
   }, []);
 
   useEffect(() => {

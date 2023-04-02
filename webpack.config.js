@@ -22,20 +22,23 @@ module.exports = (env, argv) => {
       extensions: [".tsx", ".ts", ".js", ".jsx"],
     },
     devServer: { static: path.join(__dirname, "src") },
-    externals: {
-      react: {
-        commonjs: "react",
-        commonjs2: "react",
-        amd: "React",
-        root: "React",
-      },
-      "react-dom": {
-        commonjs: "react-dom",
-        commonjs2: "react-dom",
-        amd: "ReactDOM",
-        root: "ReactDOM",
-      },
-    },
+    externals:
+      argv.mode !== "development"
+        ? {
+            react: {
+              commonjs: "react",
+              commonjs2: "react",
+              amd: "React",
+              root: "React",
+            },
+            "react-dom": {
+              commonjs: "react-dom",
+              commonjs2: "react-dom",
+              amd: "ReactDOM",
+              root: "ReactDOM",
+            },
+          }
+        : {},
 
     module: {
       rules: [
