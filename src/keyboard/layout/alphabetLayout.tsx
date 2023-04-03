@@ -18,7 +18,7 @@ export const AlphabetLayout = ({ onSwitch }: AlphabetLayoutProps) => {
     setIsMaj((prev) => !prev);
   };
   return (
-    <div className='w-full max-w-3xl p-1 pt-2 gap-y-1 flex flex-col'>
+    <div className='w-full max-w-3xl p-1 pt-3 gap-y-1 flex flex-col'>
       <div className=' grid grid-cols-10 gap-x-1 gap-y-1'>
         {rows[0].map((letter) => (
           <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
