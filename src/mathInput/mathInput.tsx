@@ -4,7 +4,7 @@ import { isMobile } from "react-device-detect";
 import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
-
+import "mathquill4keyboard/build/mathquill.css";
 type Props = {
   keyboardProps?: KeyboardProps;
   setValue?: (s: string) => void;
@@ -23,10 +23,10 @@ export const MathInput = ({
   const [showKeyboard, setShowKeyboard] = useState(false);
 
   const mathfield = useRef<MathField>({} as MathField);
-  
+
   useEffect(() => {
     window.jQuery = $;
-    require("mathquill4keyboard/build/mathquill.css");
+    // require("mathquill4keyboard/build/mathquill.css");
     require("mathquill4keyboard/build/mathquill");
     const MQ = window.MathQuill.getInterface(2);
     const mf = MQ.MathField($("#mq-keyboard-field")[0], {
@@ -54,13 +54,14 @@ export const MathInput = ({
 
   useEffect(() => {
     window.addEventListener("click", (e) => {
+      console.log(e);
       if (e.target instanceof HTMLElement) {
         let isKeyboardClick = false;
         let element: HTMLElement | null = e.target;
         while (element !== null) {
           if (element.id.includes("mq-keyboard")) {
             isKeyboardClick = true;
-            element.scrollIntoView()
+            element.scrollIntoView();
             break;
           }
           element = element.parentElement;
@@ -71,6 +72,8 @@ export const MathInput = ({
           e.target?.parentElement?.id !== "mq-keyboard-field" &&
           !isKeyboardClick
         ) {
+          console.log("isKeyboardClick", isKeyboardClick);
+          console.log("will close");
           setShowKeyboard(false);
         }
       }
@@ -78,7 +81,11 @@ export const MathInput = ({
   }, []);
 
   return (
-    <div {...(style && { style })}>
+    <div
+      {...(style && { style })}
+      id="mq-keyboard-container"
+      onClick={(e) => console.log(e)}
+    >
       {/* <div> */}
       {!loaded && <p>Loading...</p>}
       <span

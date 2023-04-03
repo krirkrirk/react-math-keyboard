@@ -10,7 +10,7 @@ export const Example = ({}: ExampleProps) => {
     <>
       <Navbar setPage={setPage} />
       {page === 0 && (
-        <div className="pb-[294px]">
+        <div>
           <div className="px-2 pb-8">
             <p className="mb-2">
               This is a mock webpage that implements the input component in a
@@ -40,6 +40,7 @@ export const Example = ({}: ExampleProps) => {
               molestie dolor. Ut condimentum purus sit amet finibus imperdiet.
             </p>
             <MathInput />
+
             <p className="pb-6 text-4xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
               hendrerit congue lacus, sed eleifend felis interdum eu. Proin id
@@ -82,12 +83,13 @@ export const Example = ({}: ExampleProps) => {
                 condimentum purus sit amet finibus imperdiet.
               </p>
               <MathInput />
+              <p>rzs</p>
             </div>
           </div>
         </div>
       )}
       {page === 2 && (
-        <div >
+        <div>
           <div className="px-2 pb-8">
             <p className="mb-2">Fixed botttom block</p>
             <p className="pb-6 text-4xl">
