@@ -50,6 +50,7 @@ export const MathInput = ({
       setShowKeyboard(true);
     });
     setLoaded(true);
+    $("body").css("transition", "all 0.15s ease");
   }, []);
 
   useEffect(() => {
@@ -75,6 +76,7 @@ export const MathInput = ({
           console.log("isKeyboardClick", isKeyboardClick);
           console.log("will close");
           setShowKeyboard(false);
+          $("body").css("padding-bottom", 0);
         }
       }
     });
