@@ -1,2 +1,2 @@
-import "../src/style.css";
-import "../src/mathInput/mathquill.css";
+import "../style.css";
+import "mathquill4keyboard/build/mathquill.css";

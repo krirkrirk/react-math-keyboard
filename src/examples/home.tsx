@@ -2,10 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { MathInput } from "../mathInput/mathInput";
 import "../style.css";
-import "../mathInput/mathquill.css";
+import "mathquill4keyboard/build/mathquill.css";
 import { Example } from "./example";
 
 const Test = () => {
-  return <div className="bg-red-500">oziefz</div>;
+  return (
+    <div>
+      Test
+      <p>
+        <MathInput />
+      </p>
+    </div>
+  );
 };
 ReactDOM.render(<Example />, document.getElementById("root"));
