@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 export const useDebounce = (delay: number) => {
-  const timeout = useRef(null);
+  const timeout = useRef<any>(null);
 
   const debounce = (func: () => void) => {
     const later = () => {

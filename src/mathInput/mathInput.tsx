@@ -5,14 +5,26 @@ import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
 import "mathquill4keyboard/build/mathquill.css";
+import { KeyId } from "../keyboard/keys/keys";
+import { KeyProps } from "../keyboard/keys/key";
+import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 type Props = {
-  keyboardProps?: KeyboardProps;
+  numericToolbarKeys?: (KeyId | KeyProps)[];
+  numericToolbarTabs?: ToolbarTabIds[];
+  alphabeticToolbarKeys?: (KeyId | KeyProps)[];
   setValue?: (s: string) => void;
   style?: React.CSSProperties;
   size?: "small" | "medium";
 };
 
-export const MathInput = ({ keyboardProps, setValue, style, size = "medium" }: Props) => {
+export const MathInput = ({
+  numericToolbarKeys,
+  numericToolbarTabs,
+  alphabeticToolbarKeys,
+  setValue,
+  style,
+  size = "medium",
+}: Props) => {
   const [loaded, setLoaded] = useState(false);
 
   const [showKeyboard, setShowKeyboard] = useState(false);
@@ -39,7 +51,6 @@ export const MathInput = ({ keyboardProps, setValue, style, size = "medium" }: P
     isMobile && textarea?.setAttribute("readonly", "readonly");
     textarea?.addEventListener("focusin", (e) => {
       setShowKeyboard(true);
-      console.log("focus", e);
       $("body").css("padding-bottom", `300px`);
       window.scrollTo({
         top: mf.el().offsetTop - 24,
@@ -48,36 +59,17 @@ export const MathInput = ({ keyboardProps, setValue, style, size = "medium" }: P
       });
     });
     textarea?.addEventListener("focusout", (e) => {
-      console.log("focusout", e);
+      // console.log("focusout", e);
     });
     const el = mf.el();
     inputTop.current = el.offsetTop;
     inputBottom.current = el.offsetTop + el.offsetHeight;
-    console.log(el.clientHeight, el.clientTop, el.offsetTop, el.offsetHeight);
     setLoaded(true);
     // $("body").css("transition", "all 0.30s ease");
   }, []);
 
-  // Get arbitrary element with id "my-element"
-  // var myElementToCheckIfClicksAreInsideOf = document.querySelector('#my-element');
-  // // Listen for click events on body
-  // document.body.addEventListener('click', function (event) {
-  //     if (myElementToCheckIfClicksAreInsideOf.contains(event.target)) {
-  //         console.log('clicked inside');
-  //     } else {
-  //         console.log('clicked outside');
-  //     }
-  // });
-
   useEffect(() => {
     window.addEventListener("click", (e) => {
-      console.log("ev", e);
-      console.log("target", e.target);
-      console.log("clicked", e.offsetY, e.screenY, e.pageY, e.clientY);
-      const isInputClick = e.offsetY > inputTop.current && e.offsetY < inputBottom.current;
-      console.log("ey", e.pageY, "el top", inputTop.current, "el b", inputBottom.current);
-      console.log("isInputClick", isInputClick);
-      // console.log(e);
       if (e.target instanceof HTMLElement) {
         let isKeyboardClick = false;
         let element: HTMLElement | null = e.target;
@@ -88,7 +80,6 @@ export const MathInput = ({ keyboardProps, setValue, style, size = "medium" }: P
           }
           element = element.parentElement;
         }
-        console.log("isKeyboardClick", isKeyboardClick);
 
         if (
           // e.target?.parentElement?.id !== "mq-keyboard-field"
@@ -96,7 +87,6 @@ export const MathInput = ({ keyboardProps, setValue, style, size = "medium" }: P
           // !isInputClick &&
           !isKeyboardClick
         ) {
-          console.log("close", e, isKeyboardClick);
           setShowKeyboard(false);
           $("body").css("padding-bottom", 0);
         }
@@ -107,22 +97,26 @@ export const MathInput = ({ keyboardProps, setValue, style, size = "medium" }: P
   return (
     <div {...(style && { style })} id="mq-keyboard-container">
       {!loaded && <p>Loading...</p>}
-      <div style={{ margin: 5, padding: 5, backgroundColor: "red" }}>
-        <span
-          style={{
-            width: "100%",
-            borderRadius: "4px",
-            padding: size === "small" ? "8px 4px" : "12px 6px",
-            borderColor: "#ccc",
-            alignItems: "center",
-            display: "flex",
-            scrollMarginTop: "24px",
-          }}
-          id="mq-keyboard-field"
-        ></span>
-      </div>
+      <span
+        style={{
+          width: "100%",
+          borderRadius: "4px",
+          padding: size === "small" ? "8px 4px" : "12px 6px",
+          borderColor: "#ccc",
+          alignItems: "center",
+          display: "flex",
+          scrollMarginTop: "24px",
+        }}
+        id="mq-keyboard-field"
+      ></span>
       <MathFieldContext.Provider value={mathfield.current}>
-        {showKeyboard && <Keyboard {...keyboardProps} />}
+        {showKeyboard && (
+          <Keyboard
+            numericToolbarKeys={numericToolbarKeys}
+            numericToolbarTabs={numericToolbarTabs}
+            alphabeticToolbarKeys={alphabeticToolbarKeys}
+          />
+        )}
       </MathFieldContext.Provider>
     </div>
   );
