@@ -48,11 +48,17 @@ export const MathInput = ({
     isMobile && textarea?.setAttribute("readonly", "readonly");
     textarea?.addEventListener("focusin", () => {
       setShowKeyboard(true);
+      $("body").css("padding-bottom", `300px`);
+      window.scrollTo({
+        top: mf.el().offsetTop - 24,
+        left: 0,
+        behavior: "smooth",
+      });
     });
     setLoaded(true);
     // $("body").css("transition", "all 0.30s ease");
   }, []);
- 
+
   useEffect(() => {
     window.addEventListener("click", (e) => {
       // console.log(e);
@@ -62,24 +68,14 @@ export const MathInput = ({
         while (element !== null) {
           if (element.id.includes("mq-keyboard")) {
             isKeyboardClick = true;
-            $("body").css("padding-bottom", `300px`);
-            window.scrollTo({
-              top: element.offsetTop - 24,
-              left: 0,
-              behavior: "smooth",
-            });
             break;
           }
           element = element.parentElement;
         }
         if (
-          // e.target?.parentElement?.id !== "mq-keyboard-field" &&
-          // ?.contains(event.target);
           e.target?.parentElement?.id !== "mq-keyboard-field" &&
           !isKeyboardClick
         ) {
-          // console.log("isKeyboardClick", isKeyboardClick);
-          // console.log("will close");
           setShowKeyboard(false);
           $("body").css("padding-bottom", 0);
         }
@@ -93,7 +89,6 @@ export const MathInput = ({
       id="mq-keyboard-container"
       onClick={(e) => console.log(e)}
     >
-      {/* <div> */}
       {!loaded && <p>Loading...</p>}
       <span
         style={{
@@ -103,14 +98,13 @@ export const MathInput = ({
           borderColor: "#ccc",
           alignItems: "center",
           display: "flex",
-          scrollMarginTop: "24px"
+          scrollMarginTop: "24px",
         }}
         id="mq-keyboard-field"
       ></span>
       <MathFieldContext.Provider value={mathfield.current}>
         {showKeyboard && <Keyboard {...keyboardProps} />}
       </MathFieldContext.Provider>
-      {/* <div className={` ${showKeyboard ? "h-[294px]" : "h-0"}`}></div> */}
     </div>
   );
 };
