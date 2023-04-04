@@ -6,7 +6,7 @@ const defaultNumericLayoutProps: NumericLayoutProps = {
   toolbarProps: {
     keys: [
       "x",
-      "percent",
+      "pi",
       "power",
       "underscore",
       "exp",
