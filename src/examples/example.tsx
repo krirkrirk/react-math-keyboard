@@ -47,6 +47,16 @@ export const Example = ({}: ExampleProps) => {
               vulputate dolor. Sed non velit facilisis, auctor felis vitae,
               mattis tortor.
             </p>
+            {/* <p className="pb-6 text-4xl">
+            fringilla lectus tincidunt non. Aenean vehicula sem neque, eu
+              vehicula mauris dapibus id. Etiam mattis velit id nisl dignissim,
+              sed tincidunt ipsum dapibus. Proin efficitur ultricies diam, id
+              finibus quam. Fusce ligula nisi, semper ac convallis eget,
+              fermentum sed erat. Quisque congue ligula nunc, sit amet dignissim
+              metus molestie a. Duis ultrices, diam eget pharetra aliquam, odio
+              elit dapibus lectus, a pretium arcu velit quis lorem. Morbi ac
+              molestie dolor. Ut condimentum purus sit amet finibus imperdiet..
+            </p> */}
           </div>
         </div>
       )}
