@@ -50,6 +50,7 @@ export const MathInput = ({
     const textarea = mf.el().querySelector("textarea");
     isMobile && textarea?.setAttribute("readonly", "readonly");
     textarea?.addEventListener("focusin", (e) => {
+      console.log("focus in");
       setShowKeyboard(true);
       $("body").css("padding-bottom", `300px`);
       window.scrollTo({
@@ -87,6 +88,7 @@ export const MathInput = ({
           // !isInputClick &&
           !isKeyboardClick
         ) {
+          console.log("will close");
           setShowKeyboard(false);
           $("body").css("padding-bottom", 0);
         }
