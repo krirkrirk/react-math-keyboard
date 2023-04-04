@@ -1,4 +1,4 @@
-import "src/style.css";
+import "./style.css";
 import { MathInput } from "./mathInput/mathInput";
 
 export default MathInput;
