@@ -62,6 +62,7 @@ export const MathInput = ({
         while (element !== null) {
           if (element.id.includes("mq-keyboard")) {
             isKeyboardClick = true;
+            $("body").css("padding-bottom", `300px`);
             window.scrollTo({
               top: element.offsetTop - 24,
               left: 0,

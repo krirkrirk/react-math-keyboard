@@ -35,7 +35,7 @@ export const Keyboard = ({
 
   useEffect(() => {
     const height = ref.current!.clientHeight;
-    $("body").css("padding-bottom", `${height + 12}px`);
+    // $("body").css("padding-bottom", `${height + 12}px`);
   }, [currentLayoutType]);
 
   return (
