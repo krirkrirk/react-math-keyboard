@@ -50,19 +50,23 @@ export const MathInput = ({
       setShowKeyboard(true);
     });
     setLoaded(true);
-    $("body").css("transition", "all 0.15s ease");
+    // $("body").css("transition", "all 0.30s ease");
   }, []);
-
+ 
   useEffect(() => {
     window.addEventListener("click", (e) => {
-      console.log(e);
+      // console.log(e);
       if (e.target instanceof HTMLElement) {
         let isKeyboardClick = false;
         let element: HTMLElement | null = e.target;
         while (element !== null) {
           if (element.id.includes("mq-keyboard")) {
             isKeyboardClick = true;
-            element.scrollIntoView();
+            window.scrollTo({
+              top: element.offsetTop - 24,
+              left: 0,
+              behavior: "smooth",
+            });
             break;
           }
           element = element.parentElement;
@@ -73,8 +77,8 @@ export const MathInput = ({
           e.target?.parentElement?.id !== "mq-keyboard-field" &&
           !isKeyboardClick
         ) {
-          console.log("isKeyboardClick", isKeyboardClick);
-          console.log("will close");
+          // console.log("isKeyboardClick", isKeyboardClick);
+          // console.log("will close");
           setShowKeyboard(false);
           $("body").css("padding-bottom", 0);
         }
@@ -98,6 +102,7 @@ export const MathInput = ({
           borderColor: "#ccc",
           alignItems: "center",
           display: "flex",
+          scrollMarginTop: "24px"
         }}
         id="mq-keyboard-field"
       ></span>
