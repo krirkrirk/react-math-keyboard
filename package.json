@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "declare": "dts-bundle dist/my-library.d.ts -o dist/my-library.bundle.d.ts",
+    "declare": "dts-bundle --name react-math-keyboard --main src/index.d.ts --out ../dist/react-math-keyboard.d.ts",
     "prepublishOnly": "npm run declare && webpack --mode=production",
     "webpack": "webpack",
     "start": "webpack serve --mode=development --open",
