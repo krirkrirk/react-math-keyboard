@@ -9,7 +9,10 @@ export type KeyboardProps = {
   numericLayoutProps?: NumericLayoutProps;
 };
 
-export const Keyboard = ({ layoutType = "numeric", numericLayoutProps = defaultNumericLayoutProps }: KeyboardProps) => {
+export const Keyboard = ({
+  layoutType = "numeric",
+  numericLayoutProps = defaultNumericLayoutProps,
+}: KeyboardProps) => {
   const mathfield = useContext(MathFieldContext);
 
   const [currentLayoutType, setCurrentLayoutType] = useState(layoutType);
@@ -19,16 +22,22 @@ export const Keyboard = ({ layoutType = "numeric", numericLayoutProps = defaultN
     } else {
       mathfield.moveToRightEnd();
     }
-    setCurrentLayoutType((prev) => (prev === "numeric" ? "alphabet" : "numeric"));
+    setCurrentLayoutType((prev) =>
+      prev === "numeric" ? "alphabet" : "numeric"
+    );
   };
   return (
     <div
       id="mq-keyboard"
       onMouseDown={(e) => e.preventDefault()}
-      className="absolute z-[1310] flex justify-center bottom-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
+      className="absolute z-[1310] flex justify-center bottom-0 left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
     >
-      {currentLayoutType === "numeric" && <NumericLayout onSwitch={onSwitch} {...numericLayoutProps} />}
-      {currentLayoutType === "alphabet" && <AlphabetLayout onSwitch={onSwitch} />}
+      {currentLayoutType === "numeric" && (
+        <NumericLayout onSwitch={onSwitch} {...numericLayoutProps} />
+      )}
+      {currentLayoutType === "alphabet" && (
+        <AlphabetLayout onSwitch={onSwitch} />
+      )}
     </div>
   );
 };

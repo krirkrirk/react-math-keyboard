@@ -3,4 +3,4 @@ export type KeyboardProps = {
     layoutType?: "numeric" | "alphabet";
     numericLayoutProps?: NumericLayoutProps;
 };
-export declare const Keyboard: ({ layoutType, numericLayoutProps }: KeyboardProps) => JSX.Element;
+export declare const Keyboard: ({ layoutType, numericLayoutProps, }: KeyboardProps) => JSX.Element;

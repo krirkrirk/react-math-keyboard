@@ -17,5 +17,5 @@
     "noEmit": false,
     "jsx": "react-jsx"
   },
-  "include": ["src", "examples/home.tsx"]
+  "include": ["src"]
 }
