@@ -38,7 +38,18 @@ export const MathInput = ({
     if (type === "close" && showKeyboardRequest.current === "open") return;
     showKeyboardRequest.current = type;
     const eventually = () => {
-      setShowKeyboard(showKeyboardRequest.current === "open");
+      if (showKeyboardRequest.current === "open") {
+        $("body").css("padding-bottom", `300px`);
+        window.scrollTo({
+          top: mathfield.current.el().offsetTop - 24,
+          left: 0,
+          behavior: "smooth",
+        });
+        setShowKeyboard(true);
+      } else {
+        $("body").css("padding-bottom", 0);
+        setShowKeyboard(false);
+      }
       showKeyboardRequest.current = undefined;
     };
     if (timeout.current) clearTimeout(timeout.current);
@@ -64,12 +75,6 @@ export const MathInput = ({
       console.log("focus in");
       // setShowKeyboard(true);
       request("open");
-      $("body").css("padding-bottom", `300px`);
-      window.scrollTo({
-        top: mf.el().offsetTop - 24,
-        left: 0,
-        behavior: "smooth",
-      });
     });
     setLoaded(true);
     // $("body").css("transition", "all 0.30s ease");
@@ -97,7 +102,6 @@ export const MathInput = ({
           console.log("will close");
           // setShowKeyboard(false);
           request("close");
-          $("body").css("padding-bottom", 0);
         }
       }
     });
