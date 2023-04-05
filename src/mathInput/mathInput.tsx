@@ -42,7 +42,7 @@ export const MathInput = ({
       showKeyboardRequest.current = undefined;
     };
     if (timeout.current) clearTimeout(timeout.current);
-    timeout.current = setTimeout(eventually, 100);
+    timeout.current = setTimeout(eventually, 300);
   };
 
   useEffect(() => {
