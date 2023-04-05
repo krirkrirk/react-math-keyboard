@@ -34,6 +34,19 @@ export const MathInput = ({
   const inputTop = useRef<number>(0);
   const inputBottom = useRef<number>(0);
 
+  const showKeyboardRequest = useRef<"close" | "open">();
+  const timeout = useRef<any>(null);
+
+  const request = (type: "close" | "open") => {
+    if (type === "close" && showKeyboardRequest.current === "open") return;
+    showKeyboardRequest.current = type;
+    const eventually = () => {
+      setShowKeyboard(showKeyboardRequest.current === "open");
+      showKeyboardRequest.current = undefined;
+    };
+    timeout.current = setTimeout(eventually, 100);
+  };
+
   useEffect(() => {
     window.jQuery = $;
     // require("mathquill4keyboard/build/mathquill.css");
@@ -51,7 +64,8 @@ export const MathInput = ({
     isMobile && textarea?.setAttribute("readonly", "readonly");
     textarea?.addEventListener("focusin", (e) => {
       console.log("focus in");
-      setShowKeyboard(true);
+      // setShowKeyboard(true);
+      request("open");
       $("body").css("padding-bottom", `300px`);
       window.scrollTo({
         top: mf.el().offsetTop - 24,
@@ -89,7 +103,8 @@ export const MathInput = ({
           !isKeyboardClick
         ) {
           console.log("will close");
-          setShowKeyboard(false);
+          // setShowKeyboard(false);
+          request("close");
           $("body").css("padding-bottom", 0);
         }
       }
