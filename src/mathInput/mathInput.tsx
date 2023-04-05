@@ -5,15 +5,22 @@ import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
 import "mathquill4keyboard/build/mathquill.css";
+import { KeyId } from "../keyboard/keys/keys";
+import { KeyProps } from "../keyboard/keys/key";
+import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 type Props = {
-  keyboardProps?: KeyboardProps;
+  numericToolbarKeys?: (KeyId | KeyProps)[];
+  numericToolbarTabs?: ToolbarTabIds[];
+  alphabeticToolbarKeys?: (KeyId | KeyProps)[];
   setValue?: (s: string) => void;
   style?: React.CSSProperties;
   size?: "small" | "medium";
 };
 
 export const MathInput = ({
-  keyboardProps,
+  numericToolbarKeys,
+  numericToolbarTabs,
+  alphabeticToolbarKeys,
   setValue,
   style,
   size = "medium",
@@ -24,6 +31,31 @@ export const MathInput = ({
 
   const mathfield = useRef<MathField>({} as MathField);
 
+  const showKeyboardRequest = useRef<"close" | "open">();
+  const timeout = useRef<any>(null);
+
+  const request = (type: "close" | "open") => {
+    if (type === "close" && showKeyboardRequest.current === "open") return;
+    showKeyboardRequest.current = type;
+    const eventually = () => {
+      if (showKeyboardRequest.current === "open") {
+        $("body").css("padding-bottom", `300px`);
+        window.scrollTo({
+          top: mathfield.current.el().offsetTop - 24,
+          left: 0,
+          behavior: "smooth",
+        });
+        setShowKeyboard(true);
+      } else {
+        $("body").css("padding-bottom", 0);
+        setShowKeyboard(false);
+      }
+      showKeyboardRequest.current = undefined;
+    };
+    if (timeout.current) clearTimeout(timeout.current);
+    timeout.current = setTimeout(eventually, 300);
+  };
+
   useEffect(() => {
     window.jQuery = $;
     // require("mathquill4keyboard/build/mathquill.css");
@@ -33,62 +65,50 @@ export const MathInput = ({
       handlers: {
         edit: function () {
           setValue?.(mf.latex());
-          // setLatex(mf.latex());
         },
       },
     }) as MathField;
-    // mf.config({
-    //   autoCommands: "pi",
-    //   substituteTextarea: function () {
-    //     return <div></div>;
-    //   },
-    // });
     mathfield.current = mf;
     const textarea = mf.el().querySelector("textarea");
     isMobile && textarea?.setAttribute("readonly", "readonly");
-    textarea?.addEventListener("focusin", () => {
-      setShowKeyboard(true);
+    textarea?.addEventListener("focusin", (e) => {
+      console.log("focus in");
+      // setShowKeyboard(true);
+      request("open");
     });
     setLoaded(true);
-    $("body").css("transition", "all 0.15s ease");
+    // $("body").css("transition", "all 0.30s ease");
   }, []);
 
   useEffect(() => {
     window.addEventListener("click", (e) => {
-      console.log(e);
       if (e.target instanceof HTMLElement) {
         let isKeyboardClick = false;
         let element: HTMLElement | null = e.target;
         while (element !== null) {
           if (element.id.includes("mq-keyboard")) {
             isKeyboardClick = true;
-            element.scrollIntoView();
             break;
           }
           element = element.parentElement;
         }
+
         if (
-          // e.target?.parentElement?.id !== "mq-keyboard-field" &&
-          // ?.contains(event.target);
-          e.target?.parentElement?.id !== "mq-keyboard-field" &&
+          // e.target?.parentElement?.id !== "mq-keyboard-field"
+          //  &&
+          // !isInputClick &&
           !isKeyboardClick
         ) {
-          console.log("isKeyboardClick", isKeyboardClick);
           console.log("will close");
-          setShowKeyboard(false);
-          $("body").css("padding-bottom", 0);
+          // setShowKeyboard(false);
+          request("close");
         }
       }
     });
   }, []);
 
   return (
-    <div
-      {...(style && { style })}
-      id="mq-keyboard-container"
-      onClick={(e) => console.log(e)}
-    >
-      {/* <div> */}
+    <div {...(style && { style })} id="mq-keyboard-container">
       {!loaded && <p>Loading...</p>}
       <span
         style={{
@@ -98,13 +118,19 @@ export const MathInput = ({
           borderColor: "#ccc",
           alignItems: "center",
           display: "flex",
+          scrollMarginTop: "24px",
         }}
         id="mq-keyboard-field"
       ></span>
       <MathFieldContext.Provider value={mathfield.current}>
-        {showKeyboard && <Keyboard {...keyboardProps} />}
+        {showKeyboard && (
+          <Keyboard
+            numericToolbarKeys={numericToolbarKeys}
+            numericToolbarTabs={numericToolbarTabs}
+            alphabeticToolbarKeys={alphabeticToolbarKeys}
+          />
+        )}
       </MathFieldContext.Provider>
-      {/* <div className={` ${showKeyboard ? "h-[294px]" : "h-0"}`}></div> */}
     </div>
   );
 };
