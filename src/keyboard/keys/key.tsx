@@ -118,7 +118,8 @@ export const Key = ({
         isTouchDown && bgHoverColor
       } 
       ${labelType === "raw" || labelType === "svg" ? "pt-0" : "pt-1 "}
-       
+       focus-visible:outline-none
+       focus-visible:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]
       `}
       ref={ref}
       id={`mq-keyboard-button-key-${id}`}
