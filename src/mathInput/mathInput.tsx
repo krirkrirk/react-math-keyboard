@@ -31,9 +31,6 @@ export const MathInput = ({
 
   const mathfield = useRef<MathField>({} as MathField);
 
-  const inputTop = useRef<number>(0);
-  const inputBottom = useRef<number>(0);
-
   const showKeyboardRequest = useRef<"close" | "open">();
   const timeout = useRef<any>(null);
 
@@ -44,6 +41,7 @@ export const MathInput = ({
       setShowKeyboard(showKeyboardRequest.current === "open");
       showKeyboardRequest.current = undefined;
     };
+    if (timeout.current) clearTimeout(timeout.current);
     timeout.current = setTimeout(eventually, 100);
   };
 
@@ -73,12 +71,6 @@ export const MathInput = ({
         behavior: "smooth",
       });
     });
-    textarea?.addEventListener("focusout", (e) => {
-      // console.log("focusout", e);
-    });
-    const el = mf.el();
-    inputTop.current = el.offsetTop;
-    inputBottom.current = el.offsetTop + el.offsetHeight;
     setLoaded(true);
     // $("body").css("transition", "all 0.30s ease");
   }, []);
