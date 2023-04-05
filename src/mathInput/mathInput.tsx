@@ -12,6 +12,7 @@ type Props = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
+  value?: string;
   setValue?: (s: string) => void;
   style?: React.CSSProperties;
   size?: "small" | "medium";
@@ -21,6 +22,7 @@ export const MathInput = ({
   numericToolbarKeys,
   numericToolbarTabs,
   alphabeticToolbarKeys,
+  value,
   setValue,
   style,
   size = "medium",
@@ -79,6 +81,12 @@ export const MathInput = ({
     setLoaded(true);
     // $("body").css("transition", "all 0.30s ease");
   }, []);
+
+  useEffect(() => {
+    if (value !== undefined) {
+      mathfield.current.latex(value);
+    }
+  }, [value]);
 
   useEffect(() => {
     window.addEventListener("click", (e) => {

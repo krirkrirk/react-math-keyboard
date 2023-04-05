@@ -7,9 +7,10 @@ type Props = {
     numericToolbarKeys?: (KeyId | KeyProps)[];
     numericToolbarTabs?: ToolbarTabIds[];
     alphabeticToolbarKeys?: (KeyId | KeyProps)[];
+    value?: string;
     setValue?: (s: string) => void;
     style?: React.CSSProperties;
     size?: "small" | "medium";
 };
-export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, style, size, }: Props) => JSX.Element;
+export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, value, setValue, style, size, }: Props) => JSX.Element;
 export {};

@@ -6,6 +6,11 @@ export type ExampleProps = {};
 
 export const Example = ({}: ExampleProps) => {
   const [page, setPage] = useState(0);
+  const [value, setValue] = useState<string>("");
+  console.log(value);
+  const clear = () => {
+    setValue("");
+  };
   return (
     <>
       <Navbar setPage={setPage} />
@@ -28,8 +33,9 @@ export const Example = ({}: ExampleProps) => {
               dignissim metus molestie a. Duis ultrices, diam eget pharetra aliquam, odio elit dapibus lectus, a pretium
               arcu velit quis lorem. Morbi ac molestie dolor. Ut condimentum purus sit amet finibus imperdiet.
             </p>
-            <MathInput />
+            <MathInput value={value} setValue={setValue} />
 
+            <button onClick={clear}>Clear</button>
             <p className="pb-6 text-4xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit congue lacus, sed eleifend
               felis interdum eu. Proin id vulputate dolor. Sed non velit facilisis, auctor felis vitae, mattis tortor.
