@@ -28,11 +28,7 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
           <div className="flex gap-x-1 px-1 pb-1 ">
             {shownKeys?.map((keyData) =>
               typeof keyData === "string" ? (
-                <Key
-                  {...KeysPropsMap.get(keyData)!}
-                  key={keyData}
-                  fullWidth={false}
-                />
+                <Key {...KeysPropsMap.get(keyData)!} key={keyData} fullWidth={false} />
               ) : (
                 <Key {...keyData} key={keyData.id} fullWidth={false} />
               )
@@ -47,7 +43,7 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
             >
               {tabs?.map((tabId) => (
                 <option key={tabId} value={tabId}>
-                  {tabId}
+                  {toolbarTabs.find((t) => t.id === tabId)?.rawLabel}
                 </option>
               ))}
             </select>

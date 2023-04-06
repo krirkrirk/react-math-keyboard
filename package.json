@@ -6,6 +6,10 @@
   "description": "",
   "main": "./dist/react-math-keyboard",
   "types": "./dist/react-math-keyboard.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krirkrirk/react-math-keyboard.git"
+  },
   "files": [
     "dist"
   ],

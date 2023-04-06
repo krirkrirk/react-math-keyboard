@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { MathInput } from "../mathInput/mathInput";
 import { Navbar } from "./navbar";
+import { MathField } from "../types/types";
 
 export type ExampleProps = {};
 
 export const Example = ({}: ExampleProps) => {
   const [page, setPage] = useState(0);
   const [value, setValue] = useState<string>("");
-  console.log(value);
+  const [overrideValue, setOverrideValue] = useState("");
+  const mf = useRef<MathField>();
+
   const clear = () => {
-    setValue("");
+    mf.current?.latex("");
   };
   return (
     <>
@@ -33,7 +36,12 @@ export const Example = ({}: ExampleProps) => {
               dignissim metus molestie a. Duis ultrices, diam eget pharetra aliquam, odio elit dapibus lectus, a pretium
               arcu velit quis lorem. Morbi ac molestie dolor. Ut condimentum purus sit amet finibus imperdiet.
             </p>
-            <MathInput value={value} setValue={setValue} />
+            <MathInput
+              setMathfieldRef={(mathfield: MathField) => {
+                mf.current = mathfield;
+              }}
+              setValue={setValue}
+            />
 
             <button onClick={clear}>Clear</button>
             <p className="pb-6 text-4xl">

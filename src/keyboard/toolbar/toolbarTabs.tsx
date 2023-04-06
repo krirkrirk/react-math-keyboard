@@ -4,37 +4,39 @@ import { KeyId } from "../keys/keys";
 export type ToolbarTab = {
   id: ToolbarTabIds;
   label: string;
+  rawLabel: string;
   keys: (KeyId | KeyProps)[];
 };
 
-export type ToolbarTabIds =
-  | "trigo"
-  | "greek"
-  | "sets"
-  | "sequences"
-  | "functions"
-  | "polynomial";
+export type ToolbarTabIds = "trigo" | "greek" | "sets" | "sequences" | "functions" | "polynomial";
 
 export const toolbarTabs: ToolbarTab[] = [
   {
     id: "polynomial",
     label: "x^n",
-    keys: ["x", "power", "cube"],
+    rawLabel: "x",
+    keys: ["x", "power", "cube", "y", "t", "n", "z"],
   },
   {
     id: "functions",
     label: "f(x)",
+    rawLabel: "f(x)",
+
     keys: ["exp", "ln", "log", "epower"],
   },
 
   {
     id: "trigo",
     label: "f(x)",
+    rawLabel: "cos(x)",
+
     keys: ["pi", "sin", "cos", "tan", "arctan", "arcsin", "arccos"],
   },
   {
     id: "greek",
-    label: "\\alpha",
+    label: "\\beta",
+    rawLabel: "β",
+
     keys: [
       "alpha",
       "beta",
@@ -54,21 +56,13 @@ export const toolbarTabs: ToolbarTab[] = [
   {
     id: "sets",
     label: "\\{ ; \\}",
-    keys: [
-      "cap",
-      "cup",
-      "lbrace",
-      "rbrace",
-      "lbracket",
-      "rbracket",
-      "semicolon",
-      "infty",
-      "emptyset",
-    ],
+    rawLabel: "{... ; ...}",
+    keys: ["cap", "cup", "lbrace", "rbrace", "lbracket", "rbracket", "semicolon", "infty", "emptyset"],
   },
   {
     id: "sequences",
     label: "u_n",
+    rawLabel: "(Un)",
     keys: [
       "underscore",
       {
@@ -91,15 +85,11 @@ export const toolbarTabs: ToolbarTab[] = [
           method: "write",
         },
       } as KeyProps,
+      "v",
+      "w",
+      "z",
     ],
   },
 ];
 
-export const defaultTabs: ToolbarTabIds[] = [
-  "polynomial",
-  "sets",
-  "trigo",
-  "functions",
-  "greek",
-  "sequences",
-];
+export const defaultTabs: ToolbarTabIds[] = ["polynomial", "sets", "trigo", "functions", "greek", "sequences"];

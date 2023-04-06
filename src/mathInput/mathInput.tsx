@@ -12,7 +12,7 @@ type Props = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
-  value?: string;
+  setMathfieldRef?: (mf: MathField) => void;
   setValue?: (s: string) => void;
   style?: React.CSSProperties;
   size?: "small" | "medium";
@@ -22,8 +22,8 @@ export const MathInput = ({
   numericToolbarKeys,
   numericToolbarTabs,
   alphabeticToolbarKeys,
-  value,
   setValue,
+  setMathfieldRef,
   style,
   size = "medium",
 }: Props) => {
@@ -74,19 +74,12 @@ export const MathInput = ({
     const textarea = mf.el().querySelector("textarea");
     isMobile && textarea?.setAttribute("readonly", "readonly");
     textarea?.addEventListener("focusin", (e) => {
-      console.log("focus in");
-      // setShowKeyboard(true);
       request("open");
     });
+    setMathfieldRef?.(mf);
     setLoaded(true);
     // $("body").css("transition", "all 0.30s ease");
   }, []);
-
-  useEffect(() => {
-    if (value !== undefined) {
-      mathfield.current.latex(value);
-    }
-  }, [value]);
 
   useEffect(() => {
     window.addEventListener("click", (e) => {
@@ -107,8 +100,6 @@ export const MathInput = ({
           // !isInputClick &&
           !isKeyboardClick
         ) {
-          console.log("will close");
-          // setShowKeyboard(false);
           request("close");
         }
       }
