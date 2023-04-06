@@ -1,18 +1,11 @@
-/*
- * MathQuill v0.10.4, by Han, Jeanine, and Mary
- * http://mathquill.com | maintainers@mathquill.com
- *
- * This Source Code Form is subject to the terms of the
- * Mozilla Public License, v. 2.0. If a copy of the MPL
- * was not distributed with this file, You can obtain
- * one at http://mozilla.org/MPL/2.0/.
- */
-
-/*
-@font-face {
+/* @font-face {
   font-family: Symbola;
   src: url(fonts/Symbola.eot);
-  src: local("Symbola Regular"), local("Symbola"), url(fonts/Symbola.woff2) format("woff2"), url(fonts/Symbola.woff) format("woff"), url(fonts/Symbola.ttf) format("truetype"), url(fonts/Symbola.svg#Symbola) format("svg");
+  src: local("Symbola Regular"), local("Symbola"),
+    url(fonts/Symbola.woff2) format("woff2"),
+    url(fonts/Symbola.woff) format("woff"),
+    url(fonts/Symbola.ttf) format("truetype"),
+    url(fonts/Symbola.svg#Symbola) format("svg");
 }
 .mq-editable-field {
   display: -moz-inline-box;
@@ -36,8 +29,6 @@
 }
 .mq-editable-field.mq-focused,
 .mq-math-mode .mq-editable-field.mq-focused {
-
-
   border: 1px solid #bbb;
   outline: 2px solid #bbb;
   border-radius: 1px;
@@ -63,15 +54,15 @@
 .mq-editable-field.mq-text-mode:after,
 .mq-math-mode .mq-empty:after {
   visibility: hidden;
-  content: 'c';
+  content: "c";
 }
 .mq-editable-field .mq-cursor:only-child:after,
 .mq-editable-field .mq-textarea + .mq-cursor:last-child:after {
   visibility: hidden;
-  content: 'c';
+  content: "c";
 }
 .mq-editable-field .mq-text-mode .mq-cursor:only-child:after {
-  content: '';
+  content: "";
 }
 .mq-editable-field.mq-text-mode {
   overflow-x: auto;
@@ -398,7 +389,7 @@
   top: -0.34em;
   font-size: 0.5em;
   line-height: 0em;
-  content: '\27A4';
+  content: "\27A4";
   text-align: right;
 }
 .mq-math-mode .mq-overarrow.mq-arrow-left:before {
@@ -432,7 +423,7 @@
   top: -2.3em;
   font-size: 0.5em;
   line-height: 0em;
-  content: '\27A4';
+  content: "\27A4";
   visibility: visible;
   text-align: right;
 }
@@ -442,14 +433,14 @@
 .mq-editable-field .mq-selection .mq-non-leaf,
 .mq-math-mode .mq-selection .mq-scaled,
 .mq-editable-field .mq-selection .mq-scaled {
-  background: #B4D5FE !important;
+  background: #b4d5fe !important;
   background: Highlight !important;
   color: HighlightText;
   border-color: HighlightText;
 }
 .mq-math-mode .mq-selection .mq-matrixed,
 .mq-editable-field .mq-selection .mq-matrixed {
-  background: #39F !important;
+  background: #39f !important;
 }
 .mq-math-mode .mq-selection .mq-matrixed-container,
 .mq-editable-field .mq-selection .mq-matrixed-container {
@@ -463,7 +454,7 @@
 .mq-editable-field .mq-selection.mq-blur .mq-scaled,
 .mq-math-mode .mq-selection.mq-blur .mq-matrixed,
 .mq-editable-field .mq-selection.mq-blur .mq-matrixed {
-  background: #D4D4D4 !important;
+  background: #d4d4d4 !important;
   color: black;
   border-color: black;
 }
