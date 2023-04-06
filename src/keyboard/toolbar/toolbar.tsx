@@ -38,7 +38,9 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
         {!keys?.length && (
           <div className="rounded focus-visible:outline-none focus-visible:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] pr-1 flex bg-slate-50 mb-1 shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
             <select
-              onChange={(e) => setCurrentTab(e.target.value as ToolbarTabIds)}
+              onChange={(e) => {
+                setCurrentTab(e.target.value as ToolbarTabIds);
+              }}
               className="bg-transparent border-r-4 focus-visible:outline-none border-transparent px-1 "
             >
               {tabs?.map((tabId) => (

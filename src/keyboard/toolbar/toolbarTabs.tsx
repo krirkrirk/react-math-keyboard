@@ -30,7 +30,7 @@ export const toolbarTabs: ToolbarTab[] = [
     label: "f(x)",
     rawLabel: "cos(x)",
 
-    keys: ["pi", "sin", "cos", "tan", "arctan", "arcsin", "arccos"],
+    keys: ["pi", "°", "sin", "cos", "tan", "arcsin", "arccos", "arctan"],
   },
   {
     id: "greek",

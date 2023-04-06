@@ -3,6 +3,7 @@ import { KeyId } from "../keys/keys";
 export type ToolbarTab = {
     id: ToolbarTabIds;
     label: string;
+    rawLabel: string;
     keys: (KeyId | KeyProps)[];
 };
 export type ToolbarTabIds = "trigo" | "greek" | "sets" | "sequences" | "functions" | "polynomial";

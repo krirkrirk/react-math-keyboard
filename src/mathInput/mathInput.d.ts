@@ -1,4 +1,5 @@
 import React from "react";
+import { MathField } from "../types/types";
 import "mathquill4keyboard/build/mathquill.css";
 import { KeyId } from "../keyboard/keys/keys";
 import { KeyProps } from "../keyboard/keys/key";
@@ -7,10 +8,10 @@ type Props = {
     numericToolbarKeys?: (KeyId | KeyProps)[];
     numericToolbarTabs?: ToolbarTabIds[];
     alphabeticToolbarKeys?: (KeyId | KeyProps)[];
-    value?: string;
+    setMathfieldRef?: (mf: MathField) => void;
     setValue?: (s: string) => void;
     style?: React.CSSProperties;
     size?: "small" | "medium";
 };
-export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, value, setValue, style, size, }: Props) => JSX.Element;
+export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, style, size, }: Props) => JSX.Element;
 export {};

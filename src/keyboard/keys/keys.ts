@@ -5,7 +5,9 @@ import { KeyCategory, KeyProps } from "./key";
 import { majLettersKeysProps, minLettersKeysProps } from "./letterKeys";
 import { numberKeysProps } from "./numberKeys";
 import { operationKeysProps } from "./operationKeys";
+import { ponctuationKeysProps } from "./ponctuationKeys";
 import { setKeysProps } from "./setKeys";
+import { unitKeysProps } from "./unitKeys";
 import { utilityKeysProps } from "./utilityKeys";
 
 const keysProps: KeyProps[] = [
@@ -18,6 +20,8 @@ const keysProps: KeyProps[] = [
   ...utilityKeysProps,
   ...setKeysProps,
   ...greekLettersKeysProps,
+  ...unitKeysProps,
+  ...ponctuationKeysProps,
   {
     id: "overrightarrow",
     label: "\\overrightarrow{AB}",
@@ -62,5 +66,5 @@ export type KeyId = string;
 export const KeysPropsMap = new Map<KeyId, KeyProps>(
   keysProps.map((obj) => {
     return [obj.id, obj];
-  }),
+  })
 );

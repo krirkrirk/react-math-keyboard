@@ -94,12 +94,7 @@ export const MathInput = ({
           element = element.parentElement;
         }
 
-        if (
-          // e.target?.parentElement?.id !== "mq-keyboard-field"
-          //  &&
-          // !isInputClick &&
-          !isKeyboardClick
-        ) {
+        if (!isKeyboardClick) {
           request("close");
         }
       }

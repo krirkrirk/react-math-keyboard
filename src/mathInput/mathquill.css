@@ -7,6 +7,8 @@
  * was not distributed with this file, You can obtain
  * one at http://mozilla.org/MPL/2.0/.
  */
+
+/*
 @font-face {
   font-family: Symbola;
   src: url(fonts/Symbola.eot);
@@ -34,10 +36,8 @@
 }
 .mq-editable-field.mq-focused,
 .mq-math-mode .mq-editable-field.mq-focused {
-  /* -webkit-box-shadow: #8bd 0 0 1px 2px, inset #6ae 0 0 2px 0;
-  -moz-box-shadow: #8bd 0 0 1px 2px, inset #6ae 0 0 2px 0;
-  box-shadow: #8bd 0 0 1px 2px, inset #6ae 0 0 2px 0; */
-  /* border-color: #709AC0; */
+
+
   border: 1px solid #bbb;
   outline: 2px solid #bbb;
   border-radius: 1px;
@@ -367,7 +367,6 @@
 }
 .mq-math-mode .mq-large-operator .mq-from {
   float: right;
-  /* take out of normal flow to manipulate baseline */
   width: 100%;
 }
 .mq-math-mode,
@@ -506,4 +505,4 @@
 .mq-math-mode .mq-matrixed-container {
   filter: progid:DXImageTransform.Microsoft.Chroma(color='white');
   margin-top: -0.1em;
-}
+} */
