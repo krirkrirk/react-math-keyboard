@@ -23,7 +23,7 @@ export const MathInput = ({
   alphabeticToolbarKeys,
   setValue,
   setMathfieldRef,
-  style,
+  style = {},
   size = "medium",
 }: Props) => {
   const [loaded, setLoaded] = useState(false);
@@ -101,17 +101,19 @@ export const MathInput = ({
   }, []);
 
   return (
-    <div {...(style && { style })} id="mq-keyboard-container">
+    // <div {...(style && { style})} id="mq-keyboard-container">
+    <div style={{ display: "flex", ...style }} id="mq-keyboard-container">
       {!loaded && <p>Loading...</p>}
       <span
+        className="react-math-keyboard-input"
         style={{
-          width: "100%",
-          borderRadius: "4px",
+          // width: "100%",
+          // borderRadius: "4px",
           padding: size === "small" ? "8px 4px" : "12px 6px",
-          borderColor: "#ccc",
-          alignItems: "center",
-          display: "flex",
-          scrollMarginTop: "24px",
+          // borderColor: "#ccc",
+          // alignItems: "center",
+          // display: "flex",
+          // scrollMarginTop: "24px",
         }}
         id="mq-keyboard-field"
       ></span>

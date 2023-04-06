@@ -3,10 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (env, argv) => {
   return {
-    entry:
-      argv.mode === "development"
-        ? "./src/examples/home.tsx"
-        : "./src/index.tsx",
+    entry: argv.mode === "development" ? "./src/examples/home.tsx" : "./src/index.tsx",
     // entry: "./src/index.tsx",
     output: {
       path: path.join(__dirname, "./dist"),
@@ -65,7 +62,7 @@ module.exports = (env, argv) => {
         {
           test: /\.css$/i,
           // include: path.join(__dirname, "src"),
-          use: ["style-loader", "css-loader", "postcss-loader"],
+          use: ["style-loader", "css-loader"],
         },
         {
           test: /mathquill\.css$/,

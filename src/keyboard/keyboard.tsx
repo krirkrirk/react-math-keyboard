@@ -39,7 +39,8 @@ export const Keyboard = ({
     <div
       id="mq-keyboard"
       // onMouseDown={(e) => e.preventDefault()}
-      className="fixed z-[1310] transition-[bottom] duration-300 flex justify-center bottom-[-300px] left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
+      // className="fixed z-[1310] transition-[bottom] duration-300 flex justify-center bottom-[-300px] left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
+      className="react-math-keyboard-keyboard-container scrollbar"
     >
       {currentLayoutType === "numeric" && (
         <NumericLayout
