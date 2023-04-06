@@ -13,34 +13,27 @@ const rows = [
   ["w", "x", "c", "v", "b", "n"],
 ];
 
-export const AlphabetLayout = ({
-  toolbarKeys = [],
-  onSwitch,
-}: AlphabetLayoutProps) => {
+export const AlphabetLayout = ({ toolbarKeys = [], onSwitch }: AlphabetLayoutProps) => {
   const [isMaj, setIsMaj] = useState(false);
   const onMaj = () => {
     setIsMaj((prev) => !prev);
   };
   return (
-    <div className="w-full max-w-3xl p-1 pt-3 gap-y-1 flex flex-col">
-      <div className=" grid grid-cols-10 gap-x-1 gap-y-1">
+    <div
+      // className="w-full max-w-3xl p-1 pt-3 gap-y-1 flex flex-col"
+      className="react-math-keyboard-alphabet-layout"
+    >
+      <div
+        // className=" grid grid-cols-10 gap-x-1 gap-y-1"
+        style={{ display: "grid", gridTemplateColumns: "repeat(10, minmax(0,1fr))", gap: "0.25rem" }}
+      >
         {rows[0].map((letter) => (
-          <LetterKey
-            letter={letter}
-            key={letter}
-            isInMathMode={false}
-            isMaj={isMaj}
-          />
+          <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
         ))}
         {rows[1].map((letter) => (
-          <LetterKey
-            letter={letter}
-            key={letter}
-            isInMathMode={false}
-            isMaj={isMaj}
-          />
+          <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
         ))}
-        <div className="col-span-2">
+        <div style={{ gridColumn: "span 2" }}>
           <Key
             id={"maj"}
             label={
@@ -61,36 +54,25 @@ export const AlphabetLayout = ({
           />
         </div>
         {rows[2].map((letter) => (
-          <LetterKey
-            letter={letter}
-            key={letter}
-            isInMathMode={false}
-            isMaj={isMaj}
-          />
+          <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
         ))}
         <Key {...KeysPropsMap.get("comma")!} />
         <Key {...KeysPropsMap.get("dot")!} />
       </div>
-      <div className="flex gap-x-1">
-        <div className="grow-[1]">
-          <Key
-            id="switch"
-            label={"123"}
-            labelType="raw"
-            keyCategory={KeyCategory.utility}
-            onClick={onSwitch}
-          />
+      <div style={{ display: "flex", columnGap: "0.25rem" }}>
+        <div style={{ flexGrow: 1 }}>
+          <Key id="switch" label={"123"} labelType="raw" keyCategory={KeyCategory.utility} onClick={onSwitch} />
         </div>
-        <div className="grow-[0.5]">
+        <div style={{ flexGrow: 0.5 }}>
           <Key {...KeysPropsMap.get("left")!} />
         </div>
-        <div className="grow-[4]">
+        <div style={{ flexGrow: 4 }}>
           <Key {...KeysPropsMap.get("space")!} />
         </div>
-        <div className="grow-[0.5]">
+        <div style={{ flexGrow: 0.5 }}>
           <Key {...KeysPropsMap.get("right")!} />
         </div>
-        <div className="grow-[1]">
+        <div style={{ flexGrow: 1 }}>
           <Key {...KeysPropsMap.get("del")!} />
         </div>
       </div>

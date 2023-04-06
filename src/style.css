@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* @tailwind base; */
+/* @tailwind components;
+@tailwind utilities; */
+
+* {
+  box-sizing: border-box;
+}
 
 .scrollbar * {
   scrollbar-width: thin;
@@ -20,4 +24,168 @@
   }
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
 
+/* Components */
+.react-math-keyboard-input {
+  flex-grow: 1;
+  /* width: 100%; */
+  border-radius: 4px;
+  border-color: #ccc;
+  align-items: center;
+  display: flex;
+  scroll-margin-top: 24px;
+}
+
+.react-math-keyboard-keyboard-container {
+  width: 100%;
+  padding-bottom: 0.25rem;
+  margin: 0px;
+  color: #020617;
+  background-color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: -300px;
+  left: 0px;
+  z-index: 1310;
+  transition: bottom 300ms ease-in-out;
+  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */
+}
+
+.react-math-keyboard-keyboard-layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.react-math-keyboard-numeric-layout {
+  width: 100%;
+  max-width: 768px;
+  padding: 0.25rem;
+  padding-top: 0.5rem;
+  display: grid;
+  column-gap: 0.75rem;
+  grid-template-columns: 2fr 3fr 1fr;
+}
+@media (min-width: 640px) {
+  .react-math-keyboard-numeric-layout {
+    column-gap: 2.5rem;
+  }
+}
+.react-math-keyboard-alphabet-layout {
+  width: 100%;
+  max-width: 768px;
+  padding: 0.25rem;
+  padding-top: 0.75rem;
+  row-gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.react-math-keyboard-layout-grid {
+  display: grid;
+  column-gap: 0.25rem;
+  row-gap: 0.25rem;
+  justify-content: stretch;
+}
+@media (min-width: 640px) {
+  .react-math-keyboard-layout-grid {
+    column-gap: 0.5rem;
+  }
+}
+
+.react-math-keyboard-select-container {
+  border-radius: 0.25rem;
+  padding-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  background-color: #f8fafc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.react-math-keyboard-select-container:focus-visible {
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.react-math-keyboard-select {
+  border: transparent;
+  background-color: transparent;
+  border-right-width: 4px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.react-math-keyboard-select:focus-visible {
+  outline: none;
+}
+
+.react-math-keyboard-toolbar-container {
+  background-color: #94a3b8;
+  padding-top: 0.5rem;
+  /* align-items: center; */
+  width: 100%;
+}
+.react-math-keyboard-toolbar {
+  display: flex;
+  max-width: 768px;
+  column-gap: 0.5rem;
+  justify-content: space-between;
+  padding-right: 0.25rem;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .react-math-keyboard-toolbar {
+    min-width: 768px;
+  }
+}
+.react-math-keyboard-divider {
+  border: transparent;
+  border-top: 2px solid #64748b;
+  margin-top: 0.25rem;
+  margin-bottom: 0px;
+}
+
+.react-math-keyboard-toolbar-keys-container {
+  display: flex;
+  column-gap: 0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.react-math-keyboard-key {
+  border: none;
+  cursor: pointer;
+  height: 3rem;
+  border-radius: 0.25rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background-color: #f8fafc;
+}
+
+.react-math-keyboard-key:focus-visible {
+  outline: transparent;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.react-math-keyboard-key-utility {
+  background-color: #94a3b8;
+}
+
+@media not screen and (hover: none) and (pointer: coarse) {
+  .react-math-keyboard-key:hover {
+    background-color: #cbd5e1;
+  }
+  .react-math-keyboard-key-utility:hover {
+    background-color: #64748b;
+  }
+}
