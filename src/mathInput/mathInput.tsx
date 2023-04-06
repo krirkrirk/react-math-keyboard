@@ -76,6 +76,7 @@ export const MathInput = ({
       request("open");
     });
     setMathfieldRef?.(mf);
+
     setLoaded(true);
     // $("body").css("transition", "all 0.30s ease");
   }, []);

@@ -14,6 +14,7 @@ export const Example = ({}: ExampleProps) => {
   const clear = () => {
     mf.current?.latex("");
   };
+
   return (
     <>
       <Navbar setPage={setPage} />
@@ -38,13 +39,8 @@ export const Example = ({}: ExampleProps) => {
               dignissim metus molestie a. Duis ultrices, diam eget pharetra aliquam, odio elit dapibus lectus, a pretium
               arcu velit quis lorem. Morbi ac molestie dolor. Ut condimentum purus sit amet finibus imperdiet.
             </p>
-            <MathInput
-              setMathfieldRef={(mathfield: MathField) => {
-                mf.current = mathfield;
-              }}
-              setValue={setValue}
-            />
-
+            <MathInput setValue={setValue} setMathfieldRef={(mathField) => (mf.current = mathField)} />
+            <button onClick={clear}>Clear</button>
             <p style={{ paddingBottom: "1.5rem", fontSize: "2rem" }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit congue lacus, sed eleifend
               felis interdum eu. Proin id vulputate dolor. Sed non velit facilisis, auctor felis vitae, mattis tortor.
