@@ -1,21 +1,29 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import $ from "jquery";
 import { MathFieldContext } from "../mathInput/mathfieldContext";
 import { AlphabetLayout } from "./layout/alphabetLayout";
-import { defaultNumericLayoutProps } from "./layout/defaultNumericLayoutProps";
 import { NumericLayout, NumericLayoutProps } from "./layout/numericLayout";
+import { KeyId } from "./keys/keys";
+import { KeyProps } from "./keys/key";
+import { ToolbarTabIds } from "./toolbar/toolbarTabs";
 
 export type KeyboardProps = {
-  layoutType?: "numeric" | "alphabet";
-  numericLayoutProps?: NumericLayoutProps;
+  numericToolbarKeys?: (KeyId | KeyProps)[];
+  numericToolbarTabs?: ToolbarTabIds[];
+  alphabeticToolbarKeys?: (KeyId | KeyProps)[];
 };
 
 export const Keyboard = ({
-  layoutType = "numeric",
-  numericLayoutProps = defaultNumericLayoutProps,
+  numericToolbarKeys,
+  numericToolbarTabs,
+  alphabeticToolbarKeys,
 }: KeyboardProps) => {
   const mathfield = useContext(MathFieldContext);
+  useEffect(() => {
+    $("#mq-keyboard").css("bottom", `0px`);
+  }, []);
 
-  const [currentLayoutType, setCurrentLayoutType] = useState(layoutType);
+  const [currentLayoutType, setCurrentLayoutType] = useState("numeric");
   const onSwitch = () => {
     if (currentLayoutType === "numeric") {
       mathfield.cmd("text");
@@ -26,17 +34,25 @@ export const Keyboard = ({
       prev === "numeric" ? "alphabet" : "numeric"
     );
   };
+
   return (
     <div
       id="mq-keyboard"
-      onMouseDown={(e) => e.preventDefault()}
-      className="absolute z-[1310] flex justify-center bottom-0 left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
+      // onMouseDown={(e) => e.preventDefault()}
+      className="fixed z-[1310] transition-[bottom] duration-300 flex justify-center bottom-[-300px] left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
     >
       {currentLayoutType === "numeric" && (
-        <NumericLayout onSwitch={onSwitch} {...numericLayoutProps} />
+        <NumericLayout
+          onSwitch={onSwitch}
+          toolbarKeys={numericToolbarKeys}
+          toolbarTabs={numericToolbarTabs}
+        />
       )}
       {currentLayoutType === "alphabet" && (
-        <AlphabetLayout onSwitch={onSwitch} />
+        <AlphabetLayout
+          onSwitch={onSwitch}
+          toolbarKeys={alphabeticToolbarKeys}
+        />
       )}
     </div>
   );

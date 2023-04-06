@@ -1,10 +1,17 @@
 import React from "react";
-import { KeyboardProps } from "../keyboard/keyboard";
+import { MathField } from "../types/types";
+import "mathquill4keyboard/build/mathquill.css";
+import { KeyId } from "../keyboard/keys/keys";
+import { KeyProps } from "../keyboard/keys/key";
+import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 type Props = {
-    keyboardProps?: KeyboardProps;
+    numericToolbarKeys?: (KeyId | KeyProps)[];
+    numericToolbarTabs?: ToolbarTabIds[];
+    alphabeticToolbarKeys?: (KeyId | KeyProps)[];
+    setMathfieldRef?: (mf: MathField) => void;
     setValue?: (s: string) => void;
     style?: React.CSSProperties;
-    size?: "small" | "medium" | "large";
+    size?: "small" | "medium";
 };
-export declare const MathInput: ({ keyboardProps, setValue, style, size, }: Props) => JSX.Element;
+export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, style, size, }: Props) => JSX.Element;
 export {};

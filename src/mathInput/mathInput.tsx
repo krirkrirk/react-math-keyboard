@@ -4,17 +4,26 @@ import { isMobile } from "react-device-detect";
 import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
-
+import "mathquill4keyboard/build/mathquill.css";
+import { KeyId } from "../keyboard/keys/keys";
+import { KeyProps } from "../keyboard/keys/key";
+import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 type Props = {
-  keyboardProps?: KeyboardProps;
+  numericToolbarKeys?: (KeyId | KeyProps)[];
+  numericToolbarTabs?: ToolbarTabIds[];
+  alphabeticToolbarKeys?: (KeyId | KeyProps)[];
+  setMathfieldRef?: (mf: MathField) => void;
   setValue?: (s: string) => void;
   style?: React.CSSProperties;
-  size?: "small" | "medium" | "large";
+  size?: "small" | "medium";
 };
 
 export const MathInput = ({
-  keyboardProps,
+  numericToolbarKeys,
+  numericToolbarTabs,
+  alphabeticToolbarKeys,
   setValue,
+  setMathfieldRef,
   style,
   size = "medium",
 }: Props) => {
@@ -23,32 +32,53 @@ export const MathInput = ({
   const [showKeyboard, setShowKeyboard] = useState(false);
 
   const mathfield = useRef<MathField>({} as MathField);
+
+  const showKeyboardRequest = useRef<"close" | "open">();
+  const timeout = useRef<any>(null);
+
+  const request = (type: "close" | "open") => {
+    if (type === "close" && showKeyboardRequest.current === "open") return;
+    showKeyboardRequest.current = type;
+    const eventually = () => {
+      if (showKeyboardRequest.current === "open") {
+        $("body").css("padding-bottom", `300px`);
+        window.scrollTo({
+          top: mathfield.current.el().offsetTop - 24,
+          left: 0,
+          behavior: "smooth",
+        });
+        setShowKeyboard(true);
+      } else {
+        $("body").css("padding-bottom", 0);
+        setShowKeyboard(false);
+      }
+      showKeyboardRequest.current = undefined;
+    };
+    if (timeout.current) clearTimeout(timeout.current);
+    timeout.current = setTimeout(eventually, 300);
+  };
+
   useEffect(() => {
     window.jQuery = $;
-    require("mathquill4keyboard/build/mathquill.css");
+    // require("mathquill4keyboard/build/mathquill.css");
     require("mathquill4keyboard/build/mathquill");
     const MQ = window.MathQuill.getInterface(2);
     const mf = MQ.MathField($("#mq-keyboard-field")[0], {
       handlers: {
         edit: function () {
           setValue?.(mf.latex());
-          // setLatex(mf.latex());
         },
       },
     }) as MathField;
-    // mf.config({
-    //   autoCommands: "pi",
-    //   substituteTextarea: function () {
-    //     return <div></div>;
-    //   },
-    // });
     mathfield.current = mf;
     const textarea = mf.el().querySelector("textarea");
     isMobile && textarea?.setAttribute("readonly", "readonly");
-    textarea?.addEventListener("focusin", () => {
-      setShowKeyboard(true);
+    textarea?.addEventListener("focusin", (e) => {
+      request("open");
     });
+    setMathfieldRef?.(mf);
     setLoaded(true);
+    // $("body").css("transition", "all 0.30s ease");
   }, []);
 
   useEffect(() => {
@@ -63,19 +93,16 @@ export const MathInput = ({
           }
           element = element.parentElement;
         }
-        if (
-          e.target?.parentElement?.id !== "mq-keyboard-field" &&
-          !isKeyboardClick
-        ) {
-          setShowKeyboard(false);
+
+        if (!isKeyboardClick) {
+          request("close");
         }
       }
     });
   }, []);
 
   return (
-    <div {...(style && { style })}>
-      {/* <div> */}
+    <div {...(style && { style })} id="mq-keyboard-container">
       {!loaded && <p>Loading...</p>}
       <span
         style={{
@@ -85,11 +112,18 @@ export const MathInput = ({
           borderColor: "#ccc",
           alignItems: "center",
           display: "flex",
+          scrollMarginTop: "24px",
         }}
         id="mq-keyboard-field"
       ></span>
       <MathFieldContext.Provider value={mathfield.current}>
-        {showKeyboard && <Keyboard {...keyboardProps} />}
+        {showKeyboard && (
+          <Keyboard
+            numericToolbarKeys={numericToolbarKeys}
+            numericToolbarTabs={numericToolbarTabs}
+            alphabeticToolbarKeys={alphabeticToolbarKeys}
+          />
+        )}
       </MathFieldContext.Provider>
     </div>
   );

@@ -27,6 +27,12 @@ export const minLettersIds = [
   "x",
   "y",
   "z",
+  "é",
+  "è",
+  "à",
+  "ç",
+  "ù",
+  "ô",
 ];
 
 export const majLettersIds = [
@@ -56,6 +62,10 @@ export const majLettersIds = [
   "X",
   "Y",
   "Z",
+  "É",
+  "È",
+  "Ç",
+  "À",
 ];
 
 export const minLettersKeysProps = minLettersIds.map((label): KeyProps => {

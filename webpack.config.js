@@ -3,10 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (env, argv) => {
   return {
-    entry:
-      argv.mode === "development"
-        ? "./src/examples/home.tsx"
-        : "./src/index.tsx",
+    entry: argv.mode === "development" ? "./src/examples/home.tsx" : "./src/index.tsx",
     // entry: "./src/index.tsx",
     output: {
       path: path.join(__dirname, "./dist"),
@@ -14,7 +11,8 @@ module.exports = (env, argv) => {
       library: "MathInput",
       libraryTarget: "umd",
       // libraryExport: "default",
-      // globalObject: "this",
+      // globalObject: this,
+      globalObject: `typeof self !== 'undefined' ? self : this`,
       // publicPath: "",
     },
     mode: process.env.NODE_ENV || "development",
