@@ -4,7 +4,6 @@ import { isMobile } from "react-device-detect";
 import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
-import "mathquill4keyboard/build/mathquill.css";
 import { KeyId } from "../keyboard/keys/keys";
 import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
@@ -60,7 +59,7 @@ export const MathInput = ({
 
   useEffect(() => {
     window.jQuery = $;
-    // require("mathquill4keyboard/build/mathquill.css");
+    require("mathquill4keyboard/build/mathquill.css");
     require("mathquill4keyboard/build/mathquill");
     const MQ = window.MathQuill.getInterface(2);
     const mf = MQ.MathField($("#mq-keyboard-field")[0], {
