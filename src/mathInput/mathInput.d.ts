@@ -1,6 +1,5 @@
 import React from "react";
 import { MathField } from "../types/types";
-import "mathquill4keyboard/build/mathquill.css";
 import { KeyId } from "../keyboard/keys/keys";
 import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
