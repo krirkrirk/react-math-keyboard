@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./src/style.css";
-import "mathquill4keyboard/build/mathquill.css";
-import { Example } from "./examples/example";
-
-ReactDOM.render(<Example />, document.getElementById("root"));
+const React = require("react");
+const ReactDOM = require("react-dom");
+require("./src/style.css");
+require("mathquill4keyboard/build/mathquill.css");
+const Example = require("./examples/example");
+console.log(Example);
+ReactDOM.render(<Example.Example />, document.getElementById("root"));
