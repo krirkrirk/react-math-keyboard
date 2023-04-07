@@ -37,7 +37,7 @@ export const Key = ({
   const mathfield = useContext(MathFieldContext);
   useEffect(() => {
     const MQ = window.MathQuill.getInterface(2);
-    MQ.StaticMath($(`#mq-keyboard-key-${id}`)[0]) as MathField;
+    MQ.StaticMath($(`#mq-keyboard-${mathfield.id}-key-${id}`)[0]) as MathField;
   }, [id]);
 
   const handleClick = () => {
@@ -51,10 +51,14 @@ export const Key = ({
   const renderLabel = (): ReactNode => {
     switch (labelType) {
       case "raw":
-        return <p id={`mq-keyboard-rawkey-${id}`}>{label as string}</p>;
+        return <p id={`mq-keyboard-${mathfield.id}-rawkey-${id}`}>{label as string}</p>;
       case "tex":
         return (
-          <span id={`mq-keyboard-key-${id}`} onClick={(e) => e.stopPropagation()} className="cursor-pointer">
+          <span
+            id={`mq-keyboard-${mathfield.id}-key-${id}`}
+            onClick={(e) => e.stopPropagation()}
+            className="cursor-pointer"
+          >
             {label as string}
           </span>
         );
@@ -105,7 +109,7 @@ export const Key = ({
         ...(labelType === "raw" || labelType === "svg" ? { paddingTop: 0 } : { paddingTop: "0.25rem" }),
       }}
       ref={ref}
-      id={`mq-keyboard-button-key-${id}`}
+      id={`mq-keyboard-${mathfield.id}-button-key-${id}`}
       onMouseDown={onMouseDown}
       onMouseUp={() => setIsClicked(false)}
       onMouseLeave={() => {

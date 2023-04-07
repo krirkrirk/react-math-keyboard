@@ -56,18 +56,28 @@ export const MathInput = ({
     timeout.current = setTimeout(eventually, 300);
   };
 
+  const idCounter = useRef<number>(0);
   useEffect(() => {
     window.jQuery = $;
     require("mathquill4keyboard/build/mathquill.css");
     require("mathquill4keyboard/build/mathquill");
+
     const MQ = window.MathQuill.getInterface(2);
-    const mf = MQ.MathField($("#mq-keyboard-field")[0], {
+    const mf = MQ.MathField(spanRef.current, {
       handlers: {
         edit: function () {
           setValue?.(mf.latex());
         },
       },
     }) as MathField;
+    idCounter.current = MQ(spanRef.current).id;
+    // const mf = MQ.MathField($(`#mq-keyboard-${id.current}-field`)[0], {
+    //   handlers: {
+    //     edit: function () {
+    //       setValue?.(mf.latex());
+    //     },
+    //   },
+    // }) as MathField;
     mathfield.current = mf;
     const textarea = mf.el().querySelector("textarea");
     isMobile && textarea?.setAttribute("readonly", "readonly");
@@ -85,7 +95,7 @@ export const MathInput = ({
         let isKeyboardClick = false;
         let element: HTMLElement | null = e.target;
         while (element !== null) {
-          if (element.id.includes("mq-keyboard")) {
+          if (element.id.includes(`mq-keyboard-${idCounter.current}`)) {
             isKeyboardClick = true;
             break;
           }
@@ -98,13 +108,16 @@ export const MathInput = ({
     });
   }, []);
 
+  const spanRef = useRef<HTMLSpanElement | null>(null);
+
   return (
-    <div style={{ display: "flex", ...style }} id="mq-keyboard-container">
+    <div style={{ display: "flex", ...style }} id={`mq-keyboard-${idCounter.current}-container`}>
       {!loaded && <p>Loading...</p>}
       <span
         className="react-math-keyboard-input"
         style={{ padding: size === "small" ? "8px 4px" : "12px 6px" }}
-        id="mq-keyboard-field"
+        id={`mq-keyboard-${idCounter.current}-field`}
+        ref={spanRef}
       ></span>
       <MathFieldContext.Provider value={mathfield.current}>
         {showKeyboard && (

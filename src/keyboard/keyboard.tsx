@@ -16,7 +16,7 @@ export type KeyboardProps = {
 export const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys }: KeyboardProps) => {
   const mathfield = useContext(MathFieldContext);
   useEffect(() => {
-    $("#mq-keyboard").css("bottom", `0px`);
+    $(`#mq-keyboard-${mathfield.id}`).css("bottom", `0px`);
   }, []);
 
   const [currentLayoutType, setCurrentLayoutType] = useState("numeric");
@@ -35,7 +35,7 @@ export const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToo
 
   return (
     <div
-      id="mq-keyboard"
+      id={`mq-keyboard-${mathfield.id}`}
       onMouseDown={onMouseDown}
       // className="fixed z-[1310] transition-[bottom] duration-300 flex justify-center bottom-[-300px] left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
       className="react-math-keyboard-keyboard-container scrollbar"
