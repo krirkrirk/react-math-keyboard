@@ -7,7 +7,6 @@ examples
 # compiler
 tsconfig.json
 webpack.config.js
-postcss.config.js
 
 # git
 .git

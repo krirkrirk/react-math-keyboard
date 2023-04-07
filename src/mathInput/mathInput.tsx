@@ -37,10 +37,12 @@ export const MathInput = ({
 
   const request = (type: "close" | "open") => {
     if (type === "close" && showKeyboardRequest.current === "open") return;
+
     showKeyboardRequest.current = type;
     const eventually = () => {
       if (showKeyboardRequest.current === "open") {
         $("body").css("padding-bottom", `300px`);
+        // $("body").css("transition", "all 0.30s ease");
         window.scrollTo({
           top: mathfield.current.el().offsetTop - 24,
           left: 0,
@@ -78,7 +80,6 @@ export const MathInput = ({
     setMathfieldRef?.(mf);
 
     setLoaded(true);
-    // $("body").css("transition", "all 0.30s ease");
   }, []);
 
   useEffect(() => {

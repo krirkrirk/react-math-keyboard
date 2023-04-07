@@ -1,7 +1,8 @@
 import { Key, KeyProps } from "../keys/key";
 import { KeyId, KeysPropsMap } from "../keys/keys";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ToolbarTabIds, defaultTabs, toolbarTabs } from "./toolbarTabs";
+import { MathFieldContext } from "../../mathInput/mathfieldContext";
 export type ToolbarProps = {
   keys?: (KeyId | KeyProps)[];
   tabs?: ToolbarTabIds[];
@@ -10,6 +11,8 @@ export type ToolbarProps = {
 export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
   const [shownKeys, setShownKeys] = useState<(KeyId | KeyProps)[]>();
   const [currentTab, setCurrentTab] = useState<ToolbarTabIds>(tabs[0]);
+  const mathfield = useContext(MathFieldContext);
+
   useEffect(() => {
     setShownKeys(keys);
   }, [keys]);
@@ -47,7 +50,10 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
             className="react-math-keyboard-select-container"
           >
             <select
-              onChange={(e) => setCurrentTab(e.target.value as ToolbarTabIds)}
+              onChange={(e) => {
+                setCurrentTab(e.target.value as ToolbarTabIds);
+                mathfield.focus();
+              }}
               // className="bg-transparent border-r-4 focus-visible:outline-none border-transparent px-1 "
               className="react-math-keyboard-select"
             >
