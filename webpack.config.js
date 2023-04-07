@@ -3,10 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (env, argv) => {
   return {
-    entry:
-      argv.mode === "development"
-        ? "./examples/src/home.tsx"
-        : "./src/index.tsx",
+    entry: argv.mode === "development" ? "./docs/home.tsx" : "./src/index.tsx",
     // entry: "./src/index.tsx",
     output: {
       path: path.join(__dirname, "./dist"),

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import { MathInput } from "../../src/mathInput/mathInput";
+import { MathInput } from "../src/mathInput/mathInput";
 import { Navbar } from "./navbar";
-import { MathField } from "../../src/types/types";
+import { MathField } from "../src/types/types";
 
 export type ExampleProps = {};
 
