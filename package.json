@@ -16,7 +16,8 @@
   ],
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "build:example": "npm run build && webpack --mode development --config webpack.examples.config.js",
+    "deploy": "npm run build:example && gh-pages -d examples/dist",
     "declare": "dts-bundle --name react-math-keyboard --main src/index.d.ts --out ../dist/react-math-keyboard.d.ts",
     "prepublishOnly": "npm run declare && webpack --mode=production",
     "webpack": "webpack",
