@@ -43,6 +43,7 @@ export interface MathField {
     keystroke(keys: string): void;
     typedText(text: string): void;
     config(newConfig: MathFieldConfig): void;
+    id: number;
 }
 export interface MathfieldInstructions {
     method: "write" | "cmd" | "keystroke" | "typedText";
