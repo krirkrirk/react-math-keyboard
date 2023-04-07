@@ -13,11 +13,7 @@ export type KeyboardProps = {
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
 };
 
-export const Keyboard = ({
-  numericToolbarKeys,
-  numericToolbarTabs,
-  alphabeticToolbarKeys,
-}: KeyboardProps) => {
+export const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys }: KeyboardProps) => {
   const mathfield = useContext(MathFieldContext);
   useEffect(() => {
     $("#mq-keyboard").css("bottom", `0px`);
@@ -30,31 +26,24 @@ export const Keyboard = ({
     } else {
       mathfield.moveToRightEnd();
     }
-    setCurrentLayoutType((prev) =>
-      prev === "numeric" ? "alphabet" : "numeric"
-    );
+    setCurrentLayoutType((prev) => (prev === "numeric" ? "alphabet" : "numeric"));
+  };
+  const onMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (e.target instanceof HTMLElement && e.target.nodeName !== "SELECT") e.preventDefault();
+    mathfield.focus();
   };
 
   return (
     <div
       id="mq-keyboard"
-      // onMouseDown={(e) => e.preventDefault()}
+      onMouseDown={onMouseDown}
       // className="fixed z-[1310] transition-[bottom] duration-300 flex justify-center bottom-[-300px] left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
       className="react-math-keyboard-keyboard-container scrollbar"
     >
       {currentLayoutType === "numeric" && (
-        <NumericLayout
-          onSwitch={onSwitch}
-          toolbarKeys={numericToolbarKeys}
-          toolbarTabs={numericToolbarTabs}
-        />
+        <NumericLayout onSwitch={onSwitch} toolbarKeys={numericToolbarKeys} toolbarTabs={numericToolbarTabs} />
       )}
-      {currentLayoutType === "alphabet" && (
-        <AlphabetLayout
-          onSwitch={onSwitch}
-          toolbarKeys={alphabeticToolbarKeys}
-        />
-      )}
+      {currentLayoutType === "alphabet" && <AlphabetLayout onSwitch={onSwitch} toolbarKeys={alphabeticToolbarKeys} />}
     </div>
   );
 };

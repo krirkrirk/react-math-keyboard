@@ -99,14 +99,14 @@ export const Key = ({
   }, []);
   return (
     <button
-      // className={`h-12 flex justify-center items-center text-lg font-normal rounded transition-all relative 
+      // className={`h-12 flex justify-center items-center text-lg font-normal rounded transition-all relative
       // focus-visible:outline-none
-      // focus-visible:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)] 
+      // focus-visible:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]
       // ${fullWidth ? "w-full" : "px-2.5 min-w-[41px] shrink-0"}  ${bgColor} ${!isMobile && bgHoverColor}  ${
       //   isClicked && innerShadow
-      // } ${isTouchDown && bgHoverColor} 
+      // } ${isTouchDown && bgHoverColor}
       // ${labelType === "raw" || labelType === "svg" ? "pt-0" : "pt-1 "}
-       
+
       // `}
       className={`react-math-keyboard-key ${keyCategory === KeyCategory.utility && "react-math-keyboard-key-utility"}`}
       style={{
@@ -115,7 +115,7 @@ export const Key = ({
           : { paddingLeft: "0.625rem", paddingRight: "0.625rem", minWidth: "41px", flexShrink: 0 }),
         ...(isTouchDown && { backgroundColor: bgHoverColor }),
         ...(isClicked && { boxShadow: "inset 0 2px 4px rgba(0, 0, 0, 0.2)" }),
-        ...(labelType === "raw" || labelType === "svg" ? {paddingTop: 0} : {paddingTop: "0.25rem"})
+        ...(labelType === "raw" || labelType === "svg" ? { paddingTop: 0 } : { paddingTop: "0.25rem" }),
       }}
       ref={ref}
       id={`mq-keyboard-button-key-${id}`}

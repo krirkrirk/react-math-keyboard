@@ -15,7 +15,7 @@ export const toolbarTabs: ToolbarTab[] = [
     id: "polynomial",
     label: "x^n",
     rawLabel: "x",
-    keys: ["x", "power", "cube", "y", "t", "n", "z"],
+    keys: ["x", "equal", "power", "cube", "y", "t", "n", "z"],
   },
   {
     id: "functions",
@@ -64,6 +64,7 @@ export const toolbarTabs: ToolbarTab[] = [
     label: "u_n",
     rawLabel: "(Un)",
     keys: [
+      "n",
       "underscore",
       {
         id: "un",

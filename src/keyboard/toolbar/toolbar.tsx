@@ -1,6 +1,6 @@
 import { Key, KeyProps } from "../keys/key";
 import { KeyId, KeysPropsMap } from "../keys/keys";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ToolbarTabIds, defaultTabs, toolbarTabs } from "./toolbarTabs";
 import { MathFieldContext } from "../../mathInput/mathfieldContext";
 export type ToolbarProps = {
@@ -22,6 +22,7 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
     const tab = toolbarTabs.find((t) => t.id === currentTab);
     setShownKeys(tab?.keys);
   }, [currentTab, keys]);
+
   return (
     <div
       // className="bg-slate-400 pt-2 items-center w-full "
