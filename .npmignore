@@ -3,6 +3,8 @@ src
 index.html
 node_modules
 examples 
+index.js
+index.html
 
 # compiler
 tsconfig.json
