@@ -12,7 +12,10 @@ module.exports = {
     path: path.resolve(__dirname, "examples/dist"),
     filename: "script.js",
   },
-  target: "web",
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", ".jsx"],
+  },
+  //   target: "web",
   module: {
     rules: [
       {
