@@ -2,15 +2,15 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: path.resolve(__dirname, "docs"),
+  template: path.resolve(__dirname, "./docs"),
 
   publicPath: "/",
 });
 
 module.exports = {
-  entry: path.resolve(__dirname, "docs/home.tsx"),
+  entry: path.resolve(__dirname, "./docs/home.tsx"),
   output: {
-    path: path.resolve(__dirname, "docs/dist"),
+    path: path.resolve(__dirname, "./docs/dist"),
     filename: "script.js",
   },
   resolve: {
