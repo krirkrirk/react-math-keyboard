@@ -43,7 +43,8 @@ export const MathInput = ({
       if (showKeyboardRequest.current === "open") {
         $("body").css("padding-bottom", `300px`);
         const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
-        if (delta < 400) window.scrollBy({ top: 300, behavior: "smooth" });
+        if (delta < 400) window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+        if (delta > window.innerHeight - 30) window.scrollBy({ top: -50, behavior: "smooth" });
         setShowKeyboard(true);
       } else {
         $("body").css("padding-bottom", 0);
