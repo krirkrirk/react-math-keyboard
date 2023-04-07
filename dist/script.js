@@ -52972,10 +52972,10 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./examples/src/example.tsx":
-/*!**********************************!*\
-  !*** ./examples/src/example.tsx ***!
-  \**********************************/
+/***/ "./docs/example.tsx":
+/*!**************************!*\
+  !*** ./docs/example.tsx ***!
+  \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -52986,8 +52986,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/mathInput/mathInput */ "./src/mathInput/mathInput.tsx");
-/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navbar */ "./examples/src/navbar.tsx");
+/* harmony import */ var _src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/mathInput/mathInput */ "./src/mathInput/mathInput.tsx");
+/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navbar */ "./docs/navbar.tsx");
 
 
 
@@ -53011,10 +53011,10 @@ const Example = ({}) => {
 
 /***/ }),
 
-/***/ "./examples/src/navbar.tsx":
-/*!*********************************!*\
-  !*** ./examples/src/navbar.tsx ***!
-  \*********************************/
+/***/ "./docs/navbar.tsx":
+/*!*************************!*\
+  !*** ./docs/navbar.tsx ***!
+  \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -54741,15 +54741,15 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/*!*******************************!*\
-  !*** ./examples/src/home.tsx ***!
-  \*******************************/
+/*!***********************!*\
+  !*** ./docs/home.tsx ***!
+  \***********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/style.css */ "./src/style.css");
+/* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/style.css */ "./src/style.css");
 /* harmony import */ var mathquill4keyboard_build_mathquill_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! mathquill4keyboard/build/mathquill.css */ "./node_modules/mathquill4keyboard/build/mathquill.css");
-/* harmony import */ var _example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./example */ "./examples/src/example.tsx");
+/* harmony import */ var _example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./example */ "./docs/example.tsx");
 
 
 
