@@ -95,11 +95,12 @@
 
 .react-math-keyboard-select-container {
   border-radius: 0.25rem;
-  padding-right: 0.25rem;
+  /* padding-right: 0.25rem; */
   margin-bottom: 0.25rem;
   display: flex;
   background-color: #f8fafc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 .react-math-keyboard-select-container:focus-visible {
   outline: none;
@@ -108,14 +109,27 @@
 
 .react-math-keyboard-select {
   border: transparent;
+  border-radius: 0.25rem;
   background-color: transparent;
-  border-right-width: 4px;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  font-size: 1.25rem;
+  appearance: none;
+  -webkit-appearance: none;
+  /* border-right-width: 16px; */
+  padding-left: 0.5rem;
+  /* padding-right: 0.25rem; */
+  padding-right: 1.75rem;
+  font-size: 1.1rem;
+
 }
 .react-math-keyboard-select:focus-visible {
   outline: none;
+}
+
+.react-math-keyboard-select-arrow {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 22px;
+  right: 8px;
+  pointer-events: none !important;
 }
 
 .react-math-keyboard-toolbar-container {
@@ -155,6 +169,7 @@
 .react-math-keyboard-key {
   border: none;
   cursor: pointer;
+  color: #020617;
   height: 3rem;
   border-radius: 0.25rem;
   font-weight: 400;
@@ -190,4 +205,5 @@
 .mq-math-mode .mq-text-mode.mq-hasCursor {
   /* To add in mathquil style  */
   padding: 0.3em 0.2em !important;
+  margin: -0.3em 0.1em !important;
 }
