@@ -21,7 +21,7 @@
 }
 
 .cursor-pointer {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 /* Components */
@@ -75,7 +75,7 @@
   width: 100%;
   max-width: 768px;
   padding: 0.25rem;
-  padding-top: 0.75rem;
+  padding-top: 0.55rem;
   row-gap: 0.25rem;
   display: flex;
   flex-direction: column;
@@ -112,6 +112,7 @@
   border-right-width: 4px;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+  font-size: 1.25rem;
 }
 .react-math-keyboard-select:focus-visible {
   outline: none;
@@ -184,4 +185,9 @@
   .react-math-keyboard-key-utility:hover {
     background-color: #64748b;
   }
+}
+
+.mq-math-mode .mq-text-mode.mq-hasCursor {
+  /* To add in mathquil style  */
+  padding: 0.3em 0.2em !important;
 }

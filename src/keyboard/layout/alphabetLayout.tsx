@@ -31,14 +31,8 @@ export const AlphabetLayout = ({ toolbarKeys = [], onSwitch }: AlphabetLayoutPro
     <div className="react-math-keyboard-keyboard-layout">
       <Toolbar keys={shownToolbarKeys} />
 
-      <div
-        // className="w-full max-w-3xl p-1 pt-3 gap-y-1 flex flex-col"
-        className="react-math-keyboard-alphabet-layout"
-      >
-        <div
-          // className=" grid grid-cols-10 gap-x-1 gap-y-1"
-          style={{ display: "grid", gridTemplateColumns: "repeat(10, minmax(0,1fr))", gap: "0.25rem" }}
-        >
+      <div className="react-math-keyboard-alphabet-layout">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(10, minmax(0,1fr))", gap: "0.25rem" }}>
           {rows[0].map((letter) => (
             <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
           ))}
