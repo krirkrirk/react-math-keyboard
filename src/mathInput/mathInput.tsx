@@ -23,7 +23,7 @@ export const MathInput = ({
   alphabeticToolbarKeys,
   setValue,
   setMathfieldRef,
-  style,
+  style = {},
   size = "medium",
 }: Props) => {
   const [loaded, setLoaded] = useState(false);
@@ -37,15 +37,14 @@ export const MathInput = ({
 
   const request = (type: "close" | "open") => {
     if (type === "close" && showKeyboardRequest.current === "open") return;
+
     showKeyboardRequest.current = type;
     const eventually = () => {
       if (showKeyboardRequest.current === "open") {
         $("body").css("padding-bottom", `300px`);
-        window.scrollTo({
-          top: mathfield.current.el().offsetTop - 24,
-          left: 0,
-          behavior: "smooth",
-        });
+        const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+        if (delta < 400) window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+        if (delta > window.innerHeight - 30) window.scrollBy({ top: -50, behavior: "smooth" });
         setShowKeyboard(true);
       } else {
         $("body").css("padding-bottom", 0);
@@ -76,12 +75,12 @@ export const MathInput = ({
       request("open");
     });
     setMathfieldRef?.(mf);
+
     setLoaded(true);
-    // $("body").css("transition", "all 0.30s ease");
   }, []);
 
   useEffect(() => {
-    window.addEventListener("click", (e) => {
+    window.addEventListener("mousedown", (e) => {
       if (e.target instanceof HTMLElement) {
         let isKeyboardClick = false;
         let element: HTMLElement | null = e.target;
@@ -92,27 +91,19 @@ export const MathInput = ({
           }
           element = element.parentElement;
         }
-
         if (!isKeyboardClick) {
           request("close");
-        }
+        } else request("open");
       }
     });
   }, []);
 
   return (
-    <div {...(style && { style })} id="mq-keyboard-container">
+    <div style={{ display: "flex", ...style }} id="mq-keyboard-container">
       {!loaded && <p>Loading...</p>}
       <span
-        style={{
-          width: "100%",
-          borderRadius: "4px",
-          padding: size === "small" ? "8px 4px" : "12px 6px",
-          borderColor: "#ccc",
-          alignItems: "center",
-          display: "flex",
-          scrollMarginTop: "24px",
-        }}
+        className="react-math-keyboard-input"
+        style={{ padding: size === "small" ? "8px 4px" : "12px 6px" }}
         id="mq-keyboard-field"
       ></span>
       <MathFieldContext.Provider value={mathfield.current}>

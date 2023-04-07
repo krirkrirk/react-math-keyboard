@@ -1,6 +1,6 @@
 # react-math-keyboard
 
-This library will provide a customisable, pretty, mobile-friendly keyboard to a MathQuill input.
+This library will provide a customizable, pretty, mobile-friendly keyboard to a MathQuill input.
 
 This is using a fork of MathQuill in order to use the comma as a decimal separator and the symbol "\\times" instead of "\\cdot" for multiplication.
 

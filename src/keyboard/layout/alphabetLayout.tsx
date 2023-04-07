@@ -28,17 +28,18 @@ export const AlphabetLayout = ({ toolbarKeys = [], onSwitch }: AlphabetLayoutPro
   }, [isMaj]);
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="react-math-keyboard-keyboard-layout">
       <Toolbar keys={shownToolbarKeys} />
-      <div className="w-full max-w-3xl p-1 pt-3 gap-y-1 flex flex-col">
-        <div className=" grid grid-cols-10 gap-x-1 gap-y-1">
+
+      <div className="react-math-keyboard-alphabet-layout">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(10, minmax(0,1fr))", gap: "0.25rem" }}>
           {rows[0].map((letter) => (
             <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
           ))}
           {rows[1].map((letter) => (
             <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
           ))}
-          <div className="col-span-2">
+          <div style={{ gridColumn: "span 2" }}>
             <Key
               id={"maj"}
               label={
@@ -64,20 +65,20 @@ export const AlphabetLayout = ({ toolbarKeys = [], onSwitch }: AlphabetLayoutPro
           <Key {...KeysPropsMap.get("comma")!} />
           <Key {...KeysPropsMap.get("dot")!} />
         </div>
-        <div className="flex gap-x-1">
-          <div className="grow-[1]">
+        <div style={{ display: "flex", columnGap: "0.25rem" }}>
+          <div style={{ flexGrow: 1 }}>
             <Key id="switch" label={"123"} labelType="raw" keyCategory={KeyCategory.utility} onClick={onSwitch} />
           </div>
-          <div className="grow-[0.5]">
+          <div style={{ flexGrow: 0.5 }}>
             <Key {...KeysPropsMap.get("left")!} />
           </div>
-          <div className="grow-[4]">
+          <div style={{ flexGrow: 4 }}>
             <Key {...KeysPropsMap.get("space")!} />
           </div>
-          <div className="grow-[0.5]">
+          <div style={{ flexGrow: 0.5 }}>
             <Key {...KeysPropsMap.get("right")!} />
           </div>
-          <div className="grow-[1]">
+          <div style={{ flexGrow: 1 }}>
             <Key {...KeysPropsMap.get("del")!} />
           </div>
         </div>

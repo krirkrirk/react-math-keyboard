@@ -7,4 +7,4 @@ export type NumericLayoutProps = {
     toolbarTabs?: ToolbarTabIds[];
     onSwitch?: () => void;
 };
-export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch, }: NumericLayoutProps) => JSX.Element;
+export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch }: NumericLayoutProps) => JSX.Element;
