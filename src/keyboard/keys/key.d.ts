@@ -13,7 +13,7 @@ export type KeyProps = {
     id: string;
     label: string | ReactNode;
     labelType: "raw" | "tex" | "svg";
-    keyCategory: KeyCategory;
+    keyCategory?: KeyCategory;
     mathfieldInstructions?: MathfieldInstructions;
     onClick?: () => void;
     fullWidth?: boolean;
