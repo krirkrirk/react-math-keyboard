@@ -1,4 +1,10 @@
-import React, { ReactNode, useContext, useEffect, useRef, useState } from "react";
+import React, {
+  ReactNode,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import $ from "jquery";
 
 import { isMobile } from "react-device-detect";
@@ -19,7 +25,7 @@ export type KeyProps = {
   id: string;
   label: string | ReactNode;
   labelType: "raw" | "tex" | "svg";
-  keyCategory: KeyCategory;
+  keyCategory?: KeyCategory;
   mathfieldInstructions?: MathfieldInstructions;
   onClick?: () => void;
   fullWidth?: boolean;
@@ -51,7 +57,11 @@ export const Key = ({
   const renderLabel = (): ReactNode => {
     switch (labelType) {
       case "raw":
-        return <p id={`mq-keyboard-${mathfield.id}-rawkey-${id}`}>{label as string}</p>;
+        return (
+          <p id={`mq-keyboard-${mathfield.id}-rawkey-${id}`}>
+            {label as string}
+          </p>
+        );
       case "tex":
         return (
           <span
@@ -67,7 +77,8 @@ export const Key = ({
     }
   };
 
-  const bgHoverColor = keyCategory === KeyCategory.utility ? "#64748b" : "#cbd5e1";
+  const bgHoverColor =
+    keyCategory === KeyCategory.utility ? "#64748b" : "#cbd5e1";
 
   const innerShadow = "shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]";
 
@@ -99,14 +110,23 @@ export const Key = ({
   }, []);
   return (
     <button
-      className={`react-math-keyboard-key ${keyCategory === KeyCategory.utility && "react-math-keyboard-key-utility"}`}
+      className={`react-math-keyboard-key ${
+        keyCategory === KeyCategory.utility && "react-math-keyboard-key-utility"
+      }`}
       style={{
         ...(fullWidth
           ? { width: "100%" }
-          : { paddingLeft: "0.625rem", paddingRight: "0.625rem", minWidth: "41px", flexShrink: 0 }),
+          : {
+              paddingLeft: "0.625rem",
+              paddingRight: "0.625rem",
+              minWidth: "41px",
+              flexShrink: 0,
+            }),
         ...(isTouchDown && { backgroundColor: bgHoverColor }),
         ...(isClicked && { boxShadow: "inset 0 2px 4px rgba(0, 0, 0, 0.2)" }),
-        ...(labelType === "raw" || labelType === "svg" ? { paddingTop: 0 } : { paddingTop: "0.25rem" }),
+        ...(labelType === "raw" || labelType === "svg"
+          ? { paddingTop: 0 }
+          : { paddingTop: "0.25rem" }),
       }}
       ref={ref}
       id={`mq-keyboard-${mathfield.id}-button-key-${id}`}
