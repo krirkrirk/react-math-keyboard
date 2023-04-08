@@ -2,13 +2,12 @@
 src
 index.html
 node_modules
-examples 
-index.js
-index.html
+docs 
 
 # compiler
 tsconfig.json
 webpack.config.js
+webpack.docs.config.js
 
 # git
 .git
