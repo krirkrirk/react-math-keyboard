@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: path.resolve(__dirname, "./docs/dist/index.html"),
+  template: path.resolve(__dirname, "./docs/index.html"),
 
   publicPath: "/",
 });
@@ -10,7 +10,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 module.exports = {
   entry: path.resolve(__dirname, "./docs/home.tsx"),
   output: {
-    path: path.resolve(__dirname, "./docs/dist"),
+    path: path.resolve(__dirname, "./docs"),
     filename: "script.js",
   },
   resolve: {
