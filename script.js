@@ -52987,64 +52987,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/mathInput/mathInput */ "./src/mathInput/mathInput.tsx");
-/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navbar */ "./examples/navbar.tsx");
-
 
 
 
 const Example = ({}) => {
-    const [page, setPage] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0);
     const [value, setValue] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("");
-    const [overrideValue, setOverrideValue] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("");
+    const [value2, setValue2] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("");
+    const [value3, setValue3] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("");
     const mf = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)();
-    const clear = () => {
-        mf.current?.latex("");
+    const mf2 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)();
+    const mf3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)();
+    const clear = (mathfield) => {
+        mathfield.latex("");
     };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_navbar__WEBPACK_IMPORTED_MODULE_3__.Navbar, { setPage: setPage }), page === 0 && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { className: "mb-2", style: { marginBottom: "0.5rem" }, children: "This is a mock webpage that implements the input component in a page." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit congue lacus, sed eleifend felis interdum eu. Proin id vulputate dolor. Sed non velit facilisis, auctor felis vitae, mattis tortor. Morbi at faucibus justo. Suspendisse nec dapibus est, sed venenatis augue. Praesent volutpat nisl ut diam aliquet bibendum. Morbi magna ex, consequat et posuere sit amet, accumsan non urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce nibh tellus, aliquam vel eleifend finibus, viverra et felis. Pellentesque leo est, blandit in massa non, porttitor feugiat leo. Aenean porta dolor eget tempus laoreet. Praesent viverra blandit posuere. Suspendisse nec commodo quam, id commodo urna. Nunc sodales nulla ligula, at condimentum leo finibus sit amet. Etiam bibendum quam sem, dapibus fringilla lectus tincidunt non. Aenean vehicula sem neque, eu vehicula mauris dapibus id. Etiam mattis velit id nisl dignissim, sed tincidunt ipsum dapibus. Proin efficitur ultricies diam, id finibus quam. Fusce ligula nisi, semper ac convallis eget, fermentum sed erat. Quisque congue ligula nunc, sit amet dignissim metus molestie a. Duis ultrices, diam eget pharetra aliquam, odio elit dapibus lectus, a pretium arcu velit quis lorem. Morbi ac molestie dolor. Ut condimentum purus sit amet finibus imperdiet. primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce nibh tellus, aliquam vel eleifend finibus, viverra et felis. Pellentesque leo est, blandit in massa non, porttitor feugiat leo. Aenean porta dolor eget tempus laoreet. Praesent viverra blandit posuere. Suspendisse nec commodo quam, id commodo urna. Nunc sodales nulla ligula, at condimentum leo finibus sit amet. Etiam bibendum quam sem, dapibus fringilla lectus tincidunt non. Aenean vehicula sem neque, eu vehicula mauris dapibus id. Etiam mattis velit id nisl dignissim, sed tincidunt ipsum dapibus. Proin efficitur ultricies diam, id finibus quam. Fusce ligula nisi, semper ac convallis eget" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit congue lacus, sed eleifend felis interdum eu. Proin id vulputate dolor. Sed non velit facilisis, auctor felis vitae, mattis tortor. Morbi at faucibus justo. Suspendisse nec dapibus est, sed venenatis augue. Praesent volutpat nisl ut diam aliquet bibendum. Morbi magna ex, consequat et posuere sit amet, accumsan non urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce nibh tellus, aliquam vel eleifend finibus, viverra et felis. Pellentesque leo est, blandit in massa non, porttitor feugiat leo. Aenean porta dolor eget tempus laoreet. Praesent viverra blandit posuere. Suspendisse nec commodo quam, id commodo urna. Nunc sodales nulla ligula, at condimentum leo finibus sit amet. Etiam bibendum quam sem, dapibus fringilla lectus tincidunt non. Aenean vehicula sem neque, eu vehicula mauris dapibus id. Etiam mattis velit id nisl dignissim, sed tincidunt ipsum dapibus. Proin efficitur ultricies diam, id finibus quam. Fusce ligula nisi, semper ac convallis eget, fermentum sed erat. Quisque congue ligula nunc, sit amet dignissim metus molestie a. Duis ultrices, diam eget pharetra aliquam, odio elit dapibus lectus, a pretium arcu velit quis lorem. Morbi ac molestie dolor. Ut condimentum purus sit amet finibus imperdiet. primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce nibh tellus, aliquam vel eleifend finibus, viverra et felis. Pellentesque leo est, blandit in massa non, porttitor feugiat leo. Aenean porta dolor eget tempus laoreet. Praesent viverra blandit posuere. Suspendisse nec commodo quam, id commodo urna. Nunc sodales nulla ligula, at condimentum leo finibus sit amet. Etiam bibendum quam sem, dapibus fringilla lectus tincidunt non. Aenean vehicula sem neque, eu vehicula mauris dapibus id. Etiam mattis velit id nisl dignissim, sed tincidunt ipsum dapibus. Proin efficitur ultricies diam, id finibus quam. Fusce ligula nisi, semper ac convallis eget" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: clear, children: "Clear" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit congue lacus, sed eleifend felis interdum eu. Proin id vulputate dolor. Sed non velit facilisis, auctor felis vitae, mattis tortor. Morbi at faucibus justo. Suspendisse nec dapibus est, sed venenatis augue. Praesent volutpat nisl ut diam aliquet bibendum. Morbi magna ex, consequat et posuere sit amet, accumsan non urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce nibh tellus, aliquam vel eleifend finibus, viverra et felis. Pellentesque leo est, blandit in massa non, porttitor feugiat leo. Aenean porta dolor eget tempus laoreet. Praesent viverra blandit posuere. Suspendisse nec commodo quam, id commodo urna. Nunc sodales nulla ligula, at condimentum leo finibus sit amet. Etiam bibendum quam sem, dapibus fringilla lectus tincidunt non. Aenean vehicula sem neque, eu vehicula mauris dapibus id. Etiam mattis velit id nisl dignissim, sed tincidunt ipsum dapibus. Proin efficitur ultricies diam, id finibus quam. Fusce ligula nisi, semper ac convallis eget, fermentum sed erat. Quisque congue ligula nunc, sit amet dignissim metus molestie a. Duis ultrices, diam eget pharetra aliquam, odio elit dapibus lectus, a pretium arcu velit quis lorem. Morbi ac molestie dolor. Ut condimentum purus sit amet finibus imperdiet." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit congue lacus, sed eleifend felis interdum eu. Proin id vulputate dolor. Sed non velit facilisis, auctor felis vitae, mattis tortor." })] }) })), page === 1 && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { marginBottom: "0.5rem" }, children: "This is a mock webpage that implements the input component in a container." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: {
-                                border: "4px solid #000",
-                                padding: "0.75rem 0.5rem",
-                                maxWidth: 500,
-                                borderRadius: "0.25rem",
-                            }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { className: "pb-6", children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit congue lacus, sed eleifend felis interdum eu. Proin id vulputate dolor. Sed non velit facilisis, auctor felis vitae, mattis tortor. Morbi at faucibus justo. Suspendisse nec dapibus est, sed venenatis augue. Praesent volutpat nisl ut diam aliquet bibendum. Morbi magna ex, consequat et posuere sit amet, accumsan non urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce nibh tellus, aliquam vel eleifend finibus, viverra et felis. Pellentesque leo est, blandit in massa non, porttitor feugiat leo. Aenean porta dolor eget tempus laoreet. Praesent viverra blandit posuere. Suspendisse nec commodo quam, id commodo urna. Nunc sodales nulla ligula, at condimentum leo finibus sit amet. Etiam bibendum quam sem, dapibus fringilla lectus tincidunt non. Aenean vehicula sem neque, eu vehicula mauris dapibus id. Etiam mattis velit id nisl dignissim, sed tincidunt ipsum dapibus. Proin efficitur ultricies diam, id finibus quam. Fusce ligula nisi, semper ac convallis eget, fermentum sed erat. Quisque congue ligula nunc, sit amet dignissim metus molestie a. Duis ultrices, diam eget pharetra aliquam, odio elit dapibus lectus, a pretium arcu velit quis lorem. Morbi ac molestie dolor. Ut condimentum purus sit amet finibus imperdiet." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "rzs" })] })] }) }))] }));
-};
-
-
-/***/ }),
-
-/***/ "./examples/navbar.tsx":
-/*!*****************************!*\
-  !*** ./examples/navbar.tsx ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Navbar": () => (/* binding */ Navbar)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-const Navbar = ({ setPage }) => {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: {
-            backgroundColor: "#f1f5f9",
-            display: "flex",
-            alignItems: "center",
-            flexWrap: "wrap",
-            padding: "0.5rem 1rem",
-            marginBottom: "1rem",
-            rowGap: "0.25rem",
-            columnGap: "2rem",
-        }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: () => setPage(0), style: {
-                    border: "none",
-                    backgroundColor: "#334155",
-                    color: "#f8fafc",
-                    padding: "0.5rem",
-                }, children: "Example : Page" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: () => setPage(1), style: {
-                    border: "none",
-                    backgroundColor: "#334155",
-                    color: "#f8fafc",
-                    padding: "0.5rem",
-                }, children: "Example : Container" })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with all the keyboard keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue2, setMathfieldRef: (mathfield) => (mf.current = mathfield) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: () => clear(mf.current), children: "Clear" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["Latex produced : ", mf.current?.latex()] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with no additional keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { numericToolbarKeys: [], setValue: setValue2 }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["Latex produced : ", value2] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with custom keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue3, numericToolbarKeys: [
+                                "euro",
+                                {
+                                    id: "custom",
+                                    keyCategory: 0,
+                                    label: "wow",
+                                    labelType: "raw",
+                                    mathfieldInstructions: {
+                                        content: "\\frac{\\int_a^b 2\\pi e^{2ix}\\cos(\\theta) \\gamma}{\\sum_2^9 i^2 - 1}",
+                                        method: "write",
+                                    },
+                                },
+                                {
+                                    id: "custom logic",
+                                    keyCategory: 0,
+                                    label: "custom logic",
+                                    labelType: "raw",
+                                    onClick: () => alert("Clicked!"),
+                                },
+                            ] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["Latex produced : ", value3] })] })] }) }));
 };
 
 
@@ -53461,7 +53436,7 @@ const Key = ({ id, label, labelType = "tex", keyCategory, onClick, mathfieldInst
     const renderLabel = () => {
         switch (labelType) {
             case "raw":
-                return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { id: `mq-keyboard-${mathfield.id}-rawkey-${id}`, children: label });
+                return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { id: `mq-keyboard-${mathfield.id}-rawkey-${id}`, children: label }));
             case "tex":
                 return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { id: `mq-keyboard-${mathfield.id}-key-${id}`, onClick: (e) => e.stopPropagation(), className: "cursor-pointer", children: label }));
             case "svg":
@@ -53497,10 +53472,17 @@ const Key = ({ id, label, labelType = "tex", keyCategory, onClick, mathfieldInst
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { className: `react-math-keyboard-key ${keyCategory === KeyCategory.utility && "react-math-keyboard-key-utility"}`, style: {
             ...(fullWidth
                 ? { width: "100%" }
-                : { paddingLeft: "0.625rem", paddingRight: "0.625rem", minWidth: "41px", flexShrink: 0 }),
+                : {
+                    paddingLeft: "0.625rem",
+                    paddingRight: "0.625rem",
+                    minWidth: "41px",
+                    flexShrink: 0,
+                }),
             ...(isTouchDown && { backgroundColor: bgHoverColor }),
             ...(isClicked && { boxShadow: "inset 0 2px 4px rgba(0, 0, 0, 0.2)" }),
-            ...(labelType === "raw" || labelType === "svg" ? { paddingTop: 0 } : { paddingTop: "0.25rem" }),
+            ...(labelType === "raw" || labelType === "svg"
+                ? { paddingTop: 0 }
+                : { paddingTop: "0.25rem" }),
         }, ref: ref, id: `mq-keyboard-${mathfield.id}-button-key-${id}`, onMouseDown: onMouseDown, onMouseUp: () => setIsClicked(false), onMouseLeave: () => {
             if (!isClicked)
                 return;
