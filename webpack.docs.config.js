@@ -1,25 +1,20 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-// const htmlPlugin = new HtmlWebPackPlugin({
-//   template: path.resolve(__dirname, "docs"),
+const htmlPlugin = new HtmlWebPackPlugin({
+  template: path.resolve(__dirname, "./docs/dist/index.html"),
 
-//   publicPath: "/",
-// });
+  publicPath: "/",
+});
 
 module.exports = {
-  entry: path.resolve(__dirname, "docs/home.tsx"),
+  entry: path.resolve(__dirname, "./docs/home.tsx"),
   output: {
-    path: path.resolve(__dirname, "docs/dist"),
+    path: path.resolve(__dirname, "./docs/dist"),
     filename: "script.js",
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".jsx"],
-    modules: [
-      path.resolve(__dirname, "src"),
-      path.resolve(__dirname, "node_modules"),
-      path.resolve(__dirname, "docs"),
-    ],
   },
   //   target: "web",
   module: {

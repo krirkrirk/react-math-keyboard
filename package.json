@@ -6,7 +6,7 @@
   "description": "",
   "main": "./dist/react-math-keyboard",
   "types": "./dist/react-math-keyboard.d.ts",
-  "homepage": "https://krirkrirk.github.io/react-math-keyboard/",
+  "homepage": ".",
   "repository": {
     "type": "git",
     "url": "https://github.com/krirkrirk/react-math-keyboard.git"
@@ -17,7 +17,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "build:example": "npm run build && webpack --mode development --config webpack.docs.config.js",
-    "deploy": "npm run build:example && gh-pages -d docs",
+    "deploy": "npm run build:example && gh-pages -d docs/dist",
     "declare": "dts-bundle --name react-math-keyboard --main src/index.d.ts --out ../dist/react-math-keyboard.d.ts",
     "prepublishOnly": "npm run declare && webpack --mode=production",
     "webpack": "webpack",
