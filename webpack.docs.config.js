@@ -41,5 +41,5 @@ module.exports = {
     minimize: false,
   },
   devtool: "source-map",
-  // plugins: [htmlPlugin],
+  plugins: [htmlPlugin],
 };
