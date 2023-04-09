@@ -3,10 +3,10 @@
   "version": "1.2.14",
   "private": false,
   "declaration": true,
-  "description": "",
+  "description": "Customizable math keyboard for React",
   "main": "./dist/react-math-keyboard",
   "types": "./dist/react-math-keyboard.d.ts",
-  "homepage": ".",
+  "homepage": "https://krirkrirk.github.io/react-math-keyboard/",
   "repository": {
     "type": "git",
     "url": "https://github.com/krirkrirk/react-math-keyboard.git"

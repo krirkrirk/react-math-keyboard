@@ -71,4 +71,64 @@ export const setKeysProps: KeyProps[] = [
       method: "cmd",
     },
   },
+  {
+    id: "naturals",
+    label: "\\mathbb{N}",
+    labelType: "tex",
+    keyCategory: KeyCategory.operator,
+    mathfieldInstructions: {
+      content: "\\mathbb{N}",
+      method: "write",
+    },
+  },
+  {
+    id: "integers",
+    label: "\\mathbb{Z}",
+    labelType: "tex",
+    keyCategory: KeyCategory.operator,
+    mathfieldInstructions: {
+      content: "\\mathbb{Z}",
+      method: "write",
+    },
+  },
+  {
+    id: "rationals",
+    label: "\\mathbb{Q}",
+    labelType: "tex",
+    keyCategory: KeyCategory.operator,
+    mathfieldInstructions: {
+      content: "\\mathbb{Q}",
+      method: "write",
+    },
+  },
+  {
+    id: "reals",
+    label: "\\mathbb{R}",
+    labelType: "tex",
+    keyCategory: KeyCategory.operator,
+    mathfieldInstructions: {
+      content: "\\mathbb{R}",
+      method: "write",
+    },
+  },
+  {
+    id: "complex",
+    label: "\\mathbb{C}",
+    labelType: "tex",
+    keyCategory: KeyCategory.operator,
+    mathfieldInstructions: {
+      content: "\\mathbb{C}",
+      method: "write",
+    },
+  },
+  {
+    id: "ast",
+    label: "\\square^\\ast",
+    labelType: "tex",
+    keyCategory: KeyCategory.operator,
+    mathfieldInstructions: {
+      content: "^\\ast",
+      method: "write",
+    },
+  },
 ];

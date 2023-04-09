@@ -11,9 +11,15 @@ export type KeyboardProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
+  divisionFormat: "fraction" | "obelus";
 };
 
-export const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys }: KeyboardProps) => {
+export const Keyboard = ({
+  numericToolbarKeys,
+  numericToolbarTabs,
+  alphabeticToolbarKeys,
+  divisionFormat,
+}: KeyboardProps) => {
   const mathfield = useContext(MathFieldContext);
   useEffect(() => {
     $(`#mq-keyboard-${mathfield.id}`).css("bottom", `0px`);
@@ -26,10 +32,13 @@ export const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToo
     } else {
       mathfield.moveToRightEnd();
     }
-    setCurrentLayoutType((prev) => (prev === "numeric" ? "alphabet" : "numeric"));
+    setCurrentLayoutType((prev) =>
+      prev === "numeric" ? "alphabet" : "numeric"
+    );
   };
   const onMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (e.target instanceof HTMLElement && e.target.nodeName !== "SELECT") e.preventDefault();
+    if (e.target instanceof HTMLElement && e.target.nodeName !== "SELECT")
+      e.preventDefault();
     mathfield.focus();
   };
 
@@ -41,9 +50,19 @@ export const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToo
       className="react-math-keyboard-keyboard-container scrollbar"
     >
       {currentLayoutType === "numeric" && (
-        <NumericLayout onSwitch={onSwitch} toolbarKeys={numericToolbarKeys} toolbarTabs={numericToolbarTabs} />
+        <NumericLayout
+          onSwitch={onSwitch}
+          toolbarKeys={numericToolbarKeys}
+          toolbarTabs={numericToolbarTabs}
+          divisionFormat={divisionFormat}
+        />
       )}
-      {currentLayoutType === "alphabet" && <AlphabetLayout onSwitch={onSwitch} toolbarKeys={alphabeticToolbarKeys} />}
+      {currentLayoutType === "alphabet" && (
+        <AlphabetLayout
+          onSwitch={onSwitch}
+          toolbarKeys={alphabeticToolbarKeys}
+        />
+      )}
     </div>
   );
 };

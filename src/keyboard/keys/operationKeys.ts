@@ -5,7 +5,7 @@ export const operationKeysIds = [
   "minus",
   "times",
   "frac",
-  "div",
+  "obelus",
   "sqrt",
   "cube",
   "power",
@@ -14,7 +14,6 @@ export const operationKeysIds = [
   "rightParenthesis",
   "equal",
   "comma",
-  "obele",
   "semicolon",
   "dot",
 ];
@@ -142,7 +141,7 @@ export const operationKeysProps: KeyProps[] = [
     },
   },
   {
-    id: "obele",
+    id: "obelus",
     label: "\\div",
     labelType: "tex",
     keyCategory: KeyCategory.operator,

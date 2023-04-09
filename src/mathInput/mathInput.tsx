@@ -13,6 +13,7 @@ type Props = {
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
   setMathfieldRef?: (mf: MathField) => void;
   setValue?: (s: string) => void;
+  divisionFormat?: "fraction" | "obelus";
   style?: React.CSSProperties;
   size?: "small" | "medium";
 };
@@ -24,6 +25,7 @@ export const MathInput = ({
   setValue,
   setMathfieldRef,
   style = {},
+  divisionFormat = "fraction",
   size = "medium",
 }: Props) => {
   const [loaded, setLoaded] = useState(false);
@@ -42,9 +44,13 @@ export const MathInput = ({
     const eventually = () => {
       if (showKeyboardRequest.current === "open") {
         $("body").css("padding-bottom", `300px`);
-        const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
-        if (delta < 400) window.scrollBy({ top: 400 - delta, behavior: "smooth" });
-        if (delta > window.innerHeight - 30) window.scrollBy({ top: -50, behavior: "smooth" });
+        const delta =
+          window.innerHeight -
+          mathfield.current.el().getBoundingClientRect().top;
+        if (delta < 400)
+          window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+        if (delta > window.innerHeight - 30)
+          window.scrollBy({ top: -50, behavior: "smooth" });
         setShowKeyboard(true);
       } else {
         $("body").css("padding-bottom", 0);
@@ -111,7 +117,10 @@ export const MathInput = ({
   const spanRef = useRef<HTMLSpanElement | null>(null);
 
   return (
-    <div style={{ display: "flex", ...style }} id={`mq-keyboard-${idCounter.current}-container`}>
+    <div
+      style={{ display: "flex", ...style }}
+      id={`mq-keyboard-${idCounter.current}-container`}
+    >
       {!loaded && <p>Loading...</p>}
       <span
         className="react-math-keyboard-input"
@@ -122,6 +131,7 @@ export const MathInput = ({
       <MathFieldContext.Provider value={mathfield.current}>
         {showKeyboard && (
           <Keyboard
+            divisionFormat={divisionFormat}
             numericToolbarKeys={numericToolbarKeys}
             numericToolbarTabs={numericToolbarTabs}
             alphabeticToolbarKeys={alphabeticToolbarKeys}
