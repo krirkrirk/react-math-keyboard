@@ -7,11 +7,13 @@ import { MathFieldContext } from "./mathfieldContext";
 import { KeyId } from "../keyboard/keys/keys";
 import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
+
 type Props = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
   setMathfieldRef?: (mf: MathField) => void;
+  initialLatex?: string;
   setValue?: (s: string) => void;
   divisionFormat?: "fraction" | "obelus";
   style?: React.CSSProperties;
@@ -26,6 +28,7 @@ export const MathInput = ({
   setValue,
   setMathfieldRef,
   style = {},
+  initialLatex,
   rootElementId,
   divisionFormat = "fraction",
   size = "medium",
@@ -41,30 +44,13 @@ export const MathInput = ({
 
   const request = (type: "close" | "open") => {
     if (type === "close" && showKeyboardRequest.current === "open") return;
+    if (timeout.current) clearTimeout(timeout.current);
 
     showKeyboardRequest.current = type;
     const eventually = () => {
-      if (showKeyboardRequest.current === "open") {
-        if (rootElementId) {
-          $(`#${rootElementId}`).css("padding-bottom", `300px`);
-        } else {
-          $("body").css("padding-bottom", `300px`);
-        }
-        const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
-        if (delta < 400) window.scrollBy({ top: 400 - delta, behavior: "smooth" });
-        if (delta > window.innerHeight - 30) window.scrollBy({ top: -50, behavior: "smooth" });
-        setShowKeyboard(true);
-      } else {
-        if (rootElementId) {
-          $(`#${rootElementId}`).css("padding-bottom", 0);
-        } else {
-          $("body").css("padding-bottom", 0);
-        }
-        setShowKeyboard(false);
-      }
+      setShowKeyboard(showKeyboardRequest.current === "open");
       showKeyboardRequest.current = undefined;
     };
-    if (timeout.current) clearTimeout(timeout.current);
     timeout.current = setTimeout(eventually, 300);
   };
 
@@ -93,7 +79,7 @@ export const MathInput = ({
   }, []);
 
   useEffect(() => {
-    window.addEventListener("mousedown", (e) => {
+    const onMouseDown = (e: MouseEvent) => {
       if (e.target instanceof HTMLElement) {
         let isKeyboardClick = false;
         let element: HTMLElement | null = e.target;
@@ -108,10 +94,38 @@ export const MathInput = ({
           request("close");
         } else request("open");
       }
-    });
+    };
+    window.addEventListener("mousedown", onMouseDown);
+    return () => window.removeEventListener("mousedown", onMouseDown);
   }, []);
 
   const spanRef = useRef<HTMLSpanElement | null>(null);
+  const wasInitialLatexSet = useRef(false);
+  useEffect(() => {
+    if (!loaded || !initialLatex) return;
+    if (wasInitialLatexSet.current) return;
+    mathfield.current.latex(initialLatex);
+    wasInitialLatexSet.current = true;
+  }, [loaded, initialLatex]);
+
+  useEffect(() => {
+    if (showKeyboard) {
+      if (rootElementId) {
+        $(`#${rootElementId}`).css("padding-bottom", `300px`);
+      } else {
+        $("body").css("padding-bottom", `300px`);
+      }
+      const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+      if (delta < 400) window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+      if (delta > window.innerHeight - 30) window.scrollBy({ top: -50, behavior: "smooth" });
+    } else {
+      if (rootElementId) {
+        $(`#${rootElementId}`).css("padding-bottom", 0);
+      } else {
+        $("body").css("padding-bottom", 0);
+      }
+    }
+  }, [showKeyboard, rootElementId]);
 
   return (
     <div style={{ display: "flex", ...style }} id={`mq-keyboard-${idCounter.current}-container`}>

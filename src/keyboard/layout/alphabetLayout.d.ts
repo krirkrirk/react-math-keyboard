@@ -4,4 +4,4 @@ export type AlphabetLayoutProps = {
     toolbarKeys?: (KeyId | KeyProps)[];
     onSwitch?: () => void;
 };
-export declare const AlphabetLayout: ({ toolbarKeys, onSwitch }: AlphabetLayoutProps) => JSX.Element;
+export declare const AlphabetLayout: ({ toolbarKeys, onSwitch, }: AlphabetLayoutProps) => JSX.Element;

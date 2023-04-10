@@ -30,7 +30,7 @@
     "build:example": "npm run build && webpack --mode development --config webpack.docs.config.js",
     "deploy": "npm run build:example && gh-pages -d docs",
     "ghpublish": "gh-pages -d docs",
-    "declare": "dts-bundle --name react-math-keyboard --main src/index.d.ts --out ../dist/react-math-keyboard.d.ts",
+    "declare": "dts-bundle --name react-math-keyboard --main src/index.tsx --out ../dist/react-math-keyboard.d.ts",
     "prepublishOnly": "npm run declare && webpack --mode=production",
     "webpack": "webpack",
     "start": "webpack serve --mode=development --open",

@@ -61,7 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\n.scrollbar * {\n  scrollbar-width: thin;\n}\n.scrollbar * ::-webkit-scrollbar {\n  background-color: transparent;\n  height: 0.5rem;\n}\n.scrollbar * ::-webkit-scrollbar-thumb {\n  background-color: rgba(0, 0, 0, 0.2);\n  border-radius: 16px;\n}\n\n@media (min-width: 640px) {\n  .scrollbar * ::-webkit-scrollbar {\n    height: 0.8rem;\n  }\n}\n\n.cursor-pointer {\n  cursor: pointer !important;\n}\n\n/* Components */\n.react-math-keyboard-input {\n  flex-grow: 1;\n  /* width: 100%; */\n  border-radius: 4px;\n  border-color: #ccc;\n  align-items: center;\n  display: flex;\n  scroll-margin-top: 24px;\n}\n\n.react-math-keyboard-keyboard-container {\n  width: 100%;\n  padding-bottom: 0.25rem;\n  margin: 0px;\n  color: #020617;\n  background-color: #e2e8f0;\n  display: flex;\n  justify-content: center;\n  position: fixed;\n  bottom: -300px;\n  left: 0px;\n  z-index: 1310;\n  transition: bottom 300ms ease-in-out;\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\n}\n\n.react-math-keyboard-keyboard-layout {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.react-math-keyboard-numeric-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.5rem;\n  display: grid;\n  column-gap: 0.75rem;\n  grid-template-columns: 2fr 3fr 1fr;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-numeric-layout {\n    column-gap: 2.5rem;\n  }\n}\n.react-math-keyboard-alphabet-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.55rem;\n  row-gap: 0.25rem;\n  display: flex;\n  flex-direction: column;\n}\n\n.react-math-keyboard-layout-grid {\n  display: grid;\n  column-gap: 0.25rem;\n  row-gap: 0.25rem;\n  justify-content: stretch;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-layout-grid {\n    column-gap: 0.5rem;\n  }\n}\n\n.react-math-keyboard-select-container {\n  border-radius: 0.25rem;\n  /* padding-right: 0.25rem; */\n  margin-bottom: 0.25rem;\n  display: flex;\n  background-color: #f8fafc;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\n  position: relative;\n}\n.react-math-keyboard-select-container:focus-visible {\n  outline: none;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-select {\n  border: transparent;\n  border-radius: 0.25rem;\n  background-color: transparent;\n  appearance: none;\n  -webkit-appearance: none;\n  /* border-right-width: 16px; */\n  padding-left: 0.5rem;\n  /* padding-right: 0.25rem; */\n  padding-right: 1.75rem;\n  font-size: 1.1rem;\n\n}\n.react-math-keyboard-select:focus-visible {\n  outline: none;\n}\n\n.react-math-keyboard-select-arrow {\n  position: absolute;\n  transform: rotate(90deg);\n  top: 22px;\n  right: 8px;\n  pointer-events: none !important;\n}\n\n.react-math-keyboard-toolbar-container {\n  background-color: #94a3b8;\n  padding-top: 0.5rem;\n  /* align-items: center; */\n  width: 100%;\n}\n.react-math-keyboard-toolbar {\n  display: flex;\n  max-width: 768px;\n  column-gap: 0.5rem;\n  justify-content: space-between;\n  padding-right: 0.25rem;\n  margin: auto;\n}\n@media (min-width: 768px) {\n  .react-math-keyboard-toolbar {\n    min-width: 768px;\n  }\n}\n.react-math-keyboard-divider {\n  border: transparent;\n  border-top: 2px solid #64748b;\n  margin-top: 0.25rem;\n  margin-bottom: 0px;\n}\n\n.react-math-keyboard-toolbar-keys-container {\n  display: flex;\n  column-gap: 0.25rem;\n  padding-left: 0.25rem;\n  padding-right: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n\n.react-math-keyboard-key {\n  border: none;\n  cursor: pointer;\n  color: #020617;\n  height: 3rem;\n  border-radius: 0.25rem;\n  font-weight: 400;\n  font-size: 1.25rem;\n  line-height: 1.75rem;\n\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n\n  background-color: #f8fafc;\n}\n\n.react-math-keyboard-key:focus-visible {\n  outline: transparent;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-key-utility {\n  background-color: #94a3b8;\n}\n\n@media not screen and (hover: none) and (pointer: coarse) {\n  .react-math-keyboard-key:hover {\n    background-color: #cbd5e1;\n  }\n  .react-math-keyboard-key-utility:hover {\n    background-color: #64748b;\n  }\n}\n\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  /* To add in mathquil style  */\n  padding: 0.3em 0.2em !important;\n  margin: -0.3em 0.1em !important;\n}\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;AACxB;;AAEA;EACE,qBAAqB;AACvB;AACA;EACE,6BAA6B;EAC7B,cAAc;AAChB;AACA;EACE,oCAAoC;EACpC,mBAAmB;AACrB;;AAEA;EACE;IACE,cAAc;EAChB;AACF;;AAEA;EACE,0BAA0B;AAC5B;;AAEA,eAAe;AACf;EACE,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;EAClB,kBAAkB;EAClB,mBAAmB;EACnB,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,WAAW;EACX,uBAAuB;EACvB,WAAW;EACX,cAAc;EACd,yBAAyB;EACzB,aAAa;EACb,uBAAuB;EACvB,eAAe;EACf,cAAc;EACd,SAAS;EACT,aAAa;EACb,oCAAoC;EACpC,wDAAwD;AAC1D;;AAEA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;EACnB,kCAAkC;AACpC;AACA;EACE;IACE,kBAAkB;EACpB;AACF;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,oBAAoB;EACpB,gBAAgB;EAChB,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,gBAAgB;EAChB,wBAAwB;AAC1B;AACA;EACE;IACE,kBAAkB;EACpB;AACF;;AAEA;EACE,sBAAsB;EACtB,4BAA4B;EAC5B,sBAAsB;EACtB,aAAa;EACb,yBAAyB;EACzB,wCAAwC;EACxC,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,8CAA8C;AAChD;;AAEA;EACE,mBAAmB;EACnB,sBAAsB;EACtB,6BAA6B;EAC7B,gBAAgB;EAChB,wBAAwB;EACxB,8BAA8B;EAC9B,oBAAoB;EACpB,4BAA4B;EAC5B,sBAAsB;EACtB,iBAAiB;;AAEnB;AACA;EACE,aAAa;AACf;;AAEA;EACE,kBAAkB;EAClB,wBAAwB;EACxB,SAAS;EACT,UAAU;EACV,+BAA+B;AACjC;;AAEA;EACE,yBAAyB;EACzB,mBAAmB;EACnB,yBAAyB;EACzB,WAAW;AACb;AACA;EACE,aAAa;EACb,gBAAgB;EAChB,kBAAkB;EAClB,8BAA8B;EAC9B,sBAAsB;EACtB,YAAY;AACd;AACA;EACE;IACE,gBAAgB;EAClB;AACF;AACA;EACE,mBAAmB;EACnB,6BAA6B;EAC7B,mBAAmB;EACnB,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,qBAAqB;EACrB,sBAAsB;EACtB,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,cAAc;EACd,YAAY;EACZ,sBAAsB;EACtB,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;;EAEpB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB;;EAElB,yBAAyB;AAC3B;;AAEA;EACE,oBAAoB;EACpB,8CAA8C;AAChD;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE;IACE,yBAAyB;EAC3B;EACA;IACE,yBAAyB;EAC3B;AACF;;AAEA;EACE,8BAA8B;EAC9B,+BAA+B;EAC/B,+BAA+B;AACjC","sourcesContent":["* {\n  box-sizing: border-box;\n}\n\n.scrollbar * {\n  scrollbar-width: thin;\n}\n.scrollbar * ::-webkit-scrollbar {\n  background-color: transparent;\n  height: 0.5rem;\n}\n.scrollbar * ::-webkit-scrollbar-thumb {\n  background-color: rgba(0, 0, 0, 0.2);\n  border-radius: 16px;\n}\n\n@media (min-width: 640px) {\n  .scrollbar * ::-webkit-scrollbar {\n    height: 0.8rem;\n  }\n}\n\n.cursor-pointer {\n  cursor: pointer !important;\n}\n\n/* Components */\n.react-math-keyboard-input {\n  flex-grow: 1;\n  /* width: 100%; */\n  border-radius: 4px;\n  border-color: #ccc;\n  align-items: center;\n  display: flex;\n  scroll-margin-top: 24px;\n}\n\n.react-math-keyboard-keyboard-container {\n  width: 100%;\n  padding-bottom: 0.25rem;\n  margin: 0px;\n  color: #020617;\n  background-color: #e2e8f0;\n  display: flex;\n  justify-content: center;\n  position: fixed;\n  bottom: -300px;\n  left: 0px;\n  z-index: 1310;\n  transition: bottom 300ms ease-in-out;\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\n}\n\n.react-math-keyboard-keyboard-layout {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.react-math-keyboard-numeric-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.5rem;\n  display: grid;\n  column-gap: 0.75rem;\n  grid-template-columns: 2fr 3fr 1fr;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-numeric-layout {\n    column-gap: 2.5rem;\n  }\n}\n.react-math-keyboard-alphabet-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.55rem;\n  row-gap: 0.25rem;\n  display: flex;\n  flex-direction: column;\n}\n\n.react-math-keyboard-layout-grid {\n  display: grid;\n  column-gap: 0.25rem;\n  row-gap: 0.25rem;\n  justify-content: stretch;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-layout-grid {\n    column-gap: 0.5rem;\n  }\n}\n\n.react-math-keyboard-select-container {\n  border-radius: 0.25rem;\n  /* padding-right: 0.25rem; */\n  margin-bottom: 0.25rem;\n  display: flex;\n  background-color: #f8fafc;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\n  position: relative;\n}\n.react-math-keyboard-select-container:focus-visible {\n  outline: none;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-select {\n  border: transparent;\n  border-radius: 0.25rem;\n  background-color: transparent;\n  appearance: none;\n  -webkit-appearance: none;\n  /* border-right-width: 16px; */\n  padding-left: 0.5rem;\n  /* padding-right: 0.25rem; */\n  padding-right: 1.75rem;\n  font-size: 1.1rem;\n\n}\n.react-math-keyboard-select:focus-visible {\n  outline: none;\n}\n\n.react-math-keyboard-select-arrow {\n  position: absolute;\n  transform: rotate(90deg);\n  top: 22px;\n  right: 8px;\n  pointer-events: none !important;\n}\n\n.react-math-keyboard-toolbar-container {\n  background-color: #94a3b8;\n  padding-top: 0.5rem;\n  /* align-items: center; */\n  width: 100%;\n}\n.react-math-keyboard-toolbar {\n  display: flex;\n  max-width: 768px;\n  column-gap: 0.5rem;\n  justify-content: space-between;\n  padding-right: 0.25rem;\n  margin: auto;\n}\n@media (min-width: 768px) {\n  .react-math-keyboard-toolbar {\n    min-width: 768px;\n  }\n}\n.react-math-keyboard-divider {\n  border: transparent;\n  border-top: 2px solid #64748b;\n  margin-top: 0.25rem;\n  margin-bottom: 0px;\n}\n\n.react-math-keyboard-toolbar-keys-container {\n  display: flex;\n  column-gap: 0.25rem;\n  padding-left: 0.25rem;\n  padding-right: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n\n.react-math-keyboard-key {\n  border: none;\n  cursor: pointer;\n  color: #020617;\n  height: 3rem;\n  border-radius: 0.25rem;\n  font-weight: 400;\n  font-size: 1.25rem;\n  line-height: 1.75rem;\n\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n\n  background-color: #f8fafc;\n}\n\n.react-math-keyboard-key:focus-visible {\n  outline: transparent;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-key-utility {\n  background-color: #94a3b8;\n}\n\n@media not screen and (hover: none) and (pointer: coarse) {\n  .react-math-keyboard-key:hover {\n    background-color: #cbd5e1;\n  }\n  .react-math-keyboard-key-utility:hover {\n    background-color: #64748b;\n  }\n}\n\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  /* To add in mathquil style  */\n  padding: 0.3em 0.2em !important;\n  margin: -0.3em 0.1em !important;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.scrollbar * {\r\n  scrollbar-width: thin;\r\n}\r\n.scrollbar * ::-webkit-scrollbar {\r\n  background-color: transparent;\r\n  height: 0.5rem;\r\n}\r\n.scrollbar * ::-webkit-scrollbar-thumb {\r\n  background-color: rgba(0, 0, 0, 0.2);\r\n  border-radius: 16px;\r\n}\r\n\r\n@media (min-width: 640px) {\r\n  .scrollbar * ::-webkit-scrollbar {\r\n    height: 0.8rem;\r\n  }\r\n}\r\n\r\n.cursor-pointer {\r\n  cursor: pointer !important;\r\n}\r\n\r\n/* Components */\r\n.react-math-keyboard-input {\r\n  flex-grow: 1;\r\n  /* width: 100%; */\r\n  border-radius: 4px;\r\n  border-color: #ccc;\r\n  align-items: center;\r\n  display: flex;\r\n  scroll-margin-top: 24px;\r\n}\r\n\r\n.react-math-keyboard-keyboard-container {\r\n  width: 100%;\r\n  padding-bottom: 0.25rem;\r\n  margin: 0px;\r\n  color: #020617;\r\n  background-color: #e2e8f0;\r\n  display: flex;\r\n  justify-content: center;\r\n  position: fixed;\r\n  bottom: -300px;\r\n  left: 0px;\r\n  z-index: 1310;\r\n  transition: bottom 300ms ease-in-out;\r\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\r\n}\r\n\r\n.react-math-keyboard-keyboard-layout {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n.react-math-keyboard-numeric-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.5rem;\r\n  display: grid;\r\n  column-gap: 0.75rem;\r\n  grid-template-columns: 2fr 3fr 1fr;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-numeric-layout {\r\n    column-gap: 2.5rem;\r\n  }\r\n}\r\n.react-math-keyboard-alphabet-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.55rem;\r\n  row-gap: 0.25rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.react-math-keyboard-layout-grid {\r\n  display: grid;\r\n  column-gap: 0.25rem;\r\n  row-gap: 0.25rem;\r\n  justify-content: stretch;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-layout-grid {\r\n    column-gap: 0.5rem;\r\n  }\r\n}\r\n\r\n.react-math-keyboard-select-container {\r\n  border-radius: 0.25rem;\r\n  /* padding-right: 0.25rem; */\r\n  margin-bottom: 0.25rem;\r\n  display: flex;\r\n  background-color: #f8fafc;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\r\n  position: relative;\r\n}\r\n.react-math-keyboard-select-container:focus-visible {\r\n  outline: none;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-select {\r\n  border: transparent;\r\n  border-radius: 0.25rem;\r\n  background-color: transparent;\r\n  appearance: none;\r\n  -webkit-appearance: none;\r\n  /* border-right-width: 16px; */\r\n  padding-left: 0.5rem;\r\n  /* padding-right: 0.25rem; */\r\n  padding-right: 1.75rem;\r\n  font-size: 1.1rem;\r\n\r\n}\r\n.react-math-keyboard-select:focus-visible {\r\n  outline: none;\r\n}\r\n\r\n.react-math-keyboard-select-arrow {\r\n  position: absolute;\r\n  transform: rotate(90deg);\r\n  top: 22px;\r\n  right: 8px;\r\n  pointer-events: none !important;\r\n}\r\n\r\n.react-math-keyboard-toolbar-container {\r\n  background-color: #94a3b8;\r\n  padding-top: 0.5rem;\r\n  /* align-items: center; */\r\n  width: 100%;\r\n}\r\n.react-math-keyboard-toolbar {\r\n  display: flex;\r\n  max-width: 768px;\r\n  column-gap: 0.5rem;\r\n  justify-content: space-between;\r\n  padding-right: 0.25rem;\r\n  margin: auto;\r\n}\r\n@media (min-width: 768px) {\r\n  .react-math-keyboard-toolbar {\r\n    min-width: 768px;\r\n  }\r\n}\r\n.react-math-keyboard-divider {\r\n  border: transparent;\r\n  border-top: 2px solid #64748b;\r\n  margin-top: 0.25rem;\r\n  margin-bottom: 0px;\r\n}\r\n\r\n.react-math-keyboard-toolbar-keys-container {\r\n  display: flex;\r\n  column-gap: 0.25rem;\r\n  padding-left: 0.25rem;\r\n  padding-right: 0.25rem;\r\n  padding-bottom: 0.25rem;\r\n}\r\n\r\n.react-math-keyboard-key {\r\n  border: none;\r\n  cursor: pointer;\r\n  color: #020617;\r\n  height: 3rem;\r\n  border-radius: 0.25rem;\r\n  font-weight: 400;\r\n  font-size: 1.25rem;\r\n  line-height: 1.75rem;\r\n\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  position: relative;\r\n\r\n  background-color: #f8fafc;\r\n}\r\n\r\n.react-math-keyboard-key:focus-visible {\r\n  outline: transparent;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-key-utility {\r\n  background-color: #94a3b8;\r\n}\r\n\r\n@media not screen and (hover: none) and (pointer: coarse) {\r\n  .react-math-keyboard-key:hover {\r\n    background-color: #cbd5e1;\r\n  }\r\n  .react-math-keyboard-key-utility:hover {\r\n    background-color: #64748b;\r\n  }\r\n}\r\n\r\n.mq-math-mode .mq-text-mode.mq-hasCursor {\r\n  /* To add in mathquil style  */\r\n  padding: 0.3em 0.2em !important;\r\n  margin: -0.3em 0.1em !important;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;AACxB;;AAEA;EACE,qBAAqB;AACvB;AACA;EACE,6BAA6B;EAC7B,cAAc;AAChB;AACA;EACE,oCAAoC;EACpC,mBAAmB;AACrB;;AAEA;EACE;IACE,cAAc;EAChB;AACF;;AAEA;EACE,0BAA0B;AAC5B;;AAEA,eAAe;AACf;EACE,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;EAClB,kBAAkB;EAClB,mBAAmB;EACnB,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,WAAW;EACX,uBAAuB;EACvB,WAAW;EACX,cAAc;EACd,yBAAyB;EACzB,aAAa;EACb,uBAAuB;EACvB,eAAe;EACf,cAAc;EACd,SAAS;EACT,aAAa;EACb,oCAAoC;EACpC,wDAAwD;AAC1D;;AAEA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;EACnB,kCAAkC;AACpC;AACA;EACE;IACE,kBAAkB;EACpB;AACF;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,oBAAoB;EACpB,gBAAgB;EAChB,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,gBAAgB;EAChB,wBAAwB;AAC1B;AACA;EACE;IACE,kBAAkB;EACpB;AACF;;AAEA;EACE,sBAAsB;EACtB,4BAA4B;EAC5B,sBAAsB;EACtB,aAAa;EACb,yBAAyB;EACzB,wCAAwC;EACxC,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,8CAA8C;AAChD;;AAEA;EACE,mBAAmB;EACnB,sBAAsB;EACtB,6BAA6B;EAC7B,gBAAgB;EAChB,wBAAwB;EACxB,8BAA8B;EAC9B,oBAAoB;EACpB,4BAA4B;EAC5B,sBAAsB;EACtB,iBAAiB;;AAEnB;AACA;EACE,aAAa;AACf;;AAEA;EACE,kBAAkB;EAClB,wBAAwB;EACxB,SAAS;EACT,UAAU;EACV,+BAA+B;AACjC;;AAEA;EACE,yBAAyB;EACzB,mBAAmB;EACnB,yBAAyB;EACzB,WAAW;AACb;AACA;EACE,aAAa;EACb,gBAAgB;EAChB,kBAAkB;EAClB,8BAA8B;EAC9B,sBAAsB;EACtB,YAAY;AACd;AACA;EACE;IACE,gBAAgB;EAClB;AACF;AACA;EACE,mBAAmB;EACnB,6BAA6B;EAC7B,mBAAmB;EACnB,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,qBAAqB;EACrB,sBAAsB;EACtB,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,cAAc;EACd,YAAY;EACZ,sBAAsB;EACtB,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;;EAEpB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB;;EAElB,yBAAyB;AAC3B;;AAEA;EACE,oBAAoB;EACpB,8CAA8C;AAChD;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE;IACE,yBAAyB;EAC3B;EACA;IACE,yBAAyB;EAC3B;AACF;;AAEA;EACE,8BAA8B;EAC9B,+BAA+B;EAC/B,+BAA+B;AACjC","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.scrollbar * {\r\n  scrollbar-width: thin;\r\n}\r\n.scrollbar * ::-webkit-scrollbar {\r\n  background-color: transparent;\r\n  height: 0.5rem;\r\n}\r\n.scrollbar * ::-webkit-scrollbar-thumb {\r\n  background-color: rgba(0, 0, 0, 0.2);\r\n  border-radius: 16px;\r\n}\r\n\r\n@media (min-width: 640px) {\r\n  .scrollbar * ::-webkit-scrollbar {\r\n    height: 0.8rem;\r\n  }\r\n}\r\n\r\n.cursor-pointer {\r\n  cursor: pointer !important;\r\n}\r\n\r\n/* Components */\r\n.react-math-keyboard-input {\r\n  flex-grow: 1;\r\n  /* width: 100%; */\r\n  border-radius: 4px;\r\n  border-color: #ccc;\r\n  align-items: center;\r\n  display: flex;\r\n  scroll-margin-top: 24px;\r\n}\r\n\r\n.react-math-keyboard-keyboard-container {\r\n  width: 100%;\r\n  padding-bottom: 0.25rem;\r\n  margin: 0px;\r\n  color: #020617;\r\n  background-color: #e2e8f0;\r\n  display: flex;\r\n  justify-content: center;\r\n  position: fixed;\r\n  bottom: -300px;\r\n  left: 0px;\r\n  z-index: 1310;\r\n  transition: bottom 300ms ease-in-out;\r\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\r\n}\r\n\r\n.react-math-keyboard-keyboard-layout {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n.react-math-keyboard-numeric-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.5rem;\r\n  display: grid;\r\n  column-gap: 0.75rem;\r\n  grid-template-columns: 2fr 3fr 1fr;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-numeric-layout {\r\n    column-gap: 2.5rem;\r\n  }\r\n}\r\n.react-math-keyboard-alphabet-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.55rem;\r\n  row-gap: 0.25rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.react-math-keyboard-layout-grid {\r\n  display: grid;\r\n  column-gap: 0.25rem;\r\n  row-gap: 0.25rem;\r\n  justify-content: stretch;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-layout-grid {\r\n    column-gap: 0.5rem;\r\n  }\r\n}\r\n\r\n.react-math-keyboard-select-container {\r\n  border-radius: 0.25rem;\r\n  /* padding-right: 0.25rem; */\r\n  margin-bottom: 0.25rem;\r\n  display: flex;\r\n  background-color: #f8fafc;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\r\n  position: relative;\r\n}\r\n.react-math-keyboard-select-container:focus-visible {\r\n  outline: none;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-select {\r\n  border: transparent;\r\n  border-radius: 0.25rem;\r\n  background-color: transparent;\r\n  appearance: none;\r\n  -webkit-appearance: none;\r\n  /* border-right-width: 16px; */\r\n  padding-left: 0.5rem;\r\n  /* padding-right: 0.25rem; */\r\n  padding-right: 1.75rem;\r\n  font-size: 1.1rem;\r\n\r\n}\r\n.react-math-keyboard-select:focus-visible {\r\n  outline: none;\r\n}\r\n\r\n.react-math-keyboard-select-arrow {\r\n  position: absolute;\r\n  transform: rotate(90deg);\r\n  top: 22px;\r\n  right: 8px;\r\n  pointer-events: none !important;\r\n}\r\n\r\n.react-math-keyboard-toolbar-container {\r\n  background-color: #94a3b8;\r\n  padding-top: 0.5rem;\r\n  /* align-items: center; */\r\n  width: 100%;\r\n}\r\n.react-math-keyboard-toolbar {\r\n  display: flex;\r\n  max-width: 768px;\r\n  column-gap: 0.5rem;\r\n  justify-content: space-between;\r\n  padding-right: 0.25rem;\r\n  margin: auto;\r\n}\r\n@media (min-width: 768px) {\r\n  .react-math-keyboard-toolbar {\r\n    min-width: 768px;\r\n  }\r\n}\r\n.react-math-keyboard-divider {\r\n  border: transparent;\r\n  border-top: 2px solid #64748b;\r\n  margin-top: 0.25rem;\r\n  margin-bottom: 0px;\r\n}\r\n\r\n.react-math-keyboard-toolbar-keys-container {\r\n  display: flex;\r\n  column-gap: 0.25rem;\r\n  padding-left: 0.25rem;\r\n  padding-right: 0.25rem;\r\n  padding-bottom: 0.25rem;\r\n}\r\n\r\n.react-math-keyboard-key {\r\n  border: none;\r\n  cursor: pointer;\r\n  color: #020617;\r\n  height: 3rem;\r\n  border-radius: 0.25rem;\r\n  font-weight: 400;\r\n  font-size: 1.25rem;\r\n  line-height: 1.75rem;\r\n\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  position: relative;\r\n\r\n  background-color: #f8fafc;\r\n}\r\n\r\n.react-math-keyboard-key:focus-visible {\r\n  outline: transparent;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-key-utility {\r\n  background-color: #94a3b8;\r\n}\r\n\r\n@media not screen and (hover: none) and (pointer: coarse) {\r\n  .react-math-keyboard-key:hover {\r\n    background-color: #cbd5e1;\r\n  }\r\n  .react-math-keyboard-key-utility:hover {\r\n    background-color: #64748b;\r\n  }\r\n}\r\n\r\n.mq-math-mode .mq-text-mode.mq-hasCursor {\r\n  /* To add in mathquil style  */\r\n  padding: 0.3em 0.2em !important;\r\n  margin: -0.3em 0.1em !important;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53000,11 +53000,10 @@ const Example = ({}) => {
     const clear = (mathfield) => {
         mathfield.latex("");
     };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with all the keyboard keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue, setMathfieldRef: (mathfield) => (mf.current = mathfield) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: () => clear(mf.current), children: "Clear" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["Latex produced : ", value] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with no additional keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { numericToolbarKeys: [], setValue: setValue2 }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["Latex produced : ", value2] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with custom keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue3, numericToolbarKeys: [
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with all the keyboard keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue, setMathfieldRef: (mathfield) => (mf.current = mathfield) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: () => clear(mf.current), children: "Clear" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { style: { overflow: "auto" }, children: ["Latex produced : ", value] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with no additional keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { numericToolbarKeys: [], setValue: setValue2 }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["Latex produced : ", value2] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with custom keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue3, numericToolbarKeys: [
                                 "euro",
                                 {
                                     id: "custom",
-                                    keyCategory: 0,
                                     label: "wow",
                                     labelType: "raw",
                                     mathfieldInstructions: {
@@ -53014,7 +53013,6 @@ const Example = ({}) => {
                                 },
                                 {
                                     id: "custom logic",
-                                    keyCategory: 0,
                                     label: "custom logic",
                                     labelType: "raw",
                                     onClick: () => alert("Clicked!"),
@@ -53090,15 +53088,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "constantKeysIds": () => (/* binding */ constantKeysIds),
 /* harmony export */   "constantKeysProps": () => (/* binding */ constantKeysProps)
 /* harmony export */ });
-/* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
-
 const constantKeysIds = ["pi"];
 const constantKeysProps = [
     {
         id: "pi",
         label: "\\pi",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\pi",
             method: "cmd",
@@ -53108,7 +53103,6 @@ const constantKeysProps = [
         id: "infty",
         label: "\\infty",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\infty",
             method: "cmd",
@@ -53130,14 +53124,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "functionKeysProps": () => (/* binding */ functionKeysProps)
 /* harmony export */ });
-/* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
-
 const functionKeysProps = [
     {
         id: "log",
         label: "\\log",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
         mathfieldInstructions: {
             content: "\\log",
             method: "cmd",
@@ -53147,7 +53138,6 @@ const functionKeysProps = [
         id: "ln",
         label: "\\ln",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
         mathfieldInstructions: {
             content: "\\ln",
             method: "cmd",
@@ -53157,7 +53147,6 @@ const functionKeysProps = [
         id: "exp",
         label: "\\exp",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
         mathfieldInstructions: {
             content: "\\exp(",
             method: "typedText",
@@ -53167,7 +53156,6 @@ const functionKeysProps = [
         id: "epower",
         label: "e^\\square",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
         mathfieldInstructions: {
             content: "e^",
             method: "typedText",
@@ -53177,7 +53165,6 @@ const functionKeysProps = [
         id: "sin",
         label: "sin",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
         mathfieldInstructions: {
             content: "sin",
             method: "cmd",
@@ -53187,7 +53174,6 @@ const functionKeysProps = [
         id: "cos",
         label: "cos",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
         mathfieldInstructions: {
             content: "cos",
             method: "cmd",
@@ -53197,7 +53183,6 @@ const functionKeysProps = [
         id: "tan",
         label: "tan",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
         mathfieldInstructions: {
             content: "tan",
             method: "cmd",
@@ -53207,7 +53192,6 @@ const functionKeysProps = [
         id: "arccos",
         label: "cos^{-1}",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
         mathfieldInstructions: {
             content: "\\cos^{-1}",
             method: "write",
@@ -53217,7 +53201,6 @@ const functionKeysProps = [
         id: "arcsin",
         label: "sin^{-1}",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
         mathfieldInstructions: {
             content: "\\sin^{-1}",
             method: "write",
@@ -53227,7 +53210,6 @@ const functionKeysProps = [
         id: "arctan",
         label: "tan^{-1}",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
         mathfieldInstructions: {
             content: "\\tan^{-1}",
             method: "write",
@@ -53249,14 +53231,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "greekLettersKeysProps": () => (/* binding */ greekLettersKeysProps)
 /* harmony export */ });
-/* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
-
 const greekLettersKeysProps = [
     {
         id: "alpha",
         label: "\\alpha",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\alpha",
             method: "cmd",
@@ -53266,7 +53245,6 @@ const greekLettersKeysProps = [
         id: "beta",
         label: "\\beta",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\beta",
             method: "cmd",
@@ -53276,7 +53254,6 @@ const greekLettersKeysProps = [
         id: "delta",
         label: "\\delta",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\delta",
             method: "cmd",
@@ -53286,7 +53263,6 @@ const greekLettersKeysProps = [
         id: "Delta",
         label: "\\Delta",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\Delta",
             method: "cmd",
@@ -53296,7 +53272,6 @@ const greekLettersKeysProps = [
         id: "sigma",
         label: "\\sigma",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\sigma",
             method: "cmd",
@@ -53306,7 +53281,6 @@ const greekLettersKeysProps = [
         id: "theta",
         label: "\\theta",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\theta",
             method: "cmd",
@@ -53316,7 +53290,6 @@ const greekLettersKeysProps = [
         id: "tau",
         label: "\\tau",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\tau",
             method: "cmd",
@@ -53326,7 +53299,6 @@ const greekLettersKeysProps = [
         id: "phi",
         label: "\\phi",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\phi",
             method: "cmd",
@@ -53336,7 +53308,6 @@ const greekLettersKeysProps = [
         id: "Omega",
         label: "\\Omega",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\Omega",
             method: "cmd",
@@ -53346,7 +53317,6 @@ const greekLettersKeysProps = [
         id: "lambda",
         label: "\\lambda",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\lambda",
             method: "cmd",
@@ -53356,7 +53326,6 @@ const greekLettersKeysProps = [
         id: "mu",
         label: "\\mu",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\mu",
             method: "cmd",
@@ -53366,7 +53335,6 @@ const greekLettersKeysProps = [
         id: "gamma",
         label: "\\gamma",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\gamma",
             method: "cmd",
@@ -53376,7 +53344,6 @@ const greekLettersKeysProps = [
         id: "omega",
         label: "\\omega",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.constant,
         mathfieldInstructions: {
             content: "\\omega",
             method: "cmd",
@@ -53396,8 +53363,7 @@ const greekLettersKeysProps = [
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Key": () => (/* binding */ Key),
-/* harmony export */   "KeyCategory": () => (/* binding */ KeyCategory)
+/* harmony export */   "Key": () => (/* binding */ Key)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -53409,17 +53375,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var KeyCategory;
-(function (KeyCategory) {
-    KeyCategory[KeyCategory["number"] = 0] = "number";
-    KeyCategory[KeyCategory["constant"] = 1] = "constant";
-    KeyCategory[KeyCategory["utility"] = 2] = "utility";
-    KeyCategory[KeyCategory["operator"] = 3] = "operator";
-    KeyCategory[KeyCategory["function"] = 4] = "function";
-    KeyCategory[KeyCategory["text"] = 5] = "text";
-    KeyCategory[KeyCategory["letter"] = 6] = "letter";
-})(KeyCategory || (KeyCategory = {}));
-const Key = ({ id, label, labelType = "tex", keyCategory, onClick, mathfieldInstructions, fullWidth = true, }) => {
+const Key = ({ id, label, labelType = "tex", onClick, mathfieldInstructions, fullWidth = true, isUtilityKey = false, }) => {
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_mathInput_mathfieldContext__WEBPACK_IMPORTED_MODULE_3__.MathFieldContext);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         const MQ = window.MathQuill.getInterface(2);
@@ -53443,7 +53399,7 @@ const Key = ({ id, label, labelType = "tex", keyCategory, onClick, mathfieldInst
                 return label;
         }
     };
-    const bgHoverColor = keyCategory === KeyCategory.utility ? "#64748b" : "#cbd5e1";
+    const bgHoverColor = isUtilityKey ? "#64748b" : "#cbd5e1";
     const innerShadow = "shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]";
     //Event states
     const [isTouchDown, setIsTouchDown] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
@@ -53469,7 +53425,7 @@ const Key = ({ id, label, labelType = "tex", keyCategory, onClick, mathfieldInst
             }
         }
     }, []);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { className: `react-math-keyboard-key ${keyCategory === KeyCategory.utility && "react-math-keyboard-key-utility"}`, style: {
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { className: `react-math-keyboard-key ${isUtilityKey && "react-math-keyboard-key-utility"}`, style: {
             ...(fullWidth
                 ? { width: "100%" }
                 : {
@@ -53507,15 +53463,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constantKeys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constantKeys */ "./src/keyboard/keys/constantKeys.ts");
 /* harmony import */ var _functionKeys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functionKeys */ "./src/keyboard/keys/functionKeys.ts");
 /* harmony import */ var _greekLetters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./greekLetters */ "./src/keyboard/keys/greekLetters.ts");
-/* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
-/* harmony import */ var _letterKeys__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./letterKeys */ "./src/keyboard/keys/letterKeys.ts");
-/* harmony import */ var _numberKeys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./numberKeys */ "./src/keyboard/keys/numberKeys.ts");
-/* harmony import */ var _operationKeys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./operationKeys */ "./src/keyboard/keys/operationKeys.ts");
-/* harmony import */ var _ponctuationKeys__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ponctuationKeys */ "./src/keyboard/keys/ponctuationKeys.ts");
-/* harmony import */ var _setKeys__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./setKeys */ "./src/keyboard/keys/setKeys.ts");
-/* harmony import */ var _unitKeys__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./unitKeys */ "./src/keyboard/keys/unitKeys.ts");
-/* harmony import */ var _utilityKeys__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utilityKeys */ "./src/keyboard/keys/utilityKeys.tsx");
-
+/* harmony import */ var _letterKeys__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./letterKeys */ "./src/keyboard/keys/letterKeys.ts");
+/* harmony import */ var _numberKeys__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./numberKeys */ "./src/keyboard/keys/numberKeys.ts");
+/* harmony import */ var _operationKeys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./operationKeys */ "./src/keyboard/keys/operationKeys.ts");
+/* harmony import */ var _ponctuationKeys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ponctuationKeys */ "./src/keyboard/keys/ponctuationKeys.ts");
+/* harmony import */ var _setKeys__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./setKeys */ "./src/keyboard/keys/setKeys.ts");
+/* harmony import */ var _unitKeys__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./unitKeys */ "./src/keyboard/keys/unitKeys.ts");
+/* harmony import */ var _utilityKeys__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utilityKeys */ "./src/keyboard/keys/utilityKeys.tsx");
 
 
 
@@ -53527,22 +53481,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const keysProps = [
-    ..._numberKeys__WEBPACK_IMPORTED_MODULE_5__.numberKeysProps,
-    ..._letterKeys__WEBPACK_IMPORTED_MODULE_4__.minLettersKeysProps,
-    ..._letterKeys__WEBPACK_IMPORTED_MODULE_4__.majLettersKeysProps,
+    ..._numberKeys__WEBPACK_IMPORTED_MODULE_4__.numberKeysProps,
+    ..._letterKeys__WEBPACK_IMPORTED_MODULE_3__.minLettersKeysProps,
+    ..._letterKeys__WEBPACK_IMPORTED_MODULE_3__.majLettersKeysProps,
     ..._constantKeys__WEBPACK_IMPORTED_MODULE_0__.constantKeysProps,
-    ..._operationKeys__WEBPACK_IMPORTED_MODULE_6__.operationKeysProps,
+    ..._operationKeys__WEBPACK_IMPORTED_MODULE_5__.operationKeysProps,
     ..._functionKeys__WEBPACK_IMPORTED_MODULE_1__.functionKeysProps,
-    ..._utilityKeys__WEBPACK_IMPORTED_MODULE_10__.utilityKeysProps,
-    ..._setKeys__WEBPACK_IMPORTED_MODULE_8__.setKeysProps,
+    ..._utilityKeys__WEBPACK_IMPORTED_MODULE_9__.utilityKeysProps,
+    ..._setKeys__WEBPACK_IMPORTED_MODULE_7__.setKeysProps,
     ..._greekLetters__WEBPACK_IMPORTED_MODULE_2__.greekLettersKeysProps,
-    ..._unitKeys__WEBPACK_IMPORTED_MODULE_9__.unitKeysProps,
-    ..._ponctuationKeys__WEBPACK_IMPORTED_MODULE_7__.ponctuationKeysProps,
+    ..._unitKeys__WEBPACK_IMPORTED_MODULE_8__.unitKeysProps,
+    ..._ponctuationKeys__WEBPACK_IMPORTED_MODULE_6__.ponctuationKeysProps,
     {
         id: "overrightarrow",
         label: "\\overrightarrow{AB}",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_3__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "overrightarrow",
             method: "cmd",
@@ -53552,7 +53505,6 @@ const keysProps = [
         id: "space",
         label: "",
         labelType: "raw",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_3__.KeyCategory.letter,
         mathfieldInstructions: {
             content: " ",
             method: "write",
@@ -53562,7 +53514,6 @@ const keysProps = [
         id: "underscore",
         label: "u_\\square",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_3__.KeyCategory["function"],
         mathfieldInstructions: { content: "_", method: "cmd" },
     },
 ];
@@ -53588,9 +53539,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
 
 
-const LetterKey = ({ letter, isMaj = false, isInMathMode = true }) => {
+const LetterKey = ({ letter, isMaj = false, isInMathMode = true, }) => {
     const displayedLetter = isMaj ? letter.toLocaleUpperCase() : letter;
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: letter, keyCategory: _key__WEBPACK_IMPORTED_MODULE_1__.KeyCategory.letter, label: displayedLetter, labelType: isInMathMode ? "tex" : "raw", mathfieldInstructions: {
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: letter, label: displayedLetter, labelType: isInMathMode ? "tex" : "raw", mathfieldInstructions: {
             content: displayedLetter,
             method: "write",
         } }));
@@ -53613,8 +53564,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "minLettersIds": () => (/* binding */ minLettersIds),
 /* harmony export */   "minLettersKeysProps": () => (/* binding */ minLettersKeysProps)
 /* harmony export */ });
-/* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
-
 const minLettersIds = [
     "a",
     "b",
@@ -53684,7 +53633,6 @@ const majLettersIds = [
 const minLettersKeysProps = minLettersIds.map((label) => {
     return {
         id: label,
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.letter,
         label: label,
         labelType: "tex",
         mathfieldInstructions: { content: label, method: "write" },
@@ -53693,7 +53641,6 @@ const minLettersKeysProps = minLettersIds.map((label) => {
 const majLettersKeysProps = majLettersIds.map((label) => {
     return {
         id: label,
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.letter,
         label: label,
         labelType: "tex",
         mathfieldInstructions: { content: label, method: "write" },
@@ -53715,13 +53662,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "numberKeysProps": () => (/* binding */ numberKeysProps),
 /* harmony export */   "numbersIds": () => (/* binding */ numbersIds)
 /* harmony export */ });
-/* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
-
 const numbersIds = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const numberKeysProps = numbersIds.map((label) => {
     return {
         id: label,
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.number,
         label: label,
         labelType: "tex",
         mathfieldInstructions: { content: label, method: "write" },
@@ -53743,8 +53687,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "operationKeysIds": () => (/* binding */ operationKeysIds),
 /* harmony export */   "operationKeysProps": () => (/* binding */ operationKeysProps)
 /* harmony export */ });
-/* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
-
 const operationKeysIds = [
     "plus",
     "minus",
@@ -53767,7 +53709,6 @@ const operationKeysProps = [
         id: "plus",
         label: "+",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "+",
             method: "write",
@@ -53777,7 +53718,6 @@ const operationKeysProps = [
         id: "minus",
         label: "-",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "-",
             method: "write",
@@ -53787,7 +53727,6 @@ const operationKeysProps = [
         id: "times",
         label: "\\times",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "\\times",
             method: "cmd",
@@ -53797,7 +53736,6 @@ const operationKeysProps = [
         id: "frac",
         label: "\\div",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "/",
             method: "cmd",
@@ -53807,7 +53745,6 @@ const operationKeysProps = [
         id: "sqrt",
         label: "\\sqrt{\\ }",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "\\sqrt",
             method: "cmd",
@@ -53817,28 +53754,24 @@ const operationKeysProps = [
         id: "square",
         label: "\\square^2",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: { content: "^2", method: "write" },
     },
     {
         id: "cube",
         label: "x^3",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: { content: "^3 ", method: "write" },
     },
     {
         id: "power",
         label: "x^\\square",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: { content: "^", method: "cmd" },
     },
     {
         id: "leftParenthesis",
         label: "(",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "(",
             method: "typedText",
@@ -53848,7 +53781,6 @@ const operationKeysProps = [
         id: "rightParenthesis",
         label: ")",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: ")",
             method: "typedText",
@@ -53858,7 +53790,6 @@ const operationKeysProps = [
         id: "equal",
         label: "=",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "=",
             method: "write",
@@ -53868,7 +53799,6 @@ const operationKeysProps = [
         id: "comma",
         label: "{,}",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: ",",
             method: "write",
@@ -53878,7 +53808,6 @@ const operationKeysProps = [
         id: "dot",
         label: ".",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: ".",
             method: "write",
@@ -53888,7 +53817,6 @@ const operationKeysProps = [
         id: "obelus",
         label: "\\div",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "\\div",
             method: "write",
@@ -53898,7 +53826,6 @@ const operationKeysProps = [
         id: "percent",
         label: "\\%",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "%",
             method: "write",
@@ -53908,7 +53835,6 @@ const operationKeysProps = [
         id: "semicolon",
         label: ";",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: ";",
             method: "write",
@@ -53930,15 +53856,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ponctuationKeysProps": () => (/* binding */ ponctuationKeysProps)
 /* harmony export */ });
-/* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
-
 const ponctuationKeys = ['"', "'", "-", "€"];
 const ponctuationKeysProps = [
     {
         id: "guillemet",
         label: '"',
         labelType: "raw",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: '"',
             method: "write",
@@ -53948,7 +53871,6 @@ const ponctuationKeysProps = [
         id: "quote",
         label: "'",
         labelType: "raw",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "'",
             method: "write",
@@ -53958,7 +53880,6 @@ const ponctuationKeysProps = [
         id: "hyphen",
         label: "-",
         labelType: "raw",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "-",
             method: "write",
@@ -53968,7 +53889,6 @@ const ponctuationKeysProps = [
         id: "euro",
         label: "€",
         labelType: "raw",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "€",
             method: "write",
@@ -53990,14 +53910,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "setKeysProps": () => (/* binding */ setKeysProps)
 /* harmony export */ });
-/* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
-
 const setKeysProps = [
     {
         id: "cap",
         label: "\\cap",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "cap",
             method: "cmd",
@@ -54007,7 +53924,6 @@ const setKeysProps = [
         id: "cup",
         label: "\\cup",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "cup",
             method: "cmd",
@@ -54017,7 +53933,6 @@ const setKeysProps = [
         id: "lbrace",
         label: "\\lbrace",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "{",
             method: "typedText",
@@ -54027,7 +53942,6 @@ const setKeysProps = [
         id: "rbrace",
         label: "\\rbrace",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "}",
             method: "typedText",
@@ -54037,27 +53951,24 @@ const setKeysProps = [
         id: "lbracket",
         label: "[",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "[",
-            method: "typedText",
+            method: "write",
         },
     },
     {
         id: "rbracket",
         label: "]",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "]",
-            method: "typedText",
+            method: "write",
         },
     },
     {
         id: "emptyset",
         label: "\\emptyset",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "\\emptyset",
             method: "cmd",
@@ -54067,7 +53978,6 @@ const setKeysProps = [
         id: "naturals",
         label: "\\mathbb{N}",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "\\mathbb{N}",
             method: "write",
@@ -54077,7 +53987,6 @@ const setKeysProps = [
         id: "integers",
         label: "\\mathbb{Z}",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "\\mathbb{Z}",
             method: "write",
@@ -54087,7 +53996,6 @@ const setKeysProps = [
         id: "rationals",
         label: "\\mathbb{Q}",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "\\mathbb{Q}",
             method: "write",
@@ -54097,7 +54005,6 @@ const setKeysProps = [
         id: "reals",
         label: "\\mathbb{R}",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "\\mathbb{R}",
             method: "write",
@@ -54107,7 +54014,6 @@ const setKeysProps = [
         id: "complex",
         label: "\\mathbb{C}",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "\\mathbb{C}",
             method: "write",
@@ -54117,7 +54023,6 @@ const setKeysProps = [
         id: "ast",
         label: "\\square^\\ast",
         labelType: "tex",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "^\\ast",
             method: "write",
@@ -54139,14 +54044,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "unitKeysProps": () => (/* binding */ unitKeysProps)
 /* harmony export */ });
-/* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
-
 const unitKeysProps = [
     {
         id: "°",
         label: "°",
         labelType: "raw",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
         mathfieldInstructions: {
             content: "°",
             method: "write",
@@ -54170,40 +54072,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "utilityKeysProps": () => (/* binding */ utilityKeysProps)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _key__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./key */ "./src/keyboard/keys/key.tsx");
-
 
 const utilityKeysIds = ["left", "right", "del"];
 const utilityKeysProps = [
     {
         id: "left",
-        label: ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", { xmlns: 'http://www.w3.org/2000/svg', width: '20', height: '20', fill: 'currentColor', className: 'bi bi-chevron-left', viewBox: '0 0 16 16', children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { fillRule: 'evenodd', d: 'M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z' }) })),
+        label: ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", { xmlns: "http://www.w3.org/2000/svg", width: "20", height: "20", fill: "currentColor", className: "bi bi-chevron-left", viewBox: "0 0 16 16", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { fillRule: "evenodd", d: "M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" }) })),
         labelType: "svg",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_1__.KeyCategory.utility,
         mathfieldInstructions: {
             content: "Left",
             method: "keystroke",
         },
+        isUtilityKey: true,
     },
     {
         id: "right",
-        label: ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", { xmlns: 'http://www.w3.org/2000/svg', width: '20', height: '20', fill: 'currentColor', className: 'bi bi-chevron-right', viewBox: '0 0 16 16', children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { fillRule: 'evenodd', d: 'M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z' }) })),
+        label: ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", { xmlns: "http://www.w3.org/2000/svg", width: "20", height: "20", fill: "currentColor", className: "bi bi-chevron-right", viewBox: "0 0 16 16", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { fillRule: "evenodd", d: "M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" }) })),
         labelType: "svg",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_1__.KeyCategory.utility,
         mathfieldInstructions: {
             content: "Right",
             method: "keystroke",
         },
+        isUtilityKey: true,
     },
     {
         id: "del",
-        label: ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", { xmlns: 'http://www.w3.org/2000/svg', width: '20', height: '20', fill: 'currentColor', className: 'bi bi-backspace', viewBox: '0 0 16 16', children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { d: 'M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z' }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { d: 'M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z' })] })),
+        label: ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", { xmlns: "http://www.w3.org/2000/svg", width: "20", height: "20", fill: "currentColor", className: "bi bi-backspace", viewBox: "0 0 16 16", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { d: "M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { d: "M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z" })] })),
         labelType: "svg",
-        keyCategory: _key__WEBPACK_IMPORTED_MODULE_1__.KeyCategory.utility,
         mathfieldInstructions: {
             content: "Backspace",
             method: "keystroke",
         },
+        isUtilityKey: true,
     },
 ];
 
@@ -54239,9 +54139,20 @@ const rows = [
     ["q", "s", "d", "f", "g", "h", "j", "k", "l", "m"],
     ["w", "x", "c", "v", "b", "n"],
 ];
-const minToolbarKeys = ["é", "è", "à", "ù", "ç", "ô", "hyphen", "quote", "guillemet", "euro"];
+const minToolbarKeys = [
+    "é",
+    "è",
+    "à",
+    "ù",
+    "ç",
+    "ô",
+    "hyphen",
+    "quote",
+    "guillemet",
+    "euro",
+];
 const majToolbarKeys = ["É", "È", "Ç", "À"];
-const AlphabetLayout = ({ toolbarKeys = [], onSwitch }) => {
+const AlphabetLayout = ({ toolbarKeys = [], onSwitch, }) => {
     const [isMaj, setIsMaj] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const onMaj = () => {
         setIsMaj((prev) => !prev);
@@ -54250,7 +54161,11 @@ const AlphabetLayout = ({ toolbarKeys = [], onSwitch }) => {
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         setShownToolbarKeys(isMaj ? majToolbarKeys : minToolbarKeys);
     }, [isMaj]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-keyboard-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_toolbar_toolbar__WEBPACK_IMPORTED_MODULE_5__.Toolbar, { keys: shownToolbarKeys }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-alphabet-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "repeat(10, minmax(0,1fr))", gap: "0.25rem" }, children: [rows[0].map((letter) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_letterKey__WEBPACK_IMPORTED_MODULE_4__.LetterKey, { letter: letter, isInMathMode: false, isMaj: isMaj }, letter))), rows[1].map((letter) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_letterKey__WEBPACK_IMPORTED_MODULE_4__.LetterKey, { letter: letter, isInMathMode: false, isMaj: isMaj }, letter))), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { gridColumn: "span 2" }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { id: "maj", label: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", { xmlns: "http://www.w3.org/2000/svg", width: "20", height: "20", fill: "currentColor", className: "bi bi-shift", viewBox: "0 0 16 16", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { d: "M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816L7.27 2.047zM14.346 9.5 8 2.731 1.654 9.5H4.5a1 1 0 0 1 1 1v3h5v-3a1 1 0 0 1 1-1h2.846z" }) }), labelType: "svg", keyCategory: _keys_key__WEBPACK_IMPORTED_MODULE_2__.KeyCategory.utility, onClick: onMaj }) }), rows[2].map((letter) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_letterKey__WEBPACK_IMPORTED_MODULE_4__.LetterKey, { letter: letter, isInMathMode: false, isMaj: isMaj }, letter))), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("comma") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("dot") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: "flex", columnGap: "0.25rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { flexGrow: 1 }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { id: "switch", label: "123", labelType: "raw", keyCategory: _keys_key__WEBPACK_IMPORTED_MODULE_2__.KeyCategory.utility, onClick: onSwitch }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { flexGrow: 0.5 }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("left") }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { flexGrow: 4 }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("space") }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { flexGrow: 0.5 }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("right") }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { flexGrow: 1 }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("del") }) })] })] })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-keyboard-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_toolbar_toolbar__WEBPACK_IMPORTED_MODULE_5__.Toolbar, { keys: shownToolbarKeys }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-alphabet-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: {
+                            display: "grid",
+                            gridTemplateColumns: "repeat(10, minmax(0,1fr))",
+                            gap: "0.25rem",
+                        }, children: [rows[0].map((letter) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_letterKey__WEBPACK_IMPORTED_MODULE_4__.LetterKey, { letter: letter, isInMathMode: false, isMaj: isMaj }, letter))), rows[1].map((letter) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_letterKey__WEBPACK_IMPORTED_MODULE_4__.LetterKey, { letter: letter, isInMathMode: false, isMaj: isMaj }, letter))), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { gridColumn: "span 2" }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { id: "maj", label: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", { xmlns: "http://www.w3.org/2000/svg", width: "20", height: "20", fill: "currentColor", className: "bi bi-shift", viewBox: "0 0 16 16", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { d: "M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816L7.27 2.047zM14.346 9.5 8 2.731 1.654 9.5H4.5a1 1 0 0 1 1 1v3h5v-3a1 1 0 0 1 1-1h2.846z" }) }), labelType: "svg", onClick: onMaj, isUtilityKey: true }) }), rows[2].map((letter) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_letterKey__WEBPACK_IMPORTED_MODULE_4__.LetterKey, { letter: letter, isInMathMode: false, isMaj: isMaj }, letter))), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("comma") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("dot") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: "flex", columnGap: "0.25rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { flexGrow: 1 }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { id: "switch", label: "123", labelType: "raw", onClick: onSwitch, isUtilityKey: true }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { flexGrow: 0.5 }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("left") }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { flexGrow: 4 }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("space") }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { flexGrow: 0.5 }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("right") }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { flexGrow: 1 }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get("del") }) })] })] })] }));
 };
 
 
@@ -54280,7 +54195,7 @@ const NumericLayout = ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, }) 
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-keyboard-layout", children: [!hideToolbar && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_toolbar_toolbar__WEBPACK_IMPORTED_MODULE_3__.Toolbar, { keys: toolbarKeys, tabs: toolbarTabs }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-numeric-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: {
                             gridTemplateColumns: "repeat(2, minmax(0,1fr))",
                             flexGrow: 1,
-                        }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("leftParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("rightParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("times") }), divisionFormat === "fraction" ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("frac") })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("obelus") })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("sqrt") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("square") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: "switch", label: "abc", labelType: "raw", keyCategory: _keys_key__WEBPACK_IMPORTED_MODULE_1__.KeyCategory.utility, onClick: onSwitch }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("power") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: {
+                        }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("leftParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("rightParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("times") }), divisionFormat === "fraction" ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("frac") })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("obelus") })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("sqrt") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("square") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: "switch", label: "abc", labelType: "raw", onClick: onSwitch, isUtilityKey: true }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("power") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: {
                             gridTemplateColumns: "repeat(3, minmax(0,1fr))",
                             flexGrow: 2,
                         }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("7") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("8") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("9") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("4") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("5") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("6") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("1") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("2") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("3") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("left") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("0") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("right") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: {
@@ -54353,8 +54268,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "defaultTabs": () => (/* binding */ defaultTabs),
 /* harmony export */   "toolbarTabs": () => (/* binding */ toolbarTabs)
 /* harmony export */ });
-/* harmony import */ var _keys_key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../keys/key */ "./src/keyboard/keys/key.tsx");
-
 const toolbarTabs = [
     {
         id: "polynomial",
@@ -54427,7 +54340,6 @@ const toolbarTabs = [
                 id: "un",
                 label: "u_n",
                 labelType: "tex",
-                keyCategory: _keys_key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
                 mathfieldInstructions: {
                     content: "u_n",
                     method: "write",
@@ -54437,7 +54349,6 @@ const toolbarTabs = [
                 id: "unplus1",
                 label: "u_{n+1}",
                 labelType: "tex",
-                keyCategory: _keys_key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory["function"],
                 mathfieldInstructions: {
                     content: "u_{n+1}",
                     method: "write",
@@ -54487,7 +54398,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, style = {}, divisionFormat = "fraction", size = "medium", }) => {
+const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, style = {}, initialLatex, rootElementId, divisionFormat = "fraction", size = "medium", }) => {
     const [loaded, setLoaded] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const [showKeyboard, setShowKeyboard] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)({});
@@ -54496,26 +54407,13 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
     const request = (type) => {
         if (type === "close" && showKeyboardRequest.current === "open")
             return;
-        showKeyboardRequest.current = type;
-        const eventually = () => {
-            if (showKeyboardRequest.current === "open") {
-                jquery__WEBPACK_IMPORTED_MODULE_2___default()("body").css("padding-bottom", `300px`);
-                const delta = window.innerHeight -
-                    mathfield.current.el().getBoundingClientRect().top;
-                if (delta < 400)
-                    window.scrollBy({ top: 400 - delta, behavior: "smooth" });
-                if (delta > window.innerHeight - 30)
-                    window.scrollBy({ top: -50, behavior: "smooth" });
-                setShowKeyboard(true);
-            }
-            else {
-                jquery__WEBPACK_IMPORTED_MODULE_2___default()("body").css("padding-bottom", 0);
-                setShowKeyboard(false);
-            }
-            showKeyboardRequest.current = undefined;
-        };
         if (timeout.current)
             clearTimeout(timeout.current);
+        showKeyboardRequest.current = type;
+        const eventually = () => {
+            setShowKeyboard(showKeyboardRequest.current === "open");
+            showKeyboardRequest.current = undefined;
+        };
         timeout.current = setTimeout(eventually, 300);
     };
     const idCounter = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(0);
@@ -54532,13 +54430,6 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
             },
         });
         idCounter.current = MQ(spanRef.current).id;
-        // const mf = MQ.MathField($(`#mq-keyboard-${id.current}-field`)[0], {
-        //   handlers: {
-        //     edit: function () {
-        //       setValue?.(mf.latex());
-        //     },
-        //   },
-        // }) as MathField;
         mathfield.current = mf;
         const textarea = mf.el().querySelector("textarea");
         react_device_detect__WEBPACK_IMPORTED_MODULE_3__.isMobile && textarea?.setAttribute("readonly", "readonly");
@@ -54549,7 +54440,7 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
         setLoaded(true);
     }, []);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-        window.addEventListener("mousedown", (e) => {
+        const onMouseDown = (e) => {
             if (e.target instanceof HTMLElement) {
                 let isKeyboardClick = false;
                 let element = e.target;
@@ -54566,9 +54457,43 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
                 else
                     request("open");
             }
-        });
+        };
+        window.addEventListener("mousedown", onMouseDown);
+        return () => window.removeEventListener("mousedown", onMouseDown);
     }, []);
     const spanRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
+    const wasInitialLatexSet = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(false);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        if (!loaded || !initialLatex)
+            return;
+        if (wasInitialLatexSet.current)
+            return;
+        mathfield.current.latex(initialLatex);
+        wasInitialLatexSet.current = true;
+    }, [loaded, initialLatex]);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        if (showKeyboard) {
+            if (rootElementId) {
+                jquery__WEBPACK_IMPORTED_MODULE_2___default()(`#${rootElementId}`).css("padding-bottom", `300px`);
+            }
+            else {
+                jquery__WEBPACK_IMPORTED_MODULE_2___default()("body").css("padding-bottom", `300px`);
+            }
+            const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+            if (delta < 400)
+                window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+            if (delta > window.innerHeight - 30)
+                window.scrollBy({ top: -50, behavior: "smooth" });
+        }
+        else {
+            if (rootElementId) {
+                jquery__WEBPACK_IMPORTED_MODULE_2___default()(`#${rootElementId}`).css("padding-bottom", 0);
+            }
+            else {
+                jquery__WEBPACK_IMPORTED_MODULE_2___default()("body").css("padding-bottom", 0);
+            }
+        }
+    }, [showKeyboard, rootElementId]);
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: "flex", ...style }, id: `mq-keyboard-${idCounter.current}-container`, children: [!loaded && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "Loading..." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "react-math-keyboard-input", style: { padding: size === "small" ? "8px 4px" : "12px 6px" }, id: `mq-keyboard-${idCounter.current}-field`, ref: spanRef }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mathfieldContext__WEBPACK_IMPORTED_MODULE_5__.MathFieldContext.Provider, { value: mathfield.current, children: showKeyboard && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keyboard_keyboard__WEBPACK_IMPORTED_MODULE_4__.Keyboard, { divisionFormat: divisionFormat, numericToolbarKeys: numericToolbarKeys, numericToolbarTabs: numericToolbarTabs, alphabeticToolbarKeys: alphabeticToolbarKeys })) })] }));
 };
 
