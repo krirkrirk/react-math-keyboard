@@ -3,7 +3,7 @@ import { MathField } from "../types/types";
 import { KeyId } from "../keyboard/keys/keys";
 import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
-type Props = {
+export type MathInputProps = {
     numericToolbarKeys?: (KeyId | KeyProps)[];
     numericToolbarTabs?: ToolbarTabIds[];
     alphabeticToolbarKeys?: (KeyId | KeyProps)[];
@@ -15,5 +15,4 @@ type Props = {
     size?: "small" | "medium";
     rootElementId?: string;
 };
-export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, style, initialLatex, rootElementId, divisionFormat, size, }: Props) => JSX.Element;
-export {};
+export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, style, initialLatex, rootElementId, divisionFormat, size, }: MathInputProps) => JSX.Element;

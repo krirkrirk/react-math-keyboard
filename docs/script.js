@@ -53392,7 +53392,7 @@ const Key = ({ id, label, labelType = "tex", onClick, mathfieldInstructions, ful
     const renderLabel = () => {
         switch (labelType) {
             case "raw":
-                return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { id: `mq-keyboard-${mathfield.id}-rawkey-${id}`, children: label }));
+                return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { id: `mq-keyboard-${mathfield.id}-rawkey-${id}`, children: label });
             case "tex":
                 return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { id: `mq-keyboard-${mathfield.id}-key-${id}`, onClick: (e) => e.stopPropagation(), className: "cursor-pointer", children: label }));
             case "svg":
@@ -53436,9 +53436,7 @@ const Key = ({ id, label, labelType = "tex", onClick, mathfieldInstructions, ful
                 }),
             ...(isTouchDown && { backgroundColor: bgHoverColor }),
             ...(isClicked && { boxShadow: "inset 0 2px 4px rgba(0, 0, 0, 0.2)" }),
-            ...(labelType === "raw" || labelType === "svg"
-                ? { paddingTop: 0 }
-                : { paddingTop: "0.25rem" }),
+            ...(labelType === "raw" || labelType === "svg" ? { paddingTop: 0 } : { paddingTop: "0.25rem" }),
         }, ref: ref, id: `mq-keyboard-${mathfield.id}-button-key-${id}`, onMouseDown: onMouseDown, onMouseUp: () => setIsClicked(false), onMouseLeave: () => {
             if (!isClicked)
                 return;
