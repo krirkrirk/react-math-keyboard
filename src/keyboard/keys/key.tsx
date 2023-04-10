@@ -1,13 +1,6 @@
-import React, {
-  ReactNode,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { ReactNode, useContext, useEffect, useRef, useState } from "react";
 import $ from "jquery";
 
-import { isMobile } from "react-device-detect";
 import { MathField, MathfieldInstructions } from "../../types/types";
 import { MathFieldContext } from "../../mathInput/mathfieldContext";
 
@@ -47,11 +40,7 @@ export const Key = ({
   const renderLabel = (): ReactNode => {
     switch (labelType) {
       case "raw":
-        return (
-          <p id={`mq-keyboard-${mathfield.id}-rawkey-${id}`}>
-            {label as string}
-          </p>
-        );
+        return <p id={`mq-keyboard-${mathfield.id}-rawkey-${id}`}>{label as string}</p>;
       case "tex":
         return (
           <span
@@ -99,9 +88,7 @@ export const Key = ({
   }, []);
   return (
     <button
-      className={`react-math-keyboard-key ${
-        isUtilityKey && "react-math-keyboard-key-utility"
-      }`}
+      className={`react-math-keyboard-key ${isUtilityKey && "react-math-keyboard-key-utility"}`}
       style={{
         ...(fullWidth
           ? { width: "100%" }
@@ -113,9 +100,7 @@ export const Key = ({
             }),
         ...(isTouchDown && { backgroundColor: bgHoverColor }),
         ...(isClicked && { boxShadow: "inset 0 2px 4px rgba(0, 0, 0, 0.2)" }),
-        ...(labelType === "raw" || labelType === "svg"
-          ? { paddingTop: 0 }
-          : { paddingTop: "0.25rem" }),
+        ...(labelType === "raw" || labelType === "svg" ? { paddingTop: 0 } : { paddingTop: "0.25rem" }),
       }}
       ref={ref}
       id={`mq-keyboard-${mathfield.id}-button-key-${id}`}

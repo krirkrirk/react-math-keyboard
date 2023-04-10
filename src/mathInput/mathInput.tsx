@@ -8,7 +8,7 @@ import { KeyId } from "../keyboard/keys/keys";
 import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 
-type Props = {
+export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
@@ -32,7 +32,7 @@ export const MathInput = ({
   rootElementId,
   divisionFormat = "fraction",
   size = "medium",
-}: Props) => {
+}: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
 
   const [showKeyboard, setShowKeyboard] = useState(false);
