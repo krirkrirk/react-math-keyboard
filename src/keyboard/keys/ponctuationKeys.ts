@@ -1,4 +1,4 @@
-import { KeyCategory, KeyProps } from "./key";
+import { KeyProps } from "./key";
 
 const ponctuationKeys = ['"', "'", "-", "€"];
 
@@ -7,7 +7,7 @@ export const ponctuationKeysProps: Array<KeyProps> = [
     id: "guillemet",
     label: '"',
     labelType: "raw",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: '"',
       method: "write",
@@ -17,7 +17,7 @@ export const ponctuationKeysProps: Array<KeyProps> = [
     id: "quote",
     label: "'",
     labelType: "raw",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "'",
       method: "write",
@@ -27,7 +27,7 @@ export const ponctuationKeysProps: Array<KeyProps> = [
     id: "hyphen",
     label: "-",
     labelType: "raw",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "-",
       method: "write",
@@ -37,7 +37,7 @@ export const ponctuationKeysProps: Array<KeyProps> = [
     id: "euro",
     label: "€",
     labelType: "raw",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "€",
       method: "write",

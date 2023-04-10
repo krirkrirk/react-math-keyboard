@@ -1,11 +1,11 @@
-import { KeyCategory, KeyProps } from "./key";
+import { KeyProps } from "./key";
 
 export const operationKeysIds = [
   "plus",
   "minus",
   "times",
   "frac",
-  "div",
+  "obelus",
   "sqrt",
   "cube",
   "power",
@@ -14,7 +14,6 @@ export const operationKeysIds = [
   "rightParenthesis",
   "equal",
   "comma",
-  "obele",
   "semicolon",
   "dot",
 ];
@@ -23,7 +22,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "plus",
     label: "+",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "+",
       method: "write",
@@ -33,7 +32,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "minus",
     label: "-",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "-",
       method: "write",
@@ -43,7 +42,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "times",
     label: "\\times",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "\\times",
       method: "cmd",
@@ -53,7 +52,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "frac",
     label: "\\div",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "/",
       method: "cmd",
@@ -63,7 +62,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "sqrt",
     label: "\\sqrt{\\ }",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "\\sqrt",
       method: "cmd",
@@ -73,21 +72,21 @@ export const operationKeysProps: KeyProps[] = [
     id: "square",
     label: "\\square^2",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: { content: "^2", method: "write" },
   },
   {
     id: "cube",
     label: "x^3",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: { content: "^3 ", method: "write" },
   },
   {
     id: "power",
     label: "x^\\square",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: { content: "^", method: "cmd" },
   },
 
@@ -95,7 +94,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "leftParenthesis",
     label: "(",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "(",
       method: "typedText",
@@ -105,7 +104,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "rightParenthesis",
     label: ")",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: ")",
       method: "typedText",
@@ -115,7 +114,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "equal",
     label: "=",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "=",
       method: "write",
@@ -125,7 +124,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "comma",
     label: "{,}",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: ",",
       method: "write",
@@ -135,17 +134,17 @@ export const operationKeysProps: KeyProps[] = [
     id: "dot",
     label: ".",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: ".",
       method: "write",
     },
   },
   {
-    id: "obele",
+    id: "obelus",
     label: "\\div",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "\\div",
       method: "write",
@@ -155,7 +154,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "percent",
     label: "\\%",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "%",
       method: "write",
@@ -165,7 +164,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "semicolon",
     label: ";",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: ";",
       method: "write",

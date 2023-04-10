@@ -1,4 +1,4 @@
-import { KeyCategory, KeyProps } from "../keys/key";
+import { KeyProps } from "../keys/key";
 import { KeyId } from "../keys/keys";
 
 export type ToolbarTab = {
@@ -8,21 +8,27 @@ export type ToolbarTab = {
   keys: (KeyId | KeyProps)[];
 };
 
-export type ToolbarTabIds = "trigo" | "greek" | "sets" | "sequences" | "functions" | "polynomial";
+export type ToolbarTabIds =
+  | "trigo"
+  | "greek"
+  | "sets"
+  | "sequences"
+  | "functions"
+  | "polynomial";
 
 export const toolbarTabs: ToolbarTab[] = [
   {
     id: "polynomial",
     label: "x^n",
     rawLabel: "x",
-    keys: ["x", "equal", "power", "cube", "y", "t", "n", "z"],
+    keys: ["x", "equal", "percent", "cube", "y", "t", "n", "z"],
   },
   {
     id: "functions",
     label: "f(x)",
     rawLabel: "f(x)",
 
-    keys: ["exp", "ln", "log", "epower"],
+    keys: ["exp", "ln", "log", "epower", "quote"],
   },
 
   {
@@ -57,7 +63,23 @@ export const toolbarTabs: ToolbarTab[] = [
     id: "sets",
     label: "\\{ ; \\}",
     rawLabel: "{... ; ...}",
-    keys: ["cap", "cup", "lbrace", "rbrace", "lbracket", "rbracket", "semicolon", "infty", "emptyset"],
+    keys: [
+      "cap",
+      "cup",
+      "lbrace",
+      "rbrace",
+      "lbracket",
+      "rbracket",
+      "semicolon",
+      "infty",
+      "emptyset",
+      "naturals",
+      "integers",
+      "rationals",
+      "reals",
+      "complex",
+      "ast",
+    ],
   },
   {
     id: "sequences",
@@ -70,7 +92,6 @@ export const toolbarTabs: ToolbarTab[] = [
         id: "un",
         label: "u_n",
         labelType: "tex",
-        keyCategory: KeyCategory.function,
         mathfieldInstructions: {
           content: "u_n",
           method: "write",
@@ -80,12 +101,12 @@ export const toolbarTabs: ToolbarTab[] = [
         id: "unplus1",
         label: "u_{n+1}",
         labelType: "tex",
-        keyCategory: KeyCategory.function,
         mathfieldInstructions: {
           content: "u_{n+1}",
           method: "write",
         },
       } as KeyProps,
+      "u",
       "v",
       "w",
       "z",
@@ -93,4 +114,11 @@ export const toolbarTabs: ToolbarTab[] = [
   },
 ];
 
-export const defaultTabs: ToolbarTabIds[] = ["polynomial", "sets", "trigo", "functions", "greek", "sequences"];
+export const defaultTabs: ToolbarTabIds[] = [
+  "polynomial",
+  "sets",
+  "trigo",
+  "functions",
+  "greek",
+  "sequences",
+];

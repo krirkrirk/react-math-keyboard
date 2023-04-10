@@ -61,7 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.scrollbar * {\r\n  scrollbar-width: thin;\r\n}\r\n.scrollbar * ::-webkit-scrollbar {\r\n  background-color: transparent;\r\n  height: 0.5rem;\r\n}\r\n.scrollbar * ::-webkit-scrollbar-thumb {\r\n  background-color: rgba(0, 0, 0, 0.2);\r\n  border-radius: 16px;\r\n}\r\n\r\n@media (min-width: 640px) {\r\n  .scrollbar * ::-webkit-scrollbar {\r\n    height: 0.8rem;\r\n  }\r\n}\r\n\r\n.cursor-pointer {\r\n  cursor: pointer !important;\r\n}\r\n\r\n/* Components */\r\n.react-math-keyboard-input {\r\n  flex-grow: 1;\r\n  /* width: 100%; */\r\n  border-radius: 4px;\r\n  border-color: #ccc;\r\n  align-items: center;\r\n  display: flex;\r\n  scroll-margin-top: 24px;\r\n}\r\n\r\n.react-math-keyboard-keyboard-container {\r\n  width: 100%;\r\n  padding-bottom: 0.25rem;\r\n  margin: 0px;\r\n  color: #020617;\r\n  background-color: #e2e8f0;\r\n  display: flex;\r\n  justify-content: center;\r\n  position: fixed;\r\n  bottom: -300px;\r\n  left: 0px;\r\n  z-index: 1310;\r\n  transition: bottom 300ms ease-in-out;\r\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\r\n}\r\n\r\n.react-math-keyboard-keyboard-layout {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n.react-math-keyboard-numeric-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.5rem;\r\n  display: grid;\r\n  column-gap: 0.75rem;\r\n  grid-template-columns: 2fr 3fr 1fr;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-numeric-layout {\r\n    column-gap: 2.5rem;\r\n  }\r\n}\r\n.react-math-keyboard-alphabet-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.55rem;\r\n  row-gap: 0.25rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.react-math-keyboard-layout-grid {\r\n  display: grid;\r\n  column-gap: 0.25rem;\r\n  row-gap: 0.25rem;\r\n  justify-content: stretch;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-layout-grid {\r\n    column-gap: 0.5rem;\r\n  }\r\n}\r\n\r\n.react-math-keyboard-select-container {\r\n  border-radius: 0.25rem;\r\n  /* padding-right: 0.25rem; */\r\n  margin-bottom: 0.25rem;\r\n  display: flex;\r\n  background-color: #f8fafc;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\r\n  position: relative;\r\n}\r\n.react-math-keyboard-select-container:focus-visible {\r\n  outline: none;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-select {\r\n  border: transparent;\r\n  border-radius: 0.25rem;\r\n  background-color: transparent;\r\n  appearance: none;\r\n  -webkit-appearance: none;\r\n  /* border-right-width: 16px; */\r\n  padding-left: 0.5rem;\r\n  /* padding-right: 0.25rem; */\r\n  padding-right: 1.75rem;\r\n  font-size: 1.1rem;\r\n\r\n}\r\n.react-math-keyboard-select:focus-visible {\r\n  outline: none;\r\n}\r\n\r\n.react-math-keyboard-select-arrow {\r\n  position: absolute;\r\n  transform: rotate(90deg);\r\n  top: 22px;\r\n  right: 8px;\r\n  pointer-events: none !important;\r\n}\r\n\r\n.react-math-keyboard-toolbar-container {\r\n  background-color: #94a3b8;\r\n  padding-top: 0.5rem;\r\n  /* align-items: center; */\r\n  width: 100%;\r\n}\r\n.react-math-keyboard-toolbar {\r\n  display: flex;\r\n  max-width: 768px;\r\n  column-gap: 0.5rem;\r\n  justify-content: space-between;\r\n  padding-right: 0.25rem;\r\n  margin: auto;\r\n}\r\n@media (min-width: 768px) {\r\n  .react-math-keyboard-toolbar {\r\n    min-width: 768px;\r\n  }\r\n}\r\n.react-math-keyboard-divider {\r\n  border: transparent;\r\n  border-top: 2px solid #64748b;\r\n  margin-top: 0.25rem;\r\n  margin-bottom: 0px;\r\n}\r\n\r\n.react-math-keyboard-toolbar-keys-container {\r\n  display: flex;\r\n  column-gap: 0.25rem;\r\n  padding-left: 0.25rem;\r\n  padding-right: 0.25rem;\r\n  padding-bottom: 0.25rem;\r\n}\r\n\r\n.react-math-keyboard-key {\r\n  border: none;\r\n  cursor: pointer;\r\n  color: #020617;\r\n  height: 3rem;\r\n  border-radius: 0.25rem;\r\n  font-weight: 400;\r\n  font-size: 1.25rem;\r\n  line-height: 1.75rem;\r\n\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  position: relative;\r\n\r\n  background-color: #f8fafc;\r\n}\r\n\r\n.react-math-keyboard-key:focus-visible {\r\n  outline: transparent;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-key-utility {\r\n  background-color: #94a3b8;\r\n}\r\n\r\n@media not screen and (hover: none) and (pointer: coarse) {\r\n  .react-math-keyboard-key:hover {\r\n    background-color: #cbd5e1;\r\n  }\r\n  .react-math-keyboard-key-utility:hover {\r\n    background-color: #64748b;\r\n  }\r\n}\r\n\r\n.mq-math-mode .mq-text-mode.mq-hasCursor {\r\n  /* To add in mathquil style  */\r\n  padding: 0.3em 0.2em !important;\r\n  margin: -0.3em 0.1em !important;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;AACxB;;AAEA;EACE,qBAAqB;AACvB;AACA;EACE,6BAA6B;EAC7B,cAAc;AAChB;AACA;EACE,oCAAoC;EACpC,mBAAmB;AACrB;;AAEA;EACE;IACE,cAAc;EAChB;AACF;;AAEA;EACE,0BAA0B;AAC5B;;AAEA,eAAe;AACf;EACE,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;EAClB,kBAAkB;EAClB,mBAAmB;EACnB,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,WAAW;EACX,uBAAuB;EACvB,WAAW;EACX,cAAc;EACd,yBAAyB;EACzB,aAAa;EACb,uBAAuB;EACvB,eAAe;EACf,cAAc;EACd,SAAS;EACT,aAAa;EACb,oCAAoC;EACpC,wDAAwD;AAC1D;;AAEA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;EACnB,kCAAkC;AACpC;AACA;EACE;IACE,kBAAkB;EACpB;AACF;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,oBAAoB;EACpB,gBAAgB;EAChB,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,gBAAgB;EAChB,wBAAwB;AAC1B;AACA;EACE;IACE,kBAAkB;EACpB;AACF;;AAEA;EACE,sBAAsB;EACtB,4BAA4B;EAC5B,sBAAsB;EACtB,aAAa;EACb,yBAAyB;EACzB,wCAAwC;EACxC,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,8CAA8C;AAChD;;AAEA;EACE,mBAAmB;EACnB,sBAAsB;EACtB,6BAA6B;EAC7B,gBAAgB;EAChB,wBAAwB;EACxB,8BAA8B;EAC9B,oBAAoB;EACpB,4BAA4B;EAC5B,sBAAsB;EACtB,iBAAiB;;AAEnB;AACA;EACE,aAAa;AACf;;AAEA;EACE,kBAAkB;EAClB,wBAAwB;EACxB,SAAS;EACT,UAAU;EACV,+BAA+B;AACjC;;AAEA;EACE,yBAAyB;EACzB,mBAAmB;EACnB,yBAAyB;EACzB,WAAW;AACb;AACA;EACE,aAAa;EACb,gBAAgB;EAChB,kBAAkB;EAClB,8BAA8B;EAC9B,sBAAsB;EACtB,YAAY;AACd;AACA;EACE;IACE,gBAAgB;EAClB;AACF;AACA;EACE,mBAAmB;EACnB,6BAA6B;EAC7B,mBAAmB;EACnB,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,qBAAqB;EACrB,sBAAsB;EACtB,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,cAAc;EACd,YAAY;EACZ,sBAAsB;EACtB,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;;EAEpB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB;;EAElB,yBAAyB;AAC3B;;AAEA;EACE,oBAAoB;EACpB,8CAA8C;AAChD;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE;IACE,yBAAyB;EAC3B;EACA;IACE,yBAAyB;EAC3B;AACF;;AAEA;EACE,8BAA8B;EAC9B,+BAA+B;EAC/B,+BAA+B;AACjC","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.scrollbar * {\r\n  scrollbar-width: thin;\r\n}\r\n.scrollbar * ::-webkit-scrollbar {\r\n  background-color: transparent;\r\n  height: 0.5rem;\r\n}\r\n.scrollbar * ::-webkit-scrollbar-thumb {\r\n  background-color: rgba(0, 0, 0, 0.2);\r\n  border-radius: 16px;\r\n}\r\n\r\n@media (min-width: 640px) {\r\n  .scrollbar * ::-webkit-scrollbar {\r\n    height: 0.8rem;\r\n  }\r\n}\r\n\r\n.cursor-pointer {\r\n  cursor: pointer !important;\r\n}\r\n\r\n/* Components */\r\n.react-math-keyboard-input {\r\n  flex-grow: 1;\r\n  /* width: 100%; */\r\n  border-radius: 4px;\r\n  border-color: #ccc;\r\n  align-items: center;\r\n  display: flex;\r\n  scroll-margin-top: 24px;\r\n}\r\n\r\n.react-math-keyboard-keyboard-container {\r\n  width: 100%;\r\n  padding-bottom: 0.25rem;\r\n  margin: 0px;\r\n  color: #020617;\r\n  background-color: #e2e8f0;\r\n  display: flex;\r\n  justify-content: center;\r\n  position: fixed;\r\n  bottom: -300px;\r\n  left: 0px;\r\n  z-index: 1310;\r\n  transition: bottom 300ms ease-in-out;\r\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\r\n}\r\n\r\n.react-math-keyboard-keyboard-layout {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n.react-math-keyboard-numeric-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.5rem;\r\n  display: grid;\r\n  column-gap: 0.75rem;\r\n  grid-template-columns: 2fr 3fr 1fr;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-numeric-layout {\r\n    column-gap: 2.5rem;\r\n  }\r\n}\r\n.react-math-keyboard-alphabet-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.55rem;\r\n  row-gap: 0.25rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.react-math-keyboard-layout-grid {\r\n  display: grid;\r\n  column-gap: 0.25rem;\r\n  row-gap: 0.25rem;\r\n  justify-content: stretch;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-layout-grid {\r\n    column-gap: 0.5rem;\r\n  }\r\n}\r\n\r\n.react-math-keyboard-select-container {\r\n  border-radius: 0.25rem;\r\n  /* padding-right: 0.25rem; */\r\n  margin-bottom: 0.25rem;\r\n  display: flex;\r\n  background-color: #f8fafc;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\r\n  position: relative;\r\n}\r\n.react-math-keyboard-select-container:focus-visible {\r\n  outline: none;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-select {\r\n  border: transparent;\r\n  border-radius: 0.25rem;\r\n  background-color: transparent;\r\n  appearance: none;\r\n  -webkit-appearance: none;\r\n  /* border-right-width: 16px; */\r\n  padding-left: 0.5rem;\r\n  /* padding-right: 0.25rem; */\r\n  padding-right: 1.75rem;\r\n  font-size: 1.1rem;\r\n\r\n}\r\n.react-math-keyboard-select:focus-visible {\r\n  outline: none;\r\n}\r\n\r\n.react-math-keyboard-select-arrow {\r\n  position: absolute;\r\n  transform: rotate(90deg);\r\n  top: 22px;\r\n  right: 8px;\r\n  pointer-events: none !important;\r\n}\r\n\r\n.react-math-keyboard-toolbar-container {\r\n  background-color: #94a3b8;\r\n  padding-top: 0.5rem;\r\n  /* align-items: center; */\r\n  width: 100%;\r\n}\r\n.react-math-keyboard-toolbar {\r\n  display: flex;\r\n  max-width: 768px;\r\n  column-gap: 0.5rem;\r\n  justify-content: space-between;\r\n  padding-right: 0.25rem;\r\n  margin: auto;\r\n}\r\n@media (min-width: 768px) {\r\n  .react-math-keyboard-toolbar {\r\n    min-width: 768px;\r\n  }\r\n}\r\n.react-math-keyboard-divider {\r\n  border: transparent;\r\n  border-top: 2px solid #64748b;\r\n  margin-top: 0.25rem;\r\n  margin-bottom: 0px;\r\n}\r\n\r\n.react-math-keyboard-toolbar-keys-container {\r\n  display: flex;\r\n  column-gap: 0.25rem;\r\n  padding-left: 0.25rem;\r\n  padding-right: 0.25rem;\r\n  padding-bottom: 0.25rem;\r\n}\r\n\r\n.react-math-keyboard-key {\r\n  border: none;\r\n  cursor: pointer;\r\n  color: #020617;\r\n  height: 3rem;\r\n  border-radius: 0.25rem;\r\n  font-weight: 400;\r\n  font-size: 1.25rem;\r\n  line-height: 1.75rem;\r\n\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  position: relative;\r\n\r\n  background-color: #f8fafc;\r\n}\r\n\r\n.react-math-keyboard-key:focus-visible {\r\n  outline: transparent;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-key-utility {\r\n  background-color: #94a3b8;\r\n}\r\n\r\n@media not screen and (hover: none) and (pointer: coarse) {\r\n  .react-math-keyboard-key:hover {\r\n    background-color: #cbd5e1;\r\n  }\r\n  .react-math-keyboard-key-utility:hover {\r\n    background-color: #64748b;\r\n  }\r\n}\r\n\r\n.mq-math-mode .mq-text-mode.mq-hasCursor {\r\n  /* To add in mathquil style  */\r\n  padding: 0.3em 0.2em !important;\r\n  margin: -0.3em 0.1em !important;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\n.scrollbar * {\n  scrollbar-width: thin;\n}\n.scrollbar * ::-webkit-scrollbar {\n  background-color: transparent;\n  height: 0.5rem;\n}\n.scrollbar * ::-webkit-scrollbar-thumb {\n  background-color: rgba(0, 0, 0, 0.2);\n  border-radius: 16px;\n}\n\n@media (min-width: 640px) {\n  .scrollbar * ::-webkit-scrollbar {\n    height: 0.8rem;\n  }\n}\n\n.cursor-pointer {\n  cursor: pointer !important;\n}\n\n/* Components */\n.react-math-keyboard-input {\n  flex-grow: 1;\n  /* width: 100%; */\n  border-radius: 4px;\n  border-color: #ccc;\n  align-items: center;\n  display: flex;\n  scroll-margin-top: 24px;\n}\n\n.react-math-keyboard-keyboard-container {\n  width: 100%;\n  padding-bottom: 0.25rem;\n  margin: 0px;\n  color: #020617;\n  background-color: #e2e8f0;\n  display: flex;\n  justify-content: center;\n  position: fixed;\n  bottom: -300px;\n  left: 0px;\n  z-index: 1310;\n  transition: bottom 300ms ease-in-out;\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\n}\n\n.react-math-keyboard-keyboard-layout {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.react-math-keyboard-numeric-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.5rem;\n  display: grid;\n  column-gap: 0.75rem;\n  grid-template-columns: 2fr 3fr 1fr;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-numeric-layout {\n    column-gap: 2.5rem;\n  }\n}\n.react-math-keyboard-alphabet-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.55rem;\n  row-gap: 0.25rem;\n  display: flex;\n  flex-direction: column;\n}\n\n.react-math-keyboard-layout-grid {\n  display: grid;\n  column-gap: 0.25rem;\n  row-gap: 0.25rem;\n  justify-content: stretch;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-layout-grid {\n    column-gap: 0.5rem;\n  }\n}\n\n.react-math-keyboard-select-container {\n  border-radius: 0.25rem;\n  /* padding-right: 0.25rem; */\n  margin-bottom: 0.25rem;\n  display: flex;\n  background-color: #f8fafc;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\n  position: relative;\n}\n.react-math-keyboard-select-container:focus-visible {\n  outline: none;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-select {\n  border: transparent;\n  border-radius: 0.25rem;\n  background-color: transparent;\n  appearance: none;\n  -webkit-appearance: none;\n  /* border-right-width: 16px; */\n  padding-left: 0.5rem;\n  /* padding-right: 0.25rem; */\n  padding-right: 1.75rem;\n  font-size: 1.1rem;\n\n}\n.react-math-keyboard-select:focus-visible {\n  outline: none;\n}\n\n.react-math-keyboard-select-arrow {\n  position: absolute;\n  transform: rotate(90deg);\n  top: 22px;\n  right: 8px;\n  pointer-events: none !important;\n}\n\n.react-math-keyboard-toolbar-container {\n  background-color: #94a3b8;\n  padding-top: 0.5rem;\n  /* align-items: center; */\n  width: 100%;\n}\n.react-math-keyboard-toolbar {\n  display: flex;\n  max-width: 768px;\n  column-gap: 0.5rem;\n  justify-content: space-between;\n  padding-right: 0.25rem;\n  margin: auto;\n}\n@media (min-width: 768px) {\n  .react-math-keyboard-toolbar {\n    min-width: 768px;\n  }\n}\n.react-math-keyboard-divider {\n  border: transparent;\n  border-top: 2px solid #64748b;\n  margin-top: 0.25rem;\n  margin-bottom: 0px;\n}\n\n.react-math-keyboard-toolbar-keys-container {\n  display: flex;\n  column-gap: 0.25rem;\n  padding-left: 0.25rem;\n  padding-right: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n\n.react-math-keyboard-key {\n  border: none;\n  cursor: pointer;\n  color: #020617;\n  height: 3rem;\n  border-radius: 0.25rem;\n  font-weight: 400;\n  font-size: 1.25rem;\n  line-height: 1.75rem;\n\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n\n  background-color: #f8fafc;\n}\n\n.react-math-keyboard-key:focus-visible {\n  outline: transparent;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-key-utility {\n  background-color: #94a3b8;\n}\n\n@media not screen and (hover: none) and (pointer: coarse) {\n  .react-math-keyboard-key:hover {\n    background-color: #cbd5e1;\n  }\n  .react-math-keyboard-key-utility:hover {\n    background-color: #64748b;\n  }\n}\n\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  /* To add in mathquil style  */\n  padding: 0.3em 0.2em !important;\n  margin: -0.3em 0.1em !important;\n}\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;AACxB;;AAEA;EACE,qBAAqB;AACvB;AACA;EACE,6BAA6B;EAC7B,cAAc;AAChB;AACA;EACE,oCAAoC;EACpC,mBAAmB;AACrB;;AAEA;EACE;IACE,cAAc;EAChB;AACF;;AAEA;EACE,0BAA0B;AAC5B;;AAEA,eAAe;AACf;EACE,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;EAClB,kBAAkB;EAClB,mBAAmB;EACnB,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,WAAW;EACX,uBAAuB;EACvB,WAAW;EACX,cAAc;EACd,yBAAyB;EACzB,aAAa;EACb,uBAAuB;EACvB,eAAe;EACf,cAAc;EACd,SAAS;EACT,aAAa;EACb,oCAAoC;EACpC,wDAAwD;AAC1D;;AAEA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;EACnB,kCAAkC;AACpC;AACA;EACE;IACE,kBAAkB;EACpB;AACF;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,oBAAoB;EACpB,gBAAgB;EAChB,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,gBAAgB;EAChB,wBAAwB;AAC1B;AACA;EACE;IACE,kBAAkB;EACpB;AACF;;AAEA;EACE,sBAAsB;EACtB,4BAA4B;EAC5B,sBAAsB;EACtB,aAAa;EACb,yBAAyB;EACzB,wCAAwC;EACxC,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,8CAA8C;AAChD;;AAEA;EACE,mBAAmB;EACnB,sBAAsB;EACtB,6BAA6B;EAC7B,gBAAgB;EAChB,wBAAwB;EACxB,8BAA8B;EAC9B,oBAAoB;EACpB,4BAA4B;EAC5B,sBAAsB;EACtB,iBAAiB;;AAEnB;AACA;EACE,aAAa;AACf;;AAEA;EACE,kBAAkB;EAClB,wBAAwB;EACxB,SAAS;EACT,UAAU;EACV,+BAA+B;AACjC;;AAEA;EACE,yBAAyB;EACzB,mBAAmB;EACnB,yBAAyB;EACzB,WAAW;AACb;AACA;EACE,aAAa;EACb,gBAAgB;EAChB,kBAAkB;EAClB,8BAA8B;EAC9B,sBAAsB;EACtB,YAAY;AACd;AACA;EACE;IACE,gBAAgB;EAClB;AACF;AACA;EACE,mBAAmB;EACnB,6BAA6B;EAC7B,mBAAmB;EACnB,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,qBAAqB;EACrB,sBAAsB;EACtB,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,cAAc;EACd,YAAY;EACZ,sBAAsB;EACtB,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;;EAEpB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB;;EAElB,yBAAyB;AAC3B;;AAEA;EACE,oBAAoB;EACpB,8CAA8C;AAChD;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE;IACE,yBAAyB;EAC3B;EACA;IACE,yBAAyB;EAC3B;AACF;;AAEA;EACE,8BAA8B;EAC9B,+BAA+B;EAC/B,+BAA+B;AACjC","sourcesContent":["* {\n  box-sizing: border-box;\n}\n\n.scrollbar * {\n  scrollbar-width: thin;\n}\n.scrollbar * ::-webkit-scrollbar {\n  background-color: transparent;\n  height: 0.5rem;\n}\n.scrollbar * ::-webkit-scrollbar-thumb {\n  background-color: rgba(0, 0, 0, 0.2);\n  border-radius: 16px;\n}\n\n@media (min-width: 640px) {\n  .scrollbar * ::-webkit-scrollbar {\n    height: 0.8rem;\n  }\n}\n\n.cursor-pointer {\n  cursor: pointer !important;\n}\n\n/* Components */\n.react-math-keyboard-input {\n  flex-grow: 1;\n  /* width: 100%; */\n  border-radius: 4px;\n  border-color: #ccc;\n  align-items: center;\n  display: flex;\n  scroll-margin-top: 24px;\n}\n\n.react-math-keyboard-keyboard-container {\n  width: 100%;\n  padding-bottom: 0.25rem;\n  margin: 0px;\n  color: #020617;\n  background-color: #e2e8f0;\n  display: flex;\n  justify-content: center;\n  position: fixed;\n  bottom: -300px;\n  left: 0px;\n  z-index: 1310;\n  transition: bottom 300ms ease-in-out;\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\n}\n\n.react-math-keyboard-keyboard-layout {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.react-math-keyboard-numeric-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.5rem;\n  display: grid;\n  column-gap: 0.75rem;\n  grid-template-columns: 2fr 3fr 1fr;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-numeric-layout {\n    column-gap: 2.5rem;\n  }\n}\n.react-math-keyboard-alphabet-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.55rem;\n  row-gap: 0.25rem;\n  display: flex;\n  flex-direction: column;\n}\n\n.react-math-keyboard-layout-grid {\n  display: grid;\n  column-gap: 0.25rem;\n  row-gap: 0.25rem;\n  justify-content: stretch;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-layout-grid {\n    column-gap: 0.5rem;\n  }\n}\n\n.react-math-keyboard-select-container {\n  border-radius: 0.25rem;\n  /* padding-right: 0.25rem; */\n  margin-bottom: 0.25rem;\n  display: flex;\n  background-color: #f8fafc;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\n  position: relative;\n}\n.react-math-keyboard-select-container:focus-visible {\n  outline: none;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-select {\n  border: transparent;\n  border-radius: 0.25rem;\n  background-color: transparent;\n  appearance: none;\n  -webkit-appearance: none;\n  /* border-right-width: 16px; */\n  padding-left: 0.5rem;\n  /* padding-right: 0.25rem; */\n  padding-right: 1.75rem;\n  font-size: 1.1rem;\n\n}\n.react-math-keyboard-select:focus-visible {\n  outline: none;\n}\n\n.react-math-keyboard-select-arrow {\n  position: absolute;\n  transform: rotate(90deg);\n  top: 22px;\n  right: 8px;\n  pointer-events: none !important;\n}\n\n.react-math-keyboard-toolbar-container {\n  background-color: #94a3b8;\n  padding-top: 0.5rem;\n  /* align-items: center; */\n  width: 100%;\n}\n.react-math-keyboard-toolbar {\n  display: flex;\n  max-width: 768px;\n  column-gap: 0.5rem;\n  justify-content: space-between;\n  padding-right: 0.25rem;\n  margin: auto;\n}\n@media (min-width: 768px) {\n  .react-math-keyboard-toolbar {\n    min-width: 768px;\n  }\n}\n.react-math-keyboard-divider {\n  border: transparent;\n  border-top: 2px solid #64748b;\n  margin-top: 0.25rem;\n  margin-bottom: 0px;\n}\n\n.react-math-keyboard-toolbar-keys-container {\n  display: flex;\n  column-gap: 0.25rem;\n  padding-left: 0.25rem;\n  padding-right: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n\n.react-math-keyboard-key {\n  border: none;\n  cursor: pointer;\n  color: #020617;\n  height: 3rem;\n  border-radius: 0.25rem;\n  font-weight: 400;\n  font-size: 1.25rem;\n  line-height: 1.75rem;\n\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n\n  background-color: #f8fafc;\n}\n\n.react-math-keyboard-key:focus-visible {\n  outline: transparent;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-key-utility {\n  background-color: #94a3b8;\n}\n\n@media not screen and (hover: none) and (pointer: coarse) {\n  .react-math-keyboard-key:hover {\n    background-color: #cbd5e1;\n  }\n  .react-math-keyboard-key-utility:hover {\n    background-color: #64748b;\n  }\n}\n\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  /* To add in mathquil style  */\n  padding: 0.3em 0.2em !important;\n  margin: -0.3em 0.1em !important;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53050,7 +53050,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys }) => {
+const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, }) => {
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_mathInput_mathfieldContext__WEBPACK_IMPORTED_MODULE_3__.MathFieldContext);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         jquery__WEBPACK_IMPORTED_MODULE_2___default()(`#mq-keyboard-${mathfield.id}`).css("bottom", `0px`);
@@ -53063,7 +53063,7 @@ const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKey
         else {
             mathfield.moveToRightEnd();
         }
-        setCurrentLayoutType((prev) => (prev === "numeric" ? "alphabet" : "numeric"));
+        setCurrentLayoutType((prev) => prev === "numeric" ? "alphabet" : "numeric");
     };
     const onMouseDown = (e) => {
         if (e.target instanceof HTMLElement && e.target.nodeName !== "SELECT")
@@ -53072,7 +53072,7 @@ const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKey
     };
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { id: `mq-keyboard-${mathfield.id}`, onMouseDown: onMouseDown, 
         // className="fixed z-[1310] transition-[bottom] duration-300 flex justify-center bottom-[-300px] left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
-        className: "react-math-keyboard-keyboard-container scrollbar", children: [currentLayoutType === "numeric" && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_numericLayout__WEBPACK_IMPORTED_MODULE_5__.NumericLayout, { onSwitch: onSwitch, toolbarKeys: numericToolbarKeys, toolbarTabs: numericToolbarTabs })), currentLayoutType === "alphabet" && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_alphabetLayout__WEBPACK_IMPORTED_MODULE_4__.AlphabetLayout, { onSwitch: onSwitch, toolbarKeys: alphabeticToolbarKeys })] }));
+        className: "react-math-keyboard-keyboard-container scrollbar", children: [currentLayoutType === "numeric" && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_numericLayout__WEBPACK_IMPORTED_MODULE_5__.NumericLayout, { onSwitch: onSwitch, toolbarKeys: numericToolbarKeys, toolbarTabs: numericToolbarTabs, divisionFormat: divisionFormat })), currentLayoutType === "alphabet" && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_alphabetLayout__WEBPACK_IMPORTED_MODULE_4__.AlphabetLayout, { onSwitch: onSwitch, toolbarKeys: alphabeticToolbarKeys }))] }));
 };
 
 
@@ -53750,7 +53750,7 @@ const operationKeysIds = [
     "minus",
     "times",
     "frac",
-    "div",
+    "obelus",
     "sqrt",
     "cube",
     "power",
@@ -53759,7 +53759,6 @@ const operationKeysIds = [
     "rightParenthesis",
     "equal",
     "comma",
-    "obele",
     "semicolon",
     "dot",
 ];
@@ -53886,7 +53885,7 @@ const operationKeysProps = [
         },
     },
     {
-        id: "obele",
+        id: "obelus",
         label: "\\div",
         labelType: "tex",
         keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
@@ -54064,6 +54063,66 @@ const setKeysProps = [
             method: "cmd",
         },
     },
+    {
+        id: "naturals",
+        label: "\\mathbb{N}",
+        labelType: "tex",
+        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
+        mathfieldInstructions: {
+            content: "\\mathbb{N}",
+            method: "write",
+        },
+    },
+    {
+        id: "integers",
+        label: "\\mathbb{Z}",
+        labelType: "tex",
+        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
+        mathfieldInstructions: {
+            content: "\\mathbb{Z}",
+            method: "write",
+        },
+    },
+    {
+        id: "rationals",
+        label: "\\mathbb{Q}",
+        labelType: "tex",
+        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
+        mathfieldInstructions: {
+            content: "\\mathbb{Q}",
+            method: "write",
+        },
+    },
+    {
+        id: "reals",
+        label: "\\mathbb{R}",
+        labelType: "tex",
+        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
+        mathfieldInstructions: {
+            content: "\\mathbb{R}",
+            method: "write",
+        },
+    },
+    {
+        id: "complex",
+        label: "\\mathbb{C}",
+        labelType: "tex",
+        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
+        mathfieldInstructions: {
+            content: "\\mathbb{C}",
+            method: "write",
+        },
+    },
+    {
+        id: "ast",
+        label: "\\square^\\ast",
+        labelType: "tex",
+        keyCategory: _key__WEBPACK_IMPORTED_MODULE_0__.KeyCategory.operator,
+        mathfieldInstructions: {
+            content: "^\\ast",
+            method: "write",
+        },
+    },
 ];
 
 
@@ -54216,9 +54275,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const NumericLayout = ({ toolbarKeys, toolbarTabs, onSwitch }) => {
+const NumericLayout = ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, }) => {
     const hideToolbar = !!toolbarKeys && !toolbarKeys.length;
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-keyboard-layout", children: [!hideToolbar && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_toolbar_toolbar__WEBPACK_IMPORTED_MODULE_3__.Toolbar, { keys: toolbarKeys, tabs: toolbarTabs }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-numeric-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: { gridTemplateColumns: "repeat(2, minmax(0,1fr))", flexGrow: 1 }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("times") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("plus") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("frac") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("minus") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("sqrt") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("square") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: "switch", label: "abc", labelType: "raw", keyCategory: _keys_key__WEBPACK_IMPORTED_MODULE_1__.KeyCategory.utility, onClick: onSwitch }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("percent") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: { gridTemplateColumns: "repeat(3, minmax(0,1fr))", flexGrow: 2 }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("7") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("8") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("9") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("4") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("5") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("6") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("1") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("2") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("3") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("left") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("0") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("right") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: "flex", flexDirection: "column", rowGap: "0.25rem", flexGrow: 1 }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("leftParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("rightParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("comma") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("del") })] })] })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-keyboard-layout", children: [!hideToolbar && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_toolbar_toolbar__WEBPACK_IMPORTED_MODULE_3__.Toolbar, { keys: toolbarKeys, tabs: toolbarTabs }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-numeric-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: {
+                            gridTemplateColumns: "repeat(2, minmax(0,1fr))",
+                            flexGrow: 1,
+                        }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("leftParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("rightParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("times") }), divisionFormat === "fraction" ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("frac") })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("obelus") })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("sqrt") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("square") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: "switch", label: "abc", labelType: "raw", keyCategory: _keys_key__WEBPACK_IMPORTED_MODULE_1__.KeyCategory.utility, onClick: onSwitch }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("power") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: {
+                            gridTemplateColumns: "repeat(3, minmax(0,1fr))",
+                            flexGrow: 2,
+                        }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("7") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("8") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("9") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("4") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("5") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("6") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("1") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("2") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("3") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("left") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("0") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("right") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: {
+                            display: "flex",
+                            flexDirection: "column",
+                            rowGap: "0.25rem",
+                            flexGrow: 1,
+                        }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("plus") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("minus") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("comma") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("del") })] })] })] }));
 };
 
 
@@ -54290,13 +54360,13 @@ const toolbarTabs = [
         id: "polynomial",
         label: "x^n",
         rawLabel: "x",
-        keys: ["x", "equal", "power", "cube", "y", "t", "n", "z"],
+        keys: ["x", "equal", "percent", "cube", "y", "t", "n", "z"],
     },
     {
         id: "functions",
         label: "f(x)",
         rawLabel: "f(x)",
-        keys: ["exp", "ln", "log", "epower"],
+        keys: ["exp", "ln", "log", "epower", "quote"],
     },
     {
         id: "trigo",
@@ -54328,7 +54398,23 @@ const toolbarTabs = [
         id: "sets",
         label: "\\{ ; \\}",
         rawLabel: "{... ; ...}",
-        keys: ["cap", "cup", "lbrace", "rbrace", "lbracket", "rbracket", "semicolon", "infty", "emptyset"],
+        keys: [
+            "cap",
+            "cup",
+            "lbrace",
+            "rbrace",
+            "lbracket",
+            "rbracket",
+            "semicolon",
+            "infty",
+            "emptyset",
+            "naturals",
+            "integers",
+            "rationals",
+            "reals",
+            "complex",
+            "ast",
+        ],
     },
     {
         id: "sequences",
@@ -54357,13 +54443,21 @@ const toolbarTabs = [
                     method: "write",
                 },
             },
+            "u",
             "v",
             "w",
             "z",
         ],
     },
 ];
-const defaultTabs = ["polynomial", "sets", "trigo", "functions", "greek", "sequences"];
+const defaultTabs = [
+    "polynomial",
+    "sets",
+    "trigo",
+    "functions",
+    "greek",
+    "sequences",
+];
 
 
 /***/ }),
@@ -54393,7 +54487,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, style = {}, size = "medium", }) => {
+const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, style = {}, divisionFormat = "fraction", size = "medium", }) => {
     const [loaded, setLoaded] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const [showKeyboard, setShowKeyboard] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)({});
@@ -54406,7 +54500,8 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
         const eventually = () => {
             if (showKeyboardRequest.current === "open") {
                 jquery__WEBPACK_IMPORTED_MODULE_2___default()("body").css("padding-bottom", `300px`);
-                const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+                const delta = window.innerHeight -
+                    mathfield.current.el().getBoundingClientRect().top;
                 if (delta < 400)
                     window.scrollBy({ top: 400 - delta, behavior: "smooth" });
                 if (delta > window.innerHeight - 30)
@@ -54474,7 +54569,7 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
         });
     }, []);
     const spanRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: "flex", ...style }, id: `mq-keyboard-${idCounter.current}-container`, children: [!loaded && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "Loading..." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "react-math-keyboard-input", style: { padding: size === "small" ? "8px 4px" : "12px 6px" }, id: `mq-keyboard-${idCounter.current}-field`, ref: spanRef }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mathfieldContext__WEBPACK_IMPORTED_MODULE_5__.MathFieldContext.Provider, { value: mathfield.current, children: showKeyboard && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keyboard_keyboard__WEBPACK_IMPORTED_MODULE_4__.Keyboard, { numericToolbarKeys: numericToolbarKeys, numericToolbarTabs: numericToolbarTabs, alphabeticToolbarKeys: alphabeticToolbarKeys })) })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: "flex", ...style }, id: `mq-keyboard-${idCounter.current}-container`, children: [!loaded && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "Loading..." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "react-math-keyboard-input", style: { padding: size === "small" ? "8px 4px" : "12px 6px" }, id: `mq-keyboard-${idCounter.current}-field`, ref: spanRef }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mathfieldContext__WEBPACK_IMPORTED_MODULE_5__.MathFieldContext.Provider, { value: mathfield.current, children: showKeyboard && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keyboard_keyboard__WEBPACK_IMPORTED_MODULE_4__.Keyboard, { divisionFormat: divisionFormat, numericToolbarKeys: numericToolbarKeys, numericToolbarTabs: numericToolbarTabs, alphabeticToolbarKeys: alphabeticToolbarKeys })) })] }));
 };
 
 

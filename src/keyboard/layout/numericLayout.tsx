@@ -1,4 +1,4 @@
-import { Key, KeyCategory, KeyProps } from "../keys/key";
+import { Key, KeyProps } from "../keys/key";
 import { KeyId, KeysPropsMap } from "../keys/keys";
 import { Toolbar, ToolbarProps } from "../toolbar/toolbar";
 import React from "react";
@@ -8,9 +8,15 @@ export type NumericLayoutProps = {
   showTabs?: boolean;
   toolbarTabs?: ToolbarTabIds[];
   onSwitch?: () => void;
+  divisionFormat: "fraction" | "obelus";
 };
 
-export const NumericLayout = ({ toolbarKeys, toolbarTabs, onSwitch }: NumericLayoutProps) => {
+export const NumericLayout = ({
+  toolbarKeys,
+  toolbarTabs,
+  onSwitch,
+  divisionFormat,
+}: NumericLayoutProps) => {
   const hideToolbar = !!toolbarKeys && !toolbarKeys.length;
 
   return (
@@ -19,20 +25,37 @@ export const NumericLayout = ({ toolbarKeys, toolbarTabs, onSwitch }: NumericLay
       <div className="react-math-keyboard-numeric-layout">
         <div
           className="react-math-keyboard-layout-grid"
-          style={{ gridTemplateColumns: "repeat(2, minmax(0,1fr))", flexGrow: 1 }}
+          style={{
+            gridTemplateColumns: "repeat(2, minmax(0,1fr))",
+            flexGrow: 1,
+          }}
         >
+          <Key {...KeysPropsMap.get("leftParenthesis")!} />
+          <Key {...KeysPropsMap.get("rightParenthesis")!} />
+
           <Key {...KeysPropsMap.get("times")!} />
-          <Key {...KeysPropsMap.get("plus")!} />
-          <Key {...KeysPropsMap.get("frac")!} />
-          <Key {...KeysPropsMap.get("minus")!} />
+          {divisionFormat === "fraction" ? (
+            <Key {...KeysPropsMap.get("frac")!} />
+          ) : (
+            <Key {...KeysPropsMap.get("obelus")!} />
+          )}
           <Key {...KeysPropsMap.get("sqrt")!} />
           <Key {...KeysPropsMap.get("square")!} />
-          <Key id="switch" label={"abc"} labelType="raw" keyCategory={KeyCategory.utility} onClick={onSwitch} />
-          <Key {...KeysPropsMap.get("percent")!} />
+          <Key
+            id="switch"
+            label={"abc"}
+            labelType="raw"
+            onClick={onSwitch}
+            isUtilityKey
+          />
+          <Key {...KeysPropsMap.get("power")!} />
         </div>
         <div
           className="react-math-keyboard-layout-grid"
-          style={{ gridTemplateColumns: "repeat(3, minmax(0,1fr))", flexGrow: 2 }}
+          style={{
+            gridTemplateColumns: "repeat(3, minmax(0,1fr))",
+            flexGrow: 2,
+          }}
         >
           <Key {...KeysPropsMap.get("7")!} />
           <Key {...KeysPropsMap.get("8")!} />
@@ -48,9 +71,17 @@ export const NumericLayout = ({ toolbarKeys, toolbarTabs, onSwitch }: NumericLay
           <Key {...KeysPropsMap.get("right")!} />
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", rowGap: "0.25rem", flexGrow: 1 }}>
-          <Key {...KeysPropsMap.get("leftParenthesis")!} />
-          <Key {...KeysPropsMap.get("rightParenthesis")!} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "0.25rem",
+            flexGrow: 1,
+          }}
+        >
+          <Key {...KeysPropsMap.get("plus")!} />
+          <Key {...KeysPropsMap.get("minus")!} />
+
           <Key {...KeysPropsMap.get("comma")!} />
           <Key {...KeysPropsMap.get("del")!} />
         </div>

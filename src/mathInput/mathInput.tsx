@@ -13,8 +13,10 @@ type Props = {
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
   setMathfieldRef?: (mf: MathField) => void;
   setValue?: (s: string) => void;
+  divisionFormat?: "fraction" | "obelus";
   style?: React.CSSProperties;
   size?: "small" | "medium";
+  rootElementId?: string;
 };
 
 export const MathInput = ({
@@ -24,6 +26,8 @@ export const MathInput = ({
   setValue,
   setMathfieldRef,
   style = {},
+  rootElementId,
+  divisionFormat = "fraction",
   size = "medium",
 }: Props) => {
   const [loaded, setLoaded] = useState(false);
@@ -41,13 +45,21 @@ export const MathInput = ({
     showKeyboardRequest.current = type;
     const eventually = () => {
       if (showKeyboardRequest.current === "open") {
-        $("body").css("padding-bottom", `300px`);
+        if (rootElementId) {
+          $(`#${rootElementId}`).css("padding-bottom", `300px`);
+        } else {
+          $("body").css("padding-bottom", `300px`);
+        }
         const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
         if (delta < 400) window.scrollBy({ top: 400 - delta, behavior: "smooth" });
         if (delta > window.innerHeight - 30) window.scrollBy({ top: -50, behavior: "smooth" });
         setShowKeyboard(true);
       } else {
-        $("body").css("padding-bottom", 0);
+        if (rootElementId) {
+          $(`#${rootElementId}`).css("padding-bottom", 0);
+        } else {
+          $("body").css("padding-bottom", 0);
+        }
         setShowKeyboard(false);
       }
       showKeyboardRequest.current = undefined;
@@ -61,7 +73,6 @@ export const MathInput = ({
     window.jQuery = $;
     require("mathquill4keyboard/build/mathquill.css");
     require("mathquill4keyboard/build/mathquill");
-
     const MQ = window.MathQuill.getInterface(2);
     const mf = MQ.MathField(spanRef.current, {
       handlers: {
@@ -71,13 +82,6 @@ export const MathInput = ({
       },
     }) as MathField;
     idCounter.current = MQ(spanRef.current).id;
-    // const mf = MQ.MathField($(`#mq-keyboard-${id.current}-field`)[0], {
-    //   handlers: {
-    //     edit: function () {
-    //       setValue?.(mf.latex());
-    //     },
-    //   },
-    // }) as MathField;
     mathfield.current = mf;
     const textarea = mf.el().querySelector("textarea");
     isMobile && textarea?.setAttribute("readonly", "readonly");
@@ -85,7 +89,6 @@ export const MathInput = ({
       request("open");
     });
     setMathfieldRef?.(mf);
-
     setLoaded(true);
   }, []);
 
@@ -122,6 +125,7 @@ export const MathInput = ({
       <MathFieldContext.Provider value={mathfield.current}>
         {showKeyboard && (
           <Keyboard
+            divisionFormat={divisionFormat}
             numericToolbarKeys={numericToolbarKeys}
             numericToolbarTabs={numericToolbarTabs}
             alphabeticToolbarKeys={alphabeticToolbarKeys}

@@ -9,8 +9,9 @@ type Props = {
     alphabeticToolbarKeys?: (KeyId | KeyProps)[];
     setMathfieldRef?: (mf: MathField) => void;
     setValue?: (s: string) => void;
+    divisionFormat?: "fraction" | "obelus";
     style?: React.CSSProperties;
     size?: "small" | "medium";
 };
-export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, style, size, }: Props) => JSX.Element;
+export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, style, divisionFormat, size, }: Props) => JSX.Element;
 export {};

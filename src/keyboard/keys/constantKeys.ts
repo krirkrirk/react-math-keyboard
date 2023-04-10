@@ -1,4 +1,4 @@
-import { KeyCategory, KeyProps } from "./key";
+import { KeyProps } from "./key";
 
 export const constantKeysIds = ["pi"];
 export const constantKeysProps: KeyProps[] = [
@@ -6,7 +6,7 @@ export const constantKeysProps: KeyProps[] = [
     id: "pi",
     label: "\\pi",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\pi",
       method: "cmd",
@@ -16,7 +16,7 @@ export const constantKeysProps: KeyProps[] = [
     id: "infty",
     label: "\\infty",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\infty",
       method: "cmd",

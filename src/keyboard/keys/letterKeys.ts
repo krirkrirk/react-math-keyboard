@@ -1,4 +1,4 @@
-import { KeyCategory, KeyProps } from "./key";
+import { KeyProps } from "./key";
 
 export const minLettersIds = [
   "a",
@@ -71,7 +71,7 @@ export const majLettersIds = [
 export const minLettersKeysProps = minLettersIds.map((label): KeyProps => {
   return {
     id: label,
-    keyCategory: KeyCategory.letter,
+
     label: label,
     labelType: "tex",
     mathfieldInstructions: { content: label, method: "write" },
@@ -81,7 +81,7 @@ export const minLettersKeysProps = minLettersIds.map((label): KeyProps => {
 export const majLettersKeysProps = majLettersIds.map((label): KeyProps => {
   return {
     id: label,
-    keyCategory: KeyCategory.letter,
+
     label: label,
     labelType: "tex",
     mathfieldInstructions: { content: label, method: "write" },

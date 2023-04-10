@@ -1,12 +1,24 @@
 {
   "name": "react-math-keyboard",
-  "version": "1.2.15",
+  "version": "1.2.16",
   "private": false,
   "declaration": true,
   "description": "Customizable math keyboard for React",
   "main": "./dist/react-math-keyboard",
   "types": "./dist/react-math-keyboard.d.ts",
   "homepage": "https://krirkrirk.github.io/react-math-keyboard/",
+  "keywords": [
+    "math",
+    "keyboard",
+    "react",
+    "input",
+    "formula",
+    "symbols",
+    "science",
+    "mathematics",
+    "equations"
+  ],
+  "author": "Robin Granda",
   "repository": {
     "type": "git",
     "url": "https://github.com/krirkrirk/react-math-keyboard.git"
@@ -25,8 +37,6 @@
     "build": "webpack --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Robin Granda",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.21.0",
