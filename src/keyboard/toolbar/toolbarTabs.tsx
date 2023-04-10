@@ -1,4 +1,4 @@
-import { KeyCategory, KeyProps } from "../keys/key";
+import { KeyProps } from "../keys/key";
 import { KeyId } from "../keys/keys";
 
 export type ToolbarTab = {
@@ -92,7 +92,6 @@ export const toolbarTabs: ToolbarTab[] = [
         id: "un",
         label: "u_n",
         labelType: "tex",
-        keyCategory: KeyCategory.function,
         mathfieldInstructions: {
           content: "u_n",
           method: "write",
@@ -102,7 +101,6 @@ export const toolbarTabs: ToolbarTab[] = [
         id: "unplus1",
         label: "u_{n+1}",
         labelType: "tex",
-        keyCategory: KeyCategory.function,
         mathfieldInstructions: {
           content: "u_{n+1}",
           method: "write",

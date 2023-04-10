@@ -11,34 +11,24 @@ import { isMobile } from "react-device-detect";
 import { MathField, MathfieldInstructions } from "../../types/types";
 import { MathFieldContext } from "../../mathInput/mathfieldContext";
 
-export enum KeyCategory {
-  "number",
-  "constant",
-  "utility",
-  "operator",
-  "function",
-  "text",
-  "letter",
-}
-
 export type KeyProps = {
   id: string;
   label: string | ReactNode;
   labelType: "raw" | "tex" | "svg";
-  keyCategory?: KeyCategory;
   mathfieldInstructions?: MathfieldInstructions;
   onClick?: () => void;
   fullWidth?: boolean;
+  isUtilityKey?: boolean;
 };
 
 export const Key = ({
   id,
   label,
   labelType = "tex",
-  keyCategory,
   onClick,
   mathfieldInstructions,
   fullWidth = true,
+  isUtilityKey = false,
 }: KeyProps) => {
   const mathfield = useContext(MathFieldContext);
   useEffect(() => {
@@ -77,8 +67,7 @@ export const Key = ({
     }
   };
 
-  const bgHoverColor =
-    keyCategory === KeyCategory.utility ? "#64748b" : "#cbd5e1";
+  const bgHoverColor = isUtilityKey ? "#64748b" : "#cbd5e1";
 
   const innerShadow = "shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]";
 
@@ -111,7 +100,7 @@ export const Key = ({
   return (
     <button
       className={`react-math-keyboard-key ${
-        keyCategory === KeyCategory.utility && "react-math-keyboard-key-utility"
+        isUtilityKey && "react-math-keyboard-key-utility"
       }`}
       style={{
         ...(fullWidth

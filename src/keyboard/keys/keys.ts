@@ -1,7 +1,7 @@
 import { constantKeysProps } from "./constantKeys";
 import { functionKeysProps } from "./functionKeys";
 import { greekLettersKeysProps } from "./greekLetters";
-import { KeyCategory, KeyProps } from "./key";
+import { KeyProps } from "./key";
 import { majLettersKeysProps, minLettersKeysProps } from "./letterKeys";
 import { numberKeysProps } from "./numberKeys";
 import { operationKeysProps } from "./operationKeys";
@@ -26,7 +26,6 @@ const keysProps: KeyProps[] = [
     id: "overrightarrow",
     label: "\\overrightarrow{AB}",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
     mathfieldInstructions: {
       content: "overrightarrow",
       method: "cmd",
@@ -36,7 +35,6 @@ const keysProps: KeyProps[] = [
     id: "space",
     label: "",
     labelType: "raw",
-    keyCategory: KeyCategory.letter,
     mathfieldInstructions: {
       content: " ",
       method: "write",
@@ -47,7 +45,6 @@ const keysProps: KeyProps[] = [
     id: "underscore",
     label: "u_\\square",
     labelType: "tex",
-    keyCategory: KeyCategory.function,
     mathfieldInstructions: { content: "_", method: "cmd" },
   },
 ];

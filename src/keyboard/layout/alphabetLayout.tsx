@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Key, KeyCategory, KeyProps } from "../keys/key";
+import { Key, KeyProps } from "../keys/key";
 import { KeyId, KeysPropsMap } from "../keys/keys";
 import { LetterKey } from "../keys/letterKey";
 import { Toolbar } from "../toolbar/toolbar";
@@ -14,10 +14,24 @@ const rows = [
   ["w", "x", "c", "v", "b", "n"],
 ];
 
-const minToolbarKeys = ["é", "è", "à", "ù", "ç", "ô", "hyphen", "quote", "guillemet", "euro"];
+const minToolbarKeys = [
+  "é",
+  "è",
+  "à",
+  "ù",
+  "ç",
+  "ô",
+  "hyphen",
+  "quote",
+  "guillemet",
+  "euro",
+];
 const majToolbarKeys = ["É", "È", "Ç", "À"];
 
-export const AlphabetLayout = ({ toolbarKeys = [], onSwitch }: AlphabetLayoutProps) => {
+export const AlphabetLayout = ({
+  toolbarKeys = [],
+  onSwitch,
+}: AlphabetLayoutProps) => {
   const [isMaj, setIsMaj] = useState(false);
   const onMaj = () => {
     setIsMaj((prev) => !prev);
@@ -32,12 +46,28 @@ export const AlphabetLayout = ({ toolbarKeys = [], onSwitch }: AlphabetLayoutPro
       <Toolbar keys={shownToolbarKeys} />
 
       <div className="react-math-keyboard-alphabet-layout">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(10, minmax(0,1fr))", gap: "0.25rem" }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(10, minmax(0,1fr))",
+            gap: "0.25rem",
+          }}
+        >
           {rows[0].map((letter) => (
-            <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
+            <LetterKey
+              letter={letter}
+              key={letter}
+              isInMathMode={false}
+              isMaj={isMaj}
+            />
           ))}
           {rows[1].map((letter) => (
-            <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
+            <LetterKey
+              letter={letter}
+              key={letter}
+              isInMathMode={false}
+              isMaj={isMaj}
+            />
           ))}
           <div style={{ gridColumn: "span 2" }}>
             <Key
@@ -55,19 +85,30 @@ export const AlphabetLayout = ({ toolbarKeys = [], onSwitch }: AlphabetLayoutPro
                 </svg>
               }
               labelType="svg"
-              keyCategory={KeyCategory.utility}
               onClick={onMaj}
+              isUtilityKey
             />
           </div>
           {rows[2].map((letter) => (
-            <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
+            <LetterKey
+              letter={letter}
+              key={letter}
+              isInMathMode={false}
+              isMaj={isMaj}
+            />
           ))}
           <Key {...KeysPropsMap.get("comma")!} />
           <Key {...KeysPropsMap.get("dot")!} />
         </div>
         <div style={{ display: "flex", columnGap: "0.25rem" }}>
           <div style={{ flexGrow: 1 }}>
-            <Key id="switch" label={"123"} labelType="raw" keyCategory={KeyCategory.utility} onClick={onSwitch} />
+            <Key
+              id="switch"
+              label={"123"}
+              labelType="raw"
+              onClick={onSwitch}
+              isUtilityKey
+            />
           </div>
           <div style={{ flexGrow: 0.5 }}>
             <Key {...KeysPropsMap.get("left")!} />

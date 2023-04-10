@@ -1,4 +1,4 @@
-import { Key, KeyCategory, KeyProps } from "../keys/key";
+import { Key, KeyProps } from "../keys/key";
 import { KeyId, KeysPropsMap } from "../keys/keys";
 import { Toolbar, ToolbarProps } from "../toolbar/toolbar";
 import React from "react";
@@ -45,8 +45,8 @@ export const NumericLayout = ({
             id="switch"
             label={"abc"}
             labelType="raw"
-            keyCategory={KeyCategory.utility}
             onClick={onSwitch}
+            isUtilityKey
           />
           <Key {...KeysPropsMap.get("power")!} />
         </div>

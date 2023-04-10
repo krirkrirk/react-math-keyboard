@@ -1,11 +1,11 @@
-import { KeyCategory, KeyProps } from "./key";
+import { KeyProps } from "./key";
 
 export const setKeysProps: KeyProps[] = [
   {
     id: "cap",
     label: "\\cap",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "cap",
       method: "cmd",
@@ -15,7 +15,7 @@ export const setKeysProps: KeyProps[] = [
     id: "cup",
     label: "\\cup",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "cup",
       method: "cmd",
@@ -25,7 +25,7 @@ export const setKeysProps: KeyProps[] = [
     id: "lbrace",
     label: "\\lbrace",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "{",
       method: "typedText",
@@ -35,7 +35,7 @@ export const setKeysProps: KeyProps[] = [
     id: "rbrace",
     label: "\\rbrace",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "}",
       method: "typedText",
@@ -45,27 +45,27 @@ export const setKeysProps: KeyProps[] = [
     id: "lbracket",
     label: "[",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "[",
-      method: "typedText",
+      method: "write",
     },
   },
   {
     id: "rbracket",
     label: "]",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "]",
-      method: "typedText",
+      method: "write",
     },
   },
   {
     id: "emptyset",
     label: "\\emptyset",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "\\emptyset",
       method: "cmd",
@@ -75,7 +75,7 @@ export const setKeysProps: KeyProps[] = [
     id: "naturals",
     label: "\\mathbb{N}",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "\\mathbb{N}",
       method: "write",
@@ -85,7 +85,7 @@ export const setKeysProps: KeyProps[] = [
     id: "integers",
     label: "\\mathbb{Z}",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "\\mathbb{Z}",
       method: "write",
@@ -95,7 +95,7 @@ export const setKeysProps: KeyProps[] = [
     id: "rationals",
     label: "\\mathbb{Q}",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "\\mathbb{Q}",
       method: "write",
@@ -105,7 +105,7 @@ export const setKeysProps: KeyProps[] = [
     id: "reals",
     label: "\\mathbb{R}",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "\\mathbb{R}",
       method: "write",
@@ -115,7 +115,7 @@ export const setKeysProps: KeyProps[] = [
     id: "complex",
     label: "\\mathbb{C}",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "\\mathbb{C}",
       method: "write",
@@ -125,7 +125,7 @@ export const setKeysProps: KeyProps[] = [
     id: "ast",
     label: "\\square^\\ast",
     labelType: "tex",
-    keyCategory: KeyCategory.operator,
+
     mathfieldInstructions: {
       content: "^\\ast",
       method: "write",

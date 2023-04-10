@@ -1,4 +1,4 @@
-import { Key, KeyCategory } from "./key";
+import { Key } from "./key";
 import React from "react";
 
 export type LetterKeyProps = {
@@ -6,12 +6,15 @@ export type LetterKeyProps = {
   isMaj?: boolean;
   isInMathMode?: boolean;
 };
-export const LetterKey = ({ letter, isMaj = false, isInMathMode = true }: LetterKeyProps) => {
+export const LetterKey = ({
+  letter,
+  isMaj = false,
+  isInMathMode = true,
+}: LetterKeyProps) => {
   const displayedLetter = isMaj ? letter.toLocaleUpperCase() : letter;
   return (
     <Key
       id={letter}
-      keyCategory={KeyCategory.letter}
       label={displayedLetter}
       labelType={isInMathMode ? "tex" : "raw"}
       mathfieldInstructions={{
