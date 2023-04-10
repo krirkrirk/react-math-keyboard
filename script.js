@@ -53000,7 +53000,11 @@ const Example = ({}) => {
     const clear = (mathfield) => {
         mathfield.latex("");
     };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with all the keyboard keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue, setMathfieldRef: (mathfield) => (mf.current = mathfield) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: () => clear(mf.current), children: "Clear" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { style: { overflow: "auto" }, children: ["Latex produced : ", value] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with no additional keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { numericToolbarKeys: [], setValue: setValue2 }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["Latex produced : ", value2] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with custom keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue3, numericToolbarKeys: [
+    const clear2 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)();
+    const onClick2 = () => {
+        clear2.current?.();
+    };
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with all the keyboard keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue, setMathfieldRef: (mathfield) => (mf.current = mathfield) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: () => clear(mf.current), children: "Clear" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { style: { overflow: "auto" }, children: ["Latex produced : ", value] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with no additional keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { numericToolbarKeys: [], setValue: setValue2, setClearRef: (f) => (clear2.current = f) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: onClick2, children: "Clear" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["Latex produced : ", value2] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "2rem" }, children: "Input with custom keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue3, numericToolbarKeys: [
                                 "euro",
                                 {
                                     id: "custom",
@@ -54396,7 +54400,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, style = {}, initialLatex, rootElementId, divisionFormat = "fraction", size = "medium", }) => {
+const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style = {}, initialLatex, rootElementId, divisionFormat = "fraction", size = "medium", }) => {
     const [loaded, setLoaded] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const [showKeyboard, setShowKeyboard] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)({});
@@ -54435,6 +54439,7 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
             request("open");
         });
         setMathfieldRef?.(mf);
+        setClearRef?.(() => mf.latex(""));
         setLoaded(true);
     }, []);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
