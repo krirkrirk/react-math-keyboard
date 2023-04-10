@@ -13,6 +13,7 @@ export type MathInputProps = {
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
   setMathfieldRef?: (mf: MathField) => void;
+  setClearRef?: (f: () => void) => void;
   initialLatex?: string;
   setValue?: (s: string) => void;
   divisionFormat?: "fraction" | "obelus";
@@ -27,6 +28,7 @@ export const MathInput = ({
   alphabeticToolbarKeys,
   setValue,
   setMathfieldRef,
+  setClearRef,
   style = {},
   initialLatex,
   rootElementId,
@@ -75,6 +77,7 @@ export const MathInput = ({
       request("open");
     });
     setMathfieldRef?.(mf);
+    setClearRef?.(() => mf.latex(""));
     setLoaded(true);
   }, []);
 
