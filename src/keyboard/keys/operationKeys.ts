@@ -121,6 +121,46 @@ export const operationKeysProps: KeyProps[] = [
     },
   },
   {
+    id: "leq",
+    label: "\\leq",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "\\leq",
+      method: "write",
+    },
+  },
+  {
+    id: "geq",
+    label: "\\geq",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "\\geq",
+      method: "write",
+    },
+  },
+  {
+    id: "inf",
+    label: "<",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "<",
+      method: "write",
+    },
+  },
+  {
+    id: "sup",
+    label: ">",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: ">",
+      method: "write",
+    },
+  },
+  {
     id: "comma",
     label: "{,}",
     labelType: "tex",
