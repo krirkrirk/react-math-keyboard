@@ -25,6 +25,20 @@
 }
 
 /* Components */
+.react-math-keyboard-input-container {
+  font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+  .react-math-keyboard-input-container {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1440px) {
+  .react-math-keyboard-input-container {
+    font-size: 1.4rem;
+  }
+}
+
 .react-math-keyboard-input {
   flex-grow: 1;
   /* width: 100%; */
@@ -112,13 +126,13 @@
   border-radius: 0.25rem;
   background-color: transparent;
   appearance: none;
+  color: #020617;
   -webkit-appearance: none;
   /* border-right-width: 16px; */
   padding-left: 0.5rem;
   /* padding-right: 0.25rem; */
   padding-right: 1.75rem;
   font-size: 1.1rem;
-
 }
 .react-math-keyboard-select:focus-visible {
   outline: none;

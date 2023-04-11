@@ -131,7 +131,11 @@ export const MathInput = ({
   }, [showKeyboard, rootElementId]);
 
   return (
-    <div style={{ display: "flex", ...style }} id={`mq-keyboard-${idCounter.current}-container`}>
+    <div
+      style={{ display: "flex", ...style }}
+      id={`mq-keyboard-${idCounter.current}-container`}
+      className="react-math-keyboard-input-container"
+    >
       {!loaded && <p>Loading...</p>}
       <span
         className="react-math-keyboard-input"
