@@ -26,7 +26,7 @@
 
 /* Components */
 .react-math-keyboard-input-container {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .react-math-keyboard-input-container {

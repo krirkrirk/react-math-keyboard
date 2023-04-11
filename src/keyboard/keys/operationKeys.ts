@@ -84,7 +84,7 @@ export const operationKeysProps: KeyProps[] = [
   },
   {
     id: "power",
-    label: "x^\\square",
+    label: "\\square^n",
     labelType: "tex",
 
     mathfieldInstructions: { content: "^", method: "cmd" },
