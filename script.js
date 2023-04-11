@@ -53798,6 +53798,15 @@ const operationKeysProps = [
         },
     },
     {
+        id: "approx",
+        label: "\\approx",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\approx",
+            method: "write",
+        },
+    },
+    {
         id: "leq",
         label: "\\leq",
         labelType: "tex",
@@ -54311,7 +54320,7 @@ const toolbarTabs = [
         id: "polynomial",
         label: "x^n",
         rawLabel: "x",
-        keys: ["x", "equal", "percent", "leq", "geq", "inf", "sup", "cube", "y", "t", "n", "z"],
+        keys: ["x", "percent", "equal", "approx", "leq", "geq", "inf", "sup", "cube", "y", "t", "n", "z"],
     },
     {
         id: "functions",
