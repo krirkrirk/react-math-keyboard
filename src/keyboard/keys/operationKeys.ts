@@ -121,6 +121,16 @@ export const operationKeysProps: KeyProps[] = [
     },
   },
   {
+    id: "approx",
+    label: "\\approx",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "\\approx",
+      method: "write",
+    },
+  },
+  {
     id: "leq",
     label: "\\leq",
     labelType: "tex",

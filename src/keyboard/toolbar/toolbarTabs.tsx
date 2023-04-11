@@ -15,7 +15,7 @@ export const toolbarTabs: ToolbarTab[] = [
     id: "polynomial",
     label: "x^n",
     rawLabel: "x",
-    keys: ["x", "equal", "percent", "leq", "geq", "inf", "sup", "cube", "y", "t", "n", "z"],
+    keys: ["x", "percent", "equal", "approx", "leq", "geq", "inf", "sup", "cube", "y", "t", "n", "z"],
   },
   {
     id: "functions",
