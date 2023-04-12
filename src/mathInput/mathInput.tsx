@@ -61,8 +61,7 @@ export const MathInput = ({
   const idCounter = useRef<number>(0);
   useEffect(() => {
     window.jQuery = $;
-    // require("mathquill4keyboard/build/mathquill.css");
-    require("../mathquill.css");
+    require("mathquill4keyboard/build/mathquill.css");
     require("mathquill4keyboard/build/mathquill");
     const MQ = window.MathQuill.getInterface(2);
     const mf = MQ.MathField(spanRef.current, {
@@ -121,9 +120,12 @@ export const MathInput = ({
       } else {
         $("body").css("padding-bottom", `300px`);
       }
-      const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
-      if (delta < 400) window.scrollBy({ top: 400 - delta, behavior: "smooth" });
-      if (delta > window.innerHeight - 30) window.scrollBy({ top: -50, behavior: "smooth" });
+      const delta =
+        window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+      if (delta < 400)
+        window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+      if (delta > window.innerHeight - 30)
+        window.scrollBy({ top: -50, behavior: "smooth" });
     } else {
       if (rootElementId) {
         $(`#${rootElementId}`).css("padding-bottom", 0);
@@ -135,7 +137,7 @@ export const MathInput = ({
 
   return (
     <div
-      style={{ display: "flex", width: fullWidth ? "100%" : "auto" , ...style }}
+      style={{ display: "flex", width: fullWidth ? "100%" : "auto", ...style }}
       id={`mq-keyboard-${idCounter.current}-container`}
       className="react-math-keyboard-input-container"
     >

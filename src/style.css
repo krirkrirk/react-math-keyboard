@@ -223,9 +223,3 @@
     background-color: #64748b;
   }
 }
-
-.mq-math-mode .mq-text-mode.mq-hasCursor {
-  /* To add in mathquil style  */
-  padding: 0.3em 0.2em !important;
-  margin: -0.3em 0.1em !important;
-}

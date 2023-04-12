@@ -15,5 +15,6 @@ export type MathInputProps = {
     style?: React.CSSProperties;
     size?: "small" | "medium";
     rootElementId?: string;
+    fullWidth?: boolean;
 };
-export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style, initialLatex, rootElementId, divisionFormat, size, }: MathInputProps) => JSX.Element;
+export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style, initialLatex, rootElementId, divisionFormat, size, fullWidth, }: MathInputProps) => JSX.Element;
