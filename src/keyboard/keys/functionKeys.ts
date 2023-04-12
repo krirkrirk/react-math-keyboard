@@ -101,4 +101,14 @@ export const functionKeysProps: KeyProps[] = [
       method: "write",
     },
   },
+  {
+    id: "abs",
+    label: "\\left|\\square\\right|",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "|",
+      method: "cmd",
+    },
+  },
 ];
