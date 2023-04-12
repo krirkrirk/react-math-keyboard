@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { MathInput } from "../src/mathInput/mathInput";
 import { MathField } from "../src/types/types";
+import { Button, Grid, Typography } from "@mui/material";
 
 export type ExampleProps = {};
 
@@ -24,6 +25,9 @@ export const Example = ({}: ExampleProps) => {
   return (
     <>
       <div>
+        <Grid>
+          <Typography style={{ color: "red" }}>MUI </Typography>
+        </Grid>
         <div style={{ padding: "0rem 0.5rem 2rem" }}>
           <p style={{ paddingBottom: "1.5rem", fontSize: "2rem" }}>Input with all the keyboard keys :</p>
           <MathInput setValue={setValue} setMathfieldRef={(mathfield) => (mf.current = mathfield)} />
