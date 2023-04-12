@@ -6,5 +6,6 @@ export type NumericLayoutProps = {
     showTabs?: boolean;
     toolbarTabs?: ToolbarTabIds[];
     onSwitch?: () => void;
+    divisionFormat: "fraction" | "obelus";
 };
-export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch, }: NumericLayoutProps) => JSX.Element;
+export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, }: NumericLayoutProps) => JSX.Element;

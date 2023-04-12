@@ -2,12 +2,12 @@
 src
 index.html
 node_modules
-examples 
+docs 
 
 # compiler
 tsconfig.json
 webpack.config.js
-postcss.config.js
+webpack.docs.config.js
 
 # git
 .git

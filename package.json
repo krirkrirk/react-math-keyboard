@@ -1,24 +1,42 @@
 {
   "name": "react-math-keyboard",
-  "version": "1.2.3",
+  "version": "1.2.19",
   "private": false,
   "declaration": true,
-  "description": "",
+  "description": "Customizable math keyboard for React",
   "main": "./dist/react-math-keyboard",
   "types": "./dist/react-math-keyboard.d.ts",
+  "homepage": "https://krirkrirk.github.io/react-math-keyboard/",
+  "keywords": [
+    "math",
+    "keyboard",
+    "react",
+    "input",
+    "formula",
+    "symbols",
+    "science",
+    "mathematics",
+    "equations"
+  ],
+  "author": "Robin Granda",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krirkrirk/react-math-keyboard.git"
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "declare": "dts-bundle --name react-math-keyboard --main src/index.d.ts --out ../dist/react-math-keyboard.d.ts",
+    "build:example": "npm run build && webpack --mode development --config webpack.docs.config.js",
+    "deploy": "npm run build:example && gh-pages -d docs",
+    "ghpublish": "gh-pages -d docs",
+    "declare": "dts-bundle --name react-math-keyboard --main src/index.tsx --out ../dist/react-math-keyboard.d.ts",
     "prepublishOnly": "npm run declare && webpack --mode=production",
     "webpack": "webpack",
     "start": "webpack serve --mode=development --open",
     "build": "webpack --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Robin Granda",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.21.0",
@@ -33,15 +51,13 @@
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "path": "^0.12.7",
-    "postcss": "^8.4.21",
-    "postcss-loader": "^7.1.0",
-    "postcss-preset-env": "^8.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "string-replace-loader": "^3.1.0",
     "style-loader": "^3.3.2",
-    "tailwindcss": "^3.3.0",
     "ts-loader": "^9.4.2",
     "typescript": "^5.0.2",
     "webpack": "^5.77.0",
@@ -50,7 +66,7 @@
   },
   "dependencies": {
     "jquery": "^3.6.4",
-    "mathquill4keyboard": "^0.10.5",
+    "mathquill4keyboard": "^0.10.6",
     "react-device-detect": "^2.2.3"
   },
   "peerDependencies": {

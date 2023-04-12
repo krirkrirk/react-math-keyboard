@@ -5,5 +5,6 @@ export type KeyboardProps = {
     numericToolbarKeys?: (KeyId | KeyProps)[];
     numericToolbarTabs?: ToolbarTabIds[];
     alphabeticToolbarKeys?: (KeyId | KeyProps)[];
+    divisionFormat: "fraction" | "obelus";
 };
-export declare const Keyboard: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, }: KeyboardProps) => JSX.Element;
+export declare const Keyboard: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, }: KeyboardProps) => JSX.Element;

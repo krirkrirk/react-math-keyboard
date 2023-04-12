@@ -1,11 +1,11 @@
-import { KeyCategory, KeyProps } from "./key";
+import { KeyProps } from "./key";
 
 export const greekLettersKeysProps: KeyProps[] = [
   {
     id: "alpha",
     label: "\\alpha",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\alpha",
       method: "cmd",
@@ -15,7 +15,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "beta",
     label: "\\beta",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\beta",
       method: "cmd",
@@ -26,7 +26,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "delta",
     label: "\\delta",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\delta",
       method: "cmd",
@@ -36,7 +36,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "Delta",
     label: "\\Delta",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\Delta",
       method: "cmd",
@@ -46,7 +46,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "sigma",
     label: "\\sigma",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\sigma",
       method: "cmd",
@@ -56,7 +56,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "theta",
     label: "\\theta",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\theta",
       method: "cmd",
@@ -66,7 +66,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "tau",
     label: "\\tau",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\tau",
       method: "cmd",
@@ -76,7 +76,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "phi",
     label: "\\phi",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\phi",
       method: "cmd",
@@ -86,7 +86,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "Omega",
     label: "\\Omega",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\Omega",
       method: "cmd",
@@ -97,7 +97,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "lambda",
     label: "\\lambda",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\lambda",
       method: "cmd",
@@ -107,7 +107,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "mu",
     label: "\\mu",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\mu",
       method: "cmd",
@@ -117,7 +117,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "gamma",
     label: "\\gamma",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\gamma",
       method: "cmd",
@@ -127,7 +127,7 @@ export const greekLettersKeysProps: KeyProps[] = [
     id: "omega",
     label: "\\omega",
     labelType: "tex",
-    keyCategory: KeyCategory.constant,
+
     mathfieldInstructions: {
       content: "\\omega",
       method: "cmd",
