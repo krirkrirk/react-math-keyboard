@@ -20,6 +20,7 @@ export type MathInputProps = {
   style?: React.CSSProperties;
   size?: "small" | "medium";
   rootElementId?: string;
+  fullWidth?: boolean;
 };
 
 export const MathInput = ({
@@ -34,6 +35,7 @@ export const MathInput = ({
   rootElementId,
   divisionFormat = "fraction",
   size = "medium",
+  fullWidth = true,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -59,7 +61,8 @@ export const MathInput = ({
   const idCounter = useRef<number>(0);
   useEffect(() => {
     window.jQuery = $;
-    require("mathquill4keyboard/build/mathquill.css");
+    // require("mathquill4keyboard/build/mathquill.css");
+    require("../mathquill.css");
     require("mathquill4keyboard/build/mathquill");
     const MQ = window.MathQuill.getInterface(2);
     const mf = MQ.MathField(spanRef.current, {
@@ -132,7 +135,7 @@ export const MathInput = ({
 
   return (
     <div
-      style={{ display: "flex", ...style }}
+      style={{ display: "flex", width: fullWidth ? "100%" : "auto" , ...style }}
       id={`mq-keyboard-${idCounter.current}-container`}
       className="react-math-keyboard-input-container"
     >

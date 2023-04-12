@@ -27,6 +27,8 @@
 /* Components */
 .react-math-keyboard-input-container {
   font-size: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .react-math-keyboard-input-container {
@@ -47,6 +49,12 @@
   align-items: center;
   display: flex;
   scroll-margin-top: 24px;
+  box-sizing: border-box;
+  overflow: auto;
+  /* overflow: hidden; */
+  min-width: 4em;
+  /* margin: 2px; */
+  /* max-width: 100%; */
 }
 
 .react-math-keyboard-keyboard-container {
