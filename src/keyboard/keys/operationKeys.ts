@@ -84,7 +84,7 @@ export const operationKeysProps: KeyProps[] = [
   },
   {
     id: "power",
-    label: "x^\\square",
+    label: "\\square^n",
     labelType: "tex",
 
     mathfieldInstructions: { content: "^", method: "cmd" },
@@ -117,6 +117,16 @@ export const operationKeysProps: KeyProps[] = [
 
     mathfieldInstructions: {
       content: "=",
+      method: "write",
+    },
+  },
+  {
+    id: "approx",
+    label: "\\approx",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "\\approx",
       method: "write",
     },
   },

@@ -43,7 +43,7 @@ const keysProps: KeyProps[] = [
 
   {
     id: "underscore",
-    label: "u_\\square",
+    label: "\\square_n",
     labelType: "tex",
     mathfieldInstructions: { content: "_", method: "cmd" },
   },
