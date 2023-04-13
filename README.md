@@ -16,11 +16,12 @@ This library is used by [Mathlive.fr](https://www.mathlive.fr).
 
 ## Basic usage
 
-Install the package : 
+Install the package :
 
 ```nodejs
 npm i react-math-keyboard
 ```
+
 Then import the MathInput :
 
 ```js
@@ -76,6 +77,26 @@ Or you can provide an array of KeyIds or KeyProps to only use the keys needed fo
     }
 ]} />
 ```
+
+Here is the full list of KeyIds and
+
+## KeyIds and KeyProps
+
+## All MathInput Props
+
+| Prop: Type | Default value | Description |
+| `numericToolbarKeys?: (KeyId \| KeyProps)[]` | `undefined` | <ul><li> `undefined` : All the keys </li><li> `Empty array` : No toolbar </li><li> `Otherwise` : the keys you've provided </li></ul> |
+| `numericToolbarTabs?: ToolbarTabIds[]` | `undefined` | Choose the options you want in the select of the toolbar. Choices available are `"trigo" \| "greek" \| "sets" \| "sequences" \| "functions" \| "polynomial"` |
+| `alphabeticToolbarKeys?: (KeyId \| KeyProps)[]` | `undefined` | Same thing that `numericToolbarKeys` but for the alphabetic keyboard |
+| `setMathfieldRef?: (mf: MathField) => void` | `undefined` | Retrieve the ref to the MathQuill input in order to use the MathQuill Api |
+| `setClearRef?: (f: () => void) => void` | `undefined` | Pass it a ref in order to have a shorthand for clearing the input. e.g : `setClearRef( f => myRef.current = f)` then `myRef.current.clear()` somewhere in your App |
+| `initialLatex?: string` | `undefined` | This latex will be shown in the input at the initial render. Later changes on this prop won't affect the input. You should interact with the MathField ref directly if you want to do stuff with the input. |
+| `setValue?: (s: string) => void` | `undefined` | To retrieve the latex |
+| `divisionFormat?: "fraction" \| "obelus"` | `"fraction"` | Whether to show divisions as fractions or with the division symbol ÷ |
+| `style?: React.CSSProperties` | `{}` | CSS for the input |
+| `size?: "small" \| "medium"` | `"medium"` | Shorthand to change the padding of the input |
+| `rootElementId?: string` | `undefined` | By default, the keyboard applies a padding bottom on the \<body\> in order to not overflow the input. You can use this prop to set this padding on another element than the body. For example, you can target Nextjs' root element by doing rootElementId = "\_\_next". |
+| `fullWidth?: boolean` | `true` | Shorthand for `width="100%"` |
 
 ## Contributing
 

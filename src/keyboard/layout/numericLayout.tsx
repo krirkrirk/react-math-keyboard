@@ -1,8 +1,9 @@
 import { Key, KeyProps } from "../keys/key";
-import { KeyId, KeysPropsMap } from "../keys/keys";
+import { KeysPropsMap } from "../keys/keys";
 import { Toolbar, ToolbarProps } from "../toolbar/toolbar";
 import React from "react";
 import { ToolbarTabIds } from "../toolbar/toolbarTabs";
+import { KeyId } from "../keys/keyIds";
 export type NumericLayoutProps = {
   toolbarKeys?: (KeyId | KeyProps)[];
   showTabs?: boolean;
@@ -11,12 +12,7 @@ export type NumericLayoutProps = {
   divisionFormat: "fraction" | "obelus";
 };
 
-export const NumericLayout = ({
-  toolbarKeys,
-  toolbarTabs,
-  onSwitch,
-  divisionFormat,
-}: NumericLayoutProps) => {
+export const NumericLayout = ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat }: NumericLayoutProps) => {
   const hideToolbar = !!toolbarKeys && !toolbarKeys.length;
 
   return (
@@ -41,13 +37,7 @@ export const NumericLayout = ({
           )}
           <Key {...KeysPropsMap.get("sqrt")!} />
           <Key {...KeysPropsMap.get("square")!} />
-          <Key
-            id="switch"
-            label={"abc"}
-            labelType="raw"
-            onClick={onSwitch}
-            isUtilityKey
-          />
+          <Key id="switch" label={"abc"} labelType="raw" onClick={onSwitch} isUtilityKey />
           <Key {...KeysPropsMap.get("power")!} />
         </div>
         <div

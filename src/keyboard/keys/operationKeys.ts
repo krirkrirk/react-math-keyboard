@@ -1,22 +1,5 @@
 import { KeyProps } from "./key";
 
-export const operationKeysIds = [
-  "plus",
-  "minus",
-  "times",
-  "frac",
-  "obelus",
-  "sqrt",
-  "cube",
-  "power",
-  "percent",
-  "leftParenthesis",
-  "rightParenthesis",
-  "equal",
-  "comma",
-  "semicolon",
-  "dot",
-];
 export const operationKeysProps: KeyProps[] = [
   {
     id: "plus",
