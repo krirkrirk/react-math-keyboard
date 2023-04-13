@@ -78,6 +78,7 @@ Or you can provide an array of KeyIds or KeyProps to only use the keys needed fo
 ]} />
 ```
 
+<!--
 Here is the full list of KeyIds and
 
 ## KeyIds and KeyProps
@@ -85,6 +86,7 @@ Here is the full list of KeyIds and
 ## All MathInput Props
 
 | Prop: Type | Default value | Description |
+
 | `numericToolbarKeys?: (KeyId \| KeyProps)[]` | `undefined` | <ul><li> `undefined` : All the keys </li><li> `Empty array` : No toolbar </li><li> `Otherwise` : the keys you've provided </li></ul> |
 | `numericToolbarTabs?: ToolbarTabIds[]` | `undefined` | Choose the options you want in the select of the toolbar. Choices available are `"trigo" \| "greek" \| "sets" \| "sequences" \| "functions" \| "polynomial"` |
 | `alphabeticToolbarKeys?: (KeyId \| KeyProps)[]` | `undefined` | Same thing that `numericToolbarKeys` but for the alphabetic keyboard |
@@ -96,7 +98,7 @@ Here is the full list of KeyIds and
 | `style?: React.CSSProperties` | `{}` | CSS for the input |
 | `size?: "small" \| "medium"` | `"medium"` | Shorthand to change the padding of the input |
 | `rootElementId?: string` | `undefined` | By default, the keyboard applies a padding bottom on the \<body\> in order to not overflow the input. You can use this prop to set this padding on another element than the body. For example, you can target Nextjs' root element by doing rootElementId = "\_\_next". |
-| `fullWidth?: boolean` | `true` | Shorthand for `width="100%"` |
+| `fullWidth?: boolean` | `true` | Shorthand for `width="100%"` | -->
 
 ## Contributing
 
