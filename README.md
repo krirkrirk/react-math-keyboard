@@ -61,7 +61,7 @@ You can hide the toolbar if you don't need additional keys :
 <MathInput numericToolbarKeys={[]} />
 ```
 
-Or you can provide an array of [KeyIds](https://github.com/krirkrirk/react-math-keyboard/tree/main/src/keyboard/keys) or KeyProps if you only want certain keys. Here is the format for KeyProps :
+Or you can provide an array of [KeyIds](https://github.com/krirkrirk/react-math-keyboard/tree/main/src/keyboard/keys/keyIds.ts) or KeyProps if you only want certain keys. Here is the format for KeyProps :
 
 | Prop : Type                                     | Default     | Description                                                                                                           |
 | ----------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------- |
