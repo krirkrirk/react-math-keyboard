@@ -60,7 +60,7 @@ export const operationKeysProps: KeyProps[] = [
   },
   {
     id: "cube",
-    label: "x^3",
+    label: "\\square^3",
     labelType: "tex",
 
     mathfieldInstructions: { content: "^3 ", method: "write" },

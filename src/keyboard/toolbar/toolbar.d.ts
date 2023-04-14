@@ -1,6 +1,6 @@
 import { KeyProps } from "../keys/key";
-import { KeyId } from "../keys/keys";
 import { ToolbarTabIds } from "./toolbarTabs";
+import { KeyId } from "../keys/keyIds";
 export type ToolbarProps = {
     keys?: (KeyId | KeyProps)[];
     tabs?: ToolbarTabIds[];
