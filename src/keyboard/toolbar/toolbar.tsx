@@ -1,8 +1,9 @@
 import { Key, KeyProps } from "../keys/key";
-import { KeyId, KeysPropsMap } from "../keys/keys";
+import { KeysPropsMap } from "../keys/keys";
 import { useContext, useEffect, useRef, useState } from "react";
 import { ToolbarTabIds, defaultTabs, toolbarTabs } from "./toolbarTabs";
 import { MathFieldContext } from "../../mathInput/mathfieldContext";
+import { KeyId } from "../keys/keyIds";
 export type ToolbarProps = {
   keys?: (KeyId | KeyProps)[];
   tabs?: ToolbarTabIds[];

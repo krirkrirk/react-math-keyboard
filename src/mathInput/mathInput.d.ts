@@ -1,8 +1,8 @@
 import React from "react";
 import { MathField } from "../types/types";
-import { KeyId } from "../keyboard/keys/keys";
 import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
+import { KeyId } from "../keyboard/keys/keyIds";
 export type MathInputProps = {
     numericToolbarKeys?: (KeyId | KeyProps)[];
     numericToolbarTabs?: ToolbarTabIds[];

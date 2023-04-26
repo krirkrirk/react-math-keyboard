@@ -1,22 +1,5 @@
 import { KeyProps } from "./key";
 
-export const operationKeysIds = [
-  "plus",
-  "minus",
-  "times",
-  "frac",
-  "obelus",
-  "sqrt",
-  "cube",
-  "power",
-  "percent",
-  "leftParenthesis",
-  "rightParenthesis",
-  "equal",
-  "comma",
-  "semicolon",
-  "dot",
-];
 export const operationKeysProps: KeyProps[] = [
   {
     id: "plus",
@@ -77,7 +60,7 @@ export const operationKeysProps: KeyProps[] = [
   },
   {
     id: "cube",
-    label: "x^3",
+    label: "\\square^3",
     labelType: "tex",
 
     mathfieldInstructions: { content: "^3 ", method: "write" },

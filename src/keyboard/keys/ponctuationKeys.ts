@@ -1,7 +1,5 @@
 import { KeyProps } from "./key";
 
-const ponctuationKeys = ['"', "'", "-", "€"];
-
 export const ponctuationKeysProps: Array<KeyProps> = [
   {
     id: "guillemet",

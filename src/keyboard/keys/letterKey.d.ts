@@ -1,6 +1,7 @@
+import { KeyId } from "./keyIds";
 export type LetterKeyProps = {
-    letter: string;
+    letter: KeyId;
     isMaj?: boolean;
     isInMathMode?: boolean;
 };
-export declare const LetterKey: ({ letter, isMaj, isInMathMode, }: LetterKeyProps) => JSX.Element;
+export declare const LetterKey: ({ letter, isMaj, isInMathMode }: LetterKeyProps) => JSX.Element;

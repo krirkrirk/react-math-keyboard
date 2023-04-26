@@ -1,6 +1,7 @@
 import { KeyProps } from "./key";
+import { KeyId } from "./keyIds";
 
-export const minLettersIds = [
+export const minLettersIds: KeyId[] = [
   "a",
   "b",
   "c",
@@ -35,7 +36,7 @@ export const minLettersIds = [
   "ô",
 ];
 
-export const majLettersIds = [
+export const majLettersIds: KeyId[] = [
   "A",
   "B",
   "C",

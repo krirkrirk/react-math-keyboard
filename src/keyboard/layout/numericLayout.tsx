@@ -1,8 +1,9 @@
 import { Key, KeyProps } from "../keys/key";
-import { KeyId, KeysPropsMap } from "../keys/keys";
+import { KeysPropsMap } from "../keys/keys";
 import { Toolbar, ToolbarProps } from "../toolbar/toolbar";
 import React from "react";
 import { ToolbarTabIds } from "../toolbar/toolbarTabs";
+import { KeyId } from "../keys/keyIds";
 export type NumericLayoutProps = {
   toolbarKeys?: (KeyId | KeyProps)[];
   showTabs?: boolean;

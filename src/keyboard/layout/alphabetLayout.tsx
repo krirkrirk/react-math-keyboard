@@ -1,42 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { Key, KeyProps } from "../keys/key";
-import { KeyId, KeysPropsMap } from "../keys/keys";
+import { KeysPropsMap } from "../keys/keys";
 import { LetterKey } from "../keys/letterKey";
 import { Toolbar } from "../toolbar/toolbar";
+import { KeyId } from "../keys/keyIds";
 export type AlphabetLayoutProps = {
   toolbarKeys?: (KeyId | KeyProps)[];
   onSwitch?: () => void;
 };
 
-const rows = [
+const rows: KeyId[][] = [
   ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p"],
   ["q", "s", "d", "f", "g", "h", "j", "k", "l", "m"],
   ["w", "x", "c", "v", "b", "n"],
 ];
 
-const minToolbarKeys = [
-  "é",
-  "è",
-  "à",
-  "ù",
-  "ç",
-  "ô",
-  "hyphen",
-  "quote",
-  "guillemet",
-  "euro",
-];
-const majToolbarKeys = ["É", "È", "Ç", "À"];
+const minToolbarKeys: KeyId[] = ["é", "è", "à", "ù", "ç", "ô", "hyphen", "quote", "guillemet", "euro"];
+const majToolbarKeys: KeyId[] = ["É", "È", "Ç", "À"];
 
-export const AlphabetLayout = ({
-  toolbarKeys = [],
-  onSwitch,
-}: AlphabetLayoutProps) => {
+export const AlphabetLayout = ({ toolbarKeys = [], onSwitch }: AlphabetLayoutProps) => {
   const [isMaj, setIsMaj] = useState(false);
   const onMaj = () => {
     setIsMaj((prev) => !prev);
   };
-  const [shownToolbarKeys, setShownToolbarKeys] = useState<string[]>([]);
+  const [shownToolbarKeys, setShownToolbarKeys] = useState<KeyId[]>([]);
   useEffect(() => {
     setShownToolbarKeys(isMaj ? majToolbarKeys : minToolbarKeys);
   }, [isMaj]);
@@ -54,20 +41,10 @@ export const AlphabetLayout = ({
           }}
         >
           {rows[0].map((letter) => (
-            <LetterKey
-              letter={letter}
-              key={letter}
-              isInMathMode={false}
-              isMaj={isMaj}
-            />
+            <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
           ))}
           {rows[1].map((letter) => (
-            <LetterKey
-              letter={letter}
-              key={letter}
-              isInMathMode={false}
-              isMaj={isMaj}
-            />
+            <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
           ))}
           <div style={{ gridColumn: "span 2" }}>
             <Key
@@ -90,25 +67,14 @@ export const AlphabetLayout = ({
             />
           </div>
           {rows[2].map((letter) => (
-            <LetterKey
-              letter={letter}
-              key={letter}
-              isInMathMode={false}
-              isMaj={isMaj}
-            />
+            <LetterKey letter={letter} key={letter} isInMathMode={false} isMaj={isMaj} />
           ))}
           <Key {...KeysPropsMap.get("comma")!} />
           <Key {...KeysPropsMap.get("dot")!} />
         </div>
         <div style={{ display: "flex", columnGap: "0.25rem" }}>
           <div style={{ flexGrow: 1 }}>
-            <Key
-              id="switch"
-              label={"123"}
-              labelType="raw"
-              onClick={onSwitch}
-              isUtilityKey
-            />
+            <Key id="switch" label={"123"} labelType="raw" onClick={onSwitch} isUtilityKey />
           </div>
           <div style={{ flexGrow: 0.5 }}>
             <Key {...KeysPropsMap.get("left")!} />

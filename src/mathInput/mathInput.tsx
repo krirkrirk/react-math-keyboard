@@ -4,9 +4,10 @@ import { isMobile } from "react-device-detect";
 import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
-import { KeyId } from "../keyboard/keys/keys";
+
 import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
+import { KeyId } from "../keyboard/keys/keyIds";
 
 export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
@@ -124,12 +125,9 @@ export const MathInput = ({
       } else {
         $("body").css("padding-bottom", `300px`);
       }
-      const delta =
-        window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
-      if (delta < 400)
-        window.scrollBy({ top: 400 - delta, behavior: "smooth" });
-      if (delta > window.innerHeight - 30)
-        window.scrollBy({ top: -50, behavior: "smooth" });
+      const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+      if (delta < 400) window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+      if (delta > window.innerHeight - 30) window.scrollBy({ top: -50, behavior: "smooth" });
     } else {
       if (rootElementId) {
         $(`#${rootElementId}`).css("padding-bottom", 0);

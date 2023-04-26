@@ -2,6 +2,7 @@ import { constantKeysProps } from "./constantKeys";
 import { functionKeysProps } from "./functionKeys";
 import { greekLettersKeysProps } from "./greekLetters";
 import { KeyProps } from "./key";
+import { KeyId } from "./keyIds";
 import { majLettersKeysProps, minLettersKeysProps } from "./letterKeys";
 import { numberKeysProps } from "./numberKeys";
 import { operationKeysProps } from "./operationKeys";
@@ -49,19 +50,8 @@ const keysProps: KeyProps[] = [
   },
 ];
 
-// const allIds = [
-//   ...majLettersIds,
-//   ...minLettersIds,
-//   ...numbersIds,
-//   ...constantKeysIds,
-//   ...operationKeysIds,
-//   ...utilityKeysIds,
-// ];
-
-export type KeyId = string;
-
 export const KeysPropsMap = new Map<KeyId, KeyProps>(
   keysProps.map((obj) => {
-    return [obj.id, obj];
+    return [obj.id as KeyId, obj];
   })
 );
