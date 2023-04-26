@@ -12,6 +12,7 @@ export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
+  allowAlphabeticKeyboard?: boolean;
   setMathfieldRef?: (mf: MathField) => void;
   setClearRef?: (f: () => void) => void;
   initialLatex?: string;
@@ -36,6 +37,7 @@ export const MathInput = ({
   divisionFormat = "fraction",
   size = "medium",
   fullWidth = true,
+  allowAlphabeticKeyboard = true,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -87,15 +89,17 @@ export const MathInput = ({
     const onMouseDown = (e: MouseEvent) => {
       if (e.target instanceof HTMLElement) {
         let isKeyboardClick = false;
+        let isCloseKeyClick = false;
         let element: HTMLElement | null = e.target;
         while (element !== null) {
+          if (element.id.includes("close")) isCloseKeyClick = true;
           if (element.id.includes(`mq-keyboard-${idCounter.current}`)) {
             isKeyboardClick = true;
             break;
           }
           element = element.parentElement;
         }
-        if (!isKeyboardClick) {
+        if (!isKeyboardClick || isCloseKeyClick) {
           request("close");
         } else request("open");
       }
@@ -135,6 +139,10 @@ export const MathInput = ({
     }
   }, [showKeyboard, rootElementId]);
 
+  const onForceHideKeyboard = () => {
+    setShowKeyboard(false);
+    // mathfield.current.blur();
+  };
   return (
     <div
       style={{ display: "flex", width: fullWidth ? "100%" : "auto", ...style }}
@@ -155,6 +163,8 @@ export const MathInput = ({
             numericToolbarKeys={numericToolbarKeys}
             numericToolbarTabs={numericToolbarTabs}
             alphabeticToolbarKeys={alphabeticToolbarKeys}
+            onHideKeyboard={onForceHideKeyboard}
+            allowAlphabeticKeyboard={allowAlphabeticKeyboard}
           />
         )}
       </MathFieldContext.Provider>

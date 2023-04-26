@@ -8,7 +8,9 @@ export type NumericLayoutProps = {
   showTabs?: boolean;
   toolbarTabs?: ToolbarTabIds[];
   onSwitch?: () => void;
+  onHideKeyboard?: () => void;
   divisionFormat: "fraction" | "obelus";
+  allowAlphabeticKeyboard: boolean;
 };
 
 export const NumericLayout = ({
@@ -16,6 +18,8 @@ export const NumericLayout = ({
   toolbarTabs,
   onSwitch,
   divisionFormat,
+  allowAlphabeticKeyboard,
+  onHideKeyboard,
 }: NumericLayoutProps) => {
   const hideToolbar = !!toolbarKeys && !toolbarKeys.length;
 
@@ -41,13 +45,23 @@ export const NumericLayout = ({
           )}
           <Key {...KeysPropsMap.get("sqrt")!} />
           <Key {...KeysPropsMap.get("square")!} />
-          <Key
-            id="switch"
-            label={"abc"}
-            labelType="raw"
-            onClick={onSwitch}
-            isUtilityKey
-          />
+          {allowAlphabeticKeyboard ? (
+            <Key
+              id="switch"
+              label={"abc"}
+              labelType="raw"
+              onClick={onSwitch}
+              isUtilityKey
+            />
+          ) : (
+            <Key
+              id="close"
+              label={"close"}
+              labelType="raw"
+              onClick={onHideKeyboard}
+              isUtilityKey
+            />
+          )}
           <Key {...KeysPropsMap.get("power")!} />
         </div>
         <div
