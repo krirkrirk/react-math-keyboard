@@ -76,6 +76,7 @@ export const minLettersKeysProps = minLettersIds.map((label): KeyProps => {
     label: label,
     labelType: "tex",
     mathfieldInstructions: { content: label, method: "write" },
+    group: "minLetters",
   };
 });
 
@@ -86,5 +87,6 @@ export const majLettersKeysProps = majLettersIds.map((label): KeyProps => {
     label: label,
     labelType: "tex",
     mathfieldInstructions: { content: label, method: "write" },
+    group: "majLetters",
   };
 });

@@ -25,6 +25,7 @@ export const utilityKeysProps: KeyProps[] = [
       method: "keystroke",
     },
     isUtilityKey: true,
+    group: "utility",
   },
   {
     id: "right",
@@ -49,6 +50,7 @@ export const utilityKeysProps: KeyProps[] = [
       method: "keystroke",
     },
     isUtilityKey: true,
+    group: "utility",
   },
   {
     id: "del",
@@ -71,5 +73,6 @@ export const utilityKeysProps: KeyProps[] = [
       method: "keystroke",
     },
     isUtilityKey: true,
+    group: "utility",
   },
 ];

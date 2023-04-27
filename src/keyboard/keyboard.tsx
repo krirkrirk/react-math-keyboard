@@ -13,6 +13,8 @@ export type KeyboardProps = {
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
   divisionFormat: "fraction" | "obelus";
+  allowAlphabeticKeyboard: boolean;
+  onHideKeyboard?: () => void;
 };
 
 export const Keyboard = ({
@@ -20,6 +22,8 @@ export const Keyboard = ({
   numericToolbarTabs,
   alphabeticToolbarKeys,
   divisionFormat,
+  allowAlphabeticKeyboard,
+  onHideKeyboard,
 }: KeyboardProps) => {
   const mathfield = useContext(MathFieldContext);
   useEffect(() => {
@@ -27,6 +31,7 @@ export const Keyboard = ({
   }, []);
 
   const [currentLayoutType, setCurrentLayoutType] = useState("numeric");
+
   const onSwitch = () => {
     if (currentLayoutType === "numeric") {
       mathfield.cmd("text");
@@ -53,6 +58,8 @@ export const Keyboard = ({
           toolbarKeys={numericToolbarKeys}
           toolbarTabs={numericToolbarTabs}
           divisionFormat={divisionFormat}
+          allowAlphabeticKeyboard={allowAlphabeticKeyboard}
+          onHideKeyboard={onHideKeyboard}
         />
       )}
       {currentLayoutType === "alphabet" && <AlphabetLayout onSwitch={onSwitch} toolbarKeys={alphabeticToolbarKeys} />}

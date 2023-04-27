@@ -2,6 +2,28 @@ import { KeyProps } from "./key";
 
 export const setKeysProps: KeyProps[] = [
   {
+    id: "semicolon",
+    label: ";",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: ";",
+      method: "write",
+    },
+    group: "sets",
+  },
+  {
+    id: "infty",
+    label: "\\infty",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "\\infty",
+      method: "cmd",
+    },
+    group: "sets",
+  },
+  {
     id: "cap",
     label: "\\cap",
     labelType: "tex",
@@ -10,6 +32,7 @@ export const setKeysProps: KeyProps[] = [
       content: "cap",
       method: "cmd",
     },
+    group: "sets",
   },
   {
     id: "cup",
@@ -20,6 +43,7 @@ export const setKeysProps: KeyProps[] = [
       content: "cup",
       method: "cmd",
     },
+    group: "sets",
   },
   {
     id: "lbrace",
@@ -30,6 +54,7 @@ export const setKeysProps: KeyProps[] = [
       content: "{",
       method: "typedText",
     },
+    group: "sets",
   },
   {
     id: "rbrace",
@@ -40,6 +65,7 @@ export const setKeysProps: KeyProps[] = [
       content: "}",
       method: "typedText",
     },
+    group: "sets",
   },
   {
     id: "lbracket",
@@ -50,6 +76,7 @@ export const setKeysProps: KeyProps[] = [
       content: "[",
       method: "write",
     },
+    group: "sets",
   },
   {
     id: "rbracket",
@@ -60,6 +87,7 @@ export const setKeysProps: KeyProps[] = [
       content: "]",
       method: "write",
     },
+    group: "sets",
   },
   {
     id: "emptyset",
@@ -70,6 +98,7 @@ export const setKeysProps: KeyProps[] = [
       content: "\\emptyset",
       method: "cmd",
     },
+    group: "sets",
   },
   {
     id: "naturals",
@@ -80,6 +109,7 @@ export const setKeysProps: KeyProps[] = [
       content: "\\mathbb{N}",
       method: "write",
     },
+    group: "sets",
   },
   {
     id: "integers",
@@ -90,6 +120,7 @@ export const setKeysProps: KeyProps[] = [
       content: "\\mathbb{Z}",
       method: "write",
     },
+    group: "sets",
   },
   {
     id: "rationals",
@@ -100,6 +131,7 @@ export const setKeysProps: KeyProps[] = [
       content: "\\mathbb{Q}",
       method: "write",
     },
+    group: "sets",
   },
   {
     id: "reals",
@@ -110,6 +142,7 @@ export const setKeysProps: KeyProps[] = [
       content: "\\mathbb{R}",
       method: "write",
     },
+    group: "sets",
   },
   {
     id: "complex",
@@ -120,6 +153,7 @@ export const setKeysProps: KeyProps[] = [
       content: "\\mathbb{C}",
       method: "write",
     },
+    group: "sets",
   },
   {
     id: "ast",
@@ -130,5 +164,6 @@ export const setKeysProps: KeyProps[] = [
       content: "^\\ast",
       method: "write",
     },
+    group: "sets",
   },
 ];

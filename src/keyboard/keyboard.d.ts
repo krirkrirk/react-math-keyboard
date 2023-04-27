@@ -6,5 +6,7 @@ export type KeyboardProps = {
     numericToolbarTabs?: ToolbarTabIds[];
     alphabeticToolbarKeys?: (KeyId | KeyProps)[];
     divisionFormat: "fraction" | "obelus";
+    allowAlphabeticKeyboard: boolean;
+    onHideKeyboard?: () => void;
 };
-export declare const Keyboard: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, }: KeyboardProps) => JSX.Element;
+export declare const Keyboard: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, }: KeyboardProps) => JSX.Element;
