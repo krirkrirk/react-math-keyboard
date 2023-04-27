@@ -53052,7 +53052,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, }) => {
+const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, }) => {
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_mathInput_mathfieldContext__WEBPACK_IMPORTED_MODULE_3__.MathFieldContext);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         jquery__WEBPACK_IMPORTED_MODULE_2___default()(`#mq-keyboard-${mathfield.id}`).css("bottom", `0px`);
@@ -53074,43 +53074,83 @@ const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKey
     };
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { id: `mq-keyboard-${mathfield.id}`, onMouseDown: onMouseDown, 
         // className="fixed z-[1310] transition-[bottom] duration-300 flex justify-center bottom-[-300px] left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
-        className: "react-math-keyboard-keyboard-container scrollbar", children: [currentLayoutType === "numeric" && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_numericLayout__WEBPACK_IMPORTED_MODULE_5__.NumericLayout, { onSwitch: onSwitch, toolbarKeys: numericToolbarKeys, toolbarTabs: numericToolbarTabs, divisionFormat: divisionFormat })), currentLayoutType === "alphabet" && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_alphabetLayout__WEBPACK_IMPORTED_MODULE_4__.AlphabetLayout, { onSwitch: onSwitch, toolbarKeys: alphabeticToolbarKeys })] }));
+        className: "react-math-keyboard-keyboard-container scrollbar", children: [currentLayoutType === "numeric" && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_numericLayout__WEBPACK_IMPORTED_MODULE_5__.NumericLayout, { onSwitch: onSwitch, toolbarKeys: numericToolbarKeys, toolbarTabs: numericToolbarTabs, divisionFormat: divisionFormat, allowAlphabeticKeyboard: allowAlphabeticKeyboard, onHideKeyboard: onHideKeyboard })), currentLayoutType === "alphabet" && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_alphabetLayout__WEBPACK_IMPORTED_MODULE_4__.AlphabetLayout, { onSwitch: onSwitch, toolbarKeys: alphabeticToolbarKeys })] }));
 };
 
 
 /***/ }),
 
-/***/ "./src/keyboard/keys/constantKeys.ts":
-/*!*******************************************!*\
-  !*** ./src/keyboard/keys/constantKeys.ts ***!
-  \*******************************************/
+/***/ "./src/keyboard/keys/algebraKeys.ts":
+/*!******************************************!*\
+  !*** ./src/keyboard/keys/algebraKeys.ts ***!
+  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "constantKeysIds": () => (/* binding */ constantKeysIds),
-/* harmony export */   "constantKeysProps": () => (/* binding */ constantKeysProps)
+/* harmony export */   "algebraKeysProps": () => (/* binding */ algebraKeysProps)
 /* harmony export */ });
-const constantKeysIds = ["pi"];
-const constantKeysProps = [
+const algebraKeysProps = [
     {
-        id: "pi",
-        label: "\\pi",
+        id: "equal",
+        label: "=",
         labelType: "tex",
         mathfieldInstructions: {
-            content: "\\pi",
-            method: "cmd",
+            content: "=",
+            method: "write",
         },
+        group: "algebra",
     },
     {
-        id: "infty",
-        label: "\\infty",
+        id: "approx",
+        label: "\\approx",
         labelType: "tex",
         mathfieldInstructions: {
-            content: "\\infty",
-            method: "cmd",
+            content: "\\approx",
+            method: "write",
         },
+        group: "algebra",
+    },
+    {
+        id: "leq",
+        label: "\\leq",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\leq",
+            method: "write",
+        },
+        group: "algebra",
+    },
+    {
+        id: "geq",
+        label: "\\geq",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\geq",
+            method: "write",
+        },
+        group: "algebra",
+    },
+    {
+        id: "inf",
+        label: "<",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "<",
+            method: "write",
+        },
+        group: "algebra",
+    },
+    {
+        id: "sup",
+        label: ">",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: ">",
+            method: "write",
+        },
+        group: "algebra",
     },
 ];
 
@@ -53137,6 +53177,7 @@ const functionKeysProps = [
             content: "\\log",
             method: "cmd",
         },
+        group: "functions",
     },
     {
         id: "ln",
@@ -53146,6 +53187,7 @@ const functionKeysProps = [
             content: "\\ln",
             method: "cmd",
         },
+        group: "functions",
     },
     {
         id: "exp",
@@ -53155,6 +53197,7 @@ const functionKeysProps = [
             content: "\\exp(",
             method: "typedText",
         },
+        group: "functions",
     },
     {
         id: "epower",
@@ -53164,6 +53207,7 @@ const functionKeysProps = [
             content: "e^",
             method: "typedText",
         },
+        group: "functions",
     },
     {
         id: "sin",
@@ -53173,6 +53217,7 @@ const functionKeysProps = [
             content: "sin",
             method: "cmd",
         },
+        group: "functions",
     },
     {
         id: "cos",
@@ -53182,6 +53227,7 @@ const functionKeysProps = [
             content: "cos",
             method: "cmd",
         },
+        group: "functions",
     },
     {
         id: "tan",
@@ -53191,6 +53237,7 @@ const functionKeysProps = [
             content: "tan",
             method: "cmd",
         },
+        group: "functions",
     },
     {
         id: "arccos",
@@ -53200,6 +53247,7 @@ const functionKeysProps = [
             content: "\\cos^{-1}",
             method: "write",
         },
+        group: "functions",
     },
     {
         id: "arcsin",
@@ -53209,6 +53257,7 @@ const functionKeysProps = [
             content: "\\sin^{-1}",
             method: "write",
         },
+        group: "functions",
     },
     {
         id: "arctan",
@@ -53218,6 +53267,7 @@ const functionKeysProps = [
             content: "\\tan^{-1}",
             method: "write",
         },
+        group: "functions",
     },
     {
         id: "abs",
@@ -53227,6 +53277,34 @@ const functionKeysProps = [
             content: "|",
             method: "cmd",
         },
+        group: "functions",
+    },
+];
+
+
+/***/ }),
+
+/***/ "./src/keyboard/keys/geometryKeys.ts":
+/*!*******************************************!*\
+  !*** ./src/keyboard/keys/geometryKeys.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "geometryKeysProps": () => (/* binding */ geometryKeysProps)
+/* harmony export */ });
+const geometryKeysProps = [
+    {
+        id: "°",
+        label: "°",
+        labelType: "raw",
+        mathfieldInstructions: {
+            content: "°",
+            method: "write",
+        },
+        group: "geometry",
     },
 ];
 
@@ -53253,6 +53331,7 @@ const greekLettersKeysProps = [
             content: "\\alpha",
             method: "cmd",
         },
+        group: "greek",
     },
     {
         id: "beta",
@@ -53262,6 +53341,7 @@ const greekLettersKeysProps = [
             content: "\\beta",
             method: "cmd",
         },
+        group: "greek",
     },
     {
         id: "delta",
@@ -53271,6 +53351,7 @@ const greekLettersKeysProps = [
             content: "\\delta",
             method: "cmd",
         },
+        group: "greek",
     },
     {
         id: "Delta",
@@ -53280,6 +53361,17 @@ const greekLettersKeysProps = [
             content: "\\Delta",
             method: "cmd",
         },
+        group: "greek",
+    },
+    {
+        id: "pi",
+        label: "\\pi",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\pi",
+            method: "cmd",
+        },
+        group: "greek",
     },
     {
         id: "sigma",
@@ -53289,6 +53381,7 @@ const greekLettersKeysProps = [
             content: "\\sigma",
             method: "cmd",
         },
+        group: "greek",
     },
     {
         id: "theta",
@@ -53298,6 +53391,7 @@ const greekLettersKeysProps = [
             content: "\\theta",
             method: "cmd",
         },
+        group: "greek",
     },
     {
         id: "tau",
@@ -53307,6 +53401,7 @@ const greekLettersKeysProps = [
             content: "\\tau",
             method: "cmd",
         },
+        group: "greek",
     },
     {
         id: "phi",
@@ -53316,6 +53411,7 @@ const greekLettersKeysProps = [
             content: "\\phi",
             method: "cmd",
         },
+        group: "greek",
     },
     {
         id: "Omega",
@@ -53325,6 +53421,7 @@ const greekLettersKeysProps = [
             content: "\\Omega",
             method: "cmd",
         },
+        group: "greek",
     },
     {
         id: "lambda",
@@ -53334,6 +53431,7 @@ const greekLettersKeysProps = [
             content: "\\lambda",
             method: "cmd",
         },
+        group: "greek",
     },
     {
         id: "mu",
@@ -53343,6 +53441,7 @@ const greekLettersKeysProps = [
             content: "\\mu",
             method: "cmd",
         },
+        group: "greek",
     },
     {
         id: "gamma",
@@ -53352,6 +53451,7 @@ const greekLettersKeysProps = [
             content: "\\gamma",
             method: "cmd",
         },
+        group: "greek",
     },
     {
         id: "omega",
@@ -53361,6 +53461,7 @@ const greekLettersKeysProps = [
             content: "\\omega",
             method: "cmd",
         },
+        group: "greek",
     },
 ];
 
@@ -53469,17 +53570,18 @@ const Key = ({ id, label, labelType = "tex", onClick, mathfieldInstructions, ful
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "KeysPropsMap": () => (/* binding */ KeysPropsMap)
+/* harmony export */   "KeysPropsMap": () => (/* binding */ KeysPropsMap),
+/* harmony export */   "allKeysProps": () => (/* binding */ allKeysProps)
 /* harmony export */ });
-/* harmony import */ var _constantKeys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constantKeys */ "./src/keyboard/keys/constantKeys.ts");
+/* harmony import */ var _algebraKeys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./algebraKeys */ "./src/keyboard/keys/algebraKeys.ts");
 /* harmony import */ var _functionKeys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functionKeys */ "./src/keyboard/keys/functionKeys.ts");
-/* harmony import */ var _greekLetters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./greekLetters */ "./src/keyboard/keys/greekLetters.ts");
-/* harmony import */ var _letterKeys__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./letterKeys */ "./src/keyboard/keys/letterKeys.ts");
-/* harmony import */ var _numberKeys__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./numberKeys */ "./src/keyboard/keys/numberKeys.ts");
-/* harmony import */ var _operationKeys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./operationKeys */ "./src/keyboard/keys/operationKeys.ts");
-/* harmony import */ var _ponctuationKeys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ponctuationKeys */ "./src/keyboard/keys/ponctuationKeys.ts");
-/* harmony import */ var _setKeys__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./setKeys */ "./src/keyboard/keys/setKeys.ts");
-/* harmony import */ var _unitKeys__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./unitKeys */ "./src/keyboard/keys/unitKeys.ts");
+/* harmony import */ var _geometryKeys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./geometryKeys */ "./src/keyboard/keys/geometryKeys.ts");
+/* harmony import */ var _greekLetters__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./greekLetters */ "./src/keyboard/keys/greekLetters.ts");
+/* harmony import */ var _letterKeys__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./letterKeys */ "./src/keyboard/keys/letterKeys.ts");
+/* harmony import */ var _numberKeys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./numberKeys */ "./src/keyboard/keys/numberKeys.ts");
+/* harmony import */ var _operationKeys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./operationKeys */ "./src/keyboard/keys/operationKeys.ts");
+/* harmony import */ var _ponctuationKeys__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ponctuationKeys */ "./src/keyboard/keys/ponctuationKeys.ts");
+/* harmony import */ var _setKeys__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./setKeys */ "./src/keyboard/keys/setKeys.ts");
 /* harmony import */ var _utilityKeys__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utilityKeys */ "./src/keyboard/keys/utilityKeys.tsx");
 
 
@@ -53491,18 +53593,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const keysProps = [
-    ..._numberKeys__WEBPACK_IMPORTED_MODULE_4__.numberKeysProps,
-    ..._letterKeys__WEBPACK_IMPORTED_MODULE_3__.minLettersKeysProps,
-    ..._letterKeys__WEBPACK_IMPORTED_MODULE_3__.majLettersKeysProps,
-    ..._constantKeys__WEBPACK_IMPORTED_MODULE_0__.constantKeysProps,
-    ..._operationKeys__WEBPACK_IMPORTED_MODULE_5__.operationKeysProps,
+const allKeysProps = [
+    ..._numberKeys__WEBPACK_IMPORTED_MODULE_5__.numberKeysProps,
+    ..._letterKeys__WEBPACK_IMPORTED_MODULE_4__.minLettersKeysProps,
+    ..._letterKeys__WEBPACK_IMPORTED_MODULE_4__.majLettersKeysProps,
+    ..._operationKeys__WEBPACK_IMPORTED_MODULE_6__.operationKeysProps,
     ..._functionKeys__WEBPACK_IMPORTED_MODULE_1__.functionKeysProps,
     ..._utilityKeys__WEBPACK_IMPORTED_MODULE_9__.utilityKeysProps,
-    ..._setKeys__WEBPACK_IMPORTED_MODULE_7__.setKeysProps,
-    ..._greekLetters__WEBPACK_IMPORTED_MODULE_2__.greekLettersKeysProps,
-    ..._unitKeys__WEBPACK_IMPORTED_MODULE_8__.unitKeysProps,
-    ..._ponctuationKeys__WEBPACK_IMPORTED_MODULE_6__.ponctuationKeysProps,
+    ..._setKeys__WEBPACK_IMPORTED_MODULE_8__.setKeysProps,
+    ..._greekLetters__WEBPACK_IMPORTED_MODULE_3__.greekLettersKeysProps,
+    ..._geometryKeys__WEBPACK_IMPORTED_MODULE_2__.geometryKeysProps,
+    ..._algebraKeys__WEBPACK_IMPORTED_MODULE_0__.algebraKeysProps,
+    ..._ponctuationKeys__WEBPACK_IMPORTED_MODULE_7__.ponctuationKeysProps,
     {
         id: "overrightarrow",
         label: "\\overrightarrow{AB}",
@@ -53513,22 +53615,14 @@ const keysProps = [
         },
     },
     {
-        id: "space",
-        label: "",
-        labelType: "raw",
-        mathfieldInstructions: {
-            content: " ",
-            method: "write",
-        },
-    },
-    {
         id: "underscore",
         label: "\\square_n",
         labelType: "tex",
         mathfieldInstructions: { content: "_", method: "cmd" },
+        group: "sequences",
     },
 ];
-const KeysPropsMap = new Map(keysProps.map((obj) => {
+const KeysPropsMap = new Map(allKeysProps.map((obj) => {
     return [obj.id, obj];
 }));
 
@@ -53647,6 +53741,7 @@ const minLettersKeysProps = minLettersIds.map((label) => {
         label: label,
         labelType: "tex",
         mathfieldInstructions: { content: label, method: "write" },
+        group: "minLetters",
     };
 });
 const majLettersKeysProps = majLettersIds.map((label) => {
@@ -53655,6 +53750,7 @@ const majLettersKeysProps = majLettersIds.map((label) => {
         label: label,
         labelType: "tex",
         mathfieldInstructions: { content: label, method: "write" },
+        group: "majLetters",
     };
 });
 
@@ -53680,6 +53776,7 @@ const numberKeysProps = numbersIds.map((label) => {
         label: label,
         labelType: "tex",
         mathfieldInstructions: { content: label, method: "write" },
+        group: "numbers",
     };
 });
 
@@ -53706,6 +53803,7 @@ const operationKeysProps = [
             content: "+",
             method: "write",
         },
+        group: "basicOperations",
     },
     {
         id: "minus",
@@ -53715,6 +53813,7 @@ const operationKeysProps = [
             content: "-",
             method: "write",
         },
+        group: "basicOperations",
     },
     {
         id: "times",
@@ -53724,6 +53823,7 @@ const operationKeysProps = [
             content: "\\times",
             method: "cmd",
         },
+        group: "basicOperations",
     },
     {
         id: "frac",
@@ -53733,6 +53833,7 @@ const operationKeysProps = [
             content: "/",
             method: "cmd",
         },
+        group: "basicOperations",
     },
     {
         id: "sqrt",
@@ -53742,11 +53843,13 @@ const operationKeysProps = [
             content: "\\sqrt",
             method: "cmd",
         },
+        group: "basicOperations",
     },
     {
         id: "square",
         label: "\\square^2",
         labelType: "tex",
+        group: "basicOperations",
         mathfieldInstructions: { content: "^2", method: "write" },
     },
     {
@@ -53754,17 +53857,20 @@ const operationKeysProps = [
         label: "\\square^3",
         labelType: "tex",
         mathfieldInstructions: { content: "^3 ", method: "write" },
+        group: "otherOperations",
     },
     {
         id: "power",
         label: "\\square^n",
         labelType: "tex",
+        group: "basicOperations",
         mathfieldInstructions: { content: "^", method: "cmd" },
     },
     {
         id: "leftParenthesis",
         label: "(",
         labelType: "tex",
+        group: "basicOperations",
         mathfieldInstructions: {
             content: "(",
             method: "typedText",
@@ -53774,69 +53880,17 @@ const operationKeysProps = [
         id: "rightParenthesis",
         label: ")",
         labelType: "tex",
+        group: "basicOperations",
         mathfieldInstructions: {
             content: ")",
             method: "typedText",
         },
     },
     {
-        id: "equal",
-        label: "=",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "=",
-            method: "write",
-        },
-    },
-    {
-        id: "approx",
-        label: "\\approx",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "\\approx",
-            method: "write",
-        },
-    },
-    {
-        id: "leq",
-        label: "\\leq",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "\\leq",
-            method: "write",
-        },
-    },
-    {
-        id: "geq",
-        label: "\\geq",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "\\geq",
-            method: "write",
-        },
-    },
-    {
-        id: "inf",
-        label: "<",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "<",
-            method: "write",
-        },
-    },
-    {
-        id: "sup",
-        label: ">",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: ">",
-            method: "write",
-        },
-    },
-    {
         id: "comma",
         label: "{,}",
         labelType: "tex",
+        group: "basicOperations",
         mathfieldInstructions: {
             content: ",",
             method: "write",
@@ -53846,6 +53900,7 @@ const operationKeysProps = [
         id: "dot",
         label: ".",
         labelType: "tex",
+        group: "basicOperations",
         mathfieldInstructions: {
             content: ".",
             method: "write",
@@ -53855,6 +53910,7 @@ const operationKeysProps = [
         id: "obelus",
         label: "\\div",
         labelType: "tex",
+        group: "basicOperations",
         mathfieldInstructions: {
             content: "\\div",
             method: "write",
@@ -53864,17 +53920,9 @@ const operationKeysProps = [
         id: "percent",
         label: "\\%",
         labelType: "tex",
+        group: "otherOperations",
         mathfieldInstructions: {
             content: "%",
-            method: "write",
-        },
-    },
-    {
-        id: "semicolon",
-        label: ";",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: ";",
             method: "write",
         },
     },
@@ -53896,6 +53944,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const ponctuationKeysProps = [
     {
+        id: "space",
+        label: "",
+        labelType: "raw",
+        mathfieldInstructions: {
+            content: " ",
+            method: "write",
+        },
+        group: "alphabet",
+    },
+    {
         id: "guillemet",
         label: '"',
         labelType: "raw",
@@ -53903,6 +53961,7 @@ const ponctuationKeysProps = [
             content: '"',
             method: "write",
         },
+        group: "alphabet",
     },
     {
         id: "quote",
@@ -53912,6 +53971,7 @@ const ponctuationKeysProps = [
             content: "'",
             method: "write",
         },
+        group: "alphabet",
     },
     {
         id: "hyphen",
@@ -53921,6 +53981,7 @@ const ponctuationKeysProps = [
             content: "-",
             method: "write",
         },
+        group: "alphabet",
     },
     {
         id: "euro",
@@ -53930,6 +53991,7 @@ const ponctuationKeysProps = [
             content: "€",
             method: "write",
         },
+        group: "alphabet",
     },
 ];
 
@@ -53949,6 +54011,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const setKeysProps = [
     {
+        id: "semicolon",
+        label: ";",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: ";",
+            method: "write",
+        },
+        group: "sets",
+    },
+    {
+        id: "infty",
+        label: "\\infty",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\infty",
+            method: "cmd",
+        },
+        group: "sets",
+    },
+    {
         id: "cap",
         label: "\\cap",
         labelType: "tex",
@@ -53956,6 +54038,7 @@ const setKeysProps = [
             content: "cap",
             method: "cmd",
         },
+        group: "sets",
     },
     {
         id: "cup",
@@ -53965,6 +54048,7 @@ const setKeysProps = [
             content: "cup",
             method: "cmd",
         },
+        group: "sets",
     },
     {
         id: "lbrace",
@@ -53974,6 +54058,7 @@ const setKeysProps = [
             content: "{",
             method: "typedText",
         },
+        group: "sets",
     },
     {
         id: "rbrace",
@@ -53983,6 +54068,7 @@ const setKeysProps = [
             content: "}",
             method: "typedText",
         },
+        group: "sets",
     },
     {
         id: "lbracket",
@@ -53992,6 +54078,7 @@ const setKeysProps = [
             content: "[",
             method: "write",
         },
+        group: "sets",
     },
     {
         id: "rbracket",
@@ -54001,6 +54088,7 @@ const setKeysProps = [
             content: "]",
             method: "write",
         },
+        group: "sets",
     },
     {
         id: "emptyset",
@@ -54010,6 +54098,7 @@ const setKeysProps = [
             content: "\\emptyset",
             method: "cmd",
         },
+        group: "sets",
     },
     {
         id: "naturals",
@@ -54019,6 +54108,7 @@ const setKeysProps = [
             content: "\\mathbb{N}",
             method: "write",
         },
+        group: "sets",
     },
     {
         id: "integers",
@@ -54028,6 +54118,7 @@ const setKeysProps = [
             content: "\\mathbb{Z}",
             method: "write",
         },
+        group: "sets",
     },
     {
         id: "rationals",
@@ -54037,6 +54128,7 @@ const setKeysProps = [
             content: "\\mathbb{Q}",
             method: "write",
         },
+        group: "sets",
     },
     {
         id: "reals",
@@ -54046,6 +54138,7 @@ const setKeysProps = [
             content: "\\mathbb{R}",
             method: "write",
         },
+        group: "sets",
     },
     {
         id: "complex",
@@ -54055,6 +54148,7 @@ const setKeysProps = [
             content: "\\mathbb{C}",
             method: "write",
         },
+        group: "sets",
     },
     {
         id: "ast",
@@ -54064,32 +54158,7 @@ const setKeysProps = [
             content: "^\\ast",
             method: "write",
         },
-    },
-];
-
-
-/***/ }),
-
-/***/ "./src/keyboard/keys/unitKeys.ts":
-/*!***************************************!*\
-  !*** ./src/keyboard/keys/unitKeys.ts ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "unitKeysProps": () => (/* binding */ unitKeysProps)
-/* harmony export */ });
-const unitKeysProps = [
-    {
-        id: "°",
-        label: "°",
-        labelType: "raw",
-        mathfieldInstructions: {
-            content: "°",
-            method: "write",
-        },
+        group: "sets",
     },
 ];
 
@@ -54121,6 +54190,7 @@ const utilityKeysProps = [
             method: "keystroke",
         },
         isUtilityKey: true,
+        group: "utility",
     },
     {
         id: "right",
@@ -54131,6 +54201,7 @@ const utilityKeysProps = [
             method: "keystroke",
         },
         isUtilityKey: true,
+        group: "utility",
     },
     {
         id: "del",
@@ -54141,6 +54212,7 @@ const utilityKeysProps = [
             method: "keystroke",
         },
         isUtilityKey: true,
+        group: "utility",
     },
 ];
 
@@ -54216,12 +54288,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const NumericLayout = ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat }) => {
+const NumericLayout = ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, }) => {
     const hideToolbar = !!toolbarKeys && !toolbarKeys.length;
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-keyboard-layout", children: [!hideToolbar && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_toolbar_toolbar__WEBPACK_IMPORTED_MODULE_3__.Toolbar, { keys: toolbarKeys, tabs: toolbarTabs }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-numeric-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: {
                             gridTemplateColumns: "repeat(2, minmax(0,1fr))",
                             flexGrow: 1,
-                        }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("leftParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("rightParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("times") }), divisionFormat === "fraction" ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("frac") })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("obelus") })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("sqrt") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("square") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: "switch", label: "abc", labelType: "raw", onClick: onSwitch, isUtilityKey: true }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("power") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: {
+                        }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("leftParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("rightParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("times") }), divisionFormat === "fraction" ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("frac") })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("obelus") })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("sqrt") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("square") }), allowAlphabeticKeyboard ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: "switch", label: "abc", labelType: "raw", onClick: onSwitch, isUtilityKey: true })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: "close", label: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", { xmlns: "http://www.w3.org/2000/svg", width: "25", height: "25", fill: "currentColor", className: "bi bi-keyboard", viewBox: "0 0 16 16", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { d: "M14 5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12zM2 4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { d: "M13 10.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm0-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5 0A.25.25 0 0 1 8.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 8 8.75v-.5zm2 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-.5zm1 2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5-2A.25.25 0 0 1 6.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 6 8.75v-.5zm-2 0A.25.25 0 0 1 4.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 4 8.75v-.5zm-2 0A.25.25 0 0 1 2.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 8.75v-.5zm11-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0A.25.25 0 0 1 9.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 9 6.75v-.5zm-2 0A.25.25 0 0 1 7.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 7 6.75v-.5zm-2 0A.25.25 0 0 1 5.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 5 6.75v-.5zm-3 0A.25.25 0 0 1 2.25 6h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5A.25.25 0 0 1 2 6.75v-.5zm0 4a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm2 0a.25.25 0 0 1 .25-.25h5.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-5.5a.25.25 0 0 1-.25-.25v-.5z" })] }), labelType: "svg", onClick: onHideKeyboard, isUtilityKey: true })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("power") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: {
                             gridTemplateColumns: "repeat(3, minmax(0,1fr))",
                             flexGrow: 2,
                         }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("7") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("8") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("9") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("4") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("5") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("6") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("1") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("2") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("3") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("left") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("0") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("right") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: {
@@ -54417,7 +54489,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style = {}, initialLatex, rootElementId, divisionFormat = "fraction", size = "medium", fullWidth = true, }) => {
+const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style = {}, initialLatex, rootElementId, divisionFormat = "fraction", size = "medium", fullWidth = true, allowAlphabeticKeyboard = true, }) => {
     const [loaded, setLoaded] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const [showKeyboard, setShowKeyboard] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)({});
@@ -54463,15 +54535,18 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
         const onMouseDown = (e) => {
             if (e.target instanceof HTMLElement) {
                 let isKeyboardClick = false;
+                let isCloseKeyClick = false;
                 let element = e.target;
                 while (element !== null) {
+                    if (element.id.includes("close"))
+                        isCloseKeyClick = true;
                     if (element.id.includes(`mq-keyboard-${idCounter.current}`)) {
                         isKeyboardClick = true;
                         break;
                     }
                     element = element.parentElement;
                 }
-                if (!isKeyboardClick) {
+                if (!isKeyboardClick || isCloseKeyClick) {
                     request("close");
                 }
                 else
@@ -54514,7 +54589,11 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
             }
         }
     }, [showKeyboard, rootElementId]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: "flex", width: fullWidth ? "100%" : "auto", ...style }, id: `mq-keyboard-${idCounter.current}-container`, className: "react-math-keyboard-input-container", children: [!loaded && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "Loading..." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "react-math-keyboard-input", style: { padding: size === "small" ? "8px 4px" : "12px 6px" }, id: `mq-keyboard-${idCounter.current}-field`, ref: spanRef }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mathfieldContext__WEBPACK_IMPORTED_MODULE_5__.MathFieldContext.Provider, { value: mathfield.current, children: showKeyboard && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keyboard_keyboard__WEBPACK_IMPORTED_MODULE_4__.Keyboard, { divisionFormat: divisionFormat, numericToolbarKeys: numericToolbarKeys, numericToolbarTabs: numericToolbarTabs, alphabeticToolbarKeys: alphabeticToolbarKeys })) })] }));
+    const onForceHideKeyboard = () => {
+        setShowKeyboard(false);
+        // mathfield.current.blur();
+    };
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: "flex", width: fullWidth ? "100%" : "auto", ...style }, id: `mq-keyboard-${idCounter.current}-container`, className: "react-math-keyboard-input-container", children: [!loaded && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "Loading..." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "react-math-keyboard-input", style: { padding: size === "small" ? "8px 4px" : "12px 6px" }, id: `mq-keyboard-${idCounter.current}-field`, ref: spanRef }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mathfieldContext__WEBPACK_IMPORTED_MODULE_5__.MathFieldContext.Provider, { value: mathfield.current, children: showKeyboard && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keyboard_keyboard__WEBPACK_IMPORTED_MODULE_4__.Keyboard, { divisionFormat: divisionFormat, numericToolbarKeys: numericToolbarKeys, numericToolbarTabs: numericToolbarTabs, alphabeticToolbarKeys: alphabeticToolbarKeys, onHideKeyboard: onForceHideKeyboard, allowAlphabeticKeyboard: allowAlphabeticKeyboard })) })] }));
 };
 
 
