@@ -54489,7 +54489,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style = {}, initialLatex, rootElementId, divisionFormat = "fraction", size = "medium", fullWidth = true, allowAlphabeticKeyboard = true, container = window, }) => {
+const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style = {}, initialLatex, rootElementId, divisionFormat = "fraction", size = "medium", fullWidth = true, allowAlphabeticKeyboard = true, scrollType = "window", }) => {
     const [loaded, setLoaded] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const [showKeyboard, setShowKeyboard] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)({});
@@ -54574,12 +54574,18 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
             else {
                 jquery__WEBPACK_IMPORTED_MODULE_2___default()("body").css("padding-bottom", `300px`);
             }
-            const delta = container.innerHeight -
-                mathfield.current.el().getBoundingClientRect().top;
-            if (delta < 400)
-                container.scrollBy({ top: 400 - delta, behavior: "smooth" });
-            if (delta > container.innerHeight - 30)
-                container.scrollBy({ top: -50, behavior: "smooth" });
+            const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+            if (delta < 400) {
+                if (scrollType === "window")
+                    window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+                else
+                    mathfield.current.el().scrollIntoView({ behavior: "smooth" });
+            }
+            if (delta > window.innerHeight - 30)
+                if (scrollType === "window")
+                    window.scrollBy({ top: -50, behavior: "smooth" });
+                else
+                    mathfield.current.el().scrollIntoView({ behavior: "smooth" });
         }
         else {
             if (rootElementId) {
@@ -54589,7 +54595,7 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
                 jquery__WEBPACK_IMPORTED_MODULE_2___default()("body").css("padding-bottom", 0);
             }
         }
-    }, [showKeyboard, rootElementId]);
+    }, [showKeyboard, rootElementId, scrollType]);
     const onForceHideKeyboard = () => {
         setShowKeyboard(false);
         // mathfield.current.blur();
