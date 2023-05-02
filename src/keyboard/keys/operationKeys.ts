@@ -10,6 +10,7 @@ export const operationKeysProps: KeyProps[] = [
       content: "+",
       method: "write",
     },
+    group: "basicOperations",
   },
   {
     id: "minus",
@@ -20,6 +21,7 @@ export const operationKeysProps: KeyProps[] = [
       content: "-",
       method: "write",
     },
+    group: "basicOperations",
   },
   {
     id: "times",
@@ -30,6 +32,7 @@ export const operationKeysProps: KeyProps[] = [
       content: "\\times",
       method: "cmd",
     },
+    group: "basicOperations",
   },
   {
     id: "frac",
@@ -40,6 +43,7 @@ export const operationKeysProps: KeyProps[] = [
       content: "/",
       method: "cmd",
     },
+    group: "basicOperations",
   },
   {
     id: "sqrt",
@@ -50,25 +54,29 @@ export const operationKeysProps: KeyProps[] = [
       content: "\\sqrt",
       method: "cmd",
     },
+    group: "basicOperations",
   },
   {
     id: "square",
     label: "\\square^2",
     labelType: "tex",
-
+    group: "basicOperations",
     mathfieldInstructions: { content: "^2", method: "write" },
   },
+
   {
     id: "cube",
     label: "\\square^3",
     labelType: "tex",
 
     mathfieldInstructions: { content: "^3 ", method: "write" },
+    group: "otherOperations",
   },
   {
     id: "power",
     label: "\\square^n",
     labelType: "tex",
+    group: "basicOperations",
 
     mathfieldInstructions: { content: "^", method: "cmd" },
   },
@@ -77,6 +85,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "leftParenthesis",
     label: "(",
     labelType: "tex",
+    group: "basicOperations",
 
     mathfieldInstructions: {
       content: "(",
@@ -87,76 +96,19 @@ export const operationKeysProps: KeyProps[] = [
     id: "rightParenthesis",
     label: ")",
     labelType: "tex",
+    group: "basicOperations",
 
     mathfieldInstructions: {
       content: ")",
       method: "typedText",
     },
   },
-  {
-    id: "equal",
-    label: "=",
-    labelType: "tex",
 
-    mathfieldInstructions: {
-      content: "=",
-      method: "write",
-    },
-  },
-  {
-    id: "approx",
-    label: "\\approx",
-    labelType: "tex",
-
-    mathfieldInstructions: {
-      content: "\\approx",
-      method: "write",
-    },
-  },
-  {
-    id: "leq",
-    label: "\\leq",
-    labelType: "tex",
-
-    mathfieldInstructions: {
-      content: "\\leq",
-      method: "write",
-    },
-  },
-  {
-    id: "geq",
-    label: "\\geq",
-    labelType: "tex",
-
-    mathfieldInstructions: {
-      content: "\\geq",
-      method: "write",
-    },
-  },
-  {
-    id: "inf",
-    label: "<",
-    labelType: "tex",
-
-    mathfieldInstructions: {
-      content: "<",
-      method: "write",
-    },
-  },
-  {
-    id: "sup",
-    label: ">",
-    labelType: "tex",
-
-    mathfieldInstructions: {
-      content: ">",
-      method: "write",
-    },
-  },
   {
     id: "comma",
     label: "{,}",
     labelType: "tex",
+    group: "basicOperations",
 
     mathfieldInstructions: {
       content: ",",
@@ -167,6 +119,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "dot",
     label: ".",
     labelType: "tex",
+    group: "basicOperations",
 
     mathfieldInstructions: {
       content: ".",
@@ -177,6 +130,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "obelus",
     label: "\\div",
     labelType: "tex",
+    group: "basicOperations",
 
     mathfieldInstructions: {
       content: "\\div",
@@ -187,19 +141,10 @@ export const operationKeysProps: KeyProps[] = [
     id: "percent",
     label: "\\%",
     labelType: "tex",
+    group: "otherOperations",
 
     mathfieldInstructions: {
       content: "%",
-      method: "write",
-    },
-  },
-  {
-    id: "semicolon",
-    label: ";",
-    labelType: "tex",
-
-    mathfieldInstructions: {
-      content: ";",
       method: "write",
     },
   },
