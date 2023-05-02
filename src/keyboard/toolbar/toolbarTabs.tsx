@@ -1,5 +1,5 @@
 import { KeyProps } from "../keys/key";
-import { KeyId } from "../keys/keys";
+import { KeyId } from "../keys/keyIds";
 
 export type ToolbarTab = {
   id: ToolbarTabIds;
@@ -22,7 +22,7 @@ export const toolbarTabs: ToolbarTab[] = [
     label: "f(x)",
     rawLabel: "f(x)",
 
-    keys: ["exp", "ln", "log", "epower", "quote"],
+    keys: ["abs", "exp", "ln", "log", "epower", "quote"],
   },
 
   {

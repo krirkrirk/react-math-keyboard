@@ -1,6 +1,6 @@
 import { KeyProps } from "./key";
 
-export const unitKeysProps: KeyProps[] = [
+export const geometryKeysProps: KeyProps[] = [
   {
     id: "°",
     label: "°",
@@ -9,5 +9,6 @@ export const unitKeysProps: KeyProps[] = [
       content: "°",
       method: "write",
     },
+    group: "geometry",
   },
 ];

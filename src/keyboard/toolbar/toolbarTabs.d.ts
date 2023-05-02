@@ -1,5 +1,5 @@
 import { KeyProps } from "../keys/key";
-import { KeyId } from "../keys/keys";
+import { KeyId } from "../keys/keyIds";
 export type ToolbarTab = {
     id: ToolbarTabIds;
     label: string;

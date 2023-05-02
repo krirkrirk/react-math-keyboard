@@ -10,6 +10,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "\\log",
       method: "cmd",
     },
+    group: "functions",
   },
   {
     id: "ln",
@@ -20,6 +21,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "\\ln",
       method: "cmd",
     },
+    group: "functions",
   },
   {
     id: "exp",
@@ -30,6 +32,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "\\exp(",
       method: "typedText",
     },
+    group: "functions",
   },
   {
     id: "epower",
@@ -40,6 +43,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "e^",
       method: "typedText",
     },
+    group: "functions",
   },
   {
     id: "sin",
@@ -50,6 +54,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "sin",
       method: "cmd",
     },
+    group: "functions",
   },
   {
     id: "cos",
@@ -60,6 +65,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "cos",
       method: "cmd",
     },
+    group: "functions",
   },
   {
     id: "tan",
@@ -70,6 +76,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "tan",
       method: "cmd",
     },
+    group: "functions",
   },
   {
     id: "arccos",
@@ -80,6 +87,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "\\cos^{-1}",
       method: "write",
     },
+    group: "functions",
   },
   {
     id: "arcsin",
@@ -90,6 +98,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "\\sin^{-1}",
       method: "write",
     },
+    group: "functions",
   },
   {
     id: "arctan",
@@ -100,5 +109,17 @@ export const functionKeysProps: KeyProps[] = [
       content: "\\tan^{-1}",
       method: "write",
     },
+    group: "functions",
+  },
+  {
+    id: "abs",
+    label: "\\left|\\square\\right|",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "|",
+      method: "cmd",
+    },
+    group: "functions",
   },
 ];

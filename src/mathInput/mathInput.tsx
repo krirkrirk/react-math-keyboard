@@ -4,14 +4,16 @@ import { isMobile } from "react-device-detect";
 import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
-import { KeyId } from "../keyboard/keys/keys";
+
 import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
+import { KeyId } from "../keyboard/keys/keyIds";
 
 export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
+  allowAlphabeticKeyboard?: boolean;
   setMathfieldRef?: (mf: MathField) => void;
   setClearRef?: (f: () => void) => void;
   initialLatex?: string;
@@ -20,6 +22,9 @@ export type MathInputProps = {
   style?: React.CSSProperties;
   size?: "small" | "medium";
   rootElementId?: string;
+  fullWidth?: boolean;
+  container?: any;
+  scrollType?: "window" | "raw";
 };
 
 export const MathInput = ({
@@ -34,6 +39,9 @@ export const MathInput = ({
   rootElementId,
   divisionFormat = "fraction",
   size = "medium",
+  fullWidth = true,
+  allowAlphabeticKeyboard = true,
+  scrollType = "window",
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -85,15 +93,17 @@ export const MathInput = ({
     const onMouseDown = (e: MouseEvent) => {
       if (e.target instanceof HTMLElement) {
         let isKeyboardClick = false;
+        let isCloseKeyClick = false;
         let element: HTMLElement | null = e.target;
         while (element !== null) {
+          if (element.id.includes("close")) isCloseKeyClick = true;
           if (element.id.includes(`mq-keyboard-${idCounter.current}`)) {
             isKeyboardClick = true;
             break;
           }
           element = element.parentElement;
         }
-        if (!isKeyboardClick) {
+        if (!isKeyboardClick || isCloseKeyClick) {
           request("close");
         } else request("open");
       }
@@ -118,9 +128,17 @@ export const MathInput = ({
       } else {
         $("body").css("padding-bottom", `300px`);
       }
-      const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
-      if (delta < 400) window.scrollBy({ top: 400 - delta, behavior: "smooth" });
-      if (delta > window.innerHeight - 30) window.scrollBy({ top: -50, behavior: "smooth" });
+      const delta =
+        window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+      if (delta < 400) {
+        if (scrollType === "window")
+          window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+        else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
+      }
+      if (delta > window.innerHeight - 30)
+        if (scrollType === "window")
+          window.scrollBy({ top: -50, behavior: "smooth" });
+        else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
     } else {
       if (rootElementId) {
         $(`#${rootElementId}`).css("padding-bottom", 0);
@@ -128,11 +146,15 @@ export const MathInput = ({
         $("body").css("padding-bottom", 0);
       }
     }
-  }, [showKeyboard, rootElementId]);
+  }, [showKeyboard, rootElementId, scrollType]);
 
+  const onForceHideKeyboard = () => {
+    setShowKeyboard(false);
+    // mathfield.current.blur();
+  };
   return (
     <div
-      style={{ display: "flex", ...style }}
+      style={{ display: "flex", width: fullWidth ? "100%" : "auto", ...style }}
       id={`mq-keyboard-${idCounter.current}-container`}
       className="react-math-keyboard-input-container"
     >
@@ -150,6 +172,8 @@ export const MathInput = ({
             numericToolbarKeys={numericToolbarKeys}
             numericToolbarTabs={numericToolbarTabs}
             alphabeticToolbarKeys={alphabeticToolbarKeys}
+            onHideKeyboard={onForceHideKeyboard}
+            allowAlphabeticKeyboard={allowAlphabeticKeyboard}
           />
         )}
       </MathFieldContext.Provider>

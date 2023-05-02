@@ -1,3 +1,4 @@
 import { KeyProps } from "./key";
-export declare const numbersIds: string[];
+import { KeyId } from "./keyIds";
+export declare const numbersIds: KeyId[];
 export declare const numberKeysProps: KeyProps[];

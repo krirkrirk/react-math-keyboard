@@ -10,6 +10,7 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\alpha",
       method: "cmd",
     },
+    group: "greek",
   },
   {
     id: "beta",
@@ -20,6 +21,7 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\beta",
       method: "cmd",
     },
+    group: "greek",
   },
 
   {
@@ -31,6 +33,7 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\delta",
       method: "cmd",
     },
+    group: "greek",
   },
   {
     id: "Delta",
@@ -41,6 +44,18 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\Delta",
       method: "cmd",
     },
+    group: "greek",
+  },
+  {
+    id: "pi",
+    label: "\\pi",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "\\pi",
+      method: "cmd",
+    },
+    group: "greek",
   },
   {
     id: "sigma",
@@ -51,6 +66,7 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\sigma",
       method: "cmd",
     },
+    group: "greek",
   },
   {
     id: "theta",
@@ -61,6 +77,7 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\theta",
       method: "cmd",
     },
+    group: "greek",
   },
   {
     id: "tau",
@@ -71,6 +88,7 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\tau",
       method: "cmd",
     },
+    group: "greek",
   },
   {
     id: "phi",
@@ -81,6 +99,7 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\phi",
       method: "cmd",
     },
+    group: "greek",
   },
   {
     id: "Omega",
@@ -91,6 +110,7 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\Omega",
       method: "cmd",
     },
+    group: "greek",
   },
 
   {
@@ -102,6 +122,7 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\lambda",
       method: "cmd",
     },
+    group: "greek",
   },
   {
     id: "mu",
@@ -112,6 +133,7 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\mu",
       method: "cmd",
     },
+    group: "greek",
   },
   {
     id: "gamma",
@@ -122,6 +144,7 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\gamma",
       method: "cmd",
     },
+    group: "greek",
   },
   {
     id: "omega",
@@ -132,5 +155,6 @@ export const greekLettersKeysProps: KeyProps[] = [
       content: "\\omega",
       method: "cmd",
     },
+    group: "greek",
   },
 ];

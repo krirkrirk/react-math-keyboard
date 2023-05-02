@@ -1,3 +1,4 @@
 import { KeyProps } from "./key";
-export type KeyId = string;
-export declare const KeysPropsMap: Map<string, KeyProps>;
+import { KeyId } from "./keyIds";
+export declare const allKeysProps: KeyProps[];
+export declare const KeysPropsMap: Map<KeyId, KeyProps>;

@@ -1,5 +1,6 @@
 import { KeyProps } from "./key";
-export declare const minLettersIds: string[];
-export declare const majLettersIds: string[];
+import { KeyId } from "./keyIds";
+export declare const minLettersIds: KeyId[];
+export declare const majLettersIds: KeyId[];
 export declare const minLettersKeysProps: KeyProps[];
 export declare const majLettersKeysProps: KeyProps[];

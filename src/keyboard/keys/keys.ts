@@ -1,26 +1,28 @@
-import { constantKeysProps } from "./constantKeys";
+import { algebraKeysProps } from "./algebraKeys";
 import { functionKeysProps } from "./functionKeys";
+import { geometryKeysProps } from "./geometryKeys";
 import { greekLettersKeysProps } from "./greekLetters";
 import { KeyProps } from "./key";
+import { KeyId } from "./keyIds";
 import { majLettersKeysProps, minLettersKeysProps } from "./letterKeys";
 import { numberKeysProps } from "./numberKeys";
 import { operationKeysProps } from "./operationKeys";
 import { ponctuationKeysProps } from "./ponctuationKeys";
 import { setKeysProps } from "./setKeys";
-import { unitKeysProps } from "./unitKeys";
 import { utilityKeysProps } from "./utilityKeys";
 
-const keysProps: KeyProps[] = [
+export const allKeysProps: KeyProps[] = [
   ...numberKeysProps,
   ...minLettersKeysProps,
   ...majLettersKeysProps,
-  ...constantKeysProps,
+
   ...operationKeysProps,
   ...functionKeysProps,
   ...utilityKeysProps,
   ...setKeysProps,
   ...greekLettersKeysProps,
-  ...unitKeysProps,
+  ...geometryKeysProps,
+  ...algebraKeysProps,
   ...ponctuationKeysProps,
   {
     id: "overrightarrow",
@@ -31,37 +33,18 @@ const keysProps: KeyProps[] = [
       method: "cmd",
     },
   },
-  {
-    id: "space",
-    label: "",
-    labelType: "raw",
-    mathfieldInstructions: {
-      content: " ",
-      method: "write",
-    },
-  },
 
   {
     id: "underscore",
     label: "\\square_n",
     labelType: "tex",
     mathfieldInstructions: { content: "_", method: "cmd" },
+    group: "sequences",
   },
 ];
 
-// const allIds = [
-//   ...majLettersIds,
-//   ...minLettersIds,
-//   ...numbersIds,
-//   ...constantKeysIds,
-//   ...operationKeysIds,
-//   ...utilityKeysIds,
-// ];
-
-export type KeyId = string;
-
 export const KeysPropsMap = new Map<KeyId, KeyProps>(
-  keysProps.map((obj) => {
-    return [obj.id, obj];
+  allKeysProps.map((obj) => {
+    return [obj.id as KeyId, obj];
   })
 );

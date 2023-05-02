@@ -3,15 +3,30 @@ import $ from "jquery";
 
 import { MathField, MathfieldInstructions } from "../../types/types";
 import { MathFieldContext } from "../../mathInput/mathfieldContext";
+import { KeyId } from "./keyIds";
 
 export type KeyProps = {
-  id: string;
+  id: KeyId | string;
   label: string | ReactNode;
   labelType: "raw" | "tex" | "svg";
   mathfieldInstructions?: MathfieldInstructions;
   onClick?: () => void;
   fullWidth?: boolean;
   isUtilityKey?: boolean;
+  group?:
+    | "sets"
+    | "functions"
+    | "minLetters"
+    | "majLetters"
+    | "greek"
+    | "utility"
+    | "sequences"
+    | "alphabet"
+    | "basicOperations"
+    | "otherOperations"
+    | "numbers"
+    | "algebra"
+    | "geometry";
 };
 
 export const Key = ({

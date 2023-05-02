@@ -3,15 +3,18 @@ import $ from "jquery";
 import { MathFieldContext } from "../mathInput/mathfieldContext";
 import { AlphabetLayout } from "./layout/alphabetLayout";
 import { NumericLayout, NumericLayoutProps } from "./layout/numericLayout";
-import { KeyId } from "./keys/keys";
+
 import { KeyProps } from "./keys/key";
 import { ToolbarTabIds } from "./toolbar/toolbarTabs";
+import { KeyId } from "./keys/keyIds";
 
 export type KeyboardProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
   divisionFormat: "fraction" | "obelus";
+  allowAlphabeticKeyboard: boolean;
+  onHideKeyboard?: () => void;
 };
 
 export const Keyboard = ({
@@ -19,6 +22,8 @@ export const Keyboard = ({
   numericToolbarTabs,
   alphabeticToolbarKeys,
   divisionFormat,
+  allowAlphabeticKeyboard,
+  onHideKeyboard,
 }: KeyboardProps) => {
   const mathfield = useContext(MathFieldContext);
   useEffect(() => {
@@ -26,19 +31,17 @@ export const Keyboard = ({
   }, []);
 
   const [currentLayoutType, setCurrentLayoutType] = useState("numeric");
+
   const onSwitch = () => {
     if (currentLayoutType === "numeric") {
       mathfield.cmd("text");
     } else {
       mathfield.moveToRightEnd();
     }
-    setCurrentLayoutType((prev) =>
-      prev === "numeric" ? "alphabet" : "numeric"
-    );
+    setCurrentLayoutType((prev) => (prev === "numeric" ? "alphabet" : "numeric"));
   };
   const onMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (e.target instanceof HTMLElement && e.target.nodeName !== "SELECT")
-      e.preventDefault();
+    if (e.target instanceof HTMLElement && e.target.nodeName !== "SELECT") e.preventDefault();
     mathfield.focus();
   };
 
@@ -55,14 +58,11 @@ export const Keyboard = ({
           toolbarKeys={numericToolbarKeys}
           toolbarTabs={numericToolbarTabs}
           divisionFormat={divisionFormat}
+          allowAlphabeticKeyboard={allowAlphabeticKeyboard}
+          onHideKeyboard={onHideKeyboard}
         />
       )}
-      {currentLayoutType === "alphabet" && (
-        <AlphabetLayout
-          onSwitch={onSwitch}
-          toolbarKeys={alphabeticToolbarKeys}
-        />
-      )}
+      {currentLayoutType === "alphabet" && <AlphabetLayout onSwitch={onSwitch} toolbarKeys={alphabeticToolbarKeys} />}
     </div>
   );
 };

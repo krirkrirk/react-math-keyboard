@@ -1,8 +1,16 @@
 import { KeyProps } from "./key";
 
-const ponctuationKeys = ['"', "'", "-", "€"];
-
 export const ponctuationKeysProps: Array<KeyProps> = [
+  {
+    id: "space",
+    label: "",
+    labelType: "raw",
+    mathfieldInstructions: {
+      content: " ",
+      method: "write",
+    },
+    group: "alphabet",
+  },
   {
     id: "guillemet",
     label: '"',
@@ -12,6 +20,7 @@ export const ponctuationKeysProps: Array<KeyProps> = [
       content: '"',
       method: "write",
     },
+    group: "alphabet",
   },
   {
     id: "quote",
@@ -22,6 +31,7 @@ export const ponctuationKeysProps: Array<KeyProps> = [
       content: "'",
       method: "write",
     },
+    group: "alphabet",
   },
   {
     id: "hyphen",
@@ -32,6 +42,7 @@ export const ponctuationKeysProps: Array<KeyProps> = [
       content: "-",
       method: "write",
     },
+    group: "alphabet",
   },
   {
     id: "euro",
@@ -42,5 +53,6 @@ export const ponctuationKeysProps: Array<KeyProps> = [
       content: "€",
       method: "write",
     },
+    group: "alphabet",
   },
 ];

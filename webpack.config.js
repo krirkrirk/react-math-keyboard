@@ -4,12 +4,18 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = (env, argv) => {
   return {
     entry:
-      argv.mode === "development" ? "./examples/home.tsx" : "./src/index.tsx",
-    // entry: "./src/index.tsx",
+      argv.mode === "development"
+        ? "./examples/home.tsx"
+        : // : {
+          //     mathInput: "./src/mathInput/mathInput.tsx",
+          //     keyProps: "./src/keyboard/keys/key.tsx",
+          //     allKeysProps: "./src/keyboard/keys/keys.ts",
+          //   },
+          "./src/index.tsx",
     output: {
       path: path.join(__dirname, "./dist"),
       filename: "react-math-keyboard.js",
-      library: "MathInput",
+      library: "react-math-keyboard",
       libraryTarget: "umd",
       umdNamedDefine: true,
       // libraryExport: "default",
