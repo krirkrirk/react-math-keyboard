@@ -24,6 +24,7 @@ export type MathInputProps = {
   rootElementId?: string;
   fullWidth?: boolean;
   container?: any;
+  scrollType?: "window" | "raw";
 };
 
 export const MathInput = ({
@@ -40,7 +41,7 @@ export const MathInput = ({
   size = "medium",
   fullWidth = true,
   allowAlphabeticKeyboard = true,
-  container = window,
+  scrollType = "window",
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -128,12 +129,16 @@ export const MathInput = ({
         $("body").css("padding-bottom", `300px`);
       }
       const delta =
-        container.innerHeight -
-        mathfield.current.el().getBoundingClientRect().top;
-      if (delta < 400)
-        container.scrollBy({ top: 400 - delta, behavior: "smooth" });
-      if (delta > container.innerHeight - 30)
-        container.scrollBy({ top: -50, behavior: "smooth" });
+        window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+      if (delta < 400) {
+        if (scrollType === "window")
+          window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+        else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
+      }
+      if (delta > window.innerHeight - 30)
+        if (scrollType === "window")
+          window.scrollBy({ top: -50, behavior: "smooth" });
+        else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
     } else {
       if (rootElementId) {
         $(`#${rootElementId}`).css("padding-bottom", 0);
@@ -141,7 +146,7 @@ export const MathInput = ({
         $("body").css("padding-bottom", 0);
       }
     }
-  }, [showKeyboard, rootElementId]);
+  }, [showKeyboard, rootElementId, scrollType]);
 
   const onForceHideKeyboard = () => {
     setShowKeyboard(false);
