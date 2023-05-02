@@ -7,6 +7,7 @@ export type MathInputProps = {
     numericToolbarKeys?: (KeyId | KeyProps)[];
     numericToolbarTabs?: ToolbarTabIds[];
     alphabeticToolbarKeys?: (KeyId | KeyProps)[];
+    allowAlphabeticKeyboard?: boolean;
     setMathfieldRef?: (mf: MathField) => void;
     setClearRef?: (f: () => void) => void;
     initialLatex?: string;
@@ -16,5 +17,6 @@ export type MathInputProps = {
     size?: "small" | "medium";
     rootElementId?: string;
     fullWidth?: boolean;
+    container?: any;
 };
-export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style, initialLatex, rootElementId, divisionFormat, size, fullWidth, }: MathInputProps) => JSX.Element;
+export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style, initialLatex, rootElementId, divisionFormat, size, fullWidth, allowAlphabeticKeyboard, container, }: MathInputProps) => JSX.Element;

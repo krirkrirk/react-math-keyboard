@@ -6,6 +6,8 @@ export type NumericLayoutProps = {
     showTabs?: boolean;
     toolbarTabs?: ToolbarTabIds[];
     onSwitch?: () => void;
+    onHideKeyboard?: () => void;
     divisionFormat: "fraction" | "obelus";
+    allowAlphabeticKeyboard: boolean;
 };
-export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat }: NumericLayoutProps) => JSX.Element;
+export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, }: NumericLayoutProps) => JSX.Element;
