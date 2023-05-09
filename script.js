@@ -53506,7 +53506,7 @@ const Key = ({ id, label, labelType = "tex", onClick, mathfieldInstructions, ful
     const renderLabel = () => {
         switch (labelType) {
             case "raw":
-                return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { id: `mq-keyboard-${mathfield.id}-rawkey-${id}`, children: label });
+                return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { id: `mq-keyboard-${mathfield.id}-rawkey-${id}`, children: label }));
             case "tex":
                 return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { id: `mq-keyboard-${mathfield.id}-key-${id}`, onClick: (e) => e.stopPropagation(), className: "cursor-pointer", children: label }));
             case "svg":
@@ -53550,7 +53550,9 @@ const Key = ({ id, label, labelType = "tex", onClick, mathfieldInstructions, ful
                 }),
             ...(isTouchDown && { backgroundColor: bgHoverColor }),
             ...(isClicked && { boxShadow: "inset 0 2px 4px rgba(0, 0, 0, 0.2)" }),
-            ...(labelType === "raw" || labelType === "svg" ? { paddingTop: 0 } : { paddingTop: "0.25rem" }),
+            ...(labelType === "raw" || labelType === "svg"
+                ? { paddingTop: 0 }
+                : { paddingTop: "0.25rem" }),
         }, ref: ref, id: `mq-keyboard-${mathfield.id}-button-key-${id}`, onMouseDown: onMouseDown, onMouseUp: () => setIsClicked(false), onMouseLeave: () => {
             if (!isClicked)
                 return;
@@ -53582,7 +53584,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _operationKeys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./operationKeys */ "./src/keyboard/keys/operationKeys.ts");
 /* harmony import */ var _ponctuationKeys__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ponctuationKeys */ "./src/keyboard/keys/ponctuationKeys.ts");
 /* harmony import */ var _setKeys__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./setKeys */ "./src/keyboard/keys/setKeys.ts");
-/* harmony import */ var _utilityKeys__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utilityKeys */ "./src/keyboard/keys/utilityKeys.tsx");
+/* harmony import */ var _unitKeys__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./unitKeys */ "./src/keyboard/keys/unitKeys.ts");
+/* harmony import */ var _utilityKeys__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utilityKeys */ "./src/keyboard/keys/utilityKeys.tsx");
+/* harmony import */ var _wordKeys__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./wordKeys */ "./src/keyboard/keys/wordKeys.ts");
+
+
 
 
 
@@ -53599,12 +53605,14 @@ const allKeysProps = [
     ..._letterKeys__WEBPACK_IMPORTED_MODULE_4__.majLettersKeysProps,
     ..._operationKeys__WEBPACK_IMPORTED_MODULE_6__.operationKeysProps,
     ..._functionKeys__WEBPACK_IMPORTED_MODULE_1__.functionKeysProps,
-    ..._utilityKeys__WEBPACK_IMPORTED_MODULE_9__.utilityKeysProps,
+    ..._utilityKeys__WEBPACK_IMPORTED_MODULE_10__.utilityKeysProps,
     ..._setKeys__WEBPACK_IMPORTED_MODULE_8__.setKeysProps,
     ..._greekLetters__WEBPACK_IMPORTED_MODULE_3__.greekLettersKeysProps,
     ..._geometryKeys__WEBPACK_IMPORTED_MODULE_2__.geometryKeysProps,
     ..._algebraKeys__WEBPACK_IMPORTED_MODULE_0__.algebraKeysProps,
     ..._ponctuationKeys__WEBPACK_IMPORTED_MODULE_7__.ponctuationKeysProps,
+    ..._unitKeys__WEBPACK_IMPORTED_MODULE_9__.unitKeysProps,
+    ..._wordKeys__WEBPACK_IMPORTED_MODULE_11__.wordKeysProps,
     {
         id: "overrightarrow",
         label: "\\overrightarrow{AB}",
@@ -54165,6 +54173,43 @@ const setKeysProps = [
 
 /***/ }),
 
+/***/ "./src/keyboard/keys/unitKeys.ts":
+/*!***************************************!*\
+  !*** ./src/keyboard/keys/unitKeys.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "unitKeysProps": () => (/* binding */ unitKeysProps)
+/* harmony export */ });
+const unitKeysProps = [
+    {
+        id: "cm",
+        label: "cm",
+        labelType: "raw",
+        mathfieldInstructions: {
+            content: "\\text{cm}",
+            method: "write",
+        },
+        group: "units",
+    },
+    {
+        id: "cm2",
+        label: "\\text{cm}^2",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\text{cm}^2",
+            method: "write",
+        },
+        group: "units",
+    },
+];
+
+
+/***/ }),
+
 /***/ "./src/keyboard/keys/utilityKeys.tsx":
 /*!*******************************************!*\
   !*** ./src/keyboard/keys/utilityKeys.tsx ***!
@@ -54213,6 +54258,43 @@ const utilityKeysProps = [
         },
         isUtilityKey: true,
         group: "utility",
+    },
+];
+
+
+/***/ }),
+
+/***/ "./src/keyboard/keys/wordKeys.ts":
+/*!***************************************!*\
+  !*** ./src/keyboard/keys/wordKeys.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "wordKeysProps": () => (/* binding */ wordKeysProps)
+/* harmony export */ });
+const wordKeysProps = [
+    {
+        id: "ou",
+        label: "ou",
+        labelType: "raw",
+        mathfieldInstructions: {
+            content: "\\text{ ou }",
+            method: "write",
+        },
+        group: "words",
+    },
+    {
+        id: "et",
+        label: "et",
+        labelType: "raw",
+        mathfieldInstructions: {
+            content: "\\text{ et }",
+            method: "write",
+        },
+        group: "words",
     },
 ];
 
@@ -54371,7 +54453,21 @@ const toolbarTabs = [
         id: "polynomial",
         label: "x^n",
         rawLabel: "x",
-        keys: ["x", "percent", "equal", "approx", "leq", "geq", "inf", "sup", "cube", "y", "t", "n", "z"],
+        keys: [
+            "x",
+            "percent",
+            "equal",
+            "approx",
+            "leq",
+            "geq",
+            "inf",
+            "sup",
+            "cube",
+            "y",
+            "t",
+            "n",
+            "z",
+        ],
     },
     {
         id: "functions",
@@ -54459,7 +54555,14 @@ const toolbarTabs = [
         ],
     },
 ];
-const defaultTabs = ["polynomial", "sets", "trigo", "functions", "greek", "sequences"];
+const defaultTabs = [
+    "polynomial",
+    "sets",
+    "trigo",
+    "functions",
+    "greek",
+    "sequences",
+];
 
 
 /***/ }),
