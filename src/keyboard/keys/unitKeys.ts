@@ -1,6 +1,6 @@
 import { KeyProps } from "./key";
 
-export const wordKeysProps: Array<KeyProps> = [
+export const unitKeysProps: Array<KeyProps> = [
   {
     id: "cm",
     label: "cm",
@@ -12,14 +12,13 @@ export const wordKeysProps: Array<KeyProps> = [
     group: "units",
   },
   {
-    id: "et",
-    label: "et",
-    labelType: "raw",
-
+    id: "cm2",
+    label: "\\text{cm}^2",
+    labelType: "tex",
     mathfieldInstructions: {
-      content: "\\text{ et }",
+      content: "\\text{cm}^2",
       method: "write",
     },
-    group: "words",
+    group: "units",
   },
 ];
