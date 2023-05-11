@@ -6,16 +6,15 @@ module.exports = (env, argv) => {
     entry:
       argv.mode === "development"
         ? "./examples/home.tsx"
-        : {
-            MathInput: "./src/mathInput/mathInput.tsx",
-            MathInputProps: "./src/mathInput/mathInput.tsx",
-            KeyProps: "./src/keyboard/keys/key.tsx",
-            KeysPropsMap: "./src/keyboard/keys/keys.ts",
-            allKeysProps: "./src/keyboard/keys/keys.ts",
-          },
+        : // : {
+          //     mathInput: "./src/mathInput/mathInput.tsx",
+          //     keyProps: "./src/keyboard/keys/key.tsx",
+          //     allKeysProps: "./src/keyboard/keys/keys.ts",
+          //   },
+          "./src/index.tsx",
     output: {
       path: path.join(__dirname, "./dist"),
-      filename: "[name].js",
+      filename: "react-math-keyboard.js",
       library: "react-math-keyboard",
       libraryTarget: "umd",
       umdNamedDefine: true,

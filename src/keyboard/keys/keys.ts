@@ -9,7 +9,9 @@ import { numberKeysProps } from "./numberKeys";
 import { operationKeysProps } from "./operationKeys";
 import { ponctuationKeysProps } from "./ponctuationKeys";
 import { setKeysProps } from "./setKeys";
+import { unitKeysProps } from "./unitKeys";
 import { utilityKeysProps } from "./utilityKeys";
+import { wordKeysProps } from "./wordKeys";
 
 export const allKeysProps: KeyProps[] = [
   ...numberKeysProps,
@@ -24,6 +26,8 @@ export const allKeysProps: KeyProps[] = [
   ...geometryKeysProps,
   ...algebraKeysProps,
   ...ponctuationKeysProps,
+  ...unitKeysProps,
+  ...wordKeysProps,
   {
     id: "overrightarrow",
     label: "\\overrightarrow{AB}",
