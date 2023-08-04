@@ -5,7 +5,7 @@ import React from "react";
 import { ToolbarTabIds } from "../toolbar/toolbarTabs";
 import { KeyId } from "../keys/keyIds";
 export type NumericLayoutProps = {
-  toolbarKeys?: (KeyId | KeyProps)[];
+  toolbarKeys?: (KeyId | KeyProps | string)[];
   showTabs?: boolean;
   toolbarTabs?: ToolbarTabIds[];
   onSwitch?: () => void;
