@@ -5,12 +5,12 @@ import { ToolbarTabIds, defaultTabs, toolbarTabs } from "./toolbarTabs";
 import { MathFieldContext } from "../../mathInput/mathfieldContext";
 import { KeyId } from "../keys/keyIds";
 export type ToolbarProps = {
-  keys?: (KeyId | KeyProps)[];
+  keys?: (KeyId | KeyProps | string)[];
   tabs?: ToolbarTabIds[];
 };
 
 export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
-  const [shownKeys, setShownKeys] = useState<(KeyId | KeyProps)[]>();
+  const [shownKeys, setShownKeys] = useState<(KeyId | KeyProps | string)[]>();
   const [currentTab, setCurrentTab] = useState<ToolbarTabIds>(tabs[0]);
   const mathfield = useContext(MathFieldContext);
 
@@ -29,13 +29,21 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
       <div className="react-math-keyboard-toolbar">
         <div style={{ overflow: "auto" }}>
           <div className="react-math-keyboard-toolbar-keys-container">
-            {shownKeys?.map((keyData) =>
-              typeof keyData === "string" ? (
-                <Key {...KeysPropsMap.get(keyData)!} key={keyData} fullWidth={false} />
-              ) : (
-                <Key {...keyData} key={keyData.id} fullWidth={false} />
-              )
-            )}
+            {shownKeys?.map((keyData) => {
+              if (typeof keyData === "string") {
+                const foundKey = KeysPropsMap.get(keyData);
+                if (foundKey) return <Key {...KeysPropsMap.get(keyData)!} key={keyData} fullWidth={false} />;
+                else
+                  return (
+                    <Key
+                      id={keyData}
+                      label={keyData}
+                      labelType={"tex"}
+                      mathfieldInstructions={{ content: keyData, method: "write" }}
+                    />
+                  );
+              } else return <Key {...keyData} key={keyData.id} fullWidth={false} />;
+            })}
           </div>
         </div>
         {!keys?.length && (

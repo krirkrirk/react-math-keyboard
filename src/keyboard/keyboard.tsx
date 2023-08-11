@@ -9,7 +9,7 @@ import { ToolbarTabIds } from "./toolbar/toolbarTabs";
 import { KeyId } from "./keys/keyIds";
 
 export type KeyboardProps = {
-  numericToolbarKeys?: (KeyId | KeyProps)[];
+  numericToolbarKeys?: (KeyId | KeyProps | string)[];
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
   divisionFormat: "fraction" | "obelus";

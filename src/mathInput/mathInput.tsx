@@ -10,7 +10,7 @@ import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 import { KeyId } from "../keyboard/keys/keyIds";
 
 export type MathInputProps = {
-  numericToolbarKeys?: (KeyId | KeyProps)[];
+  numericToolbarKeys?: (KeyId | KeyProps | string)[];
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
   allowAlphabeticKeyboard?: boolean;
@@ -128,16 +128,13 @@ export const MathInput = ({
       } else {
         $("body").css("padding-bottom", `300px`);
       }
-      const delta =
-        window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+      const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
       if (delta < 400) {
-        if (scrollType === "window")
-          window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+        if (scrollType === "window") window.scrollBy({ top: 400 - delta, behavior: "smooth" });
         else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
       }
       if (delta > window.innerHeight - 30)
-        if (scrollType === "window")
-          window.scrollBy({ top: -50, behavior: "smooth" });
+        if (scrollType === "window") window.scrollBy({ top: -50, behavior: "smooth" });
         else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
     } else {
       if (rootElementId) {
