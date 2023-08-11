@@ -1,16 +1,47 @@
 import { KeyProps } from "./key";
 
+const allPrimaryUnits = [
+  //volume
+  "mL",
+  "cL",
+  "dL",
+  "L",
+  "hL",
+  "kL",
+  //physique
+  "mol",
+  "J",
+  "kJ",
+  "Hz",
+  //metres
+  "mm",
+  "cm",
+  "dm",
+  "m",
+  "km",
+  //temps
+  "ms",
+  "s",
+  "h",
+  //masse
+  "mg",
+  "g",
+  "kg",
+];
 export const unitKeysProps: Array<KeyProps> = [
-  {
-    id: "cm",
-    label: "cm",
-    labelType: "raw",
-    mathfieldInstructions: {
-      content: "\\text{cm}",
-      method: "write",
-    },
-    group: "units",
-  },
+  ...allPrimaryUnits.map((el): KeyProps => {
+    return {
+      id: el,
+      label: el,
+      labelType: "raw",
+      mathfieldInstructions: {
+        content: `\\text{${el}}`,
+        method: "write",
+      },
+      group: "units",
+    };
+  }),
+
   {
     id: "cm2",
     label: "\\text{cm}^2",
