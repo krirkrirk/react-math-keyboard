@@ -59,8 +59,6 @@ export const Example = ({}: ExampleProps) => {
                 labelType: "raw",
                 onClick: () => alert("Clicked!"),
               },
-              "Moscovium",
-              "Ion fer(II)",
             ]}
           />
           <p>Latex produced : {value3}</p>
