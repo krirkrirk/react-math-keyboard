@@ -1,10 +1,12 @@
 import { algebraKeysProps } from "./algebraKeys";
+import { atomKeysProps } from "./atomKeys";
 import { functionKeysProps } from "./functionKeys";
 import { geometryKeysProps } from "./geometryKeys";
 import { greekLettersKeysProps } from "./greekLetters";
 import { KeyProps } from "./key";
 import { KeyId } from "./keyIds";
 import { majLettersKeysProps, minLettersKeysProps } from "./letterKeys";
+import { moleculesKeysProps } from "./moleculeKeys";
 import { numberKeysProps } from "./numberKeys";
 import { operationKeysProps } from "./operationKeys";
 import { ponctuationKeysProps } from "./ponctuationKeys";
@@ -28,6 +30,8 @@ export const allKeysProps: KeyProps[] = [
   ...ponctuationKeysProps,
   ...unitKeysProps,
   ...wordKeysProps,
+  ...atomKeysProps,
+  ...moleculesKeysProps,
   {
     id: "overrightarrow",
     label: "\\overrightarrow{AB}",

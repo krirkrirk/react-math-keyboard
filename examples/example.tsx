@@ -59,7 +59,8 @@ export const Example = ({}: ExampleProps) => {
                 labelType: "raw",
                 onClick: () => alert("Clicked!"),
               },
-              "H_2O",
+              "Moscovium",
+              "Ion fer(II)",
             ]}
           />
           <p>Latex produced : {value3}</p>
