@@ -33,6 +33,15 @@ export const allKeysProps: KeyProps[] = [
   ...atomKeysProps,
   ...moleculesKeysProps,
   {
+    id: "rightarrow",
+    label: "\\rightarrow",
+    labelType: "tex",
+    mathfieldInstructions: {
+      content: "\\rightarrow",
+      method: "write",
+    },
+  },
+  {
     id: "overrightarrow",
     label: "\\overrightarrow{AB}",
     labelType: "tex",

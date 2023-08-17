@@ -59,6 +59,7 @@ export const Example = ({}: ExampleProps) => {
                 labelType: "raw",
                 onClick: () => alert("Clicked!"),
               },
+              "Eau",
             ]}
           />
           <p>Latex produced : {value3}</p>
