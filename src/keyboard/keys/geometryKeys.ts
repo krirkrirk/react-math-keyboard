@@ -2,7 +2,7 @@ import { KeyProps } from "./key";
 
 export const geometryKeysProps: KeyProps[] = [
   {
-    id: "°",
+    id: "degree",
     label: "°",
     labelType: "raw",
     mathfieldInstructions: {

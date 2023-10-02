@@ -50,7 +50,15 @@ export const allKeysProps: KeyProps[] = [
       method: "cmd",
     },
   },
-
+  {
+    id: "overline",
+    label: "\\overline{z}",
+    labelType: "tex",
+    mathfieldInstructions: {
+      content: "overline",
+      method: "cmd",
+    },
+  },
   {
     id: "underscore",
     label: "\\square_n",

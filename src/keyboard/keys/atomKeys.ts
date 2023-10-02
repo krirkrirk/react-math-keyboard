@@ -1,6 +1,7 @@
 import { KeyProps } from "./key";
+import { KeyId } from "./keyIds";
 
-const atoms = [
+const atoms: { formula: string; name: KeyId }[] = [
   { formula: "H", name: "Hydrogène" },
   { formula: "He", name: "Hélium" },
   { formula: "Li", name: "Lithium" },
