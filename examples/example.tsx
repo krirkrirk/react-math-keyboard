@@ -11,7 +11,6 @@ export const Example = ({}: ExampleProps) => {
   const mf = useRef<MathField>();
   const mf2 = useRef<MathField>();
   const mf3 = useRef<MathField>();
-
   const clear = (mathfield: MathField) => {
     mathfield.latex("");
   };
