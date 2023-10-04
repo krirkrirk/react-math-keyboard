@@ -124,10 +124,13 @@ const atoms: { formula: string; name: KeyId }[] = [
 
 export const atomKeysProps = atoms.map((atomData): KeyProps => {
   return {
-    id: atomData.name,
+    id: atomData.name as KeyId,
     label: atomData.formula,
     labelType: "raw",
-    mathfieldInstructions: { content: `\\text{${atomData.formula}}`, method: "write" },
+    mathfieldInstructions: {
+      content: `\\text{${atomData.formula}}`,
+      method: "write",
+    },
     group: "atoms",
   };
 });

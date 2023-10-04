@@ -5,6 +5,7 @@ export type KeyId =
   | "degree"
 
   /**utility */
+  | "custom"
   | "right"
   | "left"
   | "rightarrow"
@@ -12,7 +13,6 @@ export type KeyId =
   | "del"
   | "close"
   | "switch"
-  | "underscore"
   | "ou"
   | "et"
   | "maj"
@@ -24,6 +24,7 @@ export type KeyId =
   | "frac"
   | "obelus"
   | "sqrt"
+  | "sqrtCub"
   | "square"
   | "cube"
   | "power"
@@ -54,6 +55,12 @@ export type KeyId =
   | "reals"
   | "complex"
   | "ast"
+  | "degree"
+  | "del"
+  | "right"
+  | "left"
+  | "rightarrow"
+  | "overrightarrow"
   | "infty"
 
   /**fcts */
@@ -69,6 +76,9 @@ export type KeyId =
   | "arctan"
   | "abs"
 
+  /**sequences */
+  | "un"
+  | "unplus1"
   /**complex */
   | "overline"
 
@@ -94,6 +104,7 @@ export type KeyId =
   | "hyphen"
   | "euro"
   | "space"
+  | "underscore"
   | "A"
   | "B"
   | "C"

@@ -68,7 +68,7 @@ export const allKeysProps: KeyProps[] = [
   },
 ];
 
-export const KeysPropsMap = new Map<KeyId | string, KeyProps>(
+export const KeysPropsMap = new Map<KeyId, KeyProps>(
   allKeysProps.map((obj) => {
     return [obj.id as KeyId, obj];
   })

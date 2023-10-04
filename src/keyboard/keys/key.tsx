@@ -1,4 +1,10 @@
-import React, { ReactNode, useContext, useEffect, useRef, useState } from "react";
+import React, {
+  ReactNode,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import $ from "jquery";
 
 import { MathField, MathfieldInstructions } from "../../types/types";
@@ -6,7 +12,7 @@ import { MathFieldContext } from "../../mathInput/mathfieldContext";
 import { KeyId } from "./keyIds";
 
 export type KeyProps = {
-  id: KeyId | string;
+  id: KeyId;
   formatedId?: string;
   label: string | ReactNode;
   labelType: "raw" | "tex" | "svg";
@@ -45,10 +51,13 @@ export const Key = ({
   isUtilityKey = false,
 }: KeyProps) => {
   const mathfield = useContext(MathFieldContext);
-
+  const trueId =
+    id === "custom" ? id + Math.floor(Math.random() * 1000) : formatedId ?? id;
   useEffect(() => {
     const MQ = window.MathQuill.getInterface(2);
-    MQ.StaticMath($(`#mq-keyboard-${mathfield.id}-key-${formatedId ?? id}`)[0]) as MathField;
+    MQ.StaticMath(
+      $(`#mq-keyboard-${mathfield.id}-key-${trueId}`)[0]
+    ) as MathField;
   }, [id, formatedId]);
 
   const handleClick = () => {
@@ -62,11 +71,15 @@ export const Key = ({
   const renderLabel = (): ReactNode => {
     switch (labelType) {
       case "raw":
-        return <p id={`mq-keyboard-${mathfield.id}-rawkey-${formatedId ?? id}`}>{label as string}</p>;
+        return (
+          <p id={`mq-keyboard-${mathfield.id}-rawkey-${trueId}`}>
+            {label as string}
+          </p>
+        );
       case "tex":
         return (
           <span
-            id={`mq-keyboard-${mathfield.id}-key-${formatedId ?? id}`}
+            id={`mq-keyboard-${mathfield.id}-key-${trueId}`}
             onClick={(e) => e.stopPropagation()}
             className="cursor-pointer"
           >
@@ -110,7 +123,9 @@ export const Key = ({
   }, []);
   return (
     <button
-      className={`react-math-keyboard-key ${isUtilityKey && "react-math-keyboard-key-utility"}`}
+      className={`react-math-keyboard-key ${
+        isUtilityKey && "react-math-keyboard-key-utility"
+      }`}
       style={{
         ...(fullWidth
           ? { width: "100%" }
@@ -122,10 +137,12 @@ export const Key = ({
             }),
         ...(isTouchDown && { backgroundColor: bgHoverColor }),
         ...(isClicked && { boxShadow: "inset 0 2px 4px rgba(0, 0, 0, 0.2)" }),
-        ...(labelType === "raw" || labelType === "svg" ? { paddingTop: 0 } : { paddingTop: "0.25rem" }),
+        ...(labelType === "raw" || labelType === "svg"
+          ? { paddingTop: 0 }
+          : { paddingTop: "0.25rem" }),
       }}
       ref={ref}
-      id={`mq-keyboard-${mathfield.id}-button-key-${formatedId ?? id}`}
+      id={`mq-keyboard-${mathfield.id}-button-key-${trueId}`}
       onMouseDown={onMouseDown}
       onMouseUp={() => setIsClicked(false)}
       onMouseLeave={() => {

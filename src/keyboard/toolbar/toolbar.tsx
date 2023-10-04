@@ -5,7 +5,7 @@ import { ToolbarTabIds, defaultTabs, toolbarTabs } from "./toolbarTabs";
 import { MathFieldContext } from "../../mathInput/mathfieldContext";
 import { KeyId } from "../keys/keyIds";
 export type ToolbarProps = {
-  keys?: (KeyId | KeyProps | string)[];
+  keys?: (KeyId | KeyProps)[];
   tabs?: ToolbarTabIds[];
 };
 
@@ -31,18 +31,29 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
           <div className="react-math-keyboard-toolbar-keys-container">
             {shownKeys?.map((keyData) => {
               if (typeof keyData === "string") {
-                const foundKey = KeysPropsMap.get(keyData);
-                if (foundKey) return <Key {...KeysPropsMap.get(keyData)!} key={keyData} fullWidth={false} />;
+                const foundKey = KeysPropsMap.get(keyData as KeyId);
+                if (foundKey)
+                  return (
+                    <Key
+                      {...KeysPropsMap.get(keyData as KeyId)!}
+                      key={keyData}
+                      fullWidth={false}
+                    />
+                  );
                 else
                   return (
                     <Key
-                      id={keyData}
+                      id={keyData as KeyId}
                       label={keyData}
                       labelType={"tex"}
-                      mathfieldInstructions={{ content: keyData, method: "write" }}
+                      mathfieldInstructions={{
+                        content: keyData,
+                        method: "write",
+                      }}
                     />
                   );
-              } else return <Key {...keyData} key={keyData.id} fullWidth={false} />;
+              } else
+                return <Key {...keyData} key={keyData.id} fullWidth={false} />;
             })}
           </div>
         </div>
