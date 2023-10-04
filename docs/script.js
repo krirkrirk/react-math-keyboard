@@ -34,7 +34,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_2___ = _css_loader_dist_runtime_getUrl_js__WEB
 var ___CSS_LOADER_URL_REPLACEMENT_3___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
 var ___CSS_LOADER_URL_REPLACEMENT_4___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_4___, { hash: "#Symbola" });
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/*\n * MathQuill v0.10.4, by Han, Jeanine, and Mary\n * http://mathquill.com | maintainers@mathquill.com\n *\n * This Source Code Form is subject to the terms of the\n * Mozilla Public License, v. 2.0. If a copy of the MPL\n * was not distributed with this file, You can obtain\n * one at http://mozilla.org/MPL/2.0/.\n */\n@font-face {\n  font-family: Symbola;\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  src: local(\"Symbola Regular\"), local(\"Symbola\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"woff2\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format(\"woff\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format(\"truetype\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format(\"svg\");\n}\n.mq-editable-field {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor {\n  border-left: 1px solid black;\n  margin-left: -1px;\n  position: relative;\n  z-index: 1;\n  padding: 0;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor.mq-blink {\n  visibility: hidden;\n}\n.mq-editable-field,\n.mq-math-mode .mq-editable-field {\n  border: 1px solid #ccc;\n}\n.mq-editable-field.mq-focused,\n.mq-math-mode .mq-editable-field.mq-focused {\n  border: 1px solid #bbb;\n  outline: 3px solid #bbb;\n  outline-offset: -3px;\n  border-radius: 4px;\n}\n.mq-math-mode .mq-editable-field {\n  margin: 1px;\n}\n.mq-editable-field .mq-latex-command-input {\n  color: inherit;\n  font-family: \"Courier New\", monospace;\n  border: 1px solid gray;\n  padding-right: 1px;\n  margin-right: 1px;\n  margin-left: 2px;\n}\n.mq-editable-field .mq-latex-command-input.mq-empty {\n  background: transparent;\n}\n.mq-editable-field .mq-latex-command-input.mq-hasCursor {\n  border-color: ActiveBorder;\n}\n.mq-editable-field.mq-empty:after,\n.mq-editable-field.mq-text-mode:after,\n.mq-math-mode .mq-empty:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-cursor:only-child:after,\n.mq-editable-field .mq-textarea + .mq-cursor:last-child:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-text-mode .mq-cursor:only-child:after {\n  content: \"\";\n}\n.mq-editable-field.mq-text-mode {\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.mq-root-block,\n.mq-math-mode .mq-root-block {\n  display: -moz-inline-box;\n  display: inline-block;\n  width: 100%;\n  padding: 2px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  white-space: nowrap;\n  /* overflow: hidden; */\n  /* Scroll */\n  overflow: auto;\n  vertical-align: middle;\n  -ms-overflow-style: none; /* for Internet Explorer, Edge */\n  scrollbar-width: none; /* for Firefox */\n}\n.mq-math-mode .mq-root-block::-webkit-scrollbar {\n  display: none; /* for Chrome, Safari, and Opera */\n}\n\n.mq-math-mode {\n  font-variant: normal;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 115%;\n  line-height: 1;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-non-leaf,\n.mq-math-mode .mq-scaled {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode var,\n.mq-math-mode .mq-text-mode,\n.mq-math-mode .mq-nonSymbola {\n  font-family: \"Times New Roman\", Symbola, serif;\n  line-height: 0.9;\n}\n.mq-math-mode * {\n  font-size: inherit;\n  line-height: inherit;\n  margin: 0;\n  padding: 0;\n  border-color: black;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n}\n.mq-math-mode .mq-empty {\n  background: #ccc;\n}\n.mq-math-mode .mq-empty.mq-root-block {\n  background: transparent;\n}\n.mq-math-mode.mq-empty {\n  background: transparent;\n}\n.mq-math-mode .mq-text-mode {\n  display: inline-block;\n  white-space: pre;\n}\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  box-shadow: inset darkgray 0 0.1em 0.2em;\n  min-width: 1ex;\n  padding: 0.3em 0.2em;\n  margin: -0.3em 0.1em;\n}\n.mq-math-mode .mq-font {\n  font: 1em \"Times New Roman\", Symbola, serif;\n}\n.mq-math-mode .mq-font * {\n  font-family: inherit;\n  font-style: inherit;\n}\n.mq-math-mode b,\n.mq-math-mode b.mq-font {\n  font-weight: bolder;\n}\n.mq-math-mode var,\n.mq-math-mode i,\n.mq-math-mode i.mq-font {\n  font-style: italic;\n}\n.mq-math-mode var.mq-f {\n  margin-right: 0.2em;\n  margin-left: 0.1em;\n}\n.mq-math-mode .mq-roman var.mq-f {\n  margin: 0;\n}\n.mq-math-mode big {\n  font-size: 200%;\n}\n.mq-math-mode .mq-int > big {\n  display: inline-block;\n  -webkit-transform: scaleX(0.7);\n  -moz-transform: scaleX(0.7);\n  -ms-transform: scaleX(0.7);\n  -o-transform: scaleX(0.7);\n  transform: scaleX(0.7);\n  vertical-align: -0.16em;\n}\n.mq-math-mode .mq-int > .mq-supsub {\n  font-size: 80%;\n  vertical-align: -1.1em;\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sup > .mq-sup-inner {\n  vertical-align: 1.3em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sub {\n  margin-left: -0.35em;\n}\n.mq-math-mode .mq-roman {\n  font-style: normal;\n}\n.mq-math-mode .mq-sans-serif {\n  font-family: sans-serif, Symbola, serif;\n}\n.mq-math-mode .mq-monospace {\n  font-family: monospace, Symbola, serif;\n}\n.mq-math-mode .mq-overline {\n  border-top: 1px solid black;\n  margin-top: 1px;\n}\n.mq-math-mode .mq-underline {\n  border-bottom: 1px solid black;\n  margin-bottom: 1px;\n}\n.mq-math-mode .mq-binary-operator {\n  padding: 0 0.2em;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-supsub {\n  text-align: left;\n  font-size: 90%;\n  vertical-align: -0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only {\n  vertical-align: 0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only .mq-sup {\n  display: inline-block;\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-supsub .mq-sup {\n  display: block;\n}\n.mq-math-mode .mq-supsub .mq-sub {\n  display: block;\n  float: left;\n}\n.mq-math-mode .mq-supsub .mq-binary-operator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-supsub .mq-fraction {\n  font-size: 70%;\n}\n.mq-math-mode sup.mq-nthroot {\n  font-size: 80%;\n  vertical-align: 0.8em;\n  margin-right: -0.6em;\n  margin-left: 0.2em;\n  min-width: 0.5em;\n}\n.mq-math-mode .mq-paren {\n  padding: 0 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: center 0.06em;\n  -moz-transform-origin: center 0.06em;\n  -ms-transform-origin: center 0.06em;\n  -o-transform-origin: center 0.06em;\n  transform-origin: center 0.06em;\n}\n.mq-math-mode .mq-paren.mq-ghost {\n  color: silver;\n}\n.mq-math-mode .mq-paren + span {\n  margin-top: 0.1em;\n  margin-bottom: 0.1em;\n}\n.mq-math-mode .mq-array {\n  vertical-align: middle;\n  text-align: center;\n}\n.mq-math-mode .mq-array > span {\n  display: block;\n}\n.mq-math-mode .mq-operator-name {\n  font-family: Symbola, \"Times New Roman\", serif;\n  line-height: 0.9;\n  font-style: normal;\n}\n.mq-math-mode var.mq-operator-name.mq-first {\n  padding-left: 0.2em;\n}\n.mq-math-mode var.mq-operator-name.mq-last,\n.mq-math-mode .mq-supsub.mq-after-operator-name {\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-fraction {\n  font-size: 90%;\n  text-align: center;\n  vertical-align: -0.4em;\n  padding: 0 0.2em;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link {\n  display: -moz-groupbox;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link,\n.mq-math-mode x:default {\n  display: inline-block;\n}\n.mq-math-mode .mq-numerator,\n.mq-math-mode .mq-denominator,\n.mq-math-mode .mq-dot-recurring {\n  display: block;\n}\n.mq-math-mode .mq-numerator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-denominator {\n  border-top: 1px solid;\n  float: right;\n  width: 100%;\n  padding: 0.1em;\n}\n.mq-math-mode .mq-dot-recurring {\n  text-align: center;\n  height: 0.3em;\n}\n.mq-math-mode .mq-sqrt-prefix {\n  padding-top: 0;\n  position: relative;\n  top: 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: top;\n  -moz-transform-origin: top;\n  -ms-transform-origin: top;\n  -o-transform-origin: top;\n  transform-origin: top;\n}\n.mq-math-mode .mq-sqrt-stem {\n  border-top: 1px solid;\n  margin-top: 1px;\n  padding-left: 0.15em;\n  padding-right: 0.2em;\n  margin-right: 0.1em;\n  padding-top: 1px;\n}\n.mq-math-mode .mq-diacritic-above {\n  display: block;\n  text-align: center;\n  line-height: 0.4em;\n}\n.mq-math-mode .mq-diacritic-stem {\n  display: block;\n  text-align: center;\n}\n.mq-math-mode .mq-hat-prefix {\n  display: block;\n  text-align: center;\n  line-height: 0.95em;\n  margin-bottom: -0.7em;\n  transform: scaleX(1.5);\n  -moz-transform: scaleX(1.5);\n  -o-transform: scaleX(1.5);\n  -webkit-transform: scaleX(1.5);\n}\n.mq-math-mode .mq-hat-stem {\n  display: block;\n}\n.mq-math-mode .mq-large-operator {\n  vertical-align: -0.2em;\n  padding: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator big,\n.mq-math-mode .mq-large-operator .mq-to {\n  display: block;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator .mq-to {\n  font-size: 80%;\n}\n.mq-math-mode .mq-large-operator .mq-from {\n  float: right;\n  width: 100%;\n}\n.mq-math-mode,\n.mq-math-mode .mq-editable-field {\n  cursor: text;\n  font-family: Symbola, \"Times New Roman\", serif;\n}\n.mq-math-mode .mq-overarc {\n  border-top: 1px solid black;\n  -webkit-border-top-right-radius: 50% 0.3em;\n  -moz-border-radius-topright: 50% 0.3em;\n  border-top-right-radius: 50% 0.3em;\n  -webkit-border-top-left-radius: 50% 0.3em;\n  -moz-border-radius-topleft: 50% 0.3em;\n  border-top-left-radius: 50% 0.3em;\n  margin-top: 1px;\n  padding-top: 0.15em;\n}\n.mq-math-mode .mq-overarrow {\n  min-width: 0.5em;\n  border-top: 1px solid black;\n  margin-top: 1px;\n  padding-top: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-overarrow:before {\n  display: block;\n  position: relative;\n  top: -0.34em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  text-align: right;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-left:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both {\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty {\n  min-height: 1.23em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty:after {\n  top: -0.34em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:after {\n  display: block;\n  position: relative;\n  top: -2.3em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  visibility: visible;\n  text-align: right;\n}\n.mq-math-mode .mq-selection,\n.mq-editable-field .mq-selection,\n.mq-math-mode .mq-selection .mq-non-leaf,\n.mq-editable-field .mq-selection .mq-non-leaf,\n.mq-math-mode .mq-selection .mq-scaled,\n.mq-editable-field .mq-selection .mq-scaled {\n  background: #b4d5fe !important;\n  background: Highlight !important;\n  color: HighlightText;\n  border-color: HighlightText;\n}\n.mq-math-mode .mq-selection .mq-matrixed,\n.mq-editable-field .mq-selection .mq-matrixed {\n  background: #39f !important;\n}\n.mq-math-mode .mq-selection .mq-matrixed-container,\n.mq-editable-field .mq-selection .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#3399FF') !important;\n}\n.mq-math-mode .mq-selection.mq-blur,\n.mq-editable-field .mq-selection.mq-blur,\n.mq-math-mode .mq-selection.mq-blur .mq-non-leaf,\n.mq-editable-field .mq-selection.mq-blur .mq-non-leaf,\n.mq-math-mode .mq-selection.mq-blur .mq-scaled,\n.mq-editable-field .mq-selection.mq-blur .mq-scaled,\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed {\n  background: #d4d4d4 !important;\n  color: black;\n  border-color: black;\n}\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed-container,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#D4D4D4') !important;\n}\n.mq-editable-field .mq-textarea,\n.mq-math-mode .mq-textarea {\n  position: relative;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n}\n.mq-editable-field .mq-textarea *,\n.mq-math-mode .mq-textarea *,\n.mq-editable-field .mq-selectable,\n.mq-math-mode .mq-selectable {\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n  position: absolute;\n  clip: rect(1em 1em 1em 1em);\n  -webkit-transform: scale(0);\n  -moz-transform: scale(0);\n  -ms-transform: scale(0);\n  -o-transform: scale(0);\n  transform: scale(0);\n  resize: none;\n  width: 1px;\n  height: 1px;\n  box-sizing: content-box;\n}\n.mq-math-mode .mq-matrixed {\n  background: white;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='white');\n  margin-top: -0.1em;\n}\n", "",{"version":3,"sources":["webpack://./node_modules/mathquill4keyboard/build/mathquill.css"],"names":[],"mappings":"AAAA;;;;;;;;EAQE;AACF;EACE,oBAAoB;EACpB,4CAA2B;EAC3B;;;;yDAI8C;AAChD;AACA;EACE,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,4BAA4B;EAC5B,iBAAiB;EACjB,kBAAkB;EAClB,UAAU;EACV,UAAU;EACV,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,kBAAkB;AACpB;AACA;;EAEE,sBAAsB;AACxB;AACA;;EAEE,sBAAsB;EACtB,uBAAuB;EACvB,oBAAoB;EACpB,kBAAkB;AACpB;AACA;EACE,WAAW;AACb;AACA;EACE,cAAc;EACd,qCAAqC;EACrC,sBAAsB;EACtB,kBAAkB;EAClB,iBAAiB;EACjB,gBAAgB;AAClB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,0BAA0B;AAC5B;AACA;;;EAGE,kBAAkB;EAClB,YAAY;AACd;AACA;;EAEE,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,WAAW;AACb;AACA;EACE,gBAAgB;EAChB,kBAAkB;AACpB;AACA;;EAEE,wBAAwB;EACxB,qBAAqB;EACrB,WAAW;EACX,YAAY;EACZ,8BAA8B;EAC9B,2BAA2B;EAC3B,sBAAsB;EACtB,mBAAmB;EACnB,sBAAsB;EACtB,WAAW;EACX,cAAc;EACd,sBAAsB;EACtB,wBAAwB,EAAE,gCAAgC;EAC1D,qBAAqB,EAAE,gBAAgB;AACzC;AACA;EACE,aAAa,EAAE,kCAAkC;AACnD;;AAEA;EACE,oBAAoB;EACpB,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,cAAc;EACd,wBAAwB;EACxB,qBAAqB;AACvB;AACA;;EAEE,wBAAwB;EACxB,qBAAqB;AACvB;AACA;;;EAGE,8CAA8C;EAC9C,gBAAgB;AAClB;AACA;EACE,kBAAkB;EAClB,oBAAoB;EACpB,SAAS;EACT,UAAU;EACV,mBAAmB;EACnB,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;EACjB,sBAAsB;AACxB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,wCAAwC;EACxC,cAAc;EACd,oBAAoB;EACpB,oBAAoB;AACtB;AACA;EACE,2CAA2C;AAC7C;AACA;EACE,oBAAoB;EACpB,mBAAmB;AACrB;AACA;;EAEE,mBAAmB;AACrB;AACA;;;EAGE,kBAAkB;AACpB;AACA;EACE,mBAAmB;EACnB,kBAAkB;AACpB;AACA;EACE,SAAS;AACX;AACA;EACE,eAAe;AACjB;AACA;EACE,qBAAqB;EACrB,8BAA8B;EAC9B,2BAA2B;EAC3B,0BAA0B;EAC1B,yBAAyB;EACzB,sBAAsB;EACtB,uBAAuB;AACzB;AACA;EACE,cAAc;EACd,sBAAsB;EACtB,oBAAoB;AACtB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,oBAAoB;AACtB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,uCAAuC;AACzC;AACA;EACE,sCAAsC;AACxC;AACA;EACE,2BAA2B;EAC3B,eAAe;AACjB;AACA;EACE,8BAA8B;EAC9B,kBAAkB;AACpB;AACA;EACE,gBAAgB;EAChB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,gBAAgB;EAChB,cAAc;EACd,sBAAsB;AACxB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,qBAAqB;EACrB,2BAA2B;AAC7B;AACA;EACE,cAAc;AAChB;AACA;EACE,cAAc;EACd,WAAW;AACb;AACA;EACE,gBAAgB;AAClB;AACA;EACE,cAAc;AAChB;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,oBAAoB;EACpB,kBAAkB;EAClB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,mBAAmB;EACnB,uCAAuC;EACvC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;EAClC,+BAA+B;AACjC;AACA;EACE,aAAa;AACf;AACA;EACE,iBAAiB;EACjB,oBAAoB;AACtB;AACA;EACE,sBAAsB;EACtB,kBAAkB;AACpB;AACA;EACE,cAAc;AAChB;AACA;EACE,8CAA8C;EAC9C,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,mBAAmB;AACrB;AACA;;EAEE,oBAAoB;AACtB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,sBAAsB;EACtB,gBAAgB;AAClB;AACA;;;EAGE,sBAAsB;AACxB;AACA;;;;EAIE,qBAAqB;AACvB;AACA;;;EAGE,cAAc;AAChB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,qBAAqB;EACrB,YAAY;EACZ,WAAW;EACX,cAAc;AAChB;AACA;EACE,kBAAkB;EAClB,aAAa;AACf;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,UAAU;EACV,mBAAmB;EACnB,6BAA6B;EAC7B,0BAA0B;EAC1B,yBAAyB;EACzB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,qBAAqB;EACrB,eAAe;EACf,oBAAoB;EACpB,oBAAoB;EACpB,mBAAmB;EACnB,gBAAgB;AAClB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,mBAAmB;EACnB,qBAAqB;EACrB,sBAAsB;EACtB,2BAA2B;EAC3B,yBAAyB;EACzB,8BAA8B;AAChC;AACA;EACE,cAAc;AAChB;AACA;EACE,sBAAsB;EACtB,cAAc;EACd,kBAAkB;AACpB;AACA;;;EAGE,cAAc;AAChB;AACA;;EAEE,cAAc;AAChB;AACA;EACE,YAAY;EACZ,WAAW;AACb;AACA;;EAEE,YAAY;EACZ,8CAA8C;AAChD;AACA;EACE,2BAA2B;EAC3B,0CAA0C;EAC1C,sCAAsC;EACtC,kCAAkC;EAClC,yCAAyC;EACzC,qCAAqC;EACrC,iCAAiC;EACjC,eAAe;EACf,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,2BAA2B;EAC3B,eAAe;EACf,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,YAAY;EACZ,gBAAgB;EAChB,gBAAgB;EAChB,gBAAgB;EAChB,iBAAiB;AACnB;AACA;EACE,0BAA0B;EAC1B,wBAAwB;EACxB,6BAA6B;EAC7B,qBAAqB;EACrB,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,2BAA2B;AAC7B;AACA;EACE,kBAAkB;AACpB;AACA;EACE,YAAY;AACd;AACA;EACE,0BAA0B;EAC1B,wBAAwB;EACxB,6BAA6B;EAC7B,qBAAqB;EACrB,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;;;;;;EAME,8BAA8B;EAC9B,gCAAgC;EAChC,oBAAoB;EACpB,2BAA2B;AAC7B;AACA;;EAEE,2BAA2B;AAC7B;AACA;;EAEE,4EAA4E;AAC9E;AACA;;;;;;;;EAQE,8BAA8B;EAC9B,YAAY;EACZ,mBAAmB;AACrB;AACA;;EAEE,4EAA4E;AAC9E;AACA;;EAEE,kBAAkB;EAClB,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;AACnB;AACA;;;;EAIE,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;EACjB,kBAAkB;EAClB,2BAA2B;EAC3B,2BAA2B;EAC3B,wBAAwB;EACxB,uBAAuB;EACvB,sBAAsB;EACtB,mBAAmB;EACnB,YAAY;EACZ,UAAU;EACV,WAAW;EACX,uBAAuB;AACzB;AACA;EACE,iBAAiB;EACjB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,+DAA+D;EAC/D,kBAAkB;AACpB","sourcesContent":["/*\n * MathQuill v0.10.4, by Han, Jeanine, and Mary\n * http://mathquill.com | maintainers@mathquill.com\n *\n * This Source Code Form is subject to the terms of the\n * Mozilla Public License, v. 2.0. If a copy of the MPL\n * was not distributed with this file, You can obtain\n * one at http://mozilla.org/MPL/2.0/.\n */\n@font-face {\n  font-family: Symbola;\n  src: url(fonts/Symbola.eot);\n  src: local(\"Symbola Regular\"), local(\"Symbola\"),\n    url(fonts/Symbola.woff2) format(\"woff2\"),\n    url(fonts/Symbola.woff) format(\"woff\"),\n    url(fonts/Symbola.ttf) format(\"truetype\"),\n    url(fonts/Symbola.svg#Symbola) format(\"svg\");\n}\n.mq-editable-field {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor {\n  border-left: 1px solid black;\n  margin-left: -1px;\n  position: relative;\n  z-index: 1;\n  padding: 0;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor.mq-blink {\n  visibility: hidden;\n}\n.mq-editable-field,\n.mq-math-mode .mq-editable-field {\n  border: 1px solid #ccc;\n}\n.mq-editable-field.mq-focused,\n.mq-math-mode .mq-editable-field.mq-focused {\n  border: 1px solid #bbb;\n  outline: 3px solid #bbb;\n  outline-offset: -3px;\n  border-radius: 4px;\n}\n.mq-math-mode .mq-editable-field {\n  margin: 1px;\n}\n.mq-editable-field .mq-latex-command-input {\n  color: inherit;\n  font-family: \"Courier New\", monospace;\n  border: 1px solid gray;\n  padding-right: 1px;\n  margin-right: 1px;\n  margin-left: 2px;\n}\n.mq-editable-field .mq-latex-command-input.mq-empty {\n  background: transparent;\n}\n.mq-editable-field .mq-latex-command-input.mq-hasCursor {\n  border-color: ActiveBorder;\n}\n.mq-editable-field.mq-empty:after,\n.mq-editable-field.mq-text-mode:after,\n.mq-math-mode .mq-empty:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-cursor:only-child:after,\n.mq-editable-field .mq-textarea + .mq-cursor:last-child:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-text-mode .mq-cursor:only-child:after {\n  content: \"\";\n}\n.mq-editable-field.mq-text-mode {\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.mq-root-block,\n.mq-math-mode .mq-root-block {\n  display: -moz-inline-box;\n  display: inline-block;\n  width: 100%;\n  padding: 2px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  white-space: nowrap;\n  /* overflow: hidden; */\n  /* Scroll */\n  overflow: auto;\n  vertical-align: middle;\n  -ms-overflow-style: none; /* for Internet Explorer, Edge */\n  scrollbar-width: none; /* for Firefox */\n}\n.mq-math-mode .mq-root-block::-webkit-scrollbar {\n  display: none; /* for Chrome, Safari, and Opera */\n}\n\n.mq-math-mode {\n  font-variant: normal;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 115%;\n  line-height: 1;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-non-leaf,\n.mq-math-mode .mq-scaled {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode var,\n.mq-math-mode .mq-text-mode,\n.mq-math-mode .mq-nonSymbola {\n  font-family: \"Times New Roman\", Symbola, serif;\n  line-height: 0.9;\n}\n.mq-math-mode * {\n  font-size: inherit;\n  line-height: inherit;\n  margin: 0;\n  padding: 0;\n  border-color: black;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n}\n.mq-math-mode .mq-empty {\n  background: #ccc;\n}\n.mq-math-mode .mq-empty.mq-root-block {\n  background: transparent;\n}\n.mq-math-mode.mq-empty {\n  background: transparent;\n}\n.mq-math-mode .mq-text-mode {\n  display: inline-block;\n  white-space: pre;\n}\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  box-shadow: inset darkgray 0 0.1em 0.2em;\n  min-width: 1ex;\n  padding: 0.3em 0.2em;\n  margin: -0.3em 0.1em;\n}\n.mq-math-mode .mq-font {\n  font: 1em \"Times New Roman\", Symbola, serif;\n}\n.mq-math-mode .mq-font * {\n  font-family: inherit;\n  font-style: inherit;\n}\n.mq-math-mode b,\n.mq-math-mode b.mq-font {\n  font-weight: bolder;\n}\n.mq-math-mode var,\n.mq-math-mode i,\n.mq-math-mode i.mq-font {\n  font-style: italic;\n}\n.mq-math-mode var.mq-f {\n  margin-right: 0.2em;\n  margin-left: 0.1em;\n}\n.mq-math-mode .mq-roman var.mq-f {\n  margin: 0;\n}\n.mq-math-mode big {\n  font-size: 200%;\n}\n.mq-math-mode .mq-int > big {\n  display: inline-block;\n  -webkit-transform: scaleX(0.7);\n  -moz-transform: scaleX(0.7);\n  -ms-transform: scaleX(0.7);\n  -o-transform: scaleX(0.7);\n  transform: scaleX(0.7);\n  vertical-align: -0.16em;\n}\n.mq-math-mode .mq-int > .mq-supsub {\n  font-size: 80%;\n  vertical-align: -1.1em;\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sup > .mq-sup-inner {\n  vertical-align: 1.3em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sub {\n  margin-left: -0.35em;\n}\n.mq-math-mode .mq-roman {\n  font-style: normal;\n}\n.mq-math-mode .mq-sans-serif {\n  font-family: sans-serif, Symbola, serif;\n}\n.mq-math-mode .mq-monospace {\n  font-family: monospace, Symbola, serif;\n}\n.mq-math-mode .mq-overline {\n  border-top: 1px solid black;\n  margin-top: 1px;\n}\n.mq-math-mode .mq-underline {\n  border-bottom: 1px solid black;\n  margin-bottom: 1px;\n}\n.mq-math-mode .mq-binary-operator {\n  padding: 0 0.2em;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-supsub {\n  text-align: left;\n  font-size: 90%;\n  vertical-align: -0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only {\n  vertical-align: 0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only .mq-sup {\n  display: inline-block;\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-supsub .mq-sup {\n  display: block;\n}\n.mq-math-mode .mq-supsub .mq-sub {\n  display: block;\n  float: left;\n}\n.mq-math-mode .mq-supsub .mq-binary-operator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-supsub .mq-fraction {\n  font-size: 70%;\n}\n.mq-math-mode sup.mq-nthroot {\n  font-size: 80%;\n  vertical-align: 0.8em;\n  margin-right: -0.6em;\n  margin-left: 0.2em;\n  min-width: 0.5em;\n}\n.mq-math-mode .mq-paren {\n  padding: 0 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: center 0.06em;\n  -moz-transform-origin: center 0.06em;\n  -ms-transform-origin: center 0.06em;\n  -o-transform-origin: center 0.06em;\n  transform-origin: center 0.06em;\n}\n.mq-math-mode .mq-paren.mq-ghost {\n  color: silver;\n}\n.mq-math-mode .mq-paren + span {\n  margin-top: 0.1em;\n  margin-bottom: 0.1em;\n}\n.mq-math-mode .mq-array {\n  vertical-align: middle;\n  text-align: center;\n}\n.mq-math-mode .mq-array > span {\n  display: block;\n}\n.mq-math-mode .mq-operator-name {\n  font-family: Symbola, \"Times New Roman\", serif;\n  line-height: 0.9;\n  font-style: normal;\n}\n.mq-math-mode var.mq-operator-name.mq-first {\n  padding-left: 0.2em;\n}\n.mq-math-mode var.mq-operator-name.mq-last,\n.mq-math-mode .mq-supsub.mq-after-operator-name {\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-fraction {\n  font-size: 90%;\n  text-align: center;\n  vertical-align: -0.4em;\n  padding: 0 0.2em;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link {\n  display: -moz-groupbox;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link,\n.mq-math-mode x:default {\n  display: inline-block;\n}\n.mq-math-mode .mq-numerator,\n.mq-math-mode .mq-denominator,\n.mq-math-mode .mq-dot-recurring {\n  display: block;\n}\n.mq-math-mode .mq-numerator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-denominator {\n  border-top: 1px solid;\n  float: right;\n  width: 100%;\n  padding: 0.1em;\n}\n.mq-math-mode .mq-dot-recurring {\n  text-align: center;\n  height: 0.3em;\n}\n.mq-math-mode .mq-sqrt-prefix {\n  padding-top: 0;\n  position: relative;\n  top: 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: top;\n  -moz-transform-origin: top;\n  -ms-transform-origin: top;\n  -o-transform-origin: top;\n  transform-origin: top;\n}\n.mq-math-mode .mq-sqrt-stem {\n  border-top: 1px solid;\n  margin-top: 1px;\n  padding-left: 0.15em;\n  padding-right: 0.2em;\n  margin-right: 0.1em;\n  padding-top: 1px;\n}\n.mq-math-mode .mq-diacritic-above {\n  display: block;\n  text-align: center;\n  line-height: 0.4em;\n}\n.mq-math-mode .mq-diacritic-stem {\n  display: block;\n  text-align: center;\n}\n.mq-math-mode .mq-hat-prefix {\n  display: block;\n  text-align: center;\n  line-height: 0.95em;\n  margin-bottom: -0.7em;\n  transform: scaleX(1.5);\n  -moz-transform: scaleX(1.5);\n  -o-transform: scaleX(1.5);\n  -webkit-transform: scaleX(1.5);\n}\n.mq-math-mode .mq-hat-stem {\n  display: block;\n}\n.mq-math-mode .mq-large-operator {\n  vertical-align: -0.2em;\n  padding: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator big,\n.mq-math-mode .mq-large-operator .mq-to {\n  display: block;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator .mq-to {\n  font-size: 80%;\n}\n.mq-math-mode .mq-large-operator .mq-from {\n  float: right;\n  width: 100%;\n}\n.mq-math-mode,\n.mq-math-mode .mq-editable-field {\n  cursor: text;\n  font-family: Symbola, \"Times New Roman\", serif;\n}\n.mq-math-mode .mq-overarc {\n  border-top: 1px solid black;\n  -webkit-border-top-right-radius: 50% 0.3em;\n  -moz-border-radius-topright: 50% 0.3em;\n  border-top-right-radius: 50% 0.3em;\n  -webkit-border-top-left-radius: 50% 0.3em;\n  -moz-border-radius-topleft: 50% 0.3em;\n  border-top-left-radius: 50% 0.3em;\n  margin-top: 1px;\n  padding-top: 0.15em;\n}\n.mq-math-mode .mq-overarrow {\n  min-width: 0.5em;\n  border-top: 1px solid black;\n  margin-top: 1px;\n  padding-top: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-overarrow:before {\n  display: block;\n  position: relative;\n  top: -0.34em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  text-align: right;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-left:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both {\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty {\n  min-height: 1.23em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty:after {\n  top: -0.34em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:after {\n  display: block;\n  position: relative;\n  top: -2.3em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  visibility: visible;\n  text-align: right;\n}\n.mq-math-mode .mq-selection,\n.mq-editable-field .mq-selection,\n.mq-math-mode .mq-selection .mq-non-leaf,\n.mq-editable-field .mq-selection .mq-non-leaf,\n.mq-math-mode .mq-selection .mq-scaled,\n.mq-editable-field .mq-selection .mq-scaled {\n  background: #b4d5fe !important;\n  background: Highlight !important;\n  color: HighlightText;\n  border-color: HighlightText;\n}\n.mq-math-mode .mq-selection .mq-matrixed,\n.mq-editable-field .mq-selection .mq-matrixed {\n  background: #39f !important;\n}\n.mq-math-mode .mq-selection .mq-matrixed-container,\n.mq-editable-field .mq-selection .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#3399FF') !important;\n}\n.mq-math-mode .mq-selection.mq-blur,\n.mq-editable-field .mq-selection.mq-blur,\n.mq-math-mode .mq-selection.mq-blur .mq-non-leaf,\n.mq-editable-field .mq-selection.mq-blur .mq-non-leaf,\n.mq-math-mode .mq-selection.mq-blur .mq-scaled,\n.mq-editable-field .mq-selection.mq-blur .mq-scaled,\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed {\n  background: #d4d4d4 !important;\n  color: black;\n  border-color: black;\n}\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed-container,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#D4D4D4') !important;\n}\n.mq-editable-field .mq-textarea,\n.mq-math-mode .mq-textarea {\n  position: relative;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n}\n.mq-editable-field .mq-textarea *,\n.mq-math-mode .mq-textarea *,\n.mq-editable-field .mq-selectable,\n.mq-math-mode .mq-selectable {\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n  position: absolute;\n  clip: rect(1em 1em 1em 1em);\n  -webkit-transform: scale(0);\n  -moz-transform: scale(0);\n  -ms-transform: scale(0);\n  -o-transform: scale(0);\n  transform: scale(0);\n  resize: none;\n  width: 1px;\n  height: 1px;\n  box-sizing: content-box;\n}\n.mq-math-mode .mq-matrixed {\n  background: white;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='white');\n  margin-top: -0.1em;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/*\n * MathQuill v0.10.4, by Han, Jeanine, and Mary\n * http://mathquill.com | maintainers@mathquill.com\n *\n * This Source Code Form is subject to the terms of the\n * Mozilla Public License, v. 2.0. If a copy of the MPL\n * was not distributed with this file, You can obtain\n * one at http://mozilla.org/MPL/2.0/.\n */\n\n@font-face {\n  font-family: Symbola;\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  src: local(\"Symbola Regular\"), local(\"Symbola\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"woff2\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format(\"woff\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format(\"truetype\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format(\"svg\");\n}\n.mq-editable-field {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor {\n  border-left: 1px solid black;\n  margin-left: -1px;\n  position: relative;\n  z-index: 1;\n  padding: 0;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor.mq-blink {\n  visibility: hidden;\n}\n.mq-editable-field,\n.mq-math-mode .mq-editable-field {\n  border: 1px solid #ccc;\n}\n.mq-editable-field.mq-focused,\n.mq-math-mode .mq-editable-field.mq-focused {\n  border: 1px solid #bbb;\n  outline: 2px solid #bbb;\n  border-radius: 1px;\n}\n.mq-math-mode .mq-editable-field {\n  margin: 1px;\n}\n.mq-editable-field .mq-latex-command-input {\n  color: inherit;\n  font-family: \"Courier New\", monospace;\n  border: 1px solid gray;\n  padding-right: 1px;\n  margin-right: 1px;\n  margin-left: 2px;\n}\n.mq-editable-field .mq-latex-command-input.mq-empty {\n  background: transparent;\n}\n.mq-editable-field .mq-latex-command-input.mq-hasCursor {\n  border-color: ActiveBorder;\n}\n.mq-editable-field.mq-empty:after,\n.mq-editable-field.mq-text-mode:after,\n.mq-math-mode .mq-empty:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-cursor:only-child:after,\n.mq-editable-field .mq-textarea + .mq-cursor:last-child:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-text-mode .mq-cursor:only-child:after {\n  content: \"\";\n}\n.mq-editable-field.mq-text-mode {\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.mq-root-block,\n.mq-math-mode .mq-root-block {\n  display: -moz-inline-box;\n  display: inline-block;\n  width: 100%;\n  padding: 2px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  vertical-align: middle;\n}\n.mq-math-mode {\n  font-variant: normal;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 115%;\n  line-height: 1;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-non-leaf,\n.mq-math-mode .mq-scaled {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode var,\n.mq-math-mode .mq-text-mode,\n.mq-math-mode .mq-nonSymbola {\n  font-family: \"Times New Roman\", Symbola, serif;\n  line-height: 0.9;\n}\n.mq-math-mode * {\n  font-size: inherit;\n  line-height: inherit;\n  margin: 0;\n  padding: 0;\n  border-color: black;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n}\n.mq-math-mode .mq-empty {\n  background: #ccc;\n}\n.mq-math-mode .mq-empty.mq-root-block {\n  background: transparent;\n}\n.mq-math-mode.mq-empty {\n  background: transparent;\n}\n.mq-math-mode .mq-text-mode {\n  display: inline-block;\n  white-space: pre;\n}\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  box-shadow: inset darkgray 0 0.1em 0.2em;\n  padding: 0 0.1em;\n  margin: 0 -0.1em;\n  min-width: 1ex;\n}\n.mq-math-mode .mq-font {\n  font: 1em \"Times New Roman\", Symbola, serif;\n}\n.mq-math-mode .mq-font * {\n  font-family: inherit;\n  font-style: inherit;\n}\n.mq-math-mode b,\n.mq-math-mode b.mq-font {\n  font-weight: bolder;\n}\n.mq-math-mode var,\n.mq-math-mode i,\n.mq-math-mode i.mq-font {\n  font-style: italic;\n}\n.mq-math-mode var.mq-f {\n  margin-right: 0.2em;\n  margin-left: 0.1em;\n}\n.mq-math-mode .mq-roman var.mq-f {\n  margin: 0;\n}\n.mq-math-mode big {\n  font-size: 200%;\n}\n.mq-math-mode .mq-int > big {\n  display: inline-block;\n  -webkit-transform: scaleX(0.7);\n  -moz-transform: scaleX(0.7);\n  -ms-transform: scaleX(0.7);\n  -o-transform: scaleX(0.7);\n  transform: scaleX(0.7);\n  vertical-align: -0.16em;\n}\n.mq-math-mode .mq-int > .mq-supsub {\n  font-size: 80%;\n  vertical-align: -1.1em;\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sup > .mq-sup-inner {\n  vertical-align: 1.3em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sub {\n  margin-left: -0.35em;\n}\n.mq-math-mode .mq-roman {\n  font-style: normal;\n}\n.mq-math-mode .mq-sans-serif {\n  font-family: sans-serif, Symbola, serif;\n}\n.mq-math-mode .mq-monospace {\n  font-family: monospace, Symbola, serif;\n}\n.mq-math-mode .mq-overline {\n  border-top: 1px solid black;\n  margin-top: 1px;\n}\n.mq-math-mode .mq-underline {\n  border-bottom: 1px solid black;\n  margin-bottom: 1px;\n}\n.mq-math-mode .mq-binary-operator {\n  padding: 0 0.2em;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-supsub {\n  text-align: left;\n  font-size: 90%;\n  vertical-align: -0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only {\n  vertical-align: 0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only .mq-sup {\n  display: inline-block;\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-supsub .mq-sup {\n  display: block;\n}\n.mq-math-mode .mq-supsub .mq-sub {\n  display: block;\n  float: left;\n}\n.mq-math-mode .mq-supsub .mq-binary-operator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-supsub .mq-fraction {\n  font-size: 70%;\n}\n.mq-math-mode sup.mq-nthroot {\n  font-size: 80%;\n  vertical-align: 0.8em;\n  margin-right: -0.6em;\n  margin-left: 0.2em;\n  min-width: 0.5em;\n}\n.mq-math-mode .mq-paren {\n  padding: 0 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: center 0.06em;\n  -moz-transform-origin: center 0.06em;\n  -ms-transform-origin: center 0.06em;\n  -o-transform-origin: center 0.06em;\n  transform-origin: center 0.06em;\n}\n.mq-math-mode .mq-paren.mq-ghost {\n  color: silver;\n}\n.mq-math-mode .mq-paren + span {\n  margin-top: 0.1em;\n  margin-bottom: 0.1em;\n}\n.mq-math-mode .mq-array {\n  vertical-align: middle;\n  text-align: center;\n}\n.mq-math-mode .mq-array > span {\n  display: block;\n}\n.mq-math-mode .mq-operator-name {\n  font-family: Symbola, \"Times New Roman\", serif;\n  line-height: 0.9;\n  font-style: normal;\n}\n.mq-math-mode var.mq-operator-name.mq-first {\n  padding-left: 0.2em;\n}\n.mq-math-mode var.mq-operator-name.mq-last,\n.mq-math-mode .mq-supsub.mq-after-operator-name {\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-fraction {\n  font-size: 90%;\n  text-align: center;\n  vertical-align: -0.4em;\n  padding: 0 0.2em;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link {\n  display: -moz-groupbox;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link,\n.mq-math-mode x:default {\n  display: inline-block;\n}\n.mq-math-mode .mq-numerator,\n.mq-math-mode .mq-denominator,\n.mq-math-mode .mq-dot-recurring {\n  display: block;\n}\n.mq-math-mode .mq-numerator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-denominator {\n  border-top: 1px solid;\n  float: right;\n  width: 100%;\n  padding: 0.1em;\n}\n.mq-math-mode .mq-dot-recurring {\n  text-align: center;\n  height: 0.3em;\n}\n.mq-math-mode .mq-sqrt-prefix {\n  padding-top: 0;\n  position: relative;\n  top: 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: top;\n  -moz-transform-origin: top;\n  -ms-transform-origin: top;\n  -o-transform-origin: top;\n  transform-origin: top;\n}\n.mq-math-mode .mq-sqrt-stem {\n  border-top: 1px solid;\n  margin-top: 1px;\n  padding-left: 0.15em;\n  padding-right: 0.2em;\n  margin-right: 0.1em;\n  padding-top: 1px;\n}\n.mq-math-mode .mq-diacritic-above {\n  display: block;\n  text-align: center;\n  line-height: 0.4em;\n}\n.mq-math-mode .mq-diacritic-stem {\n  display: block;\n  text-align: center;\n}\n.mq-math-mode .mq-hat-prefix {\n  display: block;\n  text-align: center;\n  line-height: 0.95em;\n  margin-bottom: -0.7em;\n  transform: scaleX(1.5);\n  -moz-transform: scaleX(1.5);\n  -o-transform: scaleX(1.5);\n  -webkit-transform: scaleX(1.5);\n}\n.mq-math-mode .mq-hat-stem {\n  display: block;\n}\n.mq-math-mode .mq-large-operator {\n  vertical-align: -0.2em;\n  padding: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator big,\n.mq-math-mode .mq-large-operator .mq-to {\n  display: block;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator .mq-to {\n  font-size: 80%;\n}\n.mq-math-mode .mq-large-operator .mq-from {\n  float: right;\n  width: 100%;\n}\n.mq-math-mode,\n.mq-math-mode .mq-editable-field {\n  cursor: text;\n  font-family: Symbola, \"Times New Roman\", serif;\n}\n.mq-math-mode .mq-overarc {\n  border-top: 1px solid black;\n  -webkit-border-top-right-radius: 50% 0.3em;\n  -moz-border-radius-topright: 50% 0.3em;\n  border-top-right-radius: 50% 0.3em;\n  -webkit-border-top-left-radius: 50% 0.3em;\n  -moz-border-radius-topleft: 50% 0.3em;\n  border-top-left-radius: 50% 0.3em;\n  margin-top: 1px;\n  padding-top: 0.15em;\n}\n.mq-math-mode .mq-overarrow {\n  min-width: 0.5em;\n  border-top: 1px solid black;\n  margin-top: 1px;\n  padding-top: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-overarrow:before {\n  display: block;\n  position: relative;\n  top: -0.34em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  text-align: right;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-left:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both {\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty {\n  min-height: 1.23em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty:after {\n  top: -0.34em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:after {\n  display: block;\n  position: relative;\n  top: -2.3em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  visibility: visible;\n  text-align: right;\n}\n.mq-math-mode .mq-selection,\n.mq-editable-field .mq-selection,\n.mq-math-mode .mq-selection .mq-non-leaf,\n.mq-editable-field .mq-selection .mq-non-leaf,\n.mq-math-mode .mq-selection .mq-scaled,\n.mq-editable-field .mq-selection .mq-scaled {\n  background: #b4d5fe !important;\n  background: Highlight !important;\n  color: HighlightText;\n  border-color: HighlightText;\n}\n.mq-math-mode .mq-selection .mq-matrixed,\n.mq-editable-field .mq-selection .mq-matrixed {\n  background: #39f !important;\n}\n.mq-math-mode .mq-selection .mq-matrixed-container,\n.mq-editable-field .mq-selection .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#3399FF') !important;\n}\n.mq-math-mode .mq-selection.mq-blur,\n.mq-editable-field .mq-selection.mq-blur,\n.mq-math-mode .mq-selection.mq-blur .mq-non-leaf,\n.mq-editable-field .mq-selection.mq-blur .mq-non-leaf,\n.mq-math-mode .mq-selection.mq-blur .mq-scaled,\n.mq-editable-field .mq-selection.mq-blur .mq-scaled,\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed {\n  background: #d4d4d4 !important;\n  color: black;\n  border-color: black;\n}\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed-container,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#D4D4D4') !important;\n}\n.mq-editable-field .mq-textarea,\n.mq-math-mode .mq-textarea {\n  position: relative;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n}\n.mq-editable-field .mq-textarea *,\n.mq-math-mode .mq-textarea *,\n.mq-editable-field .mq-selectable,\n.mq-math-mode .mq-selectable {\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n  position: absolute;\n  clip: rect(1em 1em 1em 1em);\n  -webkit-transform: scale(0);\n  -moz-transform: scale(0);\n  -ms-transform: scale(0);\n  -o-transform: scale(0);\n  transform: scale(0);\n  resize: none;\n  width: 1px;\n  height: 1px;\n  box-sizing: content-box;\n}\n.mq-math-mode .mq-matrixed {\n  background: white;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='white');\n  margin-top: -0.1em;\n}\n", "",{"version":3,"sources":["webpack://./node_modules/mathquill4keyboard/build/mathquill.css"],"names":[],"mappings":"AAAA;;;;;;;;EAQE;;AAEF;EACE,oBAAoB;EACpB,4CAA2B;EAC3B;;;;yDAI8C;AAChD;AACA;EACE,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,4BAA4B;EAC5B,iBAAiB;EACjB,kBAAkB;EAClB,UAAU;EACV,UAAU;EACV,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,kBAAkB;AACpB;AACA;;EAEE,sBAAsB;AACxB;AACA;;EAEE,sBAAsB;EACtB,uBAAuB;EACvB,kBAAkB;AACpB;AACA;EACE,WAAW;AACb;AACA;EACE,cAAc;EACd,qCAAqC;EACrC,sBAAsB;EACtB,kBAAkB;EAClB,iBAAiB;EACjB,gBAAgB;AAClB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,0BAA0B;AAC5B;AACA;;;EAGE,kBAAkB;EAClB,YAAY;AACd;AACA;;EAEE,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,WAAW;AACb;AACA;EACE,gBAAgB;EAChB,kBAAkB;AACpB;AACA;;EAEE,wBAAwB;EACxB,qBAAqB;EACrB,WAAW;EACX,YAAY;EACZ,8BAA8B;EAC9B,2BAA2B;EAC3B,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,sBAAsB;AACxB;AACA;EACE,oBAAoB;EACpB,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,cAAc;EACd,wBAAwB;EACxB,qBAAqB;AACvB;AACA;;EAEE,wBAAwB;EACxB,qBAAqB;AACvB;AACA;;;EAGE,8CAA8C;EAC9C,gBAAgB;AAClB;AACA;EACE,kBAAkB;EAClB,oBAAoB;EACpB,SAAS;EACT,UAAU;EACV,mBAAmB;EACnB,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;EACjB,sBAAsB;AACxB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,wCAAwC;EACxC,gBAAgB;EAChB,gBAAgB;EAChB,cAAc;AAChB;AACA;EACE,2CAA2C;AAC7C;AACA;EACE,oBAAoB;EACpB,mBAAmB;AACrB;AACA;;EAEE,mBAAmB;AACrB;AACA;;;EAGE,kBAAkB;AACpB;AACA;EACE,mBAAmB;EACnB,kBAAkB;AACpB;AACA;EACE,SAAS;AACX;AACA;EACE,eAAe;AACjB;AACA;EACE,qBAAqB;EACrB,8BAA8B;EAC9B,2BAA2B;EAC3B,0BAA0B;EAC1B,yBAAyB;EACzB,sBAAsB;EACtB,uBAAuB;AACzB;AACA;EACE,cAAc;EACd,sBAAsB;EACtB,oBAAoB;AACtB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,oBAAoB;AACtB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,uCAAuC;AACzC;AACA;EACE,sCAAsC;AACxC;AACA;EACE,2BAA2B;EAC3B,eAAe;AACjB;AACA;EACE,8BAA8B;EAC9B,kBAAkB;AACpB;AACA;EACE,gBAAgB;EAChB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,gBAAgB;EAChB,cAAc;EACd,sBAAsB;AACxB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,qBAAqB;EACrB,2BAA2B;AAC7B;AACA;EACE,cAAc;AAChB;AACA;EACE,cAAc;EACd,WAAW;AACb;AACA;EACE,gBAAgB;AAClB;AACA;EACE,cAAc;AAChB;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,oBAAoB;EACpB,kBAAkB;EAClB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,mBAAmB;EACnB,uCAAuC;EACvC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;EAClC,+BAA+B;AACjC;AACA;EACE,aAAa;AACf;AACA;EACE,iBAAiB;EACjB,oBAAoB;AACtB;AACA;EACE,sBAAsB;EACtB,kBAAkB;AACpB;AACA;EACE,cAAc;AAChB;AACA;EACE,8CAA8C;EAC9C,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,mBAAmB;AACrB;AACA;;EAEE,oBAAoB;AACtB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,sBAAsB;EACtB,gBAAgB;AAClB;AACA;;;EAGE,sBAAsB;AACxB;AACA;;;;EAIE,qBAAqB;AACvB;AACA;;;EAGE,cAAc;AAChB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,qBAAqB;EACrB,YAAY;EACZ,WAAW;EACX,cAAc;AAChB;AACA;EACE,kBAAkB;EAClB,aAAa;AACf;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,UAAU;EACV,mBAAmB;EACnB,6BAA6B;EAC7B,0BAA0B;EAC1B,yBAAyB;EACzB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,qBAAqB;EACrB,eAAe;EACf,oBAAoB;EACpB,oBAAoB;EACpB,mBAAmB;EACnB,gBAAgB;AAClB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,mBAAmB;EACnB,qBAAqB;EACrB,sBAAsB;EACtB,2BAA2B;EAC3B,yBAAyB;EACzB,8BAA8B;AAChC;AACA;EACE,cAAc;AAChB;AACA;EACE,sBAAsB;EACtB,cAAc;EACd,kBAAkB;AACpB;AACA;;;EAGE,cAAc;AAChB;AACA;;EAEE,cAAc;AAChB;AACA;EACE,YAAY;EACZ,WAAW;AACb;AACA;;EAEE,YAAY;EACZ,8CAA8C;AAChD;AACA;EACE,2BAA2B;EAC3B,0CAA0C;EAC1C,sCAAsC;EACtC,kCAAkC;EAClC,yCAAyC;EACzC,qCAAqC;EACrC,iCAAiC;EACjC,eAAe;EACf,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,2BAA2B;EAC3B,eAAe;EACf,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,YAAY;EACZ,gBAAgB;EAChB,gBAAgB;EAChB,gBAAgB;EAChB,iBAAiB;AACnB;AACA;EACE,0BAA0B;EAC1B,wBAAwB;EACxB,6BAA6B;EAC7B,qBAAqB;EACrB,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,2BAA2B;AAC7B;AACA;EACE,kBAAkB;AACpB;AACA;EACE,YAAY;AACd;AACA;EACE,0BAA0B;EAC1B,wBAAwB;EACxB,6BAA6B;EAC7B,qBAAqB;EACrB,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;;;;;;EAME,8BAA8B;EAC9B,gCAAgC;EAChC,oBAAoB;EACpB,2BAA2B;AAC7B;AACA;;EAEE,2BAA2B;AAC7B;AACA;;EAEE,4EAA4E;AAC9E;AACA;;;;;;;;EAQE,8BAA8B;EAC9B,YAAY;EACZ,mBAAmB;AACrB;AACA;;EAEE,4EAA4E;AAC9E;AACA;;EAEE,kBAAkB;EAClB,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;AACnB;AACA;;;;EAIE,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;EACjB,kBAAkB;EAClB,2BAA2B;EAC3B,2BAA2B;EAC3B,wBAAwB;EACxB,uBAAuB;EACvB,sBAAsB;EACtB,mBAAmB;EACnB,YAAY;EACZ,UAAU;EACV,WAAW;EACX,uBAAuB;AACzB;AACA;EACE,iBAAiB;EACjB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,+DAA+D;EAC/D,kBAAkB;AACpB","sourcesContent":["/*\n * MathQuill v0.10.4, by Han, Jeanine, and Mary\n * http://mathquill.com | maintainers@mathquill.com\n *\n * This Source Code Form is subject to the terms of the\n * Mozilla Public License, v. 2.0. If a copy of the MPL\n * was not distributed with this file, You can obtain\n * one at http://mozilla.org/MPL/2.0/.\n */\n\n@font-face {\n  font-family: Symbola;\n  src: url(fonts/Symbola.eot);\n  src: local(\"Symbola Regular\"), local(\"Symbola\"),\n    url(fonts/Symbola.woff2) format(\"woff2\"),\n    url(fonts/Symbola.woff) format(\"woff\"),\n    url(fonts/Symbola.ttf) format(\"truetype\"),\n    url(fonts/Symbola.svg#Symbola) format(\"svg\");\n}\n.mq-editable-field {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor {\n  border-left: 1px solid black;\n  margin-left: -1px;\n  position: relative;\n  z-index: 1;\n  padding: 0;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor.mq-blink {\n  visibility: hidden;\n}\n.mq-editable-field,\n.mq-math-mode .mq-editable-field {\n  border: 1px solid #ccc;\n}\n.mq-editable-field.mq-focused,\n.mq-math-mode .mq-editable-field.mq-focused {\n  border: 1px solid #bbb;\n  outline: 2px solid #bbb;\n  border-radius: 1px;\n}\n.mq-math-mode .mq-editable-field {\n  margin: 1px;\n}\n.mq-editable-field .mq-latex-command-input {\n  color: inherit;\n  font-family: \"Courier New\", monospace;\n  border: 1px solid gray;\n  padding-right: 1px;\n  margin-right: 1px;\n  margin-left: 2px;\n}\n.mq-editable-field .mq-latex-command-input.mq-empty {\n  background: transparent;\n}\n.mq-editable-field .mq-latex-command-input.mq-hasCursor {\n  border-color: ActiveBorder;\n}\n.mq-editable-field.mq-empty:after,\n.mq-editable-field.mq-text-mode:after,\n.mq-math-mode .mq-empty:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-cursor:only-child:after,\n.mq-editable-field .mq-textarea + .mq-cursor:last-child:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-text-mode .mq-cursor:only-child:after {\n  content: \"\";\n}\n.mq-editable-field.mq-text-mode {\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.mq-root-block,\n.mq-math-mode .mq-root-block {\n  display: -moz-inline-box;\n  display: inline-block;\n  width: 100%;\n  padding: 2px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  vertical-align: middle;\n}\n.mq-math-mode {\n  font-variant: normal;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 115%;\n  line-height: 1;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-non-leaf,\n.mq-math-mode .mq-scaled {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode var,\n.mq-math-mode .mq-text-mode,\n.mq-math-mode .mq-nonSymbola {\n  font-family: \"Times New Roman\", Symbola, serif;\n  line-height: 0.9;\n}\n.mq-math-mode * {\n  font-size: inherit;\n  line-height: inherit;\n  margin: 0;\n  padding: 0;\n  border-color: black;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n}\n.mq-math-mode .mq-empty {\n  background: #ccc;\n}\n.mq-math-mode .mq-empty.mq-root-block {\n  background: transparent;\n}\n.mq-math-mode.mq-empty {\n  background: transparent;\n}\n.mq-math-mode .mq-text-mode {\n  display: inline-block;\n  white-space: pre;\n}\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  box-shadow: inset darkgray 0 0.1em 0.2em;\n  padding: 0 0.1em;\n  margin: 0 -0.1em;\n  min-width: 1ex;\n}\n.mq-math-mode .mq-font {\n  font: 1em \"Times New Roman\", Symbola, serif;\n}\n.mq-math-mode .mq-font * {\n  font-family: inherit;\n  font-style: inherit;\n}\n.mq-math-mode b,\n.mq-math-mode b.mq-font {\n  font-weight: bolder;\n}\n.mq-math-mode var,\n.mq-math-mode i,\n.mq-math-mode i.mq-font {\n  font-style: italic;\n}\n.mq-math-mode var.mq-f {\n  margin-right: 0.2em;\n  margin-left: 0.1em;\n}\n.mq-math-mode .mq-roman var.mq-f {\n  margin: 0;\n}\n.mq-math-mode big {\n  font-size: 200%;\n}\n.mq-math-mode .mq-int > big {\n  display: inline-block;\n  -webkit-transform: scaleX(0.7);\n  -moz-transform: scaleX(0.7);\n  -ms-transform: scaleX(0.7);\n  -o-transform: scaleX(0.7);\n  transform: scaleX(0.7);\n  vertical-align: -0.16em;\n}\n.mq-math-mode .mq-int > .mq-supsub {\n  font-size: 80%;\n  vertical-align: -1.1em;\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sup > .mq-sup-inner {\n  vertical-align: 1.3em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sub {\n  margin-left: -0.35em;\n}\n.mq-math-mode .mq-roman {\n  font-style: normal;\n}\n.mq-math-mode .mq-sans-serif {\n  font-family: sans-serif, Symbola, serif;\n}\n.mq-math-mode .mq-monospace {\n  font-family: monospace, Symbola, serif;\n}\n.mq-math-mode .mq-overline {\n  border-top: 1px solid black;\n  margin-top: 1px;\n}\n.mq-math-mode .mq-underline {\n  border-bottom: 1px solid black;\n  margin-bottom: 1px;\n}\n.mq-math-mode .mq-binary-operator {\n  padding: 0 0.2em;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-supsub {\n  text-align: left;\n  font-size: 90%;\n  vertical-align: -0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only {\n  vertical-align: 0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only .mq-sup {\n  display: inline-block;\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-supsub .mq-sup {\n  display: block;\n}\n.mq-math-mode .mq-supsub .mq-sub {\n  display: block;\n  float: left;\n}\n.mq-math-mode .mq-supsub .mq-binary-operator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-supsub .mq-fraction {\n  font-size: 70%;\n}\n.mq-math-mode sup.mq-nthroot {\n  font-size: 80%;\n  vertical-align: 0.8em;\n  margin-right: -0.6em;\n  margin-left: 0.2em;\n  min-width: 0.5em;\n}\n.mq-math-mode .mq-paren {\n  padding: 0 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: center 0.06em;\n  -moz-transform-origin: center 0.06em;\n  -ms-transform-origin: center 0.06em;\n  -o-transform-origin: center 0.06em;\n  transform-origin: center 0.06em;\n}\n.mq-math-mode .mq-paren.mq-ghost {\n  color: silver;\n}\n.mq-math-mode .mq-paren + span {\n  margin-top: 0.1em;\n  margin-bottom: 0.1em;\n}\n.mq-math-mode .mq-array {\n  vertical-align: middle;\n  text-align: center;\n}\n.mq-math-mode .mq-array > span {\n  display: block;\n}\n.mq-math-mode .mq-operator-name {\n  font-family: Symbola, \"Times New Roman\", serif;\n  line-height: 0.9;\n  font-style: normal;\n}\n.mq-math-mode var.mq-operator-name.mq-first {\n  padding-left: 0.2em;\n}\n.mq-math-mode var.mq-operator-name.mq-last,\n.mq-math-mode .mq-supsub.mq-after-operator-name {\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-fraction {\n  font-size: 90%;\n  text-align: center;\n  vertical-align: -0.4em;\n  padding: 0 0.2em;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link {\n  display: -moz-groupbox;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link,\n.mq-math-mode x:default {\n  display: inline-block;\n}\n.mq-math-mode .mq-numerator,\n.mq-math-mode .mq-denominator,\n.mq-math-mode .mq-dot-recurring {\n  display: block;\n}\n.mq-math-mode .mq-numerator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-denominator {\n  border-top: 1px solid;\n  float: right;\n  width: 100%;\n  padding: 0.1em;\n}\n.mq-math-mode .mq-dot-recurring {\n  text-align: center;\n  height: 0.3em;\n}\n.mq-math-mode .mq-sqrt-prefix {\n  padding-top: 0;\n  position: relative;\n  top: 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: top;\n  -moz-transform-origin: top;\n  -ms-transform-origin: top;\n  -o-transform-origin: top;\n  transform-origin: top;\n}\n.mq-math-mode .mq-sqrt-stem {\n  border-top: 1px solid;\n  margin-top: 1px;\n  padding-left: 0.15em;\n  padding-right: 0.2em;\n  margin-right: 0.1em;\n  padding-top: 1px;\n}\n.mq-math-mode .mq-diacritic-above {\n  display: block;\n  text-align: center;\n  line-height: 0.4em;\n}\n.mq-math-mode .mq-diacritic-stem {\n  display: block;\n  text-align: center;\n}\n.mq-math-mode .mq-hat-prefix {\n  display: block;\n  text-align: center;\n  line-height: 0.95em;\n  margin-bottom: -0.7em;\n  transform: scaleX(1.5);\n  -moz-transform: scaleX(1.5);\n  -o-transform: scaleX(1.5);\n  -webkit-transform: scaleX(1.5);\n}\n.mq-math-mode .mq-hat-stem {\n  display: block;\n}\n.mq-math-mode .mq-large-operator {\n  vertical-align: -0.2em;\n  padding: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator big,\n.mq-math-mode .mq-large-operator .mq-to {\n  display: block;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator .mq-to {\n  font-size: 80%;\n}\n.mq-math-mode .mq-large-operator .mq-from {\n  float: right;\n  width: 100%;\n}\n.mq-math-mode,\n.mq-math-mode .mq-editable-field {\n  cursor: text;\n  font-family: Symbola, \"Times New Roman\", serif;\n}\n.mq-math-mode .mq-overarc {\n  border-top: 1px solid black;\n  -webkit-border-top-right-radius: 50% 0.3em;\n  -moz-border-radius-topright: 50% 0.3em;\n  border-top-right-radius: 50% 0.3em;\n  -webkit-border-top-left-radius: 50% 0.3em;\n  -moz-border-radius-topleft: 50% 0.3em;\n  border-top-left-radius: 50% 0.3em;\n  margin-top: 1px;\n  padding-top: 0.15em;\n}\n.mq-math-mode .mq-overarrow {\n  min-width: 0.5em;\n  border-top: 1px solid black;\n  margin-top: 1px;\n  padding-top: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-overarrow:before {\n  display: block;\n  position: relative;\n  top: -0.34em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  text-align: right;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-left:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both {\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty {\n  min-height: 1.23em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty:after {\n  top: -0.34em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:after {\n  display: block;\n  position: relative;\n  top: -2.3em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  visibility: visible;\n  text-align: right;\n}\n.mq-math-mode .mq-selection,\n.mq-editable-field .mq-selection,\n.mq-math-mode .mq-selection .mq-non-leaf,\n.mq-editable-field .mq-selection .mq-non-leaf,\n.mq-math-mode .mq-selection .mq-scaled,\n.mq-editable-field .mq-selection .mq-scaled {\n  background: #b4d5fe !important;\n  background: Highlight !important;\n  color: HighlightText;\n  border-color: HighlightText;\n}\n.mq-math-mode .mq-selection .mq-matrixed,\n.mq-editable-field .mq-selection .mq-matrixed {\n  background: #39f !important;\n}\n.mq-math-mode .mq-selection .mq-matrixed-container,\n.mq-editable-field .mq-selection .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#3399FF') !important;\n}\n.mq-math-mode .mq-selection.mq-blur,\n.mq-editable-field .mq-selection.mq-blur,\n.mq-math-mode .mq-selection.mq-blur .mq-non-leaf,\n.mq-editable-field .mq-selection.mq-blur .mq-non-leaf,\n.mq-math-mode .mq-selection.mq-blur .mq-scaled,\n.mq-editable-field .mq-selection.mq-blur .mq-scaled,\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed {\n  background: #d4d4d4 !important;\n  color: black;\n  border-color: black;\n}\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed-container,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#D4D4D4') !important;\n}\n.mq-editable-field .mq-textarea,\n.mq-math-mode .mq-textarea {\n  position: relative;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n}\n.mq-editable-field .mq-textarea *,\n.mq-math-mode .mq-textarea *,\n.mq-editable-field .mq-selectable,\n.mq-math-mode .mq-selectable {\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n  position: absolute;\n  clip: rect(1em 1em 1em 1em);\n  -webkit-transform: scale(0);\n  -moz-transform: scale(0);\n  -ms-transform: scale(0);\n  -o-transform: scale(0);\n  transform: scale(0);\n  resize: none;\n  width: 1px;\n  height: 1px;\n  box-sizing: content-box;\n}\n.mq-math-mode .mq-matrixed {\n  background: white;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='white');\n  margin-top: -0.1em;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -61,7 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\n.scrollbar * {\n  scrollbar-width: thin;\n}\n.scrollbar * ::-webkit-scrollbar {\n  background-color: transparent;\n  height: 0.5rem;\n}\n.scrollbar * ::-webkit-scrollbar-thumb {\n  background-color: rgba(0, 0, 0, 0.2);\n  border-radius: 16px;\n}\n\n@media (min-width: 640px) {\n  .scrollbar * ::-webkit-scrollbar {\n    height: 0.8rem;\n  }\n}\n\n.cursor-pointer {\n  cursor: pointer !important;\n}\n\n/* Components */\n.react-math-keyboard-input-container {\n  font-size: 1rem;\n  box-sizing: border-box;\n  overflow: hidden;\n}\n@media (min-width: 768px) {\n  .react-math-keyboard-input-container {\n    font-size: 1.1rem;\n  }\n}\n@media (min-width: 1440px) {\n  .react-math-keyboard-input-container {\n    font-size: 1.4rem;\n  }\n}\n\n.react-math-keyboard-input {\n  flex-grow: 1;\n  /* width: 100%; */\n  border-radius: 4px;\n  border-color: #ccc;\n  align-items: center;\n  display: flex;\n  scroll-margin-top: 24px;\n  box-sizing: border-box;\n  overflow: auto;\n  /* overflow: hidden; */\n  min-width: 4em;\n  /* margin: 2px; */\n  /* max-width: 100%; */\n}\n\n.react-math-keyboard-keyboard-container {\n  width: 100%;\n  padding-bottom: 0.25rem;\n  margin: 0px;\n  color: #020617;\n  background-color: #e2e8f0;\n  display: flex;\n  justify-content: center;\n  position: fixed;\n  bottom: -300px;\n  left: 0px;\n  z-index: 1310;\n  transition: bottom 300ms ease-in-out;\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\n}\n\n.react-math-keyboard-keyboard-layout {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.react-math-keyboard-numeric-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.5rem;\n  display: grid;\n  column-gap: 0.75rem;\n  grid-template-columns: 2fr 3fr 1fr;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-numeric-layout {\n    column-gap: 2.5rem;\n  }\n}\n.react-math-keyboard-alphabet-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.55rem;\n  row-gap: 0.25rem;\n  display: flex;\n  flex-direction: column;\n}\n\n.react-math-keyboard-layout-grid {\n  display: grid;\n  column-gap: 0.25rem;\n  row-gap: 0.25rem;\n  justify-content: stretch;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-layout-grid {\n    column-gap: 0.5rem;\n  }\n}\n\n.react-math-keyboard-select-container {\n  border-radius: 0.25rem;\n  /* padding-right: 0.25rem; */\n  margin-bottom: 0.25rem;\n  display: flex;\n  background-color: #f8fafc;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\n  position: relative;\n}\n.react-math-keyboard-select-container:focus-visible {\n  outline: none;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-select {\n  border: transparent;\n  border-radius: 0.25rem;\n  background-color: transparent;\n  appearance: none;\n  color: #020617;\n  -webkit-appearance: none;\n  /* border-right-width: 16px; */\n  padding-left: 0.5rem;\n  /* padding-right: 0.25rem; */\n  padding-right: 1.75rem;\n  font-size: 1.1rem;\n}\n.react-math-keyboard-select:focus-visible {\n  outline: none;\n}\n\n.react-math-keyboard-select-arrow {\n  position: absolute;\n  transform: rotate(90deg);\n  top: 22px;\n  right: 8px;\n  pointer-events: none !important;\n}\n\n.react-math-keyboard-toolbar-container {\n  background-color: #94a3b8;\n  padding-top: 0.5rem;\n  /* align-items: center; */\n  width: 100%;\n}\n.react-math-keyboard-toolbar {\n  display: flex;\n  max-width: 768px;\n  column-gap: 0.5rem;\n  justify-content: space-between;\n  padding-right: 0.25rem;\n  margin: auto;\n}\n@media (min-width: 768px) {\n  .react-math-keyboard-toolbar {\n    min-width: 768px;\n  }\n}\n.react-math-keyboard-divider {\n  border: transparent;\n  border-top: 2px solid #64748b;\n  margin-top: 0.25rem;\n  margin-bottom: 0px;\n}\n\n.react-math-keyboard-toolbar-keys-container {\n  display: flex;\n  column-gap: 0.25rem;\n  padding-left: 0.25rem;\n  padding-right: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n\n.react-math-keyboard-key {\n  border: none;\n  cursor: pointer;\n  color: #020617;\n  height: 3rem;\n  border-radius: 0.25rem;\n  font-weight: 400;\n  font-size: 1.25rem;\n  line-height: 1.75rem;\n\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n\n  background-color: #f8fafc;\n}\n\n.react-math-keyboard-key:focus-visible {\n  outline: transparent;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-key-utility {\n  background-color: #94a3b8;\n}\n\n@media not screen and (hover: none) and (pointer: coarse) {\n  .react-math-keyboard-key:hover {\n    background-color: #cbd5e1;\n  }\n  .react-math-keyboard-key-utility:hover {\n    background-color: #64748b;\n  }\n}\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;AACxB;;AAEA;EACE,qBAAqB;AACvB;AACA;EACE,6BAA6B;EAC7B,cAAc;AAChB;AACA;EACE,oCAAoC;EACpC,mBAAmB;AACrB;;AAEA;EACE;IACE,cAAc;EAChB;AACF;;AAEA;EACE,0BAA0B;AAC5B;;AAEA,eAAe;AACf;EACE,eAAe;EACf,sBAAsB;EACtB,gBAAgB;AAClB;AACA;EACE;IACE,iBAAiB;EACnB;AACF;AACA;EACE;IACE,iBAAiB;EACnB;AACF;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;EAClB,kBAAkB;EAClB,mBAAmB;EACnB,aAAa;EACb,uBAAuB;EACvB,sBAAsB;EACtB,cAAc;EACd,sBAAsB;EACtB,cAAc;EACd,iBAAiB;EACjB,qBAAqB;AACvB;;AAEA;EACE,WAAW;EACX,uBAAuB;EACvB,WAAW;EACX,cAAc;EACd,yBAAyB;EACzB,aAAa;EACb,uBAAuB;EACvB,eAAe;EACf,cAAc;EACd,SAAS;EACT,aAAa;EACb,oCAAoC;EACpC,wDAAwD;AAC1D;;AAEA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;EACnB,kCAAkC;AACpC;AACA;EACE;IACE,kBAAkB;EACpB;AACF;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,oBAAoB;EACpB,gBAAgB;EAChB,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,gBAAgB;EAChB,wBAAwB;AAC1B;AACA;EACE;IACE,kBAAkB;EACpB;AACF;;AAEA;EACE,sBAAsB;EACtB,4BAA4B;EAC5B,sBAAsB;EACtB,aAAa;EACb,yBAAyB;EACzB,wCAAwC;EACxC,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,8CAA8C;AAChD;;AAEA;EACE,mBAAmB;EACnB,sBAAsB;EACtB,6BAA6B;EAC7B,gBAAgB;EAChB,cAAc;EACd,wBAAwB;EACxB,8BAA8B;EAC9B,oBAAoB;EACpB,4BAA4B;EAC5B,sBAAsB;EACtB,iBAAiB;AACnB;AACA;EACE,aAAa;AACf;;AAEA;EACE,kBAAkB;EAClB,wBAAwB;EACxB,SAAS;EACT,UAAU;EACV,+BAA+B;AACjC;;AAEA;EACE,yBAAyB;EACzB,mBAAmB;EACnB,yBAAyB;EACzB,WAAW;AACb;AACA;EACE,aAAa;EACb,gBAAgB;EAChB,kBAAkB;EAClB,8BAA8B;EAC9B,sBAAsB;EACtB,YAAY;AACd;AACA;EACE;IACE,gBAAgB;EAClB;AACF;AACA;EACE,mBAAmB;EACnB,6BAA6B;EAC7B,mBAAmB;EACnB,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,qBAAqB;EACrB,sBAAsB;EACtB,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,cAAc;EACd,YAAY;EACZ,sBAAsB;EACtB,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;;EAEpB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB;;EAElB,yBAAyB;AAC3B;;AAEA;EACE,oBAAoB;EACpB,8CAA8C;AAChD;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE;IACE,yBAAyB;EAC3B;EACA;IACE,yBAAyB;EAC3B;AACF","sourcesContent":["* {\n  box-sizing: border-box;\n}\n\n.scrollbar * {\n  scrollbar-width: thin;\n}\n.scrollbar * ::-webkit-scrollbar {\n  background-color: transparent;\n  height: 0.5rem;\n}\n.scrollbar * ::-webkit-scrollbar-thumb {\n  background-color: rgba(0, 0, 0, 0.2);\n  border-radius: 16px;\n}\n\n@media (min-width: 640px) {\n  .scrollbar * ::-webkit-scrollbar {\n    height: 0.8rem;\n  }\n}\n\n.cursor-pointer {\n  cursor: pointer !important;\n}\n\n/* Components */\n.react-math-keyboard-input-container {\n  font-size: 1rem;\n  box-sizing: border-box;\n  overflow: hidden;\n}\n@media (min-width: 768px) {\n  .react-math-keyboard-input-container {\n    font-size: 1.1rem;\n  }\n}\n@media (min-width: 1440px) {\n  .react-math-keyboard-input-container {\n    font-size: 1.4rem;\n  }\n}\n\n.react-math-keyboard-input {\n  flex-grow: 1;\n  /* width: 100%; */\n  border-radius: 4px;\n  border-color: #ccc;\n  align-items: center;\n  display: flex;\n  scroll-margin-top: 24px;\n  box-sizing: border-box;\n  overflow: auto;\n  /* overflow: hidden; */\n  min-width: 4em;\n  /* margin: 2px; */\n  /* max-width: 100%; */\n}\n\n.react-math-keyboard-keyboard-container {\n  width: 100%;\n  padding-bottom: 0.25rem;\n  margin: 0px;\n  color: #020617;\n  background-color: #e2e8f0;\n  display: flex;\n  justify-content: center;\n  position: fixed;\n  bottom: -300px;\n  left: 0px;\n  z-index: 1310;\n  transition: bottom 300ms ease-in-out;\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\n}\n\n.react-math-keyboard-keyboard-layout {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.react-math-keyboard-numeric-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.5rem;\n  display: grid;\n  column-gap: 0.75rem;\n  grid-template-columns: 2fr 3fr 1fr;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-numeric-layout {\n    column-gap: 2.5rem;\n  }\n}\n.react-math-keyboard-alphabet-layout {\n  width: 100%;\n  max-width: 768px;\n  padding: 0.25rem;\n  padding-top: 0.55rem;\n  row-gap: 0.25rem;\n  display: flex;\n  flex-direction: column;\n}\n\n.react-math-keyboard-layout-grid {\n  display: grid;\n  column-gap: 0.25rem;\n  row-gap: 0.25rem;\n  justify-content: stretch;\n}\n@media (min-width: 640px) {\n  .react-math-keyboard-layout-grid {\n    column-gap: 0.5rem;\n  }\n}\n\n.react-math-keyboard-select-container {\n  border-radius: 0.25rem;\n  /* padding-right: 0.25rem; */\n  margin-bottom: 0.25rem;\n  display: flex;\n  background-color: #f8fafc;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\n  position: relative;\n}\n.react-math-keyboard-select-container:focus-visible {\n  outline: none;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-select {\n  border: transparent;\n  border-radius: 0.25rem;\n  background-color: transparent;\n  appearance: none;\n  color: #020617;\n  -webkit-appearance: none;\n  /* border-right-width: 16px; */\n  padding-left: 0.5rem;\n  /* padding-right: 0.25rem; */\n  padding-right: 1.75rem;\n  font-size: 1.1rem;\n}\n.react-math-keyboard-select:focus-visible {\n  outline: none;\n}\n\n.react-math-keyboard-select-arrow {\n  position: absolute;\n  transform: rotate(90deg);\n  top: 22px;\n  right: 8px;\n  pointer-events: none !important;\n}\n\n.react-math-keyboard-toolbar-container {\n  background-color: #94a3b8;\n  padding-top: 0.5rem;\n  /* align-items: center; */\n  width: 100%;\n}\n.react-math-keyboard-toolbar {\n  display: flex;\n  max-width: 768px;\n  column-gap: 0.5rem;\n  justify-content: space-between;\n  padding-right: 0.25rem;\n  margin: auto;\n}\n@media (min-width: 768px) {\n  .react-math-keyboard-toolbar {\n    min-width: 768px;\n  }\n}\n.react-math-keyboard-divider {\n  border: transparent;\n  border-top: 2px solid #64748b;\n  margin-top: 0.25rem;\n  margin-bottom: 0px;\n}\n\n.react-math-keyboard-toolbar-keys-container {\n  display: flex;\n  column-gap: 0.25rem;\n  padding-left: 0.25rem;\n  padding-right: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n\n.react-math-keyboard-key {\n  border: none;\n  cursor: pointer;\n  color: #020617;\n  height: 3rem;\n  border-radius: 0.25rem;\n  font-weight: 400;\n  font-size: 1.25rem;\n  line-height: 1.75rem;\n\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n\n  background-color: #f8fafc;\n}\n\n.react-math-keyboard-key:focus-visible {\n  outline: transparent;\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n.react-math-keyboard-key-utility {\n  background-color: #94a3b8;\n}\n\n@media not screen and (hover: none) and (pointer: coarse) {\n  .react-math-keyboard-key:hover {\n    background-color: #cbd5e1;\n  }\n  .react-math-keyboard-key-utility:hover {\n    background-color: #64748b;\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.scrollbar * {\r\n  scrollbar-width: thin;\r\n}\r\n.scrollbar * ::-webkit-scrollbar {\r\n  background-color: transparent;\r\n  height: 0.5rem;\r\n}\r\n.scrollbar * ::-webkit-scrollbar-thumb {\r\n  background-color: rgba(0, 0, 0, 0.2);\r\n  border-radius: 16px;\r\n}\r\n\r\n@media (min-width: 640px) {\r\n  .scrollbar * ::-webkit-scrollbar {\r\n    height: 0.8rem;\r\n  }\r\n}\r\n\r\n.cursor-pointer {\r\n  cursor: pointer !important;\r\n}\r\n\r\n/* Components */\r\n.react-math-keyboard-input-container {\r\n  font-size: 1rem;\r\n  box-sizing: border-box;\r\n  overflow: hidden;\r\n}\r\n@media (min-width: 768px) {\r\n  .react-math-keyboard-input-container {\r\n    font-size: 1.1rem;\r\n  }\r\n}\r\n@media (min-width: 1440px) {\r\n  .react-math-keyboard-input-container {\r\n    font-size: 1.4rem;\r\n  }\r\n}\r\n\r\n.react-math-keyboard-input {\r\n  flex-grow: 1;\r\n  /* width: 100%; */\r\n  border-radius: 4px;\r\n  border-color: #ccc;\r\n  align-items: center;\r\n  display: flex;\r\n  scroll-margin-top: 24px;\r\n  box-sizing: border-box;\r\n  overflow: auto;\r\n  /* overflow: hidden; */\r\n  min-width: 4em;\r\n  /* margin: 2px; */\r\n  /* max-width: 100%; */\r\n}\r\n\r\n.react-math-keyboard-keyboard-container {\r\n  width: 100%;\r\n  padding-bottom: 0.25rem;\r\n  margin: 0px;\r\n  color: #020617;\r\n  background-color: #e2e8f0;\r\n  display: flex;\r\n  justify-content: center;\r\n  position: fixed;\r\n  bottom: -300px;\r\n  left: 0px;\r\n  z-index: 1310;\r\n  transition: bottom 300ms ease-in-out;\r\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\r\n}\r\n\r\n.react-math-keyboard-keyboard-layout {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n.react-math-keyboard-numeric-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.5rem;\r\n  display: grid;\r\n  column-gap: 0.75rem;\r\n  grid-template-columns: 2fr 3fr 1fr;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-numeric-layout {\r\n    column-gap: 2.5rem;\r\n  }\r\n}\r\n.react-math-keyboard-alphabet-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.55rem;\r\n  row-gap: 0.25rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.react-math-keyboard-layout-grid {\r\n  display: grid;\r\n  column-gap: 0.25rem;\r\n  row-gap: 0.25rem;\r\n  justify-content: stretch;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-layout-grid {\r\n    column-gap: 0.5rem;\r\n  }\r\n}\r\n\r\n.react-math-keyboard-select-container {\r\n  border-radius: 0.25rem;\r\n  /* padding-right: 0.25rem; */\r\n  margin-bottom: 0.25rem;\r\n  display: flex;\r\n  background-color: #f8fafc;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\r\n  position: relative;\r\n}\r\n.react-math-keyboard-select-container:focus-visible {\r\n  outline: none;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-select {\r\n  border: transparent;\r\n  border-radius: 0.25rem;\r\n  background-color: transparent;\r\n  appearance: none;\r\n  color: #020617;\r\n  -webkit-appearance: none;\r\n  /* border-right-width: 16px; */\r\n  padding-left: 0.5rem;\r\n  /* padding-right: 0.25rem; */\r\n  padding-right: 1.75rem;\r\n  font-size: 1.1rem;\r\n}\r\n.react-math-keyboard-select:focus-visible {\r\n  outline: none;\r\n}\r\n\r\n.react-math-keyboard-select-arrow {\r\n  position: absolute;\r\n  transform: rotate(90deg);\r\n  top: 22px;\r\n  right: 8px;\r\n  pointer-events: none !important;\r\n}\r\n\r\n.react-math-keyboard-toolbar-container {\r\n  background-color: #94a3b8;\r\n  padding-top: 0.5rem;\r\n  /* align-items: center; */\r\n  width: 100%;\r\n}\r\n.react-math-keyboard-toolbar {\r\n  display: flex;\r\n  max-width: 768px;\r\n  column-gap: 0.5rem;\r\n  justify-content: space-between;\r\n  padding-right: 0.25rem;\r\n  margin: auto;\r\n}\r\n@media (min-width: 768px) {\r\n  .react-math-keyboard-toolbar {\r\n    min-width: 768px;\r\n  }\r\n}\r\n.react-math-keyboard-divider {\r\n  border: transparent;\r\n  border-top: 2px solid #64748b;\r\n  margin-top: 0.25rem;\r\n  margin-bottom: 0px;\r\n}\r\n\r\n.react-math-keyboard-toolbar-keys-container {\r\n  display: flex;\r\n  column-gap: 0.25rem;\r\n  padding-left: 0.25rem;\r\n  padding-right: 0.25rem;\r\n  padding-bottom: 0.25rem;\r\n}\r\n\r\n.react-math-keyboard-key {\r\n  border: none;\r\n  cursor: pointer;\r\n  color: #020617;\r\n  height: 3rem;\r\n  border-radius: 0.25rem;\r\n  font-weight: 400;\r\n  font-size: 1.25rem;\r\n  line-height: 1.75rem;\r\n\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  position: relative;\r\n\r\n  background-color: #f8fafc;\r\n}\r\n\r\n.react-math-keyboard-key:focus-visible {\r\n  outline: transparent;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-key-utility {\r\n  background-color: #94a3b8;\r\n}\r\n\r\n@media not screen and (hover: none) and (pointer: coarse) {\r\n  .react-math-keyboard-key:hover {\r\n    background-color: #cbd5e1;\r\n  }\r\n  .react-math-keyboard-key-utility:hover {\r\n    background-color: #64748b;\r\n  }\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;AACxB;;AAEA;EACE,qBAAqB;AACvB;AACA;EACE,6BAA6B;EAC7B,cAAc;AAChB;AACA;EACE,oCAAoC;EACpC,mBAAmB;AACrB;;AAEA;EACE;IACE,cAAc;EAChB;AACF;;AAEA;EACE,0BAA0B;AAC5B;;AAEA,eAAe;AACf;EACE,eAAe;EACf,sBAAsB;EACtB,gBAAgB;AAClB;AACA;EACE;IACE,iBAAiB;EACnB;AACF;AACA;EACE;IACE,iBAAiB;EACnB;AACF;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;EAClB,kBAAkB;EAClB,mBAAmB;EACnB,aAAa;EACb,uBAAuB;EACvB,sBAAsB;EACtB,cAAc;EACd,sBAAsB;EACtB,cAAc;EACd,iBAAiB;EACjB,qBAAqB;AACvB;;AAEA;EACE,WAAW;EACX,uBAAuB;EACvB,WAAW;EACX,cAAc;EACd,yBAAyB;EACzB,aAAa;EACb,uBAAuB;EACvB,eAAe;EACf,cAAc;EACd,SAAS;EACT,aAAa;EACb,oCAAoC;EACpC,wDAAwD;AAC1D;;AAEA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;EACnB,aAAa;EACb,mBAAmB;EACnB,kCAAkC;AACpC;AACA;EACE;IACE,kBAAkB;EACpB;AACF;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,oBAAoB;EACpB,gBAAgB;EAChB,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,gBAAgB;EAChB,wBAAwB;AAC1B;AACA;EACE;IACE,kBAAkB;EACpB;AACF;;AAEA;EACE,sBAAsB;EACtB,4BAA4B;EAC5B,sBAAsB;EACtB,aAAa;EACb,yBAAyB;EACzB,wCAAwC;EACxC,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,8CAA8C;AAChD;;AAEA;EACE,mBAAmB;EACnB,sBAAsB;EACtB,6BAA6B;EAC7B,gBAAgB;EAChB,cAAc;EACd,wBAAwB;EACxB,8BAA8B;EAC9B,oBAAoB;EACpB,4BAA4B;EAC5B,sBAAsB;EACtB,iBAAiB;AACnB;AACA;EACE,aAAa;AACf;;AAEA;EACE,kBAAkB;EAClB,wBAAwB;EACxB,SAAS;EACT,UAAU;EACV,+BAA+B;AACjC;;AAEA;EACE,yBAAyB;EACzB,mBAAmB;EACnB,yBAAyB;EACzB,WAAW;AACb;AACA;EACE,aAAa;EACb,gBAAgB;EAChB,kBAAkB;EAClB,8BAA8B;EAC9B,sBAAsB;EACtB,YAAY;AACd;AACA;EACE;IACE,gBAAgB;EAClB;AACF;AACA;EACE,mBAAmB;EACnB,6BAA6B;EAC7B,mBAAmB;EACnB,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,qBAAqB;EACrB,sBAAsB;EACtB,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,cAAc;EACd,YAAY;EACZ,sBAAsB;EACtB,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;;EAEpB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB;;EAElB,yBAAyB;AAC3B;;AAEA;EACE,oBAAoB;EACpB,8CAA8C;AAChD;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE;IACE,yBAAyB;EAC3B;EACA;IACE,yBAAyB;EAC3B;AACF","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.scrollbar * {\r\n  scrollbar-width: thin;\r\n}\r\n.scrollbar * ::-webkit-scrollbar {\r\n  background-color: transparent;\r\n  height: 0.5rem;\r\n}\r\n.scrollbar * ::-webkit-scrollbar-thumb {\r\n  background-color: rgba(0, 0, 0, 0.2);\r\n  border-radius: 16px;\r\n}\r\n\r\n@media (min-width: 640px) {\r\n  .scrollbar * ::-webkit-scrollbar {\r\n    height: 0.8rem;\r\n  }\r\n}\r\n\r\n.cursor-pointer {\r\n  cursor: pointer !important;\r\n}\r\n\r\n/* Components */\r\n.react-math-keyboard-input-container {\r\n  font-size: 1rem;\r\n  box-sizing: border-box;\r\n  overflow: hidden;\r\n}\r\n@media (min-width: 768px) {\r\n  .react-math-keyboard-input-container {\r\n    font-size: 1.1rem;\r\n  }\r\n}\r\n@media (min-width: 1440px) {\r\n  .react-math-keyboard-input-container {\r\n    font-size: 1.4rem;\r\n  }\r\n}\r\n\r\n.react-math-keyboard-input {\r\n  flex-grow: 1;\r\n  /* width: 100%; */\r\n  border-radius: 4px;\r\n  border-color: #ccc;\r\n  align-items: center;\r\n  display: flex;\r\n  scroll-margin-top: 24px;\r\n  box-sizing: border-box;\r\n  overflow: auto;\r\n  /* overflow: hidden; */\r\n  min-width: 4em;\r\n  /* margin: 2px; */\r\n  /* max-width: 100%; */\r\n}\r\n\r\n.react-math-keyboard-keyboard-container {\r\n  width: 100%;\r\n  padding-bottom: 0.25rem;\r\n  margin: 0px;\r\n  color: #020617;\r\n  background-color: #e2e8f0;\r\n  display: flex;\r\n  justify-content: center;\r\n  position: fixed;\r\n  bottom: -300px;\r\n  left: 0px;\r\n  z-index: 1310;\r\n  transition: bottom 300ms ease-in-out;\r\n  /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */\r\n}\r\n\r\n.react-math-keyboard-keyboard-layout {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n.react-math-keyboard-numeric-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.5rem;\r\n  display: grid;\r\n  column-gap: 0.75rem;\r\n  grid-template-columns: 2fr 3fr 1fr;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-numeric-layout {\r\n    column-gap: 2.5rem;\r\n  }\r\n}\r\n.react-math-keyboard-alphabet-layout {\r\n  width: 100%;\r\n  max-width: 768px;\r\n  padding: 0.25rem;\r\n  padding-top: 0.55rem;\r\n  row-gap: 0.25rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.react-math-keyboard-layout-grid {\r\n  display: grid;\r\n  column-gap: 0.25rem;\r\n  row-gap: 0.25rem;\r\n  justify-content: stretch;\r\n}\r\n@media (min-width: 640px) {\r\n  .react-math-keyboard-layout-grid {\r\n    column-gap: 0.5rem;\r\n  }\r\n}\r\n\r\n.react-math-keyboard-select-container {\r\n  border-radius: 0.25rem;\r\n  /* padding-right: 0.25rem; */\r\n  margin-bottom: 0.25rem;\r\n  display: flex;\r\n  background-color: #f8fafc;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);\r\n  position: relative;\r\n}\r\n.react-math-keyboard-select-container:focus-visible {\r\n  outline: none;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-select {\r\n  border: transparent;\r\n  border-radius: 0.25rem;\r\n  background-color: transparent;\r\n  appearance: none;\r\n  color: #020617;\r\n  -webkit-appearance: none;\r\n  /* border-right-width: 16px; */\r\n  padding-left: 0.5rem;\r\n  /* padding-right: 0.25rem; */\r\n  padding-right: 1.75rem;\r\n  font-size: 1.1rem;\r\n}\r\n.react-math-keyboard-select:focus-visible {\r\n  outline: none;\r\n}\r\n\r\n.react-math-keyboard-select-arrow {\r\n  position: absolute;\r\n  transform: rotate(90deg);\r\n  top: 22px;\r\n  right: 8px;\r\n  pointer-events: none !important;\r\n}\r\n\r\n.react-math-keyboard-toolbar-container {\r\n  background-color: #94a3b8;\r\n  padding-top: 0.5rem;\r\n  /* align-items: center; */\r\n  width: 100%;\r\n}\r\n.react-math-keyboard-toolbar {\r\n  display: flex;\r\n  max-width: 768px;\r\n  column-gap: 0.5rem;\r\n  justify-content: space-between;\r\n  padding-right: 0.25rem;\r\n  margin: auto;\r\n}\r\n@media (min-width: 768px) {\r\n  .react-math-keyboard-toolbar {\r\n    min-width: 768px;\r\n  }\r\n}\r\n.react-math-keyboard-divider {\r\n  border: transparent;\r\n  border-top: 2px solid #64748b;\r\n  margin-top: 0.25rem;\r\n  margin-bottom: 0px;\r\n}\r\n\r\n.react-math-keyboard-toolbar-keys-container {\r\n  display: flex;\r\n  column-gap: 0.25rem;\r\n  padding-left: 0.25rem;\r\n  padding-right: 0.25rem;\r\n  padding-bottom: 0.25rem;\r\n}\r\n\r\n.react-math-keyboard-key {\r\n  border: none;\r\n  cursor: pointer;\r\n  color: #020617;\r\n  height: 3rem;\r\n  border-radius: 0.25rem;\r\n  font-weight: 400;\r\n  font-size: 1.25rem;\r\n  line-height: 1.75rem;\r\n\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  position: relative;\r\n\r\n  background-color: #f8fafc;\r\n}\r\n\r\n.react-math-keyboard-key:focus-visible {\r\n  outline: transparent;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.react-math-keyboard-key-utility {\r\n  background-color: #94a3b8;\r\n}\r\n\r\n@media not screen and (hover: none) and (pointer: coarse) {\r\n  .react-math-keyboard-key:hover {\r\n    background-color: #cbd5e1;\r\n  }\r\n  .react-math-keyboard-key-utility:hover {\r\n    background-color: #64748b;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53016,11 +53016,12 @@ const Example = ({}) => {
                                     },
                                 },
                                 {
-                                    id: "custom logic",
+                                    id: "custom",
                                     label: "custom logic",
                                     labelType: "raw",
                                     onClick: () => alert("Clicked!"),
                                 },
+                                "Eau",
                             ] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["Latex produced : ", value3] })] })] }) }));
 };
 
@@ -53153,6 +53154,153 @@ const algebraKeysProps = [
         group: "algebra",
     },
 ];
+
+
+/***/ }),
+
+/***/ "./src/keyboard/keys/atomKeys.ts":
+/*!***************************************!*\
+  !*** ./src/keyboard/keys/atomKeys.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "atomKeysProps": () => (/* binding */ atomKeysProps)
+/* harmony export */ });
+const atoms = [
+    { formula: "H", name: "Hydrogène" },
+    { formula: "He", name: "Hélium" },
+    { formula: "Li", name: "Lithium" },
+    { formula: "Be", name: "Béryllium" },
+    { formula: "B", name: "Bore" },
+    { formula: "C", name: "Carbone" },
+    { formula: "N", name: "Azote" },
+    { formula: "O", name: "Oxygène" },
+    { formula: "F", name: "Fluor" },
+    { formula: "Ne", name: "Néon" },
+    { formula: "Na", name: "Sodium" },
+    { formula: "Mg", name: "Magnésium" },
+    { formula: "Al", name: "Aluminium" },
+    { formula: "Si", name: "Silicium" },
+    { formula: "P", name: "Phosphore" },
+    { formula: "S", name: "Soufre" },
+    { formula: "Cl", name: "Chlore" },
+    { formula: "Ar", name: "Argon" },
+    { formula: "K", name: "Potassium" },
+    { formula: "Ca", name: "Calcium" },
+    { formula: "Sc", name: "Scandium" },
+    { formula: "Ti", name: "Titane" },
+    { formula: "V", name: "Vanadium" },
+    { formula: "Cr", name: "Chrome" },
+    { formula: "Mn", name: "Manganèse" },
+    { formula: "Fe", name: "Fer" },
+    { formula: "Co", name: "Cobalt" },
+    { formula: "Ni", name: "Nickel" },
+    { formula: "Cu", name: "Cuivre" },
+    { formula: "Zn", name: "Zinc" },
+    { formula: "Ga", name: "Gallium" },
+    { formula: "Ge", name: "Germanium" },
+    { formula: "As", name: "Arsenic" },
+    { formula: "Se", name: "Sélénium" },
+    { formula: "Br", name: "Brome" },
+    { formula: "Kr", name: "Krypton" },
+    { formula: "Rb", name: "Rubidium" },
+    { formula: "Sr", name: "Strontium" },
+    { formula: "Y", name: "Yttrium" },
+    { formula: "Zr", name: "Zirconium" },
+    { formula: "Nb", name: "Niobium" },
+    { formula: "Mo", name: "Molybdène" },
+    { formula: "Tc", name: "Technétium" },
+    { formula: "Ru", name: "Ruthénium" },
+    { formula: "Rh", name: "Rhodium" },
+    { formula: "Pd", name: "Palladium" },
+    { formula: "Ag", name: "Argent" },
+    { formula: "Cd", name: "Cadmium" },
+    { formula: "In", name: "Indium" },
+    { formula: "Sn", name: "Étain" },
+    { formula: "Sb", name: "Antimoine" },
+    { formula: "Te", name: "Tellure" },
+    { formula: "I", name: "Iode" },
+    { formula: "Xe", name: "Xénon" },
+    { formula: "Cs", name: "Césium" },
+    { formula: "Ba", name: "Baryum" },
+    { formula: "La", name: "Lanthane" },
+    { formula: "Ce", name: "Cérium" },
+    { formula: "Pr", name: "Praséodyme" },
+    { formula: "Nd", name: "Néodyme" },
+    { formula: "Pm", name: "Prométhium" },
+    { formula: "Sm", name: "Samarium" },
+    { formula: "Eu", name: "Europium" },
+    { formula: "Gd", name: "Gadolinium" },
+    { formula: "Tb", name: "Térbium" },
+    { formula: "Dy", name: "Dysprosium" },
+    { formula: "Ho", name: "Holmium" },
+    { formula: "Er", name: "Erbium" },
+    { formula: "Tm", name: "Thulium" },
+    { formula: "Yb", name: "Ytterbium" },
+    { formula: "Lu", name: "Lutétium" },
+    { formula: "Hf", name: "Hafnium" },
+    { formula: "Ta", name: "Tantale" },
+    { formula: "W", name: "Tungstène" },
+    { formula: "Re", name: "Rhénium" },
+    { formula: "Os", name: "Osmium" },
+    { formula: "Ir", name: "Iridium" },
+    { formula: "Pt", name: "Platine" },
+    { formula: "Au", name: "Or" },
+    { formula: "Hg", name: "Mercure" },
+    { formula: "Tl", name: "Thallium" },
+    { formula: "Pb", name: "Plomb" },
+    { formula: "Bi", name: "Bismuth" },
+    { formula: "Po", name: "Polonium" },
+    { formula: "At", name: "Astate" },
+    { formula: "Rn", name: "Radon" },
+    { formula: "Fr", name: "Francium" },
+    { formula: "Ra", name: "Radium" },
+    { formula: "Ac", name: "Actinium" },
+    { formula: "Th", name: "Thorium" },
+    { formula: "Pa", name: "Protactinium" },
+    { formula: "U", name: "Uranium" },
+    { formula: "Np", name: "Neptunium" },
+    { formula: "Pu", name: "Plutonium" },
+    { formula: "Am", name: "Américium" },
+    { formula: "Cm", name: "Curium" },
+    { formula: "Bk", name: "Berkélium" },
+    { formula: "Cf", name: "Californium" },
+    { formula: "Es", name: "Einsteinium" },
+    { formula: "Fm", name: "Fermium" },
+    { formula: "Md", name: "Mendélévium" },
+    { formula: "No", name: "Nobelium" },
+    { formula: "Lr", name: "Lawrencium" },
+    { formula: "Rf", name: "Rutherfordium" },
+    { formula: "Db", name: "Dubnium" },
+    { formula: "Sg", name: "Seaborgium" },
+    { formula: "Bh", name: "Bohrium" },
+    { formula: "Hs", name: "Hassium" },
+    { formula: "Mt", name: "Meitnérium" },
+    { formula: "Ds", name: "Darmstadtium" },
+    { formula: "Rg", name: "Roentgenium" },
+    { formula: "Cn", name: "Copernicium" },
+    { formula: "Nh", name: "Nihonium" },
+    { formula: "Fl", name: "Flerovium" },
+    { formula: "Mc", name: "Moscovium" },
+    { formula: "Lv", name: "Livermorium" },
+    { formula: "Ts", name: "Tennessine" },
+    { formula: "Og", name: "Oganesson" },
+];
+const atomKeysProps = atoms.map((atomData) => {
+    return {
+        id: atomData.name,
+        label: atomData.formula,
+        labelType: "raw",
+        mathfieldInstructions: {
+            content: `\\text{${atomData.formula}}`,
+            method: "write",
+        },
+        group: "atoms",
+    };
+});
 
 
 /***/ }),
@@ -53297,7 +53445,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const geometryKeysProps = [
     {
-        id: "°",
+        id: "degree",
         label: "°",
         labelType: "raw",
         mathfieldInstructions: {
@@ -53489,12 +53637,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Key = ({ id, label, labelType = "tex", onClick, mathfieldInstructions, fullWidth = true, isUtilityKey = false, }) => {
+const Key = ({ id, formatedId, label, labelType = "tex", onClick, mathfieldInstructions, fullWidth = true, isUtilityKey = false, }) => {
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_mathInput_mathfieldContext__WEBPACK_IMPORTED_MODULE_3__.MathFieldContext);
+    const trueId = id === "custom" ? id + Math.floor(Math.random() * 1000) : formatedId ?? id;
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         const MQ = window.MathQuill.getInterface(2);
-        MQ.StaticMath(jquery__WEBPACK_IMPORTED_MODULE_2___default()(`#mq-keyboard-${mathfield.id}-key-${id}`)[0]);
-    }, [id]);
+        MQ.StaticMath(jquery__WEBPACK_IMPORTED_MODULE_2___default()(`#mq-keyboard-${mathfield.id}-key-${trueId}`)[0]);
+    }, [id, formatedId]);
     const handleClick = () => {
         if (mathfieldInstructions) {
             mathfield[mathfieldInstructions.method](mathfieldInstructions.content);
@@ -53506,9 +53655,9 @@ const Key = ({ id, label, labelType = "tex", onClick, mathfieldInstructions, ful
     const renderLabel = () => {
         switch (labelType) {
             case "raw":
-                return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { id: `mq-keyboard-${mathfield.id}-rawkey-${id}`, children: label }));
+                return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { id: `mq-keyboard-${mathfield.id}-rawkey-${trueId}`, children: label }));
             case "tex":
-                return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { id: `mq-keyboard-${mathfield.id}-key-${id}`, onClick: (e) => e.stopPropagation(), className: "cursor-pointer", children: label }));
+                return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { id: `mq-keyboard-${mathfield.id}-key-${trueId}`, onClick: (e) => e.stopPropagation(), className: "cursor-pointer", children: label }));
             case "svg":
                 return label;
         }
@@ -53553,7 +53702,7 @@ const Key = ({ id, label, labelType = "tex", onClick, mathfieldInstructions, ful
             ...(labelType === "raw" || labelType === "svg"
                 ? { paddingTop: 0 }
                 : { paddingTop: "0.25rem" }),
-        }, ref: ref, id: `mq-keyboard-${mathfield.id}-button-key-${id}`, onMouseDown: onMouseDown, onMouseUp: () => setIsClicked(false), onMouseLeave: () => {
+        }, ref: ref, id: `mq-keyboard-${mathfield.id}-button-key-${trueId}`, onMouseDown: onMouseDown, onMouseUp: () => setIsClicked(false), onMouseLeave: () => {
             if (!isClicked)
                 return;
             setIsClicked(false);
@@ -53576,17 +53725,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "allKeysProps": () => (/* binding */ allKeysProps)
 /* harmony export */ });
 /* harmony import */ var _algebraKeys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./algebraKeys */ "./src/keyboard/keys/algebraKeys.ts");
-/* harmony import */ var _functionKeys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functionKeys */ "./src/keyboard/keys/functionKeys.ts");
-/* harmony import */ var _geometryKeys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./geometryKeys */ "./src/keyboard/keys/geometryKeys.ts");
-/* harmony import */ var _greekLetters__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./greekLetters */ "./src/keyboard/keys/greekLetters.ts");
-/* harmony import */ var _letterKeys__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./letterKeys */ "./src/keyboard/keys/letterKeys.ts");
-/* harmony import */ var _numberKeys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./numberKeys */ "./src/keyboard/keys/numberKeys.ts");
-/* harmony import */ var _operationKeys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./operationKeys */ "./src/keyboard/keys/operationKeys.ts");
-/* harmony import */ var _ponctuationKeys__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ponctuationKeys */ "./src/keyboard/keys/ponctuationKeys.ts");
-/* harmony import */ var _setKeys__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./setKeys */ "./src/keyboard/keys/setKeys.ts");
-/* harmony import */ var _unitKeys__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./unitKeys */ "./src/keyboard/keys/unitKeys.ts");
-/* harmony import */ var _utilityKeys__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utilityKeys */ "./src/keyboard/keys/utilityKeys.tsx");
-/* harmony import */ var _wordKeys__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./wordKeys */ "./src/keyboard/keys/wordKeys.ts");
+/* harmony import */ var _atomKeys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./atomKeys */ "./src/keyboard/keys/atomKeys.ts");
+/* harmony import */ var _functionKeys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functionKeys */ "./src/keyboard/keys/functionKeys.ts");
+/* harmony import */ var _geometryKeys__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./geometryKeys */ "./src/keyboard/keys/geometryKeys.ts");
+/* harmony import */ var _greekLetters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./greekLetters */ "./src/keyboard/keys/greekLetters.ts");
+/* harmony import */ var _letterKeys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./letterKeys */ "./src/keyboard/keys/letterKeys.ts");
+/* harmony import */ var _moleculeKeys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./moleculeKeys */ "./src/keyboard/keys/moleculeKeys.ts");
+/* harmony import */ var _numberKeys__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./numberKeys */ "./src/keyboard/keys/numberKeys.ts");
+/* harmony import */ var _operationKeys__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./operationKeys */ "./src/keyboard/keys/operationKeys.ts");
+/* harmony import */ var _ponctuationKeys__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ponctuationKeys */ "./src/keyboard/keys/ponctuationKeys.ts");
+/* harmony import */ var _setKeys__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./setKeys */ "./src/keyboard/keys/setKeys.ts");
+/* harmony import */ var _unitKeys__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./unitKeys */ "./src/keyboard/keys/unitKeys.ts");
+/* harmony import */ var _utilityKeys__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./utilityKeys */ "./src/keyboard/keys/utilityKeys.tsx");
+/* harmony import */ var _wordKeys__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./wordKeys */ "./src/keyboard/keys/wordKeys.ts");
+
+
 
 
 
@@ -53600,25 +53753,45 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const allKeysProps = [
-    ..._numberKeys__WEBPACK_IMPORTED_MODULE_5__.numberKeysProps,
-    ..._letterKeys__WEBPACK_IMPORTED_MODULE_4__.minLettersKeysProps,
-    ..._letterKeys__WEBPACK_IMPORTED_MODULE_4__.majLettersKeysProps,
-    ..._operationKeys__WEBPACK_IMPORTED_MODULE_6__.operationKeysProps,
-    ..._functionKeys__WEBPACK_IMPORTED_MODULE_1__.functionKeysProps,
-    ..._utilityKeys__WEBPACK_IMPORTED_MODULE_10__.utilityKeysProps,
-    ..._setKeys__WEBPACK_IMPORTED_MODULE_8__.setKeysProps,
-    ..._greekLetters__WEBPACK_IMPORTED_MODULE_3__.greekLettersKeysProps,
-    ..._geometryKeys__WEBPACK_IMPORTED_MODULE_2__.geometryKeysProps,
+    ..._numberKeys__WEBPACK_IMPORTED_MODULE_7__.numberKeysProps,
+    ..._letterKeys__WEBPACK_IMPORTED_MODULE_5__.minLettersKeysProps,
+    ..._letterKeys__WEBPACK_IMPORTED_MODULE_5__.majLettersKeysProps,
+    ..._operationKeys__WEBPACK_IMPORTED_MODULE_8__.operationKeysProps,
+    ..._functionKeys__WEBPACK_IMPORTED_MODULE_2__.functionKeysProps,
+    ..._utilityKeys__WEBPACK_IMPORTED_MODULE_12__.utilityKeysProps,
+    ..._setKeys__WEBPACK_IMPORTED_MODULE_10__.setKeysProps,
+    ..._greekLetters__WEBPACK_IMPORTED_MODULE_4__.greekLettersKeysProps,
+    ..._geometryKeys__WEBPACK_IMPORTED_MODULE_3__.geometryKeysProps,
     ..._algebraKeys__WEBPACK_IMPORTED_MODULE_0__.algebraKeysProps,
-    ..._ponctuationKeys__WEBPACK_IMPORTED_MODULE_7__.ponctuationKeysProps,
-    ..._unitKeys__WEBPACK_IMPORTED_MODULE_9__.unitKeysProps,
-    ..._wordKeys__WEBPACK_IMPORTED_MODULE_11__.wordKeysProps,
+    ..._ponctuationKeys__WEBPACK_IMPORTED_MODULE_9__.ponctuationKeysProps,
+    ..._unitKeys__WEBPACK_IMPORTED_MODULE_11__.unitKeysProps,
+    ..._wordKeys__WEBPACK_IMPORTED_MODULE_13__.wordKeysProps,
+    ..._atomKeys__WEBPACK_IMPORTED_MODULE_1__.atomKeysProps,
+    ..._moleculeKeys__WEBPACK_IMPORTED_MODULE_6__.moleculesKeysProps,
+    {
+        id: "rightarrow",
+        label: "\\rightarrow",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\rightarrow",
+            method: "write",
+        },
+    },
     {
         id: "overrightarrow",
         label: "\\overrightarrow{AB}",
         labelType: "tex",
         mathfieldInstructions: {
             content: "overrightarrow",
+            method: "cmd",
+        },
+    },
+    {
+        id: "overline",
+        label: "\\overline{z}",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "overline",
             method: "cmd",
         },
     },
@@ -53765,6 +53938,161 @@ const majLettersKeysProps = majLettersIds.map((label) => {
 
 /***/ }),
 
+/***/ "./src/keyboard/keys/moleculeKeys.ts":
+/*!*******************************************!*\
+  !*** ./src/keyboard/keys/moleculeKeys.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "moleculesKeysProps": () => (/* binding */ moleculesKeysProps)
+/* harmony export */ });
+/* harmony import */ var _utils_textifyInLatex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/textifyInLatex */ "./src/utils/textifyInLatex.ts");
+
+const moleculesData = [
+    { name: "Dihydrogène", formula: "H_2" },
+    { name: "Dioxygène", formula: "O_2" },
+    { name: "Eau", formula: "H_2O" },
+    { name: "Méthane", formula: "CH_4" },
+    { name: "Dioxyde de carbone", formula: "CO_2" },
+    { name: "Ammoniac", formula: "NH_3" },
+    { name: "Dioxyde de soufre", formula: "SO_2" },
+    { name: "Éthanol", formula: "C_2H_5OH" },
+    { name: "Glucose", formula: "C_6H_{12},O_6" },
+    { name: "Méthanol", formula: "CH_3OH" },
+    { name: "Propane", formula: "C_3H_8" },
+    { name: "Butane", formula: "C_4H_{10}," },
+    { name: "Acide sulfurique", formula: "H_2SO_4" },
+    { name: "Propylène", formula: "C_3H_6" },
+    { name: "Benzène", formula: "C_6H_6" },
+    { name: "Acetonitrile", formula: "CH_3CN" },
+    { name: "Méthanal", formula: "CH_2O" },
+    { name: "Méthanoate de sodium", formula: "HCOONa" },
+    { name: "Carbonate de calcium", formula: "CaCO_3" },
+    { name: "Sulfate d'ammonium", formula: "(NH_4)_2SO_4" },
+    { name: "Soude caustique", formula: "NaOH" },
+    { name: "Nitrate d'ammonium", formula: "NH_4NO_3" },
+    { name: "Carbonate de sodium", formula: "Na_2CO_3" },
+    { name: "Vitamine C", formula: "C_6H_8O_6" },
+    { name: "Aspirine", formula: "C_9H_8O_4" },
+    { name: "Caféine", formula: "C_8H_{10},N_4O_2" },
+    { name: "Paracétamol", formula: "C_8H_9NO_2" },
+    { name: "Chlorure de sodium", formula: "NaCl" },
+    { name: "Lactose", formula: "C_{12},H_{22},O_{11}," },
+    { name: "Acide acétique", formula: "CH_3COOH" },
+    { name: "Magnésium", formula: "Mg" },
+    { name: "Oxyde de magnésium", formula: "MgO" },
+    { name: "Fer", formula: "Fe" },
+    { name: "Oxyde de fer(III)", formula: "Fe_2O_3" },
+    { name: "Éthane", formula: "C_2H_6" },
+    { name: "Éthylène", formula: "C_2H_4" },
+    { name: "Acétone", formula: "C_3H_6O" },
+    { name: "Toluène", formula: "C_7H_8" },
+    { name: "Éthylène glycol", formula: "C_2H_6O_2" },
+    { name: "Butène", formula: "C_4H_8" },
+    { name: "Pentène", formula: "C_5H_{10}," },
+    { name: "Cyclohexane", formula: "C_6H_{12}," },
+    { name: "Acétate d'éthyle", formula: "C_4H_8O_2" },
+    { name: "Acétate de méthyle", formula: "C_3H_6O_2" },
+    { name: "Acétate de butyle", formula: "C_6H_{12},O_2" },
+    { name: "Phénol", formula: "C_6H_6O" },
+    { name: "Éthanal", formula: "C_2H_4O" },
+    { name: "Butyraldéhyde", formula: "C_4H_8O" },
+    { name: "Furfural", formula: "C_5H_4O_2" },
+    { name: "Acide formique", formula: "CH_2O_2" },
+    { name: "Sucrose", formula: "C_{12},H_{22},O_{11}," },
+    { name: "Acide chlorhydrique", formula: "HCl" },
+    { name: "Hydroxyde de sodium", formula: "NaOH" },
+    { name: "Nitrate d'argent", formula: "AgNO_3" },
+    { name: "Chlorure d'argent", formula: "AgCl" },
+    { name: "Nitrate de sodium", formula: "NaNO_3" },
+    { name: "Hydroxyde de calcium", formula: "Ca(OH)_2" },
+    { name: "Sulfate de calcium", formula: "CaSO_4" },
+    { name: "Sulfate de cuivre", formula: "CuSO_4" },
+    { name: "Hydroxyde de cuivre(II)", formula: "Cu(OH)_2" },
+    { name: "Sulfate de sodium", formula: "Na_2SO_4" },
+    { name: "Zinc", formula: "Zn" },
+    { name: "Chlorure de zinc", formula: "ZnCl_2" },
+    { name: "Hydroxyde de potassium", formula: "KOH" },
+    { name: "Sulfate de potassium", formula: "K_2SO_4" },
+    { name: "Peroxyde d'hydrogène", formula: "H_2O_2" },
+    { name: "Chlorure de plomb(II)", formula: "PbCl_2" },
+    { name: "Iodure de potassium", formula: "KI" },
+    { name: "Iodure de plomb(II)", formula: "PbI_2" },
+    { name: "Chlorure de potassium", formula: "KCl" },
+    { name: "Acétate de sodium", formula: "CH_3COONa" },
+    { name: "Soufre", formula: "S" },
+    { name: "Nitrate de baryum", formula: "Ba(NO_3)_2" },
+    { name: "Sulfate de baryum", formula: "BaSO_4" },
+    { name: "Cuivre", formula: "Cu" },
+    { name: "Nitrate de cuivre(II)", formula: "Cu(NO_3)_2" },
+    { name: "Argent", formula: "Ag" },
+    { name: "Phosphate de calcium", formula: "Ca_3(PO_4)_2" },
+    { name: "Soufre", formula: "S_8" },
+    { name: "Nitrate de potassium", formula: "KNO_3" },
+    { name: "Azote", formula: "N_2" },
+    { name: "Nitrate de plomb(II)", formula: "Pb(NO_3)_2" },
+    { name: "Sulfate de plomb(II)", formula: "PbSO_4" },
+    { name: "Oxyde de calcium", formula: "CaO" },
+    { name: "Chlorure de cuivre(II)", formula: "CuCl_2" },
+    { name: "Chlorure de fer(II)", formula: "FeCl_2" },
+    { name: "Dichlore", formula: "Cl_2" },
+    { name: "Protoxyde d'azote", formula: "N_2O" },
+    { name: "Peroxyde de dinitrogène", formula: "N_2O_4" },
+    { name: "Dioxyde d'azote", formula: "NO_2" },
+    { name: "Chlorate de potassium", formula: "KClO_3" },
+    { name: "Sulfate de zinc", formula: "ZnSO_4" },
+    { name: "Acide phosphorique", formula: "H_3PO_4" },
+    { name: "Oxyde de sodium", formula: "Na_2O" },
+    { name: "Monoxyde d'azote", formula: "NO" },
+    { name: "Monoxyde de carbone", formula: "CO" },
+    { name: "Oxyde de fer(III)", formula: "Fe_3O_4" },
+    { name: "Sulfure de cuivre(I)", formula: "Cu_2S" },
+    { name: "Oxyde de cuivre(I)", formula: "Cu_2O" },
+    { name: "Ion hydronium", formula: "H_3O^+" },
+    { name: "Ion sulfate", formula: "SO_4^{2-}," },
+    { name: "Ion fer(II)", formula: "Fe^{2+}," },
+    { name: "Ion hydroxyde", formula: "OH^-" },
+    { name: "Ion argent(I)", formula: "Ag^+" },
+    { name: "Ion phosphate", formula: "PO_4^{3-}," },
+    { name: "Phosphate d'argent(I)", formula: "Ag_3PO_4" },
+    { name: "Ion cuivre(II)", formula: "Cu^{2+}," },
+    { name: "Acétate de sodium", formula: "CH_3COONa" },
+    { name: "Phosphate de calcium", formula: "Ca_3(PO_3)_2" },
+    { name: "Chlorure d'ammonium", formula: "NH_4Cl" },
+    { name: "cyclooctasoufre ", formula: "S_8" },
+    { name: "Hydroxyde de magnésium", formula: "Mg(OH)_2" },
+    { name: "Chlorure de magnésium", formula: "MgCl_2" },
+];
+const getId = (name) => {
+    return name
+        .replaceAll(" ", "-")
+        .replaceAll("(", "-")
+        .replaceAll(")", "")
+        .replaceAll("'", "-");
+};
+const molecules = moleculesData.map((molData) => {
+    return { ...molData, id: getId(molData.name) };
+});
+const moleculesKeysProps = molecules.map((moleculeData) => {
+    return {
+        id: moleculeData.id,
+        formatedId: moleculeData.id,
+        label: (0,_utils_textifyInLatex__WEBPACK_IMPORTED_MODULE_0__.textifyInLatex)(moleculeData.formula),
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: (0,_utils_textifyInLatex__WEBPACK_IMPORTED_MODULE_0__.textifyInLatex)(moleculeData.formula),
+            method: "write",
+        },
+        group: "molecules",
+    };
+});
+
+
+/***/ }),
+
 /***/ "./src/keyboard/keys/numberKeys.ts":
 /*!*****************************************!*\
   !*** ./src/keyboard/keys/numberKeys.ts ***!
@@ -53850,6 +54178,16 @@ const operationKeysProps = [
         mathfieldInstructions: {
             content: "\\sqrt",
             method: "cmd",
+        },
+        group: "basicOperations",
+    },
+    {
+        id: "sqrtCub",
+        label: "\\sqrt[3]{\\ }",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\nthroot3",
+            method: "typedText",
         },
         group: "basicOperations",
     },
@@ -54186,6 +54524,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const unitKeysProps = [
     {
+        id: "degree",
+        label: "^\\circ C",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "^\\circ C",
+            method: "write",
+        },
+        group: "units",
+    },
+    {
         id: "cm",
         label: "cm",
         labelType: "raw",
@@ -54427,7 +54775,20 @@ const Toolbar = ({ keys, tabs = _toolbarTabs__WEBPACK_IMPORTED_MODULE_4__.defaul
         const tab = _toolbarTabs__WEBPACK_IMPORTED_MODULE_4__.toolbarTabs.find((t) => t.id === currentTab);
         setShownKeys(tab?.keys);
     }, [currentTab, keys]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-toolbar-container", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-toolbar", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { overflow: "auto" }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "react-math-keyboard-toolbar-keys-container", children: shownKeys?.map((keyData) => typeof keyData === "string" ? ((0,react__WEBPACK_IMPORTED_MODULE_1__.createElement)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get(keyData), key: keyData, fullWidth: false })) : ((0,react__WEBPACK_IMPORTED_MODULE_1__.createElement)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ...keyData, key: keyData.id, fullWidth: false }))) }) }), !keys?.length && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-select-container", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("select", { onChange: (e) => {
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-toolbar-container", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-toolbar", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { overflow: "auto" }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "react-math-keyboard-toolbar-keys-container", children: shownKeys?.map((keyData) => {
+                                if (typeof keyData === "string") {
+                                    const foundKey = _keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get(keyData);
+                                    if (foundKey)
+                                        return ((0,react__WEBPACK_IMPORTED_MODULE_1__.createElement)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get(keyData), key: keyData, fullWidth: false }));
+                                    else
+                                        return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { id: keyData, label: keyData, labelType: "tex", mathfieldInstructions: {
+                                                content: keyData,
+                                                method: "write",
+                                            } }));
+                                }
+                                else
+                                    return (0,react__WEBPACK_IMPORTED_MODULE_1__.createElement)(_keys_key__WEBPACK_IMPORTED_MODULE_2__.Key, { ...keyData, key: keyData.id, fullWidth: false });
+                            }) }) }), !keys?.length && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-select-container", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("select", { onChange: (e) => {
                                     setCurrentTab(e.target.value);
                                     mathfield.focus();
                                 }, className: "react-math-keyboard-select", children: tabs?.map((tabId) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: tabId, children: _toolbarTabs__WEBPACK_IMPORTED_MODULE_4__.toolbarTabs.find((t) => t.id === tabId)?.rawLabel }, tabId))) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", { xmlns: "http://www.w3.org/2000/svg", width: "12", height: "12", fill: "currentColor", className: "bi bi-chevron-right react-math-keyboard-select-arrow", viewBox: "0 0 16 16", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { fillRule: "evenodd", d: "M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" }) })] }))] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("hr", { className: "react-math-keyboard-divider" })] }));
@@ -54453,21 +54814,7 @@ const toolbarTabs = [
         id: "polynomial",
         label: "x^n",
         rawLabel: "x",
-        keys: [
-            "x",
-            "percent",
-            "equal",
-            "approx",
-            "leq",
-            "geq",
-            "inf",
-            "sup",
-            "cube",
-            "y",
-            "t",
-            "n",
-            "z",
-        ],
+        keys: ["x", "percent", "equal", "approx", "leq", "geq", "inf", "sup", "cube", "y", "t", "n", "z"],
     },
     {
         id: "functions",
@@ -54479,7 +54826,7 @@ const toolbarTabs = [
         id: "trigo",
         label: "f(x)",
         rawLabel: "cos(x)",
-        keys: ["pi", "°", "sin", "cos", "tan", "arcsin", "arccos", "arctan"],
+        keys: ["pi", "degree", "sin", "cos", "tan", "arcsin", "arccos", "arctan"],
     },
     {
         id: "greek",
@@ -54555,14 +54902,7 @@ const toolbarTabs = [
         ],
     },
 ];
-const defaultTabs = [
-    "polynomial",
-    "sets",
-    "trigo",
-    "functions",
-    "greek",
-    "sequences",
-];
+const defaultTabs = ["polynomial", "sets", "trigo", "functions", "greek", "sequences"];
 
 
 /***/ }),
@@ -54724,6 +55064,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 const MathFieldContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)({});
+
+
+/***/ }),
+
+/***/ "./src/utils/textifyInLatex.ts":
+/*!*************************************!*\
+  !*** ./src/utils/textifyInLatex.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "textifyInLatex": () => (/* binding */ textifyInLatex)
+/* harmony export */ });
+//pour une string du type "CO_2" cette fonction renvoit "\\text{CO}_2"
+const textifyInLatex = (s) => {
+    let res = "";
+    let isInText = false;
+    for (let i = 0; i < s.length; i++) {
+        const char = s.charAt(i);
+        const isLetter = char.toUpperCase() != char.toLowerCase();
+        if (isInText && isLetter) {
+            res += char;
+            if (i === s.length - 1)
+                res += `}`;
+        }
+        else if (!isInText && isLetter) {
+            res += `\\text{${char}`;
+            isInText = true;
+            if (i === s.length - 1)
+                res += `}`;
+        }
+        else if (isInText && !isLetter) {
+            isInText = false;
+            res += `}${char}`;
+        }
+        else if (!isInText && !isLetter) {
+            res += char;
+        }
+    }
+    return res;
+};
 
 
 /***/ }),

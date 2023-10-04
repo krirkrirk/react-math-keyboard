@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { MathfieldInstructions } from "../../types/types";
 import { KeyId } from "./keyIds";
 export type KeyProps = {
-    id: KeyId | string;
+    id: KeyId;
     formatedId?: string;
     label: string | ReactNode;
     labelType: "raw" | "tex" | "svg";

@@ -2,19 +2,21 @@ export type KeyId =
 /**units */
 "cm" | "cm2" | "degree"
 /**utility */
- | "right" | "left" | "rightarrow" | "overrightarrow" | "del" | "close" | "switch" | "underscore" | "ou" | "et" | "maj"
+ | "custom" | "right" | "left" | "rightarrow" | "overrightarrow" | "del" | "close" | "switch" | "ou" | "et" | "maj"
 /**operations */
- | "plus" | "minus" | "times" | "frac" | "obelus" | "sqrt" | "square" | "cube" | "power" | "percent" | "leftParenthesis" | "rightParenthesis" | "equal" | "comma" | "semicolon" | "dot" | "sup" | "inf" | "geq" | "leq" | "approx"
+ | "plus" | "minus" | "times" | "frac" | "obelus" | "sqrt" | "sqrtCub" | "square" | "cube" | "power" | "percent" | "leftParenthesis" | "rightParenthesis" | "equal" | "comma" | "semicolon" | "dot" | "sup" | "inf" | "geq" | "leq" | "approx"
 /**sets */
- | "cap" | "cup" | "lbrace" | "rbrace" | "lbracket" | "rbracket" | "emptyset" | "naturals" | "integers" | "rationals" | "reals" | "complex" | "ast" | "infty"
+ | "cap" | "cup" | "lbrace" | "rbrace" | "lbracket" | "rbracket" | "emptyset" | "naturals" | "integers" | "rationals" | "reals" | "complex" | "ast" | "degree" | "del" | "right" | "left" | "rightarrow" | "overrightarrow" | "infty"
 /**fcts */
  | "log" | "ln" | "exp" | "epower" | "sin" | "cos" | "tan" | "arccos" | "arcsin" | "arctan" | "abs"
+/**sequences */
+ | "un" | "unplus1"
 /**complex */
  | "overline"
 /**greek */
  | "alpha" | "beta" | "delta" | "Delta" | "sigma" | "theta" | "tau" | "pi" | "phi" | "Omega" | "lambda" | "mu" | "gamma" | "omega"
 /**alphabet */
- | "guillemet" | "quote" | "hyphen" | "euro" | "space" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "É" | "È" | "Ç" | "À" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "é" | "è" | "à" | "ç" | "ù" | "ô"
+ | "guillemet" | "quote" | "hyphen" | "euro" | "space" | "underscore" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "É" | "È" | "Ç" | "À" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "é" | "è" | "à" | "ç" | "ù" | "ô"
 /**numbers */
  | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 /**atoms */
