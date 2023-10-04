@@ -57,6 +57,17 @@ export const operationKeysProps: KeyProps[] = [
     group: "basicOperations",
   },
   {
+    id: "sqrtCub",
+    label: "\\sqrt[3]{\\ }",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "\\sqrt[3]",
+      method: "cmd",
+    },
+    group: "basicOperations",
+  },
+  {
     id: "square",
     label: "\\square^2",
     labelType: "tex",

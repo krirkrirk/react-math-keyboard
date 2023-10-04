@@ -12,7 +12,8 @@ import { MathFieldContext } from "../../mathInput/mathfieldContext";
 import { KeyId } from "./keyIds";
 
 export type KeyProps = {
-  id: KeyId | string;
+  id: KeyId;
+  formatedId?: string;
   label: string | ReactNode;
   labelType: "raw" | "tex" | "svg";
   mathfieldInstructions?: MathfieldInstructions;
@@ -34,11 +35,14 @@ export type KeyProps = {
     | "algebra"
     | "geometry"
     | "words"
-    | "units";
+    | "units"
+    | "atoms"
+    | "molecules";
 };
 
 export const Key = ({
   id,
+  formatedId,
   label,
   labelType = "tex",
   onClick,
@@ -47,10 +51,13 @@ export const Key = ({
   isUtilityKey = false,
 }: KeyProps) => {
   const mathfield = useContext(MathFieldContext);
+
   useEffect(() => {
     const MQ = window.MathQuill.getInterface(2);
-    MQ.StaticMath($(`#mq-keyboard-${mathfield.id}-key-${id}`)[0]) as MathField;
-  }, [id]);
+    MQ.StaticMath(
+      $(`#mq-keyboard-${mathfield.id}-key-${formatedId ?? id}`)[0]
+    ) as MathField;
+  }, [id, formatedId]);
 
   const handleClick = () => {
     if (mathfieldInstructions) {
@@ -64,14 +71,14 @@ export const Key = ({
     switch (labelType) {
       case "raw":
         return (
-          <p id={`mq-keyboard-${mathfield.id}-rawkey-${id}`}>
+          <p id={`mq-keyboard-${mathfield.id}-rawkey-${formatedId ?? id}`}>
             {label as string}
           </p>
         );
       case "tex":
         return (
           <span
-            id={`mq-keyboard-${mathfield.id}-key-${id}`}
+            id={`mq-keyboard-${mathfield.id}-key-${formatedId ?? id}`}
             onClick={(e) => e.stopPropagation()}
             className="cursor-pointer"
           >
@@ -134,7 +141,7 @@ export const Key = ({
           : { paddingTop: "0.25rem" }),
       }}
       ref={ref}
-      id={`mq-keyboard-${mathfield.id}-button-key-${id}`}
+      id={`mq-keyboard-${mathfield.id}-button-key-${formatedId ?? id}`}
       onMouseDown={onMouseDown}
       onMouseUp={() => setIsClicked(false)}
       onMouseLeave={() => {

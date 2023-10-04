@@ -1,10 +1,12 @@
 import { algebraKeysProps } from "./algebraKeys";
+import { atomKeysProps } from "./atomKeys";
 import { functionKeysProps } from "./functionKeys";
 import { geometryKeysProps } from "./geometryKeys";
 import { greekLettersKeysProps } from "./greekLetters";
 import { KeyProps } from "./key";
 import { KeyId } from "./keyIds";
 import { majLettersKeysProps, minLettersKeysProps } from "./letterKeys";
+import { moleculesKeysProps } from "./moleculeKeys";
 import { numberKeysProps } from "./numberKeys";
 import { operationKeysProps } from "./operationKeys";
 import { ponctuationKeysProps } from "./ponctuationKeys";
@@ -28,6 +30,17 @@ export const allKeysProps: KeyProps[] = [
   ...ponctuationKeysProps,
   ...unitKeysProps,
   ...wordKeysProps,
+  ...atomKeysProps,
+  ...moleculesKeysProps,
+  {
+    id: "rightarrow",
+    label: "\\rightarrow",
+    labelType: "tex",
+    mathfieldInstructions: {
+      content: "\\rightarrow",
+      method: "write",
+    },
+  },
   {
     id: "overrightarrow",
     label: "\\overrightarrow{AB}",
@@ -47,7 +60,7 @@ export const allKeysProps: KeyProps[] = [
   },
 ];
 
-export const KeysPropsMap = new Map<KeyId | string, KeyProps>(
+export const KeysPropsMap = new Map<KeyId, KeyProps>(
   allKeysProps.map((obj) => {
     return [obj.id as KeyId, obj];
   })
