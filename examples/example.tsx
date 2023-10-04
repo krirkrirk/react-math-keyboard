@@ -11,7 +11,6 @@ export const Example = ({}: ExampleProps) => {
   const mf = useRef<MathField>();
   const mf2 = useRef<MathField>();
   const mf3 = useRef<MathField>();
-
   const clear = (mathfield: MathField) => {
     mathfield.latex("");
   };
@@ -66,12 +65,15 @@ export const Example = ({}: ExampleProps) => {
                 },
               },
               {
-                id: "custom logic",
+                id: "custom",
                 label: "custom logic",
                 labelType: "raw",
                 onClick: () => alert("Clicked!"),
               },
-              "sqrtCub",
+              "sup",
+              "inf",
+              "geq",
+              "leq",
             ]}
           />
           <p>Latex produced : {value3}</p>

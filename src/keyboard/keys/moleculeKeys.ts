@@ -2,7 +2,7 @@ import { textifyInLatex } from "../../utils/textifyInLatex";
 import { KeyProps } from "./key";
 import { KeyId } from "./keyIds";
 
-const moleculesData = [
+const moleculesData: { name: KeyId; formula: string }[] = [
   { name: "Dihydrogène", formula: "H_2" },
   { name: "Dioxygène", formula: "O_2" },
   { name: "Eau", formula: "H_2O" },

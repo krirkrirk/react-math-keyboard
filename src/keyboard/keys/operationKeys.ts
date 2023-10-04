@@ -62,8 +62,8 @@ export const operationKeysProps: KeyProps[] = [
     labelType: "tex",
 
     mathfieldInstructions: {
-      content: "\\sqrt[3]",
-      method: "cmd",
+      content: "\\nthroot3",
+      method: "typedText",
     },
     group: "basicOperations",
   },

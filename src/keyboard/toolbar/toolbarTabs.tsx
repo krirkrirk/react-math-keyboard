@@ -8,34 +8,14 @@ export type ToolbarTab = {
   keys: (KeyId | KeyProps)[];
 };
 
-export type ToolbarTabIds =
-  | "trigo"
-  | "greek"
-  | "sets"
-  | "sequences"
-  | "functions"
-  | "polynomial";
+export type ToolbarTabIds = "trigo" | "greek" | "sets" | "sequences" | "functions" | "polynomial";
 
 export const toolbarTabs: ToolbarTab[] = [
   {
     id: "polynomial",
     label: "x^n",
     rawLabel: "x",
-    keys: [
-      "x",
-      "percent",
-      "equal",
-      "approx",
-      "leq",
-      "geq",
-      "inf",
-      "sup",
-      "cube",
-      "y",
-      "t",
-      "n",
-      "z",
-    ],
+    keys: ["x", "percent", "equal", "approx", "leq", "geq", "inf", "sup", "cube", "y", "t", "n", "z"],
   },
   {
     id: "functions",
@@ -50,7 +30,7 @@ export const toolbarTabs: ToolbarTab[] = [
     label: "f(x)",
     rawLabel: "cos(x)",
 
-    keys: ["pi", "°", "sin", "cos", "tan", "arcsin", "arccos", "arctan"],
+    keys: ["pi", "degree", "sin", "cos", "tan", "arcsin", "arccos", "arctan"],
   },
   {
     id: "greek",
@@ -128,11 +108,4 @@ export const toolbarTabs: ToolbarTab[] = [
   },
 ];
 
-export const defaultTabs: ToolbarTabIds[] = [
-  "polynomial",
-  "sets",
-  "trigo",
-  "functions",
-  "greek",
-  "sequences",
-];
+export const defaultTabs: ToolbarTabIds[] = ["polynomial", "sets", "trigo", "functions", "greek", "sequences"];

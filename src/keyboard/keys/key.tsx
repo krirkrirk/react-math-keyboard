@@ -51,11 +51,12 @@ export const Key = ({
   isUtilityKey = false,
 }: KeyProps) => {
   const mathfield = useContext(MathFieldContext);
-
+  const trueId =
+    id === "custom" ? id + Math.floor(Math.random() * 1000) : formatedId ?? id;
   useEffect(() => {
     const MQ = window.MathQuill.getInterface(2);
     MQ.StaticMath(
-      $(`#mq-keyboard-${mathfield.id}-key-${formatedId ?? id}`)[0]
+      $(`#mq-keyboard-${mathfield.id}-key-${trueId}`)[0]
     ) as MathField;
   }, [id, formatedId]);
 
@@ -71,14 +72,14 @@ export const Key = ({
     switch (labelType) {
       case "raw":
         return (
-          <p id={`mq-keyboard-${mathfield.id}-rawkey-${formatedId ?? id}`}>
+          <p id={`mq-keyboard-${mathfield.id}-rawkey-${trueId}`}>
             {label as string}
           </p>
         );
       case "tex":
         return (
           <span
-            id={`mq-keyboard-${mathfield.id}-key-${formatedId ?? id}`}
+            id={`mq-keyboard-${mathfield.id}-key-${trueId}`}
             onClick={(e) => e.stopPropagation()}
             className="cursor-pointer"
           >
@@ -141,7 +142,7 @@ export const Key = ({
           : { paddingTop: "0.25rem" }),
       }}
       ref={ref}
-      id={`mq-keyboard-${mathfield.id}-button-key-${formatedId ?? id}`}
+      id={`mq-keyboard-${mathfield.id}-button-key-${trueId}`}
       onMouseDown={onMouseDown}
       onMouseUp={() => setIsClicked(false)}
       onMouseLeave={() => {

@@ -10,7 +10,7 @@ import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 import { KeyId } from "../keyboard/keys/keyIds";
 
 export type MathInputProps = {
-  numericToolbarKeys?: (KeyId | KeyProps | string)[];
+  numericToolbarKeys?: (KeyId | KeyProps)[];
   numericToolbarTabs?: ToolbarTabIds[];
   alphabeticToolbarKeys?: (KeyId | KeyProps)[];
   allowAlphabeticKeyboard?: boolean;
