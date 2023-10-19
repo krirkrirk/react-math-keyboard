@@ -10,6 +10,7 @@ import { moleculesKeysProps } from "./moleculeKeys";
 import { numberKeysProps } from "./numberKeys";
 import { operationKeysProps } from "./operationKeys";
 import { ponctuationKeysProps } from "./ponctuationKeys";
+import { probaKeysProps } from "./probaKeys";
 import { setKeysProps } from "./setKeys";
 import { unitKeysProps } from "./unitKeys";
 import { utilityKeysProps } from "./utilityKeys";
@@ -32,6 +33,7 @@ export const allKeysProps: KeyProps[] = [
   ...wordKeysProps,
   ...atomKeysProps,
   ...moleculesKeysProps,
+  ...probaKeysProps,
   {
     id: "rightarrow",
     label: "\\rightarrow",
@@ -59,6 +61,7 @@ export const allKeysProps: KeyProps[] = [
       method: "cmd",
     },
   },
+
   {
     id: "underscore",
     label: "\\square_n",

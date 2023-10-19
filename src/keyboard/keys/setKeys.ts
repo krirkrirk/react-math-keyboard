@@ -2,6 +2,28 @@ import { KeyProps } from "./key";
 
 export const setKeysProps: KeyProps[] = [
   {
+    id: "belongs",
+    label: "\\in",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "\\in",
+      method: "write",
+    },
+    group: "sets",
+  },
+  {
+    id: "notin",
+    label: "\\notin",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "\\notin",
+      method: "write",
+    },
+    group: "sets",
+  },
+  {
     id: "semicolon",
     label: ";",
     labelType: "tex",
@@ -118,6 +140,17 @@ export const setKeysProps: KeyProps[] = [
 
     mathfieldInstructions: {
       content: "\\mathbb{Z}",
+      method: "write",
+    },
+    group: "sets",
+  },
+  {
+    id: "decimals",
+    label: "\\mathrm{D}",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "\\mathrm{D}",
       method: "write",
     },
     group: "sets",

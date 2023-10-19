@@ -42,6 +42,8 @@ export type KeyId =
   | "approx"
 
   /**sets */
+  | "belongs"
+  | "notin"
   | "cap"
   | "cup"
   | "lbrace"
@@ -52,6 +54,7 @@ export type KeyId =
   | "naturals"
   | "integers"
   | "rationals"
+  | "decimals"
   | "reals"
   | "complex"
   | "ast"
@@ -79,6 +82,12 @@ export type KeyId =
   /**sequences */
   | "un"
   | "unplus1"
+
+  /**probas */
+  | "overlineProba"
+  | "majProba"
+  | "minProba"
+
   /**complex */
   | "overline"
 

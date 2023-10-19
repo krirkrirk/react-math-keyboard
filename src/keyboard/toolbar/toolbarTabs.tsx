@@ -8,7 +8,7 @@ export type ToolbarTab = {
   keys: (KeyId | KeyProps)[];
 };
 
-export type ToolbarTabIds = "trigo" | "greek" | "sets" | "sequences" | "functions" | "polynomial";
+export type ToolbarTabIds = "trigo" | "greek" | "sets" | "sequences" | "functions" | "polynomial" | "proba";
 
 export const toolbarTabs: ToolbarTab[] = [
   {
@@ -58,6 +58,8 @@ export const toolbarTabs: ToolbarTab[] = [
     label: "\\{ ; \\}",
     rawLabel: "{... ; ...}",
     keys: [
+      "belongs",
+      "notin",
       "cap",
       "cup",
       "lbrace",
@@ -69,11 +71,19 @@ export const toolbarTabs: ToolbarTab[] = [
       "emptyset",
       "naturals",
       "integers",
+      "decimals",
       "rationals",
       "reals",
       "complex",
       "ast",
     ],
+  },
+  {
+    id: "proba",
+    label: "P(A)",
+    rawLabel: "P(A)",
+
+    keys: ["minProba", "majProba", "cap", "cup", "overlineProba", "underscore"],
   },
   {
     id: "sequences",
@@ -108,4 +118,4 @@ export const toolbarTabs: ToolbarTab[] = [
   },
 ];
 
-export const defaultTabs: ToolbarTabIds[] = ["polynomial", "sets", "trigo", "functions", "greek", "sequences"];
+export const defaultTabs: ToolbarTabIds[] = ["polynomial", "sets", "trigo", "functions", "proba", "greek", "sequences"];
