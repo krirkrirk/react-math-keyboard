@@ -6,6 +6,6 @@ export type ToolbarTab = {
     rawLabel: string;
     keys: (KeyId | KeyProps)[];
 };
-export type ToolbarTabIds = "trigo" | "greek" | "sets" | "sequences" | "functions" | "polynomial";
+export type ToolbarTabIds = "trigo" | "greek" | "sets" | "sequences" | "functions" | "polynomial" | "proba";
 export declare const toolbarTabs: ToolbarTab[];
 export declare const defaultTabs: ToolbarTabIds[];

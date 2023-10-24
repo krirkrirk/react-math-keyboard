@@ -43,15 +43,7 @@ export const allKeysProps: KeyProps[] = [
       method: "write",
     },
   },
-  {
-    id: "overrightarrow",
-    label: "\\overrightarrow{AB}",
-    labelType: "tex",
-    mathfieldInstructions: {
-      content: "overrightarrow",
-      method: "cmd",
-    },
-  },
+
   {
     id: "overline",
     label: "\\overline{z}",

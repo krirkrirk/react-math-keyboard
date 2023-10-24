@@ -6,11 +6,13 @@ export type KeyId =
 /**operations */
  | "plus" | "minus" | "times" | "frac" | "obelus" | "sqrt" | "sqrtCub" | "square" | "cube" | "power" | "percent" | "leftParenthesis" | "rightParenthesis" | "equal" | "comma" | "semicolon" | "dot" | "sup" | "inf" | "geq" | "leq" | "approx"
 /**sets */
- | "cap" | "cup" | "lbrace" | "rbrace" | "lbracket" | "rbracket" | "emptyset" | "naturals" | "integers" | "rationals" | "reals" | "complex" | "ast" | "degree" | "del" | "right" | "left" | "rightarrow" | "overrightarrow" | "infty"
+ | "belongs" | "notin" | "cap" | "cup" | "lbrace" | "rbrace" | "lbracket" | "rbracket" | "emptyset" | "naturals" | "integers" | "rationals" | "decimals" | "reals" | "complex" | "ast" | "degree" | "del" | "right" | "left" | "rightarrow" | "overrightarrow" | "infty"
 /**fcts */
  | "log" | "ln" | "exp" | "epower" | "sin" | "cos" | "tan" | "arccos" | "arcsin" | "arctan" | "abs"
 /**sequences */
  | "un" | "unplus1"
+/**probas */
+ | "overlineProba" | "majProba" | "minProba"
 /**complex */
  | "overline"
 /**greek */

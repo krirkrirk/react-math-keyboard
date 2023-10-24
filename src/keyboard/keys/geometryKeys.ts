@@ -11,4 +11,14 @@ export const geometryKeysProps: KeyProps[] = [
     },
     group: "geometry",
   },
+  {
+    id: "overrightarrow",
+    label: "\\overrightarrow{AB}",
+    labelType: "tex",
+    mathfieldInstructions: {
+      content: "overrightarrow",
+      method: "cmd",
+    },
+    group: "geometry",
+  },
 ];

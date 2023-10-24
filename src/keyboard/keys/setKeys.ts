@@ -96,7 +96,7 @@ export const setKeysProps: KeyProps[] = [
 
     mathfieldInstructions: {
       content: "[",
-      method: "write",
+      method: "typedText",
     },
     group: "sets",
   },
@@ -107,7 +107,7 @@ export const setKeysProps: KeyProps[] = [
 
     mathfieldInstructions: {
       content: "]",
-      method: "write",
+      method: "typedText",
     },
     group: "sets",
   },

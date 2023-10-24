@@ -9,6 +9,7 @@ export const probaKeysProps: KeyProps[] = [
       content: "overline",
       method: "cmd",
     },
+    group: "proba",
   },
   {
     id: "minProba",
@@ -19,7 +20,7 @@ export const probaKeysProps: KeyProps[] = [
       content: "p(",
       method: "typedText",
     },
-    group: "sets",
+    group: "proba",
   },
   {
     id: "majProba",
@@ -30,6 +31,6 @@ export const probaKeysProps: KeyProps[] = [
       content: "P(",
       method: "typedText",
     },
-    group: "sets",
+    group: "proba",
   },
 ];
