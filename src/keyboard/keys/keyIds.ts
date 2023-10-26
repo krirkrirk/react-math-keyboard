@@ -61,7 +61,6 @@ export type KeyId =
   | "reals"
   | "complex"
   | "ast"
-  | "degree"
   | "del"
   | "right"
   | "left"

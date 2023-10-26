@@ -1,4 +1,5 @@
 import { KeyProps } from "../keys/key";
+import { KeyGroupIds } from "../keys/keyGroup";
 import { KeyId } from "../keys/keyIds";
 export type ToolbarTab = {
     id: ToolbarTabIds;
@@ -6,6 +7,11 @@ export type ToolbarTab = {
     rawLabel: string;
     keys: (KeyId | KeyProps)[];
 };
-export type ToolbarTabIds = "trigo" | "greek" | "sets" | "sequences" | "functions" | "polynomial" | "proba";
-export declare const toolbarTabs: ToolbarTab[];
+export type ToolbarTabIds = KeyGroupIds;
+export declare const toolbarTabs: {
+    id: KeyGroupIds;
+    label: string;
+    rawLabel: string;
+    keys: KeyProps[];
+}[];
 export declare const defaultTabs: ToolbarTabIds[];
