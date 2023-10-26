@@ -18,6 +18,7 @@ export const LetterKey = ({ letter, isMaj = false, isInMathMode = true }: Letter
         content: displayedLetter,
         method: "write",
       }}
+      groups={isMaj ? ["majLetters"] : ["minLetters"]}
     />
   );
 };

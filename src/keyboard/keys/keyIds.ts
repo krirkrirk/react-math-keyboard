@@ -3,7 +3,10 @@ export type KeyId =
   | "cm"
   | "cm2"
   | "degree"
-
+  | "Hz"
+  | "mol"
+  | "kJ"
+  | "mL"
   /**utility */
   | "custom"
   | "right"
@@ -87,6 +90,7 @@ export type KeyId =
   | "overlineProba"
   | "majProba"
   | "minProba"
+  | "binom"
 
   /**complex */
   | "overline"

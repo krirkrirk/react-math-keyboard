@@ -9,7 +9,7 @@ export const wordKeysProps: Array<KeyProps> = [
       content: "\\text{ ou }",
       method: "write",
     },
-    group: "words",
+    groups: ["words"],
   },
   {
     id: "et",
@@ -20,6 +20,6 @@ export const wordKeysProps: Array<KeyProps> = [
       content: "\\text{ et }",
       method: "write",
     },
-    group: "words",
+    groups: ["words"],
   },
 ];

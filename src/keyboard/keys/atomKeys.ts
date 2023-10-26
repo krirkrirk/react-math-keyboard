@@ -131,6 +131,6 @@ export const atomKeysProps = atoms.map((atomData): KeyProps => {
       content: `\\text{${atomData.formula}}`,
       method: "write",
     },
-    group: "atoms",
+    groups: ["atoms"],
   };
 });

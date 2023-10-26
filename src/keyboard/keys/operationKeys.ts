@@ -10,7 +10,7 @@ export const operationKeysProps: KeyProps[] = [
       content: "+",
       method: "write",
     },
-    group: "basicOperations",
+    groups: ["basicOperations"],
   },
   {
     id: "minus",
@@ -21,7 +21,7 @@ export const operationKeysProps: KeyProps[] = [
       content: "-",
       method: "write",
     },
-    group: "basicOperations",
+    groups: ["basicOperations"],
   },
   {
     id: "times",
@@ -32,7 +32,7 @@ export const operationKeysProps: KeyProps[] = [
       content: "\\times",
       method: "cmd",
     },
-    group: "basicOperations",
+    groups: ["basicOperations"],
   },
   {
     id: "frac",
@@ -43,7 +43,7 @@ export const operationKeysProps: KeyProps[] = [
       content: "/",
       method: "cmd",
     },
-    group: "basicOperations",
+    groups: ["basicOperations"],
   },
   {
     id: "sqrt",
@@ -54,7 +54,7 @@ export const operationKeysProps: KeyProps[] = [
       content: "\\sqrt",
       method: "cmd",
     },
-    group: "basicOperations",
+    groups: ["basicOperations"],
   },
   {
     id: "sqrtCub",
@@ -65,13 +65,13 @@ export const operationKeysProps: KeyProps[] = [
       content: "\\nthroot3",
       method: "typedText",
     },
-    group: "basicOperations",
+    groups: ["otherOperations"],
   },
   {
     id: "square",
     label: "\\square^2",
     labelType: "tex",
-    group: "basicOperations",
+    groups: ["basicOperations"],
     mathfieldInstructions: { content: "^2", method: "write" },
   },
 
@@ -81,13 +81,13 @@ export const operationKeysProps: KeyProps[] = [
     labelType: "tex",
 
     mathfieldInstructions: { content: "^3 ", method: "write" },
-    group: "otherOperations",
+    groups: ["otherOperations"],
   },
   {
     id: "power",
     label: "\\square^n",
     labelType: "tex",
-    group: "basicOperations",
+    groups: ["basicOperations"],
 
     mathfieldInstructions: { content: "^", method: "cmd" },
   },
@@ -96,7 +96,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "leftParenthesis",
     label: "(",
     labelType: "tex",
-    group: "basicOperations",
+    groups: ["basicOperations"],
 
     mathfieldInstructions: {
       content: "(",
@@ -107,7 +107,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "rightParenthesis",
     label: ")",
     labelType: "tex",
-    group: "basicOperations",
+    groups: ["basicOperations"],
 
     mathfieldInstructions: {
       content: ")",
@@ -119,7 +119,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "comma",
     label: "{,}",
     labelType: "tex",
-    group: "basicOperations",
+    groups: ["basicOperations"],
 
     mathfieldInstructions: {
       content: ",",
@@ -130,7 +130,7 @@ export const operationKeysProps: KeyProps[] = [
     id: "dot",
     label: ".",
     labelType: "tex",
-    group: "basicOperations",
+    groups: ["otherOperations"],
 
     mathfieldInstructions: {
       content: ".",
@@ -141,21 +141,10 @@ export const operationKeysProps: KeyProps[] = [
     id: "obelus",
     label: "\\div",
     labelType: "tex",
-    group: "basicOperations",
+    groups: ["basicOperations"],
 
     mathfieldInstructions: {
       content: "\\div",
-      method: "write",
-    },
-  },
-  {
-    id: "percent",
-    label: "\\%",
-    labelType: "tex",
-    group: "otherOperations",
-
-    mathfieldInstructions: {
-      content: "%",
       method: "write",
     },
   },

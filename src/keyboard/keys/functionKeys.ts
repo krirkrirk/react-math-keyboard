@@ -10,7 +10,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "\\log",
       method: "cmd",
     },
-    group: "functions",
+    groups: ["functions"],
   },
   {
     id: "ln",
@@ -21,7 +21,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "\\ln",
       method: "cmd",
     },
-    group: "functions",
+    groups: ["functions"],
   },
   {
     id: "exp",
@@ -32,7 +32,7 @@ export const functionKeysProps: KeyProps[] = [
       content: "\\exp(",
       method: "typedText",
     },
-    group: "functions",
+    groups: ["functions"],
   },
   {
     id: "epower",
@@ -43,74 +43,9 @@ export const functionKeysProps: KeyProps[] = [
       content: "e^",
       method: "typedText",
     },
-    group: "functions",
+    groups: ["functions"],
   },
-  {
-    id: "sin",
-    label: "sin",
-    labelType: "tex",
 
-    mathfieldInstructions: {
-      content: "sin",
-      method: "cmd",
-    },
-    group: "functions",
-  },
-  {
-    id: "cos",
-    label: "cos",
-    labelType: "tex",
-
-    mathfieldInstructions: {
-      content: "cos",
-      method: "cmd",
-    },
-    group: "functions",
-  },
-  {
-    id: "tan",
-    label: "tan",
-    labelType: "tex",
-
-    mathfieldInstructions: {
-      content: "tan",
-      method: "cmd",
-    },
-    group: "functions",
-  },
-  {
-    id: "arccos",
-    label: "cos^{-1}",
-    labelType: "tex",
-
-    mathfieldInstructions: {
-      content: "\\cos^{-1}",
-      method: "write",
-    },
-    group: "functions",
-  },
-  {
-    id: "arcsin",
-    label: "sin^{-1}",
-    labelType: "tex",
-
-    mathfieldInstructions: {
-      content: "\\sin^{-1}",
-      method: "write",
-    },
-    group: "functions",
-  },
-  {
-    id: "arctan",
-    label: "tan^{-1}",
-    labelType: "tex",
-
-    mathfieldInstructions: {
-      content: "\\tan^{-1}",
-      method: "write",
-    },
-    group: "functions",
-  },
   {
     id: "abs",
     label: "\\left|\\square\\right|",
@@ -120,6 +55,6 @@ export const functionKeysProps: KeyProps[] = [
       content: "|",
       method: "cmd",
     },
-    group: "functions",
+    groups: ["functions"],
   },
 ];

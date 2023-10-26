@@ -3,13 +3,13 @@ import { KeyProps } from "./key";
 export const unitKeysProps: Array<KeyProps> = [
   {
     id: "degree",
-    label: "^\\circ C",
+    label: "°C",
     labelType: "tex",
     mathfieldInstructions: {
       content: "^\\circ C",
       method: "write",
     },
-    group: "units",
+    groups: ["units", "trigo", "geometry"],
   },
   {
     id: "cm",
@@ -19,7 +19,7 @@ export const unitKeysProps: Array<KeyProps> = [
       content: "\\text{cm}",
       method: "write",
     },
-    group: "units",
+    groups: ["units"],
   },
   {
     id: "cm2",
@@ -29,6 +29,46 @@ export const unitKeysProps: Array<KeyProps> = [
       content: "\\text{cm}^2",
       method: "write",
     },
-    group: "units",
+    groups: ["units"],
+  },
+  {
+    id: "Hz",
+    label: "Hz",
+    labelType: "raw",
+    mathfieldInstructions: {
+      content: "\\text{Hz}",
+      method: "write",
+    },
+    groups: ["units"],
+  },
+  {
+    id: "mol",
+    label: "mol",
+    labelType: "raw",
+    mathfieldInstructions: {
+      content: "\\text{mol}",
+      method: "write",
+    },
+    groups: ["units"],
+  },
+  {
+    id: "kJ",
+    label: "kJ",
+    labelType: "raw",
+    mathfieldInstructions: {
+      content: "\\text{kJ}",
+      method: "write",
+    },
+    groups: ["units"],
+  },
+  {
+    id: "mL",
+    label: "mL",
+    labelType: "raw",
+    mathfieldInstructions: {
+      content: "\\text{mL}",
+      method: "write",
+    },
+    groups: ["units"],
   },
 ];

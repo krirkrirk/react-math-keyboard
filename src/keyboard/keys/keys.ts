@@ -1,5 +1,6 @@
 import { algebraKeysProps } from "./algebraKeys";
 import { atomKeysProps } from "./atomKeys";
+import { complexKeysProps } from "./complexKeys";
 import { functionKeysProps } from "./functionKeys";
 import { geometryKeysProps } from "./geometryKeys";
 import { greekLettersKeysProps } from "./greekLetters";
@@ -11,7 +12,9 @@ import { numberKeysProps } from "./numberKeys";
 import { operationKeysProps } from "./operationKeys";
 import { ponctuationKeysProps } from "./ponctuationKeys";
 import { probaKeysProps } from "./probaKeys";
+import { sequenceKeysProps } from "./sequenceKeys";
 import { setKeysProps } from "./setKeys";
+import { trigoKeysProps } from "./trigoKeys";
 import { unitKeysProps } from "./unitKeys";
 import { utilityKeysProps } from "./utilityKeys";
 import { wordKeysProps } from "./wordKeys";
@@ -34,6 +37,9 @@ export const allKeysProps: KeyProps[] = [
   ...atomKeysProps,
   ...moleculesKeysProps,
   ...probaKeysProps,
+  ...sequenceKeysProps,
+  ...complexKeysProps,
+  ...trigoKeysProps,
   {
     id: "rightarrow",
     label: "\\rightarrow",
@@ -42,24 +48,6 @@ export const allKeysProps: KeyProps[] = [
       content: "\\rightarrow",
       method: "write",
     },
-  },
-
-  {
-    id: "overline",
-    label: "\\overline{z}",
-    labelType: "tex",
-    mathfieldInstructions: {
-      content: "overline",
-      method: "cmd",
-    },
-  },
-
-  {
-    id: "underscore",
-    label: "\\square_n",
-    labelType: "tex",
-    mathfieldInstructions: { content: "_", method: "cmd" },
-    group: "sequences",
   },
 ];
 

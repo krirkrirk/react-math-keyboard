@@ -9,7 +9,7 @@ export const probaKeysProps: KeyProps[] = [
       content: "overline",
       method: "cmd",
     },
-    group: "proba",
+    groups: ["proba"],
   },
   {
     id: "minProba",
@@ -20,7 +20,7 @@ export const probaKeysProps: KeyProps[] = [
       content: "p(",
       method: "typedText",
     },
-    group: "proba",
+    groups: ["proba"],
   },
   {
     id: "majProba",
@@ -31,6 +31,17 @@ export const probaKeysProps: KeyProps[] = [
       content: "P(",
       method: "typedText",
     },
-    group: "proba",
+    groups: ["proba"],
+  },
+  {
+    id: "binom",
+    label: "\\binom{a}{b}",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "binom",
+      method: "cmd",
+    },
+    groups: ["proba"],
   },
 ];

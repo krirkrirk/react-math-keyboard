@@ -10,7 +10,7 @@ export const algebraKeysProps: KeyProps[] = [
       content: "=",
       method: "write",
     },
-    group: "algebra",
+    groups: ["algebra"],
   },
   {
     id: "approx",
@@ -21,7 +21,7 @@ export const algebraKeysProps: KeyProps[] = [
       content: "\\approx",
       method: "write",
     },
-    group: "algebra",
+    groups: ["algebra"],
   },
   {
     id: "leq",
@@ -32,7 +32,7 @@ export const algebraKeysProps: KeyProps[] = [
       content: "\\leq",
       method: "write",
     },
-    group: "algebra",
+    groups: ["algebra"],
   },
   {
     id: "geq",
@@ -43,7 +43,7 @@ export const algebraKeysProps: KeyProps[] = [
       content: "\\geq",
       method: "write",
     },
-    group: "algebra",
+    groups: ["algebra"],
   },
   {
     id: "inf",
@@ -54,7 +54,7 @@ export const algebraKeysProps: KeyProps[] = [
       content: "<",
       method: "write",
     },
-    group: "algebra",
+    groups: ["algebra"],
   },
   {
     id: "sup",
@@ -65,6 +65,17 @@ export const algebraKeysProps: KeyProps[] = [
       content: ">",
       method: "write",
     },
-    group: "algebra",
+    groups: ["algebra"],
+  },
+  {
+    id: "percent",
+    label: "\\%",
+    labelType: "tex",
+    groups: ["algebra"],
+
+    mathfieldInstructions: {
+      content: "%",
+      method: "write",
+    },
   },
 ];

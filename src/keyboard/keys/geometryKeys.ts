@@ -9,7 +9,7 @@ export const geometryKeysProps: KeyProps[] = [
       content: "°",
       method: "write",
     },
-    group: "geometry",
+    groups: ["geometry"],
   },
   {
     id: "overrightarrow",
@@ -19,6 +19,6 @@ export const geometryKeysProps: KeyProps[] = [
       content: "overrightarrow",
       method: "cmd",
     },
-    group: "geometry",
+    groups: ["geometry"],
   },
 ];

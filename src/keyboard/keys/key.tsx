@@ -4,6 +4,7 @@ import $ from "jquery";
 import { MathField, MathfieldInstructions } from "../../types/types";
 import { MathFieldContext } from "../../mathInput/mathfieldContext";
 import { KeyId } from "./keyIds";
+import { KeyGroupIds } from "./keyGroup";
 
 export type KeyProps = {
   id: KeyId;
@@ -14,25 +15,7 @@ export type KeyProps = {
   onClick?: () => void;
   fullWidth?: boolean;
   isUtilityKey?: boolean;
-  group?:
-    | "sets"
-    | "proba"
-    | "functions"
-    | "minLetters"
-    | "majLetters"
-    | "greek"
-    | "utility"
-    | "sequences"
-    | "alphabet"
-    | "basicOperations"
-    | "otherOperations"
-    | "numbers"
-    | "algebra"
-    | "geometry"
-    | "words"
-    | "units"
-    | "atoms"
-    | "molecules";
+  groups?: KeyGroupIds[];
 };
 
 export const Key = ({
