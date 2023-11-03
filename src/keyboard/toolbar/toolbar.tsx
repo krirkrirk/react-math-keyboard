@@ -27,19 +27,12 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
   return (
     <div className="react-math-keyboard-toolbar-container">
       <div className="react-math-keyboard-toolbar">
-        <div style={{ overflow: "auto" }}>
+        <div style={{ overflowX: "auto", overflowY: "hidden" }}>
           <div className="react-math-keyboard-toolbar-keys-container">
             {shownKeys?.map((keyData) => {
               if (typeof keyData === "string") {
                 const foundKey = KeysPropsMap.get(keyData as KeyId);
-                if (foundKey)
-                  return (
-                    <Key
-                      {...KeysPropsMap.get(keyData as KeyId)!}
-                      key={keyData}
-                      fullWidth={false}
-                    />
-                  );
+                if (foundKey) return <Key {...KeysPropsMap.get(keyData as KeyId)!} key={keyData} fullWidth={false} />;
                 else
                   return (
                     <Key
@@ -52,8 +45,7 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
                       }}
                     />
                   );
-              } else
-                return <Key {...keyData} key={keyData.id} fullWidth={false} />;
+              } else return <Key {...keyData} key={keyData.id} fullWidth={false} />;
             })}
           </div>
         </div>

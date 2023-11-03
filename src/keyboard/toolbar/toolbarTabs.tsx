@@ -134,11 +134,13 @@ export const defaultTabs: ToolbarTabIds[] = keyGroups
       ![
         "basicOperations",
         "utility",
+        "numbers",
+
         "minLetters",
         "majLetters",
-        "numbers",
         "words",
         "alphabet",
+
         "atoms",
         "molecules",
       ].includes(group.id)
