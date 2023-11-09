@@ -30,7 +30,7 @@ export const Example = ({}: ExampleProps) => {
           <MathInput
             setValue={setValue}
             setMathfieldRef={(mathfield) => (mf.current = mathfield)}
-            lang="fr"
+            lang="en"
           />
           <button onClick={() => clear(mf.current!)}>Clear</button>
           <p style={{ overflow: "auto" }}>Latex produced : {value}</p>
@@ -53,7 +53,6 @@ export const Example = ({}: ExampleProps) => {
           </p>
           <MathInput
             setValue={setValue3}
-            numericToolbarTabs={["algebra"]}
             numericToolbarKeys={[
               "euro",
               {
