@@ -10,8 +10,14 @@ export type ToolbarTab = {
 export type ToolbarTabIds = KeyGroupIds;
 export declare const toolbarTabs: {
     id: KeyGroupIds;
-    label: string;
-    rawLabel: string;
+    label: {
+        en: string;
+        fr: string;
+    };
+    rawLabel: {
+        en: string;
+        fr: string;
+    };
     keys: KeyProps[];
 }[];
 export declare const defaultTabs: ToolbarTabIds[];
