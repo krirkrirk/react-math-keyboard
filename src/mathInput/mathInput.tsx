@@ -8,6 +8,7 @@ import { MathFieldContext } from "./mathfieldContext";
 import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 import { KeyId } from "../keyboard/keys/keyIds";
+import { Langs } from "../keyboard/keys/keyGroup";
 
 export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
@@ -25,6 +26,7 @@ export type MathInputProps = {
   fullWidth?: boolean;
   container?: any;
   scrollType?: "window" | "raw";
+  lang?: Langs;
 };
 
 export const MathInput = ({
@@ -42,6 +44,7 @@ export const MathInput = ({
   fullWidth = true,
   allowAlphabeticKeyboard = true,
   scrollType = "window",
+  lang = "en",
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -128,13 +131,16 @@ export const MathInput = ({
       } else {
         $("body").css("padding-bottom", `300px`);
       }
-      const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+      const delta =
+        window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
       if (delta < 400) {
-        if (scrollType === "window") window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+        if (scrollType === "window")
+          window.scrollBy({ top: 400 - delta, behavior: "smooth" });
         else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
       }
       if (delta > window.innerHeight - 30)
-        if (scrollType === "window") window.scrollBy({ top: -50, behavior: "smooth" });
+        if (scrollType === "window")
+          window.scrollBy({ top: -50, behavior: "smooth" });
         else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
     } else {
       if (rootElementId) {
@@ -171,6 +177,7 @@ export const MathInput = ({
             alphabeticToolbarKeys={alphabeticToolbarKeys}
             onHideKeyboard={onForceHideKeyboard}
             allowAlphabeticKeyboard={allowAlphabeticKeyboard}
+            lang={lang}
           />
         )}
       </MathFieldContext.Provider>

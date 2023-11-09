@@ -4,6 +4,7 @@ import { Toolbar, ToolbarProps } from "../toolbar/toolbar";
 import React from "react";
 import { ToolbarTabIds } from "../toolbar/toolbarTabs";
 import { KeyId } from "../keys/keyIds";
+import { Langs } from "../keys/keyGroup";
 export type NumericLayoutProps = {
   toolbarKeys?: (KeyId | KeyProps)[];
   showTabs?: boolean;
@@ -12,6 +13,7 @@ export type NumericLayoutProps = {
   onHideKeyboard?: () => void;
   divisionFormat: "fraction" | "obelus";
   allowAlphabeticKeyboard: boolean;
+  lang: Langs;
 };
 
 export const NumericLayout = ({
@@ -21,12 +23,15 @@ export const NumericLayout = ({
   divisionFormat,
   allowAlphabeticKeyboard,
   onHideKeyboard,
+  lang,
 }: NumericLayoutProps) => {
   const hideToolbar = !!toolbarKeys && !toolbarKeys.length;
 
   return (
     <div className="react-math-keyboard-keyboard-layout">
-      {!hideToolbar && <Toolbar keys={toolbarKeys} tabs={toolbarTabs} />}
+      {!hideToolbar && (
+        <Toolbar keys={toolbarKeys} tabs={toolbarTabs} lang={lang} />
+      )}
       <div className="react-math-keyboard-numeric-layout">
         <div
           className="react-math-keyboard-layout-grid"
@@ -47,7 +52,13 @@ export const NumericLayout = ({
           <Key {...KeysPropsMap.get("sqrt")!} />
           <Key {...KeysPropsMap.get("square")!} />
           {allowAlphabeticKeyboard ? (
-            <Key id="switch" label={"abc"} labelType="raw" onClick={onSwitch} isUtilityKey />
+            <Key
+              id="switch"
+              label={"abc"}
+              labelType="raw"
+              onClick={onSwitch}
+              isUtilityKey
+            />
           ) : (
             <Key
               id="close"
