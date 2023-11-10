@@ -1,5 +1,8 @@
-//pour une string du type "CO_2" cette fonction renvoit "\\text{CO}_2"
-
+/**
+ *
+ * @param s latex
+ * @returns a textified latex version of s, e.g : CO_2 is turned into \\text{CO}_2
+ */
 export const textifyInLatex = (s: string) => {
   let res = "";
   let isInText = false;
