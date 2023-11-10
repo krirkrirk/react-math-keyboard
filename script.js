@@ -55364,7 +55364,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "textifyInLatex": () => (/* binding */ textifyInLatex)
 /* harmony export */ });
-//pour une string du type "CO_2" cette fonction renvoit "\\text{CO}_2"
+/**
+ *
+ * @param s latex
+ * @returns a textified latex version of s, e.g : CO_2 is turned into \\text{CO}_2
+ */
 const textifyInLatex = (s) => {
     let res = "";
     let isInText = false;
