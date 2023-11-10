@@ -7,8 +7,7 @@ This library provides :
 - a [MathQuill](http://www.mathquill.com) input in which you can write both mathematical expressions (in LaTeX) and raw text
 - a customizable, pretty, mobile-friendly keyboard for this input.
 
-You can try it live here : [Live Demo](https://krirkrirk.github.io/react-math-keyboard/),
-or you can test it in CodeSandbox : [js version](https://codesandbox.io/s/epic-wildflower-v1jlww) or [ts version](https://codesandbox.io/s/react-mat-keyboard-ts-playground-w01638).
+You can test it in CodeSandbox : [js version](https://codesandbox.io/s/epic-wildflower-v1jlww) or [ts version](https://codesandbox.io/s/react-mat-keyboard-ts-playground-w01638).
 
 :warning: This is using a fork of MathQuill in order to use the comma as a decimal separator and the symbol $\times$ instead of $\cdot$ for multiplication. This is not customizable so far, but could be in the future if there are requests for it.
 
