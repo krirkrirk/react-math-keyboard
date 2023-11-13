@@ -11,4 +11,14 @@ export const geometryKeysProps: KeyProps[] = [
     },
     groups: ["geometry"],
   },
+  {
+    id: "degree",
+    label: "°",
+    labelType: "tex",
+    mathfieldInstructions: {
+      content: "^\\circ",
+      method: "write",
+    },
+    groups: ["units", "geometry"],
+  },
 ];

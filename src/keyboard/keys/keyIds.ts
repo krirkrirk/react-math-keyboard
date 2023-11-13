@@ -2,23 +2,27 @@ export type KeyId =
   /**units */
   | "cm"
   | "cm2"
-  | "degree"
+  | "celsius"
   | "Hz"
   | "mol"
   | "kJ"
   | "mL"
+
   /**utility */
   | "custom"
   | "right"
   | "left"
   | "rightarrow"
-  | "overrightarrow"
   | "del"
   | "close"
   | "switch"
   | "ou"
   | "et"
   | "maj"
+
+  /**geometry */
+  | "overrightarrow"
+  | "degree"
 
   /**operations */
   | "plus"

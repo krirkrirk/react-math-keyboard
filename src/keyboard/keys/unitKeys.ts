@@ -2,14 +2,14 @@ import { KeyProps } from "./key";
 
 export const unitKeysProps: Array<KeyProps> = [
   {
-    id: "degree",
+    id: "celsius",
     label: "°C",
     labelType: "tex",
     mathfieldInstructions: {
       content: "^\\circ C",
       method: "write",
     },
-    groups: ["units", "trigo", "geometry"],
+    groups: ["units"],
   },
   {
     id: "cm",
