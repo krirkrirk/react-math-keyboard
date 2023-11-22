@@ -1,8 +1,10 @@
 export type KeyId = 
 /**units */
-"cm" | "cm2" | "degree" | "Hz" | "mol" | "kJ" | "mL"
+"cm" | "cm2" | "celsius" | "Hz" | "mol" | "kJ" | "mL"
 /**utility */
- | "custom" | "right" | "left" | "rightarrow" | "overrightarrow" | "del" | "close" | "switch" | "ou" | "et" | "maj"
+ | "custom" | "right" | "left" | "rightarrow" | "del" | "close" | "switch" | "ou" | "et" | "maj"
+/**geometry */
+ | "overrightarrow" | "degree"
 /**operations */
  | "plus" | "minus" | "times" | "frac" | "obelus" | "sqrt" | "sqrtCub" | "square" | "cube" | "power" | "percent" | "leftParenthesis" | "rightParenthesis" | "equal" | "comma" | "semicolon" | "dot" | "sup" | "inf" | "geq" | "leq" | "approx"
 /**sets */
