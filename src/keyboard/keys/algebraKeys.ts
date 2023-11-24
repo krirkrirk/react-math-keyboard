@@ -78,4 +78,20 @@ export const algebraKeysProps: KeyProps[] = [
       method: "write",
     },
   },
+  {
+    id: "xsquare",
+    label: "x^2",
+    labelType: "tex",
+
+    mathfieldInstructions: { content: "x^2", method: "write" },
+    groups: ["algebra"],
+  },
+  {
+    id: "xcube",
+    label: "x^3",
+    labelType: "tex",
+
+    mathfieldInstructions: { content: "x^3", method: "write" },
+    groups: ["algebra"],
+  },
 ];

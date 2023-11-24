@@ -83,6 +83,7 @@ export const operationKeysProps: KeyProps[] = [
     mathfieldInstructions: { content: "^3 ", method: "write" },
     groups: ["otherOperations"],
   },
+
   {
     id: "power",
     label: "\\square^n",

@@ -47,6 +47,8 @@ export type KeyId =
   | "geq"
   | "leq"
   | "approx"
+  | "xsquare"
+  | "xcube"
 
   /**sets */
   | "belongs"
