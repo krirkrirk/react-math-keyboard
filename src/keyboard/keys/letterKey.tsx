@@ -7,7 +7,11 @@ export type LetterKeyProps = {
   isMaj?: boolean;
   isInMathMode?: boolean;
 };
-export const LetterKey = ({ letter, isMaj = false, isInMathMode = true }: LetterKeyProps) => {
+export const LetterKey = ({
+  letter,
+  isMaj = false,
+  isInMathMode = true,
+}: LetterKeyProps) => {
   const displayedLetter = isMaj ? letter.toLocaleUpperCase() : letter;
   return (
     <Key
@@ -18,6 +22,7 @@ export const LetterKey = ({ letter, isMaj = false, isInMathMode = true }: Letter
         content: displayedLetter,
         method: "write",
       }}
+      keypressId={displayedLetter}
       groups={isMaj ? ["majLetters"] : ["minLetters"]}
     />
   );

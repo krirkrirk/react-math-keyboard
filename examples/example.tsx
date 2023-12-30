@@ -53,6 +53,7 @@ export const Example = ({}: ExampleProps) => {
           </p>
           <MathInput
             setValue={setValue3}
+            forbidOtherKeyboardKeys={true}
             numericToolbarKeys={[
               "euro",
               {
@@ -71,7 +72,12 @@ export const Example = ({}: ExampleProps) => {
                 labelType: "raw",
                 onClick: () => alert("Clicked!"),
               },
-              "Eau",
+              "lbracket",
+              "rbracket",
+              "lbrace",
+              "rbrace",
+              "x",
+              "y",
             ]}
           />
           <p>Latex produced : {value3}</p>

@@ -14,6 +14,7 @@ export const geometryKeysProps: KeyProps[] = [
   {
     id: "degree",
     label: "°",
+    keypressId: "°",
     labelType: "tex",
     mathfieldInstructions: {
       content: "^\\circ",

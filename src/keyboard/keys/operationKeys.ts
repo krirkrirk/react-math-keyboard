@@ -5,12 +5,12 @@ export const operationKeysProps: KeyProps[] = [
     id: "plus",
     label: "+",
     labelType: "tex",
-
     mathfieldInstructions: {
       content: "+",
       method: "write",
     },
     groups: ["basicOperations"],
+    keypressId: "+",
   },
   {
     id: "minus",
@@ -22,6 +22,7 @@ export const operationKeysProps: KeyProps[] = [
       method: "write",
     },
     groups: ["basicOperations"],
+    keypressId: "-",
   },
   {
     id: "times",
@@ -33,6 +34,7 @@ export const operationKeysProps: KeyProps[] = [
       method: "cmd",
     },
     groups: ["basicOperations"],
+    keypressId: "*",
   },
   {
     id: "frac",
@@ -44,6 +46,7 @@ export const operationKeysProps: KeyProps[] = [
       method: "cmd",
     },
     groups: ["basicOperations"],
+    keypressId: "/",
   },
   {
     id: "sqrt",
@@ -73,6 +76,7 @@ export const operationKeysProps: KeyProps[] = [
     labelType: "tex",
     groups: ["basicOperations"],
     mathfieldInstructions: { content: "^2", method: "write" },
+    keypressId: "²",
   },
 
   {
@@ -91,6 +95,7 @@ export const operationKeysProps: KeyProps[] = [
     groups: ["basicOperations"],
 
     mathfieldInstructions: { content: "^", method: "cmd" },
+    keypressId: "^",
   },
 
   {
@@ -103,6 +108,7 @@ export const operationKeysProps: KeyProps[] = [
       content: "(",
       method: "typedText",
     },
+    keypressId: "(",
   },
   {
     id: "rightParenthesis",
@@ -114,6 +120,7 @@ export const operationKeysProps: KeyProps[] = [
       content: ")",
       method: "typedText",
     },
+    keypressId: ")",
   },
 
   {
@@ -126,6 +133,7 @@ export const operationKeysProps: KeyProps[] = [
       content: ",",
       method: "write",
     },
+    keypressId: ",",
   },
   {
     id: "dot",
@@ -137,6 +145,7 @@ export const operationKeysProps: KeyProps[] = [
       content: ".",
       method: "write",
     },
+    keypressId: ".",
   },
   {
     id: "obelus",
@@ -148,5 +157,6 @@ export const operationKeysProps: KeyProps[] = [
       content: "\\div",
       method: "write",
     },
+    keypressId: "/",
   },
 ];

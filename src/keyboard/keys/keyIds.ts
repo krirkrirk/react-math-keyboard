@@ -16,10 +16,12 @@ export type KeyId =
   | "del"
   | "close"
   | "switch"
-  | "ou"
-  | "et"
   | "maj"
 
+  /**words */
+  | "ou"
+  | "et"
+  | "aucun"
   /**geometry */
   | "overrightarrow"
   | "degree"

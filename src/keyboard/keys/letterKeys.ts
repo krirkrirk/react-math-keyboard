@@ -92,21 +92,21 @@ export const minLettersKeysProps = minLettersIds.map((label): KeyProps => {
   }
   return {
     id: label,
-
     label: label,
     labelType: "tex",
     mathfieldInstructions: { content: label, method: "write" },
     groups: groups,
+    keypressId: label,
   };
 });
 
 export const majLettersKeysProps = majLettersIds.map((label): KeyProps => {
   return {
     id: label,
-
     label: label,
     labelType: "tex",
     mathfieldInstructions: { content: label, method: "write" },
     groups: ["majLetters"],
+    keypressId: label,
   };
 });

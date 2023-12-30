@@ -9,6 +9,7 @@ import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 import { KeyId } from "../keyboard/keys/keyIds";
 import { Langs } from "../keyboard/keys/keyGroup";
+import { KeysPropsMap } from "../keyboard/keys/keys";
 
 export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
@@ -27,7 +28,30 @@ export type MathInputProps = {
   container?: any;
   scrollType?: "window" | "raw";
   lang?: Langs;
+  forbidOtherKeyboardKeys?: boolean;
 };
+
+const vanillaKeys = [
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "+",
+  "-",
+  ",",
+  "(",
+  ")",
+  "²",
+  "^",
+  "*",
+  "/",
+];
 
 export const MathInput = ({
   numericToolbarKeys,
@@ -45,6 +69,7 @@ export const MathInput = ({
   allowAlphabeticKeyboard = true,
   scrollType = "window",
   lang = "en",
+  forbidOtherKeyboardKeys = false,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -66,6 +91,28 @@ export const MathInput = ({
     };
     timeout.current = setTimeout(eventually, 300);
   };
+
+  useEffect(() => {
+    if (!forbidOtherKeyboardKeys) return;
+    let keys: (string | undefined)[] = [...vanillaKeys];
+    if (numericToolbarKeys)
+      keys.push(
+        ...numericToolbarKeys.map((key) => {
+          return typeof key === "string"
+            ? KeysPropsMap.get(key)!.keypressId
+            : key.keypressId;
+        })
+      );
+    console.log(keys);
+    keys = keys.filter((e) => e !== undefined);
+
+    const exec = (event: KeyboardEvent) => {
+      console.log(event);
+      if (!keys.includes(event.key)) event.preventDefault();
+    };
+    window.addEventListener("keypress", exec);
+    return () => window.removeEventListener("keypress", exec);
+  }, [forbidOtherKeyboardKeys, numericToolbarKeys]);
 
   const idCounter = useRef<number>(0);
   useEffect(() => {

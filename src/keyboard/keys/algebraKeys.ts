@@ -5,7 +5,7 @@ export const algebraKeysProps: KeyProps[] = [
     id: "equal",
     label: "=",
     labelType: "tex",
-
+    keypressId: "=",
     mathfieldInstructions: {
       content: "=",
       method: "write",
@@ -55,6 +55,7 @@ export const algebraKeysProps: KeyProps[] = [
       method: "write",
     },
     groups: ["algebra"],
+    keypressId: "<",
   },
   {
     id: "sup",
@@ -66,6 +67,7 @@ export const algebraKeysProps: KeyProps[] = [
       method: "write",
     },
     groups: ["algebra"],
+    keypressId: ">",
   },
   {
     id: "percent",
@@ -77,6 +79,7 @@ export const algebraKeysProps: KeyProps[] = [
       content: "%",
       method: "write",
     },
+    keypressId: "%",
   },
   {
     id: "xsquare",
