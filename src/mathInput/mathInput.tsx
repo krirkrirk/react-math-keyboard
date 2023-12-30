@@ -4,7 +4,6 @@ import { isMobile } from "react-device-detect";
 import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
-
 import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 import { KeyId } from "../keyboard/keys/keyIds";

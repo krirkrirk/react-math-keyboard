@@ -12,5 +12,7 @@ export type KeyProps = {
     fullWidth?: boolean;
     isUtilityKey?: boolean;
     groups?: KeyGroupIds[];
+    postKeystrokes?: string[];
+    keypressId?: string;
 };
-export declare const Key: ({ id, formatedId, label, labelType, onClick, mathfieldInstructions, fullWidth, isUtilityKey, }: KeyProps) => JSX.Element;
+export declare const Key: ({ id, formatedId, label, labelType, onClick, mathfieldInstructions, fullWidth, isUtilityKey, postKeystrokes, }: KeyProps) => JSX.Element;

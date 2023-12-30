@@ -21,5 +21,6 @@ export type MathInputProps = {
     container?: any;
     scrollType?: "window" | "raw";
     lang?: Langs;
+    forbidOtherKeyboardKeys?: boolean;
 };
-export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style, initialLatex, rootElementId, divisionFormat, size, fullWidth, allowAlphabeticKeyboard, scrollType, lang, }: MathInputProps) => JSX.Element;
+export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style, initialLatex, rootElementId, divisionFormat, size, fullWidth, allowAlphabeticKeyboard, scrollType, lang, forbidOtherKeyboardKeys, }: MathInputProps) => JSX.Element;

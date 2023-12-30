@@ -2,7 +2,9 @@ export type KeyId =
 /**units */
 "cm" | "cm2" | "celsius" | "Hz" | "mol" | "kJ" | "mL"
 /**utility */
- | "custom" | "right" | "left" | "rightarrow" | "del" | "close" | "switch" | "ou" | "et" | "maj"
+ | "custom" | "right" | "left" | "rightarrow" | "del" | "close" | "switch" | "maj"
+/**words */
+ | "ou" | "et" | "aucun"
 /**geometry */
  | "overrightarrow" | "degree"
 /**operations */

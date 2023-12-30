@@ -28,7 +28,7 @@ export const wordKeysProps: Array<KeyProps> = [
     labelType: "raw",
 
     mathfieldInstructions: {
-      content: "\\text{ Aucun }",
+      content: "\\text{Aucun}",
       method: "write",
     },
     groups: ["words"],
