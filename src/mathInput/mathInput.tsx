@@ -28,6 +28,12 @@ export type MathInputProps = {
   scrollType?: "window" | "raw";
   lang?: Langs;
   forbidOtherKeyboardKeys?: boolean;
+  registerEmbedObjects?: {
+    id: string;
+    htmlString: string;
+    text: string;
+    latex: string;
+  }[];
 };
 
 const vanillaKeys = [
@@ -69,6 +75,7 @@ export const MathInput = ({
   scrollType = "window",
   lang = "en",
   forbidOtherKeyboardKeys = false,
+  registerEmbedObjects,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -118,7 +125,24 @@ export const MathInput = ({
     window.jQuery = $;
     require("mathquill4keyboard/build/mathquill.css");
     require("mathquill4keyboard/build/mathquill");
-    const MQ = window.MathQuill.getInterface(2);
+    let MQ = window.MathQuill.getInterface(2);
+
+    if (registerEmbedObjects) {
+      registerEmbedObjects.forEach((obj) => {
+        MQ.registerEmbed(obj.id, function registerObject() {
+          return {
+            htmlString: obj.htmlString,
+            text: function text() {
+              return obj.text;
+            },
+            latex: function latex() {
+              return obj.latex;
+            },
+          };
+        });
+      });
+    }
+
     const mf = MQ.MathField(spanRef.current, {
       handlers: {
         edit: function () {
