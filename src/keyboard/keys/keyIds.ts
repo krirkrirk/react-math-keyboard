@@ -88,6 +88,7 @@ export type KeyId =
   | "arcsin"
   | "arctan"
   | "abs"
+  | "fx"
 
   /**sequences */
   | "un"
