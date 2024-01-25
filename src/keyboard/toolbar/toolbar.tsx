@@ -4,12 +4,14 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { ToolbarTabIds, defaultTabs, toolbarTabs } from "./toolbarTabs";
 import { MathFieldContext } from "../../mathInput/mathfieldContext";
 import { KeyId } from "../keys/keyIds";
+import { Langs } from "../keys/keyGroup";
 export type ToolbarProps = {
   keys?: (KeyId | KeyProps)[];
   tabs?: ToolbarTabIds[];
+  lang: Langs;
 };
 
-export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
+export const Toolbar = ({ keys, tabs = defaultTabs, lang }: ToolbarProps) => {
   const [shownKeys, setShownKeys] = useState<(KeyId | KeyProps | string)[]>();
   const [currentTab, setCurrentTab] = useState<ToolbarTabIds>(tabs[0]);
   const mathfield = useContext(MathFieldContext);
@@ -32,7 +34,14 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
             {shownKeys?.map((keyData) => {
               if (typeof keyData === "string") {
                 const foundKey = KeysPropsMap.get(keyData as KeyId);
-                if (foundKey) return <Key {...KeysPropsMap.get(keyData as KeyId)!} key={keyData} fullWidth={false} />;
+                if (foundKey)
+                  return (
+                    <Key
+                      {...KeysPropsMap.get(keyData as KeyId)!}
+                      key={keyData}
+                      fullWidth={false}
+                    />
+                  );
                 else
                   return (
                     <Key
@@ -45,7 +54,8 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
                       }}
                     />
                   );
-              } else return <Key {...keyData} key={keyData.id} fullWidth={false} />;
+              } else
+                return <Key {...keyData} key={keyData.id} fullWidth={false} />;
             })}
           </div>
         </div>
@@ -60,7 +70,7 @@ export const Toolbar = ({ keys, tabs = defaultTabs }: ToolbarProps) => {
             >
               {tabs?.map((tabId) => (
                 <option key={tabId} value={tabId}>
-                  {toolbarTabs.find((t) => t.id === tabId)?.rawLabel}
+                  {toolbarTabs.find((t) => t.id === tabId)?.rawLabel[lang]}
                 </option>
               ))}
             </select>

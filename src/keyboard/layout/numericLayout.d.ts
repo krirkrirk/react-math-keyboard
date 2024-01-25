@@ -1,6 +1,7 @@
 import { KeyProps } from "../keys/key";
 import { ToolbarTabIds } from "../toolbar/toolbarTabs";
 import { KeyId } from "../keys/keyIds";
+import { Langs } from "../keys/keyGroup";
 export type NumericLayoutProps = {
     toolbarKeys?: (KeyId | KeyProps)[];
     showTabs?: boolean;
@@ -9,5 +10,6 @@ export type NumericLayoutProps = {
     onHideKeyboard?: () => void;
     divisionFormat: "fraction" | "obelus";
     allowAlphabeticKeyboard: boolean;
+    lang: Langs;
 };
-export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, }: NumericLayoutProps) => JSX.Element;
+export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, }: NumericLayoutProps) => JSX.Element;

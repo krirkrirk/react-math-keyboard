@@ -22,4 +22,15 @@ export const wordKeysProps: Array<KeyProps> = [
     },
     groups: ["words"],
   },
+  {
+    id: "aucun",
+    label: "Aucun",
+    labelType: "raw",
+
+    mathfieldInstructions: {
+      content: "\\text{Aucun}",
+      method: "write",
+    },
+    groups: ["words"],
+  },
 ];

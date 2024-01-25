@@ -21,38 +21,48 @@ export type KeyGroupIds =
   | "atoms"
   | "molecules";
 
+export type Langs = "en" | "fr";
+
 export type KeyGroup = {
   id: KeyGroupIds;
-  label: string;
+  label: { [x in Langs]: string };
 };
 
 export const keyGroups: KeyGroup[] = [
-  { id: "algebra", label: "Algèbre" },
-  { id: "otherOperations", label: "Opérations" },
+  { id: "algebra", label: { fr: "Algèbre", en: "Algebra" } },
+  { id: "otherOperations", label: { fr: "Opérations", en: "Operations" } },
 
-  { id: "sets", label: "Ensembles" },
-  { id: "trigo", label: "Trigo" },
+  { id: "sets", label: { fr: "Ensembles", en: "Sets" } },
+  { id: "trigo", label: { fr: "Trigo", en: "Trigonometry" } },
 
-  { id: "functions", label: "Fonctions" },
-  { id: "proba", label: "Probas" },
+  { id: "functions", label: { fr: "Fonctions", en: "Functions" } },
+  { id: "proba", label: { fr: "Probas", en: "Probability" } },
 
-  { id: "minLetters", label: "Lettres minuscules" },
-  { id: "majLetters", label: "Lettres majuscules" },
+  {
+    id: "minLetters",
+    label: { fr: "Lettres minuscules", en: "Lowercase letters" },
+  },
+  {
+    id: "majLetters",
+    label: { fr: "Lettres majuscules", en: "Uppercase letters" },
+  },
+  { id: "greek", label: { fr: "Grec", en: "Greek" } },
 
-  { id: "greek", label: "Grec" },
+  { id: "geometry", label: { fr: "Géométrie", en: "Geometry" } },
+  { id: "units", label: { fr: "Unités", en: "Units" } },
 
-  { id: "geometry", label: "Géométrie" },
-  { id: "units", label: "Unités" },
+  { id: "sequences", label: { fr: "Suites", en: "Sequences" } },
+  { id: "complex", label: { fr: "Complexes", en: "Complex" } },
+  { id: "words", label: { fr: "Mots", en: "Words" } },
 
-  { id: "sequences", label: "Suites" },
-  { id: "complex", label: "Complexes" },
-  { id: "words", label: "Mots" },
+  {
+    id: "basicOperations",
+    label: { fr: "Opérations basiques", en: "Basic operations" },
+  },
+  { id: "numbers", label: { fr: "Nombres", en: "Numbers" } },
 
-  { id: "basicOperations", label: "Opérations basiques" },
-  { id: "numbers", label: "Nombres" },
+  { id: "atoms", label: { fr: "Atomes", en: "Atoms" } },
+  { id: "molecules", label: { fr: "Molécules", en: "Molecules" } },
 
-  { id: "atoms", label: "Atomes" },
-  { id: "molecules", label: "Molécules" },
-
-  { id: "alphabet", label: "Alphabet" },
+  { id: "alphabet", label: { fr: "Alphabet", en: "Alphabet" } },
 ];

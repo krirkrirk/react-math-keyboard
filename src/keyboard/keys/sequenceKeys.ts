@@ -7,6 +7,7 @@ export const sequenceKeysProps: KeyProps[] = [
     labelType: "tex",
     mathfieldInstructions: { content: "_", method: "cmd" },
     groups: ["sequences", "algebra", "proba"],
+    keypressId: "_",
   },
   {
     id: "un",

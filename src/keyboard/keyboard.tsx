@@ -7,6 +7,7 @@ import { NumericLayout, NumericLayoutProps } from "./layout/numericLayout";
 import { KeyProps } from "./keys/key";
 import { ToolbarTabIds } from "./toolbar/toolbarTabs";
 import { KeyId } from "./keys/keyIds";
+import { Langs } from "./keys/keyGroup";
 
 export type KeyboardProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
@@ -15,6 +16,7 @@ export type KeyboardProps = {
   divisionFormat: "fraction" | "obelus";
   allowAlphabeticKeyboard: boolean;
   onHideKeyboard?: () => void;
+  lang: Langs;
 };
 
 export const Keyboard = ({
@@ -24,6 +26,7 @@ export const Keyboard = ({
   divisionFormat,
   allowAlphabeticKeyboard,
   onHideKeyboard,
+  lang,
 }: KeyboardProps) => {
   const mathfield = useContext(MathFieldContext);
   useEffect(() => {
@@ -38,10 +41,13 @@ export const Keyboard = ({
     } else {
       mathfield.moveToRightEnd();
     }
-    setCurrentLayoutType((prev) => (prev === "numeric" ? "alphabet" : "numeric"));
+    setCurrentLayoutType((prev) =>
+      prev === "numeric" ? "alphabet" : "numeric"
+    );
   };
   const onMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (e.target instanceof HTMLElement && e.target.nodeName !== "SELECT") e.preventDefault();
+    if (e.target instanceof HTMLElement && e.target.nodeName !== "SELECT")
+      e.preventDefault();
     mathfield.focus();
   };
 
@@ -60,9 +66,16 @@ export const Keyboard = ({
           divisionFormat={divisionFormat}
           allowAlphabeticKeyboard={allowAlphabeticKeyboard}
           onHideKeyboard={onHideKeyboard}
+          lang={lang}
         />
       )}
-      {currentLayoutType === "alphabet" && <AlphabetLayout onSwitch={onSwitch} toolbarKeys={alphabeticToolbarKeys} />}
+      {currentLayoutType === "alphabet" && (
+        <AlphabetLayout
+          onSwitch={onSwitch}
+          toolbarKeys={alphabeticToolbarKeys}
+          lang={lang}
+        />
+      )}
     </div>
   );
 };

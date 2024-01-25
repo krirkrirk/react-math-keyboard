@@ -4,10 +4,11 @@ import { isMobile } from "react-device-detect";
 import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
-
 import { KeyProps } from "../keyboard/keys/key";
 import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 import { KeyId } from "../keyboard/keys/keyIds";
+import { Langs } from "../keyboard/keys/keyGroup";
+import { KeysPropsMap } from "../keyboard/keys/keys";
 
 export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
@@ -25,7 +26,37 @@ export type MathInputProps = {
   fullWidth?: boolean;
   container?: any;
   scrollType?: "window" | "raw";
+  lang?: Langs;
+  forbidOtherKeyboardKeys?: boolean;
+  registerEmbedObjects?: {
+    id: string;
+    htmlString: string;
+    text: string;
+    latex: string;
+  }[];
 };
+
+const vanillaKeys = [
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "+",
+  "-",
+  ",",
+  "(",
+  ")",
+  "²",
+  "^",
+  "*",
+  "/",
+];
 
 export const MathInput = ({
   numericToolbarKeys,
@@ -42,6 +73,9 @@ export const MathInput = ({
   fullWidth = true,
   allowAlphabeticKeyboard = true,
   scrollType = "window",
+  lang = "en",
+  forbidOtherKeyboardKeys = false,
+  registerEmbedObjects,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -64,12 +98,51 @@ export const MathInput = ({
     timeout.current = setTimeout(eventually, 300);
   };
 
+  useEffect(() => {
+    if (!forbidOtherKeyboardKeys) return;
+    let keys: (string | undefined)[] = [...vanillaKeys];
+    if (numericToolbarKeys)
+      keys.push(
+        ...numericToolbarKeys.map((key) => {
+          return typeof key === "string"
+            ? KeysPropsMap.get(key)!.keypressId
+            : key.keypressId;
+        })
+      );
+    console.log(keys);
+    keys = keys.filter((e) => e !== undefined);
+
+    const exec = (event: KeyboardEvent) => {
+      console.log(event);
+      if (!keys.includes(event.key)) event.preventDefault();
+    };
+    window.addEventListener("keypress", exec);
+    return () => window.removeEventListener("keypress", exec);
+  }, [forbidOtherKeyboardKeys, numericToolbarKeys]);
+
   const idCounter = useRef<number>(0);
   useEffect(() => {
     window.jQuery = $;
     require("mathquill4keyboard/build/mathquill.css");
     require("mathquill4keyboard/build/mathquill");
-    const MQ = window.MathQuill.getInterface(2);
+    let MQ = window.MathQuill.getInterface(2);
+
+    if (registerEmbedObjects) {
+      registerEmbedObjects.forEach((obj) => {
+        MQ.registerEmbed(obj.id, function registerObject() {
+          return {
+            htmlString: obj.htmlString,
+            text: function text() {
+              return obj.text;
+            },
+            latex: function latex() {
+              return obj.latex;
+            },
+          };
+        });
+      });
+    }
+
     const mf = MQ.MathField(spanRef.current, {
       handlers: {
         edit: function () {
@@ -128,13 +201,16 @@ export const MathInput = ({
       } else {
         $("body").css("padding-bottom", `300px`);
       }
-      const delta = window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
+      const delta =
+        window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
       if (delta < 400) {
-        if (scrollType === "window") window.scrollBy({ top: 400 - delta, behavior: "smooth" });
+        if (scrollType === "window")
+          window.scrollBy({ top: 400 - delta, behavior: "smooth" });
         else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
       }
       if (delta > window.innerHeight - 30)
-        if (scrollType === "window") window.scrollBy({ top: -50, behavior: "smooth" });
+        if (scrollType === "window")
+          window.scrollBy({ top: -50, behavior: "smooth" });
         else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
     } else {
       if (rootElementId) {
@@ -171,6 +247,7 @@ export const MathInput = ({
             alphabeticToolbarKeys={alphabeticToolbarKeys}
             onHideKeyboard={onForceHideKeyboard}
             allowAlphabeticKeyboard={allowAlphabeticKeyboard}
+            lang={lang}
           />
         )}
       </MathFieldContext.Provider>

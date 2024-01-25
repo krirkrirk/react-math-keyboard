@@ -33,6 +33,7 @@ export const setKeysProps: KeyProps[] = [
       method: "write",
     },
     groups: ["sets"],
+    keypressId: ";",
   },
   {
     id: "infty",
@@ -77,6 +78,7 @@ export const setKeysProps: KeyProps[] = [
       method: "typedText",
     },
     groups: ["sets"],
+    keypressId: "{",
   },
   {
     id: "rbrace",
@@ -88,6 +90,7 @@ export const setKeysProps: KeyProps[] = [
       method: "typedText",
     },
     groups: ["sets"],
+    keypressId: "}",
   },
   {
     id: "lbracket",
@@ -96,7 +99,7 @@ export const setKeysProps: KeyProps[] = [
 
     mathfieldInstructions: {
       content: "[",
-      method: "typedText",
+      method: "write",
     },
     groups: ["sets"],
   },
@@ -107,7 +110,7 @@ export const setKeysProps: KeyProps[] = [
 
     mathfieldInstructions: {
       content: "]",
-      method: "typedText",
+      method: "write",
     },
     groups: ["sets"],
   },

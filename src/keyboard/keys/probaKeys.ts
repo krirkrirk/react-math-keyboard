@@ -21,6 +21,7 @@ export const probaKeysProps: KeyProps[] = [
       method: "typedText",
     },
     groups: ["proba"],
+    keypressId: "p",
   },
   {
     id: "majProba",
@@ -32,6 +33,7 @@ export const probaKeysProps: KeyProps[] = [
       method: "typedText",
     },
     groups: ["proba"],
+    keypressId: "P",
   },
   {
     id: "binom",

@@ -34,7 +34,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_2___ = _css_loader_dist_runtime_getUrl_js__WEB
 var ___CSS_LOADER_URL_REPLACEMENT_3___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
 var ___CSS_LOADER_URL_REPLACEMENT_4___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_4___, { hash: "#Symbola" });
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/*\n * MathQuill v0.10.4, by Han, Jeanine, and Mary\n * http://mathquill.com | maintainers@mathquill.com\n *\n * This Source Code Form is subject to the terms of the\n * Mozilla Public License, v. 2.0. If a copy of the MPL\n * was not distributed with this file, You can obtain\n * one at http://mozilla.org/MPL/2.0/.\n */\n\n@font-face {\n  font-family: Symbola;\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  src: local(\"Symbola Regular\"), local(\"Symbola\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"woff2\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format(\"woff\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format(\"truetype\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format(\"svg\");\n}\n.mq-editable-field {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor {\n  border-left: 1px solid black;\n  margin-left: -1px;\n  position: relative;\n  z-index: 1;\n  padding: 0;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor.mq-blink {\n  visibility: hidden;\n}\n.mq-editable-field,\n.mq-math-mode .mq-editable-field {\n  border: 1px solid #ccc;\n}\n.mq-editable-field.mq-focused,\n.mq-math-mode .mq-editable-field.mq-focused {\n  border: 1px solid #bbb;\n  outline: 2px solid #bbb;\n  border-radius: 1px;\n}\n.mq-math-mode .mq-editable-field {\n  margin: 1px;\n}\n.mq-editable-field .mq-latex-command-input {\n  color: inherit;\n  font-family: \"Courier New\", monospace;\n  border: 1px solid gray;\n  padding-right: 1px;\n  margin-right: 1px;\n  margin-left: 2px;\n}\n.mq-editable-field .mq-latex-command-input.mq-empty {\n  background: transparent;\n}\n.mq-editable-field .mq-latex-command-input.mq-hasCursor {\n  border-color: ActiveBorder;\n}\n.mq-editable-field.mq-empty:after,\n.mq-editable-field.mq-text-mode:after,\n.mq-math-mode .mq-empty:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-cursor:only-child:after,\n.mq-editable-field .mq-textarea + .mq-cursor:last-child:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-text-mode .mq-cursor:only-child:after {\n  content: \"\";\n}\n.mq-editable-field.mq-text-mode {\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.mq-root-block,\n.mq-math-mode .mq-root-block {\n  display: -moz-inline-box;\n  display: inline-block;\n  width: 100%;\n  padding: 2px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  vertical-align: middle;\n}\n.mq-math-mode {\n  font-variant: normal;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 115%;\n  line-height: 1;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-non-leaf,\n.mq-math-mode .mq-scaled {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode var,\n.mq-math-mode .mq-text-mode,\n.mq-math-mode .mq-nonSymbola {\n  font-family: \"Times New Roman\", Symbola, serif;\n  line-height: 0.9;\n}\n.mq-math-mode * {\n  font-size: inherit;\n  line-height: inherit;\n  margin: 0;\n  padding: 0;\n  border-color: black;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n}\n.mq-math-mode .mq-empty {\n  background: #ccc;\n}\n.mq-math-mode .mq-empty.mq-root-block {\n  background: transparent;\n}\n.mq-math-mode.mq-empty {\n  background: transparent;\n}\n.mq-math-mode .mq-text-mode {\n  display: inline-block;\n  white-space: pre;\n}\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  box-shadow: inset darkgray 0 0.1em 0.2em;\n  padding: 0 0.1em;\n  margin: 0 -0.1em;\n  min-width: 1ex;\n}\n.mq-math-mode .mq-font {\n  font: 1em \"Times New Roman\", Symbola, serif;\n}\n.mq-math-mode .mq-font * {\n  font-family: inherit;\n  font-style: inherit;\n}\n.mq-math-mode b,\n.mq-math-mode b.mq-font {\n  font-weight: bolder;\n}\n.mq-math-mode var,\n.mq-math-mode i,\n.mq-math-mode i.mq-font {\n  font-style: italic;\n}\n.mq-math-mode var.mq-f {\n  margin-right: 0.2em;\n  margin-left: 0.1em;\n}\n.mq-math-mode .mq-roman var.mq-f {\n  margin: 0;\n}\n.mq-math-mode big {\n  font-size: 200%;\n}\n.mq-math-mode .mq-int > big {\n  display: inline-block;\n  -webkit-transform: scaleX(0.7);\n  -moz-transform: scaleX(0.7);\n  -ms-transform: scaleX(0.7);\n  -o-transform: scaleX(0.7);\n  transform: scaleX(0.7);\n  vertical-align: -0.16em;\n}\n.mq-math-mode .mq-int > .mq-supsub {\n  font-size: 80%;\n  vertical-align: -1.1em;\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sup > .mq-sup-inner {\n  vertical-align: 1.3em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sub {\n  margin-left: -0.35em;\n}\n.mq-math-mode .mq-roman {\n  font-style: normal;\n}\n.mq-math-mode .mq-sans-serif {\n  font-family: sans-serif, Symbola, serif;\n}\n.mq-math-mode .mq-monospace {\n  font-family: monospace, Symbola, serif;\n}\n.mq-math-mode .mq-overline {\n  border-top: 1px solid black;\n  margin-top: 1px;\n}\n.mq-math-mode .mq-underline {\n  border-bottom: 1px solid black;\n  margin-bottom: 1px;\n}\n.mq-math-mode .mq-binary-operator {\n  padding: 0 0.2em;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-supsub {\n  text-align: left;\n  font-size: 90%;\n  vertical-align: -0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only {\n  vertical-align: 0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only .mq-sup {\n  display: inline-block;\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-supsub .mq-sup {\n  display: block;\n}\n.mq-math-mode .mq-supsub .mq-sub {\n  display: block;\n  float: left;\n}\n.mq-math-mode .mq-supsub .mq-binary-operator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-supsub .mq-fraction {\n  font-size: 70%;\n}\n.mq-math-mode sup.mq-nthroot {\n  font-size: 80%;\n  vertical-align: 0.8em;\n  margin-right: -0.6em;\n  margin-left: 0.2em;\n  min-width: 0.5em;\n}\n.mq-math-mode .mq-paren {\n  padding: 0 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: center 0.06em;\n  -moz-transform-origin: center 0.06em;\n  -ms-transform-origin: center 0.06em;\n  -o-transform-origin: center 0.06em;\n  transform-origin: center 0.06em;\n}\n.mq-math-mode .mq-paren.mq-ghost {\n  color: silver;\n}\n.mq-math-mode .mq-paren + span {\n  margin-top: 0.1em;\n  margin-bottom: 0.1em;\n}\n.mq-math-mode .mq-array {\n  vertical-align: middle;\n  text-align: center;\n}\n.mq-math-mode .mq-array > span {\n  display: block;\n}\n.mq-math-mode .mq-operator-name {\n  font-family: Symbola, \"Times New Roman\", serif;\n  line-height: 0.9;\n  font-style: normal;\n}\n.mq-math-mode var.mq-operator-name.mq-first {\n  padding-left: 0.2em;\n}\n.mq-math-mode var.mq-operator-name.mq-last,\n.mq-math-mode .mq-supsub.mq-after-operator-name {\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-fraction {\n  font-size: 90%;\n  text-align: center;\n  vertical-align: -0.4em;\n  padding: 0 0.2em;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link {\n  display: -moz-groupbox;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link,\n.mq-math-mode x:default {\n  display: inline-block;\n}\n.mq-math-mode .mq-numerator,\n.mq-math-mode .mq-denominator,\n.mq-math-mode .mq-dot-recurring {\n  display: block;\n}\n.mq-math-mode .mq-numerator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-denominator {\n  border-top: 1px solid;\n  float: right;\n  width: 100%;\n  padding: 0.1em;\n}\n.mq-math-mode .mq-dot-recurring {\n  text-align: center;\n  height: 0.3em;\n}\n.mq-math-mode .mq-sqrt-prefix {\n  padding-top: 0;\n  position: relative;\n  top: 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: top;\n  -moz-transform-origin: top;\n  -ms-transform-origin: top;\n  -o-transform-origin: top;\n  transform-origin: top;\n}\n.mq-math-mode .mq-sqrt-stem {\n  border-top: 1px solid;\n  margin-top: 1px;\n  padding-left: 0.15em;\n  padding-right: 0.2em;\n  margin-right: 0.1em;\n  padding-top: 1px;\n}\n.mq-math-mode .mq-diacritic-above {\n  display: block;\n  text-align: center;\n  line-height: 0.4em;\n}\n.mq-math-mode .mq-diacritic-stem {\n  display: block;\n  text-align: center;\n}\n.mq-math-mode .mq-hat-prefix {\n  display: block;\n  text-align: center;\n  line-height: 0.95em;\n  margin-bottom: -0.7em;\n  transform: scaleX(1.5);\n  -moz-transform: scaleX(1.5);\n  -o-transform: scaleX(1.5);\n  -webkit-transform: scaleX(1.5);\n}\n.mq-math-mode .mq-hat-stem {\n  display: block;\n}\n.mq-math-mode .mq-large-operator {\n  vertical-align: -0.2em;\n  padding: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator big,\n.mq-math-mode .mq-large-operator .mq-to {\n  display: block;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator .mq-to {\n  font-size: 80%;\n}\n.mq-math-mode .mq-large-operator .mq-from {\n  float: right;\n  width: 100%;\n}\n.mq-math-mode,\n.mq-math-mode .mq-editable-field {\n  cursor: text;\n  font-family: Symbola, \"Times New Roman\", serif;\n}\n.mq-math-mode .mq-overarc {\n  border-top: 1px solid black;\n  -webkit-border-top-right-radius: 50% 0.3em;\n  -moz-border-radius-topright: 50% 0.3em;\n  border-top-right-radius: 50% 0.3em;\n  -webkit-border-top-left-radius: 50% 0.3em;\n  -moz-border-radius-topleft: 50% 0.3em;\n  border-top-left-radius: 50% 0.3em;\n  margin-top: 1px;\n  padding-top: 0.15em;\n}\n.mq-math-mode .mq-overarrow {\n  min-width: 0.5em;\n  border-top: 1px solid black;\n  margin-top: 1px;\n  padding-top: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-overarrow:before {\n  display: block;\n  position: relative;\n  top: -0.34em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  text-align: right;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-left:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both {\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty {\n  min-height: 1.23em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty:after {\n  top: -0.34em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:after {\n  display: block;\n  position: relative;\n  top: -2.3em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  visibility: visible;\n  text-align: right;\n}\n.mq-math-mode .mq-selection,\n.mq-editable-field .mq-selection,\n.mq-math-mode .mq-selection .mq-non-leaf,\n.mq-editable-field .mq-selection .mq-non-leaf,\n.mq-math-mode .mq-selection .mq-scaled,\n.mq-editable-field .mq-selection .mq-scaled {\n  background: #b4d5fe !important;\n  background: Highlight !important;\n  color: HighlightText;\n  border-color: HighlightText;\n}\n.mq-math-mode .mq-selection .mq-matrixed,\n.mq-editable-field .mq-selection .mq-matrixed {\n  background: #39f !important;\n}\n.mq-math-mode .mq-selection .mq-matrixed-container,\n.mq-editable-field .mq-selection .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#3399FF') !important;\n}\n.mq-math-mode .mq-selection.mq-blur,\n.mq-editable-field .mq-selection.mq-blur,\n.mq-math-mode .mq-selection.mq-blur .mq-non-leaf,\n.mq-editable-field .mq-selection.mq-blur .mq-non-leaf,\n.mq-math-mode .mq-selection.mq-blur .mq-scaled,\n.mq-editable-field .mq-selection.mq-blur .mq-scaled,\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed {\n  background: #d4d4d4 !important;\n  color: black;\n  border-color: black;\n}\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed-container,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#D4D4D4') !important;\n}\n.mq-editable-field .mq-textarea,\n.mq-math-mode .mq-textarea {\n  position: relative;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n}\n.mq-editable-field .mq-textarea *,\n.mq-math-mode .mq-textarea *,\n.mq-editable-field .mq-selectable,\n.mq-math-mode .mq-selectable {\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n  position: absolute;\n  clip: rect(1em 1em 1em 1em);\n  -webkit-transform: scale(0);\n  -moz-transform: scale(0);\n  -ms-transform: scale(0);\n  -o-transform: scale(0);\n  transform: scale(0);\n  resize: none;\n  width: 1px;\n  height: 1px;\n  box-sizing: content-box;\n}\n.mq-math-mode .mq-matrixed {\n  background: white;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='white');\n  margin-top: -0.1em;\n}\n", "",{"version":3,"sources":["webpack://./node_modules/mathquill4keyboard/build/mathquill.css"],"names":[],"mappings":"AAAA;;;;;;;;EAQE;;AAEF;EACE,oBAAoB;EACpB,4CAA2B;EAC3B;;;;yDAI8C;AAChD;AACA;EACE,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,4BAA4B;EAC5B,iBAAiB;EACjB,kBAAkB;EAClB,UAAU;EACV,UAAU;EACV,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,kBAAkB;AACpB;AACA;;EAEE,sBAAsB;AACxB;AACA;;EAEE,sBAAsB;EACtB,uBAAuB;EACvB,kBAAkB;AACpB;AACA;EACE,WAAW;AACb;AACA;EACE,cAAc;EACd,qCAAqC;EACrC,sBAAsB;EACtB,kBAAkB;EAClB,iBAAiB;EACjB,gBAAgB;AAClB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,0BAA0B;AAC5B;AACA;;;EAGE,kBAAkB;EAClB,YAAY;AACd;AACA;;EAEE,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,WAAW;AACb;AACA;EACE,gBAAgB;EAChB,kBAAkB;AACpB;AACA;;EAEE,wBAAwB;EACxB,qBAAqB;EACrB,WAAW;EACX,YAAY;EACZ,8BAA8B;EAC9B,2BAA2B;EAC3B,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,sBAAsB;AACxB;AACA;EACE,oBAAoB;EACpB,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,cAAc;EACd,wBAAwB;EACxB,qBAAqB;AACvB;AACA;;EAEE,wBAAwB;EACxB,qBAAqB;AACvB;AACA;;;EAGE,8CAA8C;EAC9C,gBAAgB;AAClB;AACA;EACE,kBAAkB;EAClB,oBAAoB;EACpB,SAAS;EACT,UAAU;EACV,mBAAmB;EACnB,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;EACjB,sBAAsB;AACxB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,wCAAwC;EACxC,gBAAgB;EAChB,gBAAgB;EAChB,cAAc;AAChB;AACA;EACE,2CAA2C;AAC7C;AACA;EACE,oBAAoB;EACpB,mBAAmB;AACrB;AACA;;EAEE,mBAAmB;AACrB;AACA;;;EAGE,kBAAkB;AACpB;AACA;EACE,mBAAmB;EACnB,kBAAkB;AACpB;AACA;EACE,SAAS;AACX;AACA;EACE,eAAe;AACjB;AACA;EACE,qBAAqB;EACrB,8BAA8B;EAC9B,2BAA2B;EAC3B,0BAA0B;EAC1B,yBAAyB;EACzB,sBAAsB;EACtB,uBAAuB;AACzB;AACA;EACE,cAAc;EACd,sBAAsB;EACtB,oBAAoB;AACtB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,oBAAoB;AACtB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,uCAAuC;AACzC;AACA;EACE,sCAAsC;AACxC;AACA;EACE,2BAA2B;EAC3B,eAAe;AACjB;AACA;EACE,8BAA8B;EAC9B,kBAAkB;AACpB;AACA;EACE,gBAAgB;EAChB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,gBAAgB;EAChB,cAAc;EACd,sBAAsB;AACxB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,qBAAqB;EACrB,2BAA2B;AAC7B;AACA;EACE,cAAc;AAChB;AACA;EACE,cAAc;EACd,WAAW;AACb;AACA;EACE,gBAAgB;AAClB;AACA;EACE,cAAc;AAChB;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,oBAAoB;EACpB,kBAAkB;EAClB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,mBAAmB;EACnB,uCAAuC;EACvC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;EAClC,+BAA+B;AACjC;AACA;EACE,aAAa;AACf;AACA;EACE,iBAAiB;EACjB,oBAAoB;AACtB;AACA;EACE,sBAAsB;EACtB,kBAAkB;AACpB;AACA;EACE,cAAc;AAChB;AACA;EACE,8CAA8C;EAC9C,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,mBAAmB;AACrB;AACA;;EAEE,oBAAoB;AACtB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,sBAAsB;EACtB,gBAAgB;AAClB;AACA;;;EAGE,sBAAsB;AACxB;AACA;;;;EAIE,qBAAqB;AACvB;AACA;;;EAGE,cAAc;AAChB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,qBAAqB;EACrB,YAAY;EACZ,WAAW;EACX,cAAc;AAChB;AACA;EACE,kBAAkB;EAClB,aAAa;AACf;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,UAAU;EACV,mBAAmB;EACnB,6BAA6B;EAC7B,0BAA0B;EAC1B,yBAAyB;EACzB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,qBAAqB;EACrB,eAAe;EACf,oBAAoB;EACpB,oBAAoB;EACpB,mBAAmB;EACnB,gBAAgB;AAClB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,mBAAmB;EACnB,qBAAqB;EACrB,sBAAsB;EACtB,2BAA2B;EAC3B,yBAAyB;EACzB,8BAA8B;AAChC;AACA;EACE,cAAc;AAChB;AACA;EACE,sBAAsB;EACtB,cAAc;EACd,kBAAkB;AACpB;AACA;;;EAGE,cAAc;AAChB;AACA;;EAEE,cAAc;AAChB;AACA;EACE,YAAY;EACZ,WAAW;AACb;AACA;;EAEE,YAAY;EACZ,8CAA8C;AAChD;AACA;EACE,2BAA2B;EAC3B,0CAA0C;EAC1C,sCAAsC;EACtC,kCAAkC;EAClC,yCAAyC;EACzC,qCAAqC;EACrC,iCAAiC;EACjC,eAAe;EACf,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,2BAA2B;EAC3B,eAAe;EACf,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,YAAY;EACZ,gBAAgB;EAChB,gBAAgB;EAChB,gBAAgB;EAChB,iBAAiB;AACnB;AACA;EACE,0BAA0B;EAC1B,wBAAwB;EACxB,6BAA6B;EAC7B,qBAAqB;EACrB,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,2BAA2B;AAC7B;AACA;EACE,kBAAkB;AACpB;AACA;EACE,YAAY;AACd;AACA;EACE,0BAA0B;EAC1B,wBAAwB;EACxB,6BAA6B;EAC7B,qBAAqB;EACrB,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;;;;;;EAME,8BAA8B;EAC9B,gCAAgC;EAChC,oBAAoB;EACpB,2BAA2B;AAC7B;AACA;;EAEE,2BAA2B;AAC7B;AACA;;EAEE,4EAA4E;AAC9E;AACA;;;;;;;;EAQE,8BAA8B;EAC9B,YAAY;EACZ,mBAAmB;AACrB;AACA;;EAEE,4EAA4E;AAC9E;AACA;;EAEE,kBAAkB;EAClB,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;AACnB;AACA;;;;EAIE,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;EACjB,kBAAkB;EAClB,2BAA2B;EAC3B,2BAA2B;EAC3B,wBAAwB;EACxB,uBAAuB;EACvB,sBAAsB;EACtB,mBAAmB;EACnB,YAAY;EACZ,UAAU;EACV,WAAW;EACX,uBAAuB;AACzB;AACA;EACE,iBAAiB;EACjB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,+DAA+D;EAC/D,kBAAkB;AACpB","sourcesContent":["/*\n * MathQuill v0.10.4, by Han, Jeanine, and Mary\n * http://mathquill.com | maintainers@mathquill.com\n *\n * This Source Code Form is subject to the terms of the\n * Mozilla Public License, v. 2.0. If a copy of the MPL\n * was not distributed with this file, You can obtain\n * one at http://mozilla.org/MPL/2.0/.\n */\n\n@font-face {\n  font-family: Symbola;\n  src: url(fonts/Symbola.eot);\n  src: local(\"Symbola Regular\"), local(\"Symbola\"),\n    url(fonts/Symbola.woff2) format(\"woff2\"),\n    url(fonts/Symbola.woff) format(\"woff\"),\n    url(fonts/Symbola.ttf) format(\"truetype\"),\n    url(fonts/Symbola.svg#Symbola) format(\"svg\");\n}\n.mq-editable-field {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor {\n  border-left: 1px solid black;\n  margin-left: -1px;\n  position: relative;\n  z-index: 1;\n  padding: 0;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor.mq-blink {\n  visibility: hidden;\n}\n.mq-editable-field,\n.mq-math-mode .mq-editable-field {\n  border: 1px solid #ccc;\n}\n.mq-editable-field.mq-focused,\n.mq-math-mode .mq-editable-field.mq-focused {\n  border: 1px solid #bbb;\n  outline: 2px solid #bbb;\n  border-radius: 1px;\n}\n.mq-math-mode .mq-editable-field {\n  margin: 1px;\n}\n.mq-editable-field .mq-latex-command-input {\n  color: inherit;\n  font-family: \"Courier New\", monospace;\n  border: 1px solid gray;\n  padding-right: 1px;\n  margin-right: 1px;\n  margin-left: 2px;\n}\n.mq-editable-field .mq-latex-command-input.mq-empty {\n  background: transparent;\n}\n.mq-editable-field .mq-latex-command-input.mq-hasCursor {\n  border-color: ActiveBorder;\n}\n.mq-editable-field.mq-empty:after,\n.mq-editable-field.mq-text-mode:after,\n.mq-math-mode .mq-empty:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-cursor:only-child:after,\n.mq-editable-field .mq-textarea + .mq-cursor:last-child:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-text-mode .mq-cursor:only-child:after {\n  content: \"\";\n}\n.mq-editable-field.mq-text-mode {\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.mq-root-block,\n.mq-math-mode .mq-root-block {\n  display: -moz-inline-box;\n  display: inline-block;\n  width: 100%;\n  padding: 2px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  vertical-align: middle;\n}\n.mq-math-mode {\n  font-variant: normal;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 115%;\n  line-height: 1;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-non-leaf,\n.mq-math-mode .mq-scaled {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode var,\n.mq-math-mode .mq-text-mode,\n.mq-math-mode .mq-nonSymbola {\n  font-family: \"Times New Roman\", Symbola, serif;\n  line-height: 0.9;\n}\n.mq-math-mode * {\n  font-size: inherit;\n  line-height: inherit;\n  margin: 0;\n  padding: 0;\n  border-color: black;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n}\n.mq-math-mode .mq-empty {\n  background: #ccc;\n}\n.mq-math-mode .mq-empty.mq-root-block {\n  background: transparent;\n}\n.mq-math-mode.mq-empty {\n  background: transparent;\n}\n.mq-math-mode .mq-text-mode {\n  display: inline-block;\n  white-space: pre;\n}\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  box-shadow: inset darkgray 0 0.1em 0.2em;\n  padding: 0 0.1em;\n  margin: 0 -0.1em;\n  min-width: 1ex;\n}\n.mq-math-mode .mq-font {\n  font: 1em \"Times New Roman\", Symbola, serif;\n}\n.mq-math-mode .mq-font * {\n  font-family: inherit;\n  font-style: inherit;\n}\n.mq-math-mode b,\n.mq-math-mode b.mq-font {\n  font-weight: bolder;\n}\n.mq-math-mode var,\n.mq-math-mode i,\n.mq-math-mode i.mq-font {\n  font-style: italic;\n}\n.mq-math-mode var.mq-f {\n  margin-right: 0.2em;\n  margin-left: 0.1em;\n}\n.mq-math-mode .mq-roman var.mq-f {\n  margin: 0;\n}\n.mq-math-mode big {\n  font-size: 200%;\n}\n.mq-math-mode .mq-int > big {\n  display: inline-block;\n  -webkit-transform: scaleX(0.7);\n  -moz-transform: scaleX(0.7);\n  -ms-transform: scaleX(0.7);\n  -o-transform: scaleX(0.7);\n  transform: scaleX(0.7);\n  vertical-align: -0.16em;\n}\n.mq-math-mode .mq-int > .mq-supsub {\n  font-size: 80%;\n  vertical-align: -1.1em;\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sup > .mq-sup-inner {\n  vertical-align: 1.3em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sub {\n  margin-left: -0.35em;\n}\n.mq-math-mode .mq-roman {\n  font-style: normal;\n}\n.mq-math-mode .mq-sans-serif {\n  font-family: sans-serif, Symbola, serif;\n}\n.mq-math-mode .mq-monospace {\n  font-family: monospace, Symbola, serif;\n}\n.mq-math-mode .mq-overline {\n  border-top: 1px solid black;\n  margin-top: 1px;\n}\n.mq-math-mode .mq-underline {\n  border-bottom: 1px solid black;\n  margin-bottom: 1px;\n}\n.mq-math-mode .mq-binary-operator {\n  padding: 0 0.2em;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-supsub {\n  text-align: left;\n  font-size: 90%;\n  vertical-align: -0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only {\n  vertical-align: 0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only .mq-sup {\n  display: inline-block;\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-supsub .mq-sup {\n  display: block;\n}\n.mq-math-mode .mq-supsub .mq-sub {\n  display: block;\n  float: left;\n}\n.mq-math-mode .mq-supsub .mq-binary-operator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-supsub .mq-fraction {\n  font-size: 70%;\n}\n.mq-math-mode sup.mq-nthroot {\n  font-size: 80%;\n  vertical-align: 0.8em;\n  margin-right: -0.6em;\n  margin-left: 0.2em;\n  min-width: 0.5em;\n}\n.mq-math-mode .mq-paren {\n  padding: 0 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: center 0.06em;\n  -moz-transform-origin: center 0.06em;\n  -ms-transform-origin: center 0.06em;\n  -o-transform-origin: center 0.06em;\n  transform-origin: center 0.06em;\n}\n.mq-math-mode .mq-paren.mq-ghost {\n  color: silver;\n}\n.mq-math-mode .mq-paren + span {\n  margin-top: 0.1em;\n  margin-bottom: 0.1em;\n}\n.mq-math-mode .mq-array {\n  vertical-align: middle;\n  text-align: center;\n}\n.mq-math-mode .mq-array > span {\n  display: block;\n}\n.mq-math-mode .mq-operator-name {\n  font-family: Symbola, \"Times New Roman\", serif;\n  line-height: 0.9;\n  font-style: normal;\n}\n.mq-math-mode var.mq-operator-name.mq-first {\n  padding-left: 0.2em;\n}\n.mq-math-mode var.mq-operator-name.mq-last,\n.mq-math-mode .mq-supsub.mq-after-operator-name {\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-fraction {\n  font-size: 90%;\n  text-align: center;\n  vertical-align: -0.4em;\n  padding: 0 0.2em;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link {\n  display: -moz-groupbox;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link,\n.mq-math-mode x:default {\n  display: inline-block;\n}\n.mq-math-mode .mq-numerator,\n.mq-math-mode .mq-denominator,\n.mq-math-mode .mq-dot-recurring {\n  display: block;\n}\n.mq-math-mode .mq-numerator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-denominator {\n  border-top: 1px solid;\n  float: right;\n  width: 100%;\n  padding: 0.1em;\n}\n.mq-math-mode .mq-dot-recurring {\n  text-align: center;\n  height: 0.3em;\n}\n.mq-math-mode .mq-sqrt-prefix {\n  padding-top: 0;\n  position: relative;\n  top: 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: top;\n  -moz-transform-origin: top;\n  -ms-transform-origin: top;\n  -o-transform-origin: top;\n  transform-origin: top;\n}\n.mq-math-mode .mq-sqrt-stem {\n  border-top: 1px solid;\n  margin-top: 1px;\n  padding-left: 0.15em;\n  padding-right: 0.2em;\n  margin-right: 0.1em;\n  padding-top: 1px;\n}\n.mq-math-mode .mq-diacritic-above {\n  display: block;\n  text-align: center;\n  line-height: 0.4em;\n}\n.mq-math-mode .mq-diacritic-stem {\n  display: block;\n  text-align: center;\n}\n.mq-math-mode .mq-hat-prefix {\n  display: block;\n  text-align: center;\n  line-height: 0.95em;\n  margin-bottom: -0.7em;\n  transform: scaleX(1.5);\n  -moz-transform: scaleX(1.5);\n  -o-transform: scaleX(1.5);\n  -webkit-transform: scaleX(1.5);\n}\n.mq-math-mode .mq-hat-stem {\n  display: block;\n}\n.mq-math-mode .mq-large-operator {\n  vertical-align: -0.2em;\n  padding: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator big,\n.mq-math-mode .mq-large-operator .mq-to {\n  display: block;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator .mq-to {\n  font-size: 80%;\n}\n.mq-math-mode .mq-large-operator .mq-from {\n  float: right;\n  width: 100%;\n}\n.mq-math-mode,\n.mq-math-mode .mq-editable-field {\n  cursor: text;\n  font-family: Symbola, \"Times New Roman\", serif;\n}\n.mq-math-mode .mq-overarc {\n  border-top: 1px solid black;\n  -webkit-border-top-right-radius: 50% 0.3em;\n  -moz-border-radius-topright: 50% 0.3em;\n  border-top-right-radius: 50% 0.3em;\n  -webkit-border-top-left-radius: 50% 0.3em;\n  -moz-border-radius-topleft: 50% 0.3em;\n  border-top-left-radius: 50% 0.3em;\n  margin-top: 1px;\n  padding-top: 0.15em;\n}\n.mq-math-mode .mq-overarrow {\n  min-width: 0.5em;\n  border-top: 1px solid black;\n  margin-top: 1px;\n  padding-top: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-overarrow:before {\n  display: block;\n  position: relative;\n  top: -0.34em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  text-align: right;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-left:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both {\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty {\n  min-height: 1.23em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty:after {\n  top: -0.34em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:after {\n  display: block;\n  position: relative;\n  top: -2.3em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  visibility: visible;\n  text-align: right;\n}\n.mq-math-mode .mq-selection,\n.mq-editable-field .mq-selection,\n.mq-math-mode .mq-selection .mq-non-leaf,\n.mq-editable-field .mq-selection .mq-non-leaf,\n.mq-math-mode .mq-selection .mq-scaled,\n.mq-editable-field .mq-selection .mq-scaled {\n  background: #b4d5fe !important;\n  background: Highlight !important;\n  color: HighlightText;\n  border-color: HighlightText;\n}\n.mq-math-mode .mq-selection .mq-matrixed,\n.mq-editable-field .mq-selection .mq-matrixed {\n  background: #39f !important;\n}\n.mq-math-mode .mq-selection .mq-matrixed-container,\n.mq-editable-field .mq-selection .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#3399FF') !important;\n}\n.mq-math-mode .mq-selection.mq-blur,\n.mq-editable-field .mq-selection.mq-blur,\n.mq-math-mode .mq-selection.mq-blur .mq-non-leaf,\n.mq-editable-field .mq-selection.mq-blur .mq-non-leaf,\n.mq-math-mode .mq-selection.mq-blur .mq-scaled,\n.mq-editable-field .mq-selection.mq-blur .mq-scaled,\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed {\n  background: #d4d4d4 !important;\n  color: black;\n  border-color: black;\n}\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed-container,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#D4D4D4') !important;\n}\n.mq-editable-field .mq-textarea,\n.mq-math-mode .mq-textarea {\n  position: relative;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n}\n.mq-editable-field .mq-textarea *,\n.mq-math-mode .mq-textarea *,\n.mq-editable-field .mq-selectable,\n.mq-math-mode .mq-selectable {\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n  position: absolute;\n  clip: rect(1em 1em 1em 1em);\n  -webkit-transform: scale(0);\n  -moz-transform: scale(0);\n  -ms-transform: scale(0);\n  -o-transform: scale(0);\n  transform: scale(0);\n  resize: none;\n  width: 1px;\n  height: 1px;\n  box-sizing: content-box;\n}\n.mq-math-mode .mq-matrixed {\n  background: white;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='white');\n  margin-top: -0.1em;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/*\n * MathQuill v0.10.4, by Han, Jeanine, and Mary\n * http://mathquill.com | maintainers@mathquill.com\n *\n * This Source Code Form is subject to the terms of the\n * Mozilla Public License, v. 2.0. If a copy of the MPL\n * was not distributed with this file, You can obtain\n * one at http://mozilla.org/MPL/2.0/.\n */\n@font-face {\n  font-family: Symbola;\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  src: local(\"Symbola Regular\"), local(\"Symbola\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"woff2\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format(\"woff\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format(\"truetype\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format(\"svg\");\n}\n.mq-editable-field {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor {\n  border-left: 1px solid black;\n  margin-left: -1px;\n  position: relative;\n  z-index: 1;\n  padding: 0;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor.mq-blink {\n  visibility: hidden;\n}\n.mq-editable-field,\n.mq-math-mode .mq-editable-field {\n  border: 1px solid #ccc;\n}\n.mq-editable-field.mq-focused,\n.mq-math-mode .mq-editable-field.mq-focused {\n  border: 1px solid #bbb;\n  outline: 3px solid #bbb;\n  outline-offset: -3px;\n  border-radius: 4px;\n}\n.mq-math-mode .mq-editable-field {\n  margin: 1px;\n}\n.mq-editable-field .mq-latex-command-input {\n  color: inherit;\n  font-family: \"Courier New\", monospace;\n  border: 1px solid gray;\n  padding-right: 1px;\n  margin-right: 1px;\n  margin-left: 2px;\n}\n.mq-editable-field .mq-latex-command-input.mq-empty {\n  background: transparent;\n}\n.mq-editable-field .mq-latex-command-input.mq-hasCursor {\n  border-color: ActiveBorder;\n}\n.mq-editable-field.mq-empty:after,\n.mq-editable-field.mq-text-mode:after,\n.mq-math-mode .mq-empty:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-cursor:only-child:after,\n.mq-editable-field .mq-textarea + .mq-cursor:last-child:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-text-mode .mq-cursor:only-child:after {\n  content: \"\";\n}\n.mq-editable-field.mq-text-mode {\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.mq-root-block,\n.mq-math-mode .mq-root-block {\n  display: -moz-inline-box;\n  display: inline-block;\n  width: 100%;\n  padding: 2px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  white-space: nowrap;\n  /* overflow: hidden; */\n  /* Scroll */\n  overflow: auto;\n  vertical-align: middle;\n  -ms-overflow-style: none; /* for Internet Explorer, Edge */\n  scrollbar-width: none; /* for Firefox */\n}\n.mq-math-mode .mq-root-block::-webkit-scrollbar {\n  display: none; /* for Chrome, Safari, and Opera */\n}\n\n.mq-math-mode {\n  font-variant: normal;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 115%;\n  line-height: 1;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-non-leaf,\n.mq-math-mode .mq-scaled {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode var,\n.mq-math-mode .mq-text-mode,\n.mq-math-mode .mq-nonSymbola {\n  font-family: \"Times New Roman\", Symbola, serif;\n  line-height: 0.9;\n}\n.mq-math-mode * {\n  font-size: inherit;\n  line-height: inherit;\n  margin: 0;\n  padding: 0;\n  border-color: black;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n}\n.mq-math-mode .mq-empty {\n  background: #ccc;\n}\n.mq-math-mode .mq-empty.mq-root-block {\n  background: transparent;\n}\n.mq-math-mode.mq-empty {\n  background: transparent;\n}\n.mq-math-mode .mq-text-mode {\n  display: inline-block;\n  white-space: pre;\n}\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  box-shadow: inset darkgray 0 0.1em 0.2em;\n  min-width: 1ex;\n  padding: 0.3em 0.2em;\n  margin: -0.3em 0.1em;\n}\n.mq-math-mode .mq-font {\n  font: 1em \"Times New Roman\", Symbola, serif;\n}\n.mq-math-mode .mq-font * {\n  font-family: inherit;\n  font-style: inherit;\n}\n.mq-math-mode b,\n.mq-math-mode b.mq-font {\n  font-weight: bolder;\n}\n.mq-math-mode var,\n.mq-math-mode i,\n.mq-math-mode i.mq-font {\n  font-style: italic;\n}\n.mq-math-mode var.mq-f {\n  margin-right: 0.2em;\n  margin-left: 0.1em;\n}\n.mq-math-mode .mq-roman var.mq-f {\n  margin: 0;\n}\n.mq-math-mode big {\n  font-size: 200%;\n}\n.mq-math-mode .mq-int > big {\n  display: inline-block;\n  -webkit-transform: scaleX(0.7);\n  -moz-transform: scaleX(0.7);\n  -ms-transform: scaleX(0.7);\n  -o-transform: scaleX(0.7);\n  transform: scaleX(0.7);\n  vertical-align: -0.16em;\n}\n.mq-math-mode .mq-int > .mq-supsub {\n  font-size: 80%;\n  vertical-align: -1.1em;\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sup > .mq-sup-inner {\n  vertical-align: 1.3em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sub {\n  margin-left: -0.35em;\n}\n.mq-math-mode .mq-roman {\n  font-style: normal;\n}\n.mq-math-mode .mq-sans-serif {\n  font-family: sans-serif, Symbola, serif;\n}\n.mq-math-mode .mq-monospace {\n  font-family: monospace, Symbola, serif;\n}\n.mq-math-mode .mq-overline {\n  border-top: 1px solid black;\n  margin-top: 1px;\n}\n.mq-math-mode .mq-underline {\n  border-bottom: 1px solid black;\n  margin-bottom: 1px;\n}\n.mq-math-mode .mq-binary-operator {\n  padding: 0 0.2em;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-supsub {\n  text-align: left;\n  font-size: 90%;\n  vertical-align: -0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only {\n  vertical-align: 0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only .mq-sup {\n  display: inline-block;\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-supsub .mq-sup {\n  display: block;\n}\n.mq-math-mode .mq-supsub .mq-sub {\n  display: block;\n  float: left;\n}\n.mq-math-mode .mq-supsub .mq-binary-operator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-supsub .mq-fraction {\n  font-size: 70%;\n}\n.mq-math-mode sup.mq-nthroot {\n  font-size: 80%;\n  vertical-align: 0.8em;\n  margin-right: -0.6em;\n  margin-left: 0.2em;\n  min-width: 0.5em;\n}\n.mq-math-mode .mq-paren {\n  padding: 0 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: center 0.06em;\n  -moz-transform-origin: center 0.06em;\n  -ms-transform-origin: center 0.06em;\n  -o-transform-origin: center 0.06em;\n  transform-origin: center 0.06em;\n}\n.mq-math-mode .mq-paren.mq-ghost {\n  color: silver;\n}\n.mq-math-mode .mq-paren + span {\n  margin-top: 0.1em;\n  margin-bottom: 0.1em;\n}\n.mq-math-mode .mq-array {\n  vertical-align: middle;\n  text-align: center;\n}\n.mq-math-mode .mq-array > span {\n  display: block;\n}\n.mq-math-mode .mq-operator-name {\n  font-family: Symbola, \"Times New Roman\", serif;\n  line-height: 0.9;\n  font-style: normal;\n}\n.mq-math-mode var.mq-operator-name.mq-first {\n  padding-left: 0.2em;\n}\n.mq-math-mode var.mq-operator-name.mq-last,\n.mq-math-mode .mq-supsub.mq-after-operator-name {\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-fraction {\n  font-size: 90%;\n  text-align: center;\n  vertical-align: -0.4em;\n  padding: 0 0.2em;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link {\n  display: -moz-groupbox;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link,\n.mq-math-mode x:default {\n  display: inline-block;\n}\n.mq-math-mode .mq-numerator,\n.mq-math-mode .mq-denominator,\n.mq-math-mode .mq-dot-recurring {\n  display: block;\n}\n.mq-math-mode .mq-numerator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-denominator {\n  border-top: 1px solid;\n  float: right;\n  width: 100%;\n  padding: 0.1em;\n}\n.mq-math-mode .mq-dot-recurring {\n  text-align: center;\n  height: 0.3em;\n}\n.mq-math-mode .mq-sqrt-prefix {\n  padding-top: 0;\n  position: relative;\n  top: 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: top;\n  -moz-transform-origin: top;\n  -ms-transform-origin: top;\n  -o-transform-origin: top;\n  transform-origin: top;\n}\n.mq-math-mode .mq-sqrt-stem {\n  border-top: 1px solid;\n  margin-top: 1px;\n  padding-left: 0.15em;\n  padding-right: 0.2em;\n  margin-right: 0.1em;\n  padding-top: 1px;\n}\n.mq-math-mode .mq-diacritic-above {\n  display: block;\n  text-align: center;\n  line-height: 0.4em;\n}\n.mq-math-mode .mq-diacritic-stem {\n  display: block;\n  text-align: center;\n}\n.mq-math-mode .mq-hat-prefix {\n  display: block;\n  text-align: center;\n  line-height: 0.95em;\n  margin-bottom: -0.7em;\n  transform: scaleX(1.5);\n  -moz-transform: scaleX(1.5);\n  -o-transform: scaleX(1.5);\n  -webkit-transform: scaleX(1.5);\n}\n.mq-math-mode .mq-hat-stem {\n  display: block;\n}\n.mq-math-mode .mq-large-operator {\n  vertical-align: -0.2em;\n  padding: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator big,\n.mq-math-mode .mq-large-operator .mq-to {\n  display: block;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator .mq-to {\n  font-size: 80%;\n}\n.mq-math-mode .mq-large-operator .mq-from {\n  float: right;\n  width: 100%;\n}\n.mq-math-mode,\n.mq-math-mode .mq-editable-field {\n  cursor: text;\n  font-family: Symbola, \"Times New Roman\", serif;\n}\n.mq-math-mode .mq-overarc {\n  border-top: 1px solid black;\n  -webkit-border-top-right-radius: 50% 0.3em;\n  -moz-border-radius-topright: 50% 0.3em;\n  border-top-right-radius: 50% 0.3em;\n  -webkit-border-top-left-radius: 50% 0.3em;\n  -moz-border-radius-topleft: 50% 0.3em;\n  border-top-left-radius: 50% 0.3em;\n  margin-top: 1px;\n  padding-top: 0.15em;\n}\n.mq-math-mode .mq-overarrow {\n  min-width: 0.5em;\n  border-top: 1px solid black;\n  margin-top: 1px;\n  padding-top: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-overarrow:before {\n  display: block;\n  position: relative;\n  top: -0.34em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  text-align: right;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-left:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both {\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty {\n  min-height: 1.23em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty:after {\n  top: -0.34em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:after {\n  display: block;\n  position: relative;\n  top: -2.3em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  visibility: visible;\n  text-align: right;\n}\n.mq-math-mode .mq-selection,\n.mq-editable-field .mq-selection,\n.mq-math-mode .mq-selection .mq-non-leaf,\n.mq-editable-field .mq-selection .mq-non-leaf,\n.mq-math-mode .mq-selection .mq-scaled,\n.mq-editable-field .mq-selection .mq-scaled {\n  background: #b4d5fe !important;\n  background: Highlight !important;\n  color: HighlightText;\n  border-color: HighlightText;\n}\n.mq-math-mode .mq-selection .mq-matrixed,\n.mq-editable-field .mq-selection .mq-matrixed {\n  background: #39f !important;\n}\n.mq-math-mode .mq-selection .mq-matrixed-container,\n.mq-editable-field .mq-selection .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#3399FF') !important;\n}\n.mq-math-mode .mq-selection.mq-blur,\n.mq-editable-field .mq-selection.mq-blur,\n.mq-math-mode .mq-selection.mq-blur .mq-non-leaf,\n.mq-editable-field .mq-selection.mq-blur .mq-non-leaf,\n.mq-math-mode .mq-selection.mq-blur .mq-scaled,\n.mq-editable-field .mq-selection.mq-blur .mq-scaled,\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed {\n  background: #d4d4d4 !important;\n  color: black;\n  border-color: black;\n}\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed-container,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#D4D4D4') !important;\n}\n.mq-editable-field .mq-textarea,\n.mq-math-mode .mq-textarea {\n  position: relative;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n}\n.mq-editable-field .mq-textarea *,\n.mq-math-mode .mq-textarea *,\n.mq-editable-field .mq-selectable,\n.mq-math-mode .mq-selectable {\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n  position: absolute;\n  clip: rect(1em 1em 1em 1em);\n  -webkit-transform: scale(0);\n  -moz-transform: scale(0);\n  -ms-transform: scale(0);\n  -o-transform: scale(0);\n  transform: scale(0);\n  resize: none;\n  width: 1px;\n  height: 1px;\n  box-sizing: content-box;\n}\n.mq-math-mode .mq-matrixed {\n  background: white;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='white');\n  margin-top: -0.1em;\n}\n", "",{"version":3,"sources":["webpack://./node_modules/mathquill4keyboard/build/mathquill.css"],"names":[],"mappings":"AAAA;;;;;;;;EAQE;AACF;EACE,oBAAoB;EACpB,4CAA2B;EAC3B;;;;yDAI8C;AAChD;AACA;EACE,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,4BAA4B;EAC5B,iBAAiB;EACjB,kBAAkB;EAClB,UAAU;EACV,UAAU;EACV,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,kBAAkB;AACpB;AACA;;EAEE,sBAAsB;AACxB;AACA;;EAEE,sBAAsB;EACtB,uBAAuB;EACvB,oBAAoB;EACpB,kBAAkB;AACpB;AACA;EACE,WAAW;AACb;AACA;EACE,cAAc;EACd,qCAAqC;EACrC,sBAAsB;EACtB,kBAAkB;EAClB,iBAAiB;EACjB,gBAAgB;AAClB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,0BAA0B;AAC5B;AACA;;;EAGE,kBAAkB;EAClB,YAAY;AACd;AACA;;EAEE,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,WAAW;AACb;AACA;EACE,gBAAgB;EAChB,kBAAkB;AACpB;AACA;;EAEE,wBAAwB;EACxB,qBAAqB;EACrB,WAAW;EACX,YAAY;EACZ,8BAA8B;EAC9B,2BAA2B;EAC3B,sBAAsB;EACtB,mBAAmB;EACnB,sBAAsB;EACtB,WAAW;EACX,cAAc;EACd,sBAAsB;EACtB,wBAAwB,EAAE,gCAAgC;EAC1D,qBAAqB,EAAE,gBAAgB;AACzC;AACA;EACE,aAAa,EAAE,kCAAkC;AACnD;;AAEA;EACE,oBAAoB;EACpB,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,cAAc;EACd,wBAAwB;EACxB,qBAAqB;AACvB;AACA;;EAEE,wBAAwB;EACxB,qBAAqB;AACvB;AACA;;;EAGE,8CAA8C;EAC9C,gBAAgB;AAClB;AACA;EACE,kBAAkB;EAClB,oBAAoB;EACpB,SAAS;EACT,UAAU;EACV,mBAAmB;EACnB,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;EACjB,sBAAsB;AACxB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,wCAAwC;EACxC,cAAc;EACd,oBAAoB;EACpB,oBAAoB;AACtB;AACA;EACE,2CAA2C;AAC7C;AACA;EACE,oBAAoB;EACpB,mBAAmB;AACrB;AACA;;EAEE,mBAAmB;AACrB;AACA;;;EAGE,kBAAkB;AACpB;AACA;EACE,mBAAmB;EACnB,kBAAkB;AACpB;AACA;EACE,SAAS;AACX;AACA;EACE,eAAe;AACjB;AACA;EACE,qBAAqB;EACrB,8BAA8B;EAC9B,2BAA2B;EAC3B,0BAA0B;EAC1B,yBAAyB;EACzB,sBAAsB;EACtB,uBAAuB;AACzB;AACA;EACE,cAAc;EACd,sBAAsB;EACtB,oBAAoB;AACtB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,oBAAoB;AACtB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,uCAAuC;AACzC;AACA;EACE,sCAAsC;AACxC;AACA;EACE,2BAA2B;EAC3B,eAAe;AACjB;AACA;EACE,8BAA8B;EAC9B,kBAAkB;AACpB;AACA;EACE,gBAAgB;EAChB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,gBAAgB;EAChB,cAAc;EACd,sBAAsB;AACxB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,qBAAqB;EACrB,2BAA2B;AAC7B;AACA;EACE,cAAc;AAChB;AACA;EACE,cAAc;EACd,WAAW;AACb;AACA;EACE,gBAAgB;AAClB;AACA;EACE,cAAc;AAChB;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,oBAAoB;EACpB,kBAAkB;EAClB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,mBAAmB;EACnB,uCAAuC;EACvC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;EAClC,+BAA+B;AACjC;AACA;EACE,aAAa;AACf;AACA;EACE,iBAAiB;EACjB,oBAAoB;AACtB;AACA;EACE,sBAAsB;EACtB,kBAAkB;AACpB;AACA;EACE,cAAc;AAChB;AACA;EACE,8CAA8C;EAC9C,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,mBAAmB;AACrB;AACA;;EAEE,oBAAoB;AACtB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,sBAAsB;EACtB,gBAAgB;AAClB;AACA;;;EAGE,sBAAsB;AACxB;AACA;;;;EAIE,qBAAqB;AACvB;AACA;;;EAGE,cAAc;AAChB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,qBAAqB;EACrB,YAAY;EACZ,WAAW;EACX,cAAc;AAChB;AACA;EACE,kBAAkB;EAClB,aAAa;AACf;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,UAAU;EACV,mBAAmB;EACnB,6BAA6B;EAC7B,0BAA0B;EAC1B,yBAAyB;EACzB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,qBAAqB;EACrB,eAAe;EACf,oBAAoB;EACpB,oBAAoB;EACpB,mBAAmB;EACnB,gBAAgB;AAClB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,mBAAmB;EACnB,qBAAqB;EACrB,sBAAsB;EACtB,2BAA2B;EAC3B,yBAAyB;EACzB,8BAA8B;AAChC;AACA;EACE,cAAc;AAChB;AACA;EACE,sBAAsB;EACtB,cAAc;EACd,kBAAkB;AACpB;AACA;;;EAGE,cAAc;AAChB;AACA;;EAEE,cAAc;AAChB;AACA;EACE,YAAY;EACZ,WAAW;AACb;AACA;;EAEE,YAAY;EACZ,8CAA8C;AAChD;AACA;EACE,2BAA2B;EAC3B,0CAA0C;EAC1C,sCAAsC;EACtC,kCAAkC;EAClC,yCAAyC;EACzC,qCAAqC;EACrC,iCAAiC;EACjC,eAAe;EACf,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,2BAA2B;EAC3B,eAAe;EACf,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,YAAY;EACZ,gBAAgB;EAChB,gBAAgB;EAChB,gBAAgB;EAChB,iBAAiB;AACnB;AACA;EACE,0BAA0B;EAC1B,wBAAwB;EACxB,6BAA6B;EAC7B,qBAAqB;EACrB,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,2BAA2B;AAC7B;AACA;EACE,kBAAkB;AACpB;AACA;EACE,YAAY;AACd;AACA;EACE,0BAA0B;EAC1B,wBAAwB;EACxB,6BAA6B;EAC7B,qBAAqB;EACrB,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,WAAW;EACX,gBAAgB;EAChB,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;;;;;;EAME,8BAA8B;EAC9B,gCAAgC;EAChC,oBAAoB;EACpB,2BAA2B;AAC7B;AACA;;EAEE,2BAA2B;AAC7B;AACA;;EAEE,4EAA4E;AAC9E;AACA;;;;;;;;EAQE,8BAA8B;EAC9B,YAAY;EACZ,mBAAmB;AACrB;AACA;;EAEE,4EAA4E;AAC9E;AACA;;EAEE,kBAAkB;EAClB,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;AACnB;AACA;;;;EAIE,yBAAyB;EACzB,sBAAsB;EACtB,iBAAiB;EACjB,kBAAkB;EAClB,2BAA2B;EAC3B,2BAA2B;EAC3B,wBAAwB;EACxB,uBAAuB;EACvB,sBAAsB;EACtB,mBAAmB;EACnB,YAAY;EACZ,UAAU;EACV,WAAW;EACX,uBAAuB;AACzB;AACA;EACE,iBAAiB;EACjB,wBAAwB;EACxB,qBAAqB;AACvB;AACA;EACE,+DAA+D;EAC/D,kBAAkB;AACpB","sourcesContent":["/*\n * MathQuill v0.10.4, by Han, Jeanine, and Mary\n * http://mathquill.com | maintainers@mathquill.com\n *\n * This Source Code Form is subject to the terms of the\n * Mozilla Public License, v. 2.0. If a copy of the MPL\n * was not distributed with this file, You can obtain\n * one at http://mozilla.org/MPL/2.0/.\n */\n@font-face {\n  font-family: Symbola;\n  src: url(fonts/Symbola.eot);\n  src: local(\"Symbola Regular\"), local(\"Symbola\"),\n    url(fonts/Symbola.woff2) format(\"woff2\"),\n    url(fonts/Symbola.woff) format(\"woff\"),\n    url(fonts/Symbola.ttf) format(\"truetype\"),\n    url(fonts/Symbola.svg#Symbola) format(\"svg\");\n}\n.mq-editable-field {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor {\n  border-left: 1px solid black;\n  margin-left: -1px;\n  position: relative;\n  z-index: 1;\n  padding: 0;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-editable-field .mq-cursor.mq-blink {\n  visibility: hidden;\n}\n.mq-editable-field,\n.mq-math-mode .mq-editable-field {\n  border: 1px solid #ccc;\n}\n.mq-editable-field.mq-focused,\n.mq-math-mode .mq-editable-field.mq-focused {\n  border: 1px solid #bbb;\n  outline: 3px solid #bbb;\n  outline-offset: -3px;\n  border-radius: 4px;\n}\n.mq-math-mode .mq-editable-field {\n  margin: 1px;\n}\n.mq-editable-field .mq-latex-command-input {\n  color: inherit;\n  font-family: \"Courier New\", monospace;\n  border: 1px solid gray;\n  padding-right: 1px;\n  margin-right: 1px;\n  margin-left: 2px;\n}\n.mq-editable-field .mq-latex-command-input.mq-empty {\n  background: transparent;\n}\n.mq-editable-field .mq-latex-command-input.mq-hasCursor {\n  border-color: ActiveBorder;\n}\n.mq-editable-field.mq-empty:after,\n.mq-editable-field.mq-text-mode:after,\n.mq-math-mode .mq-empty:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-cursor:only-child:after,\n.mq-editable-field .mq-textarea + .mq-cursor:last-child:after {\n  visibility: hidden;\n  content: \"c\";\n}\n.mq-editable-field .mq-text-mode .mq-cursor:only-child:after {\n  content: \"\";\n}\n.mq-editable-field.mq-text-mode {\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.mq-root-block,\n.mq-math-mode .mq-root-block {\n  display: -moz-inline-box;\n  display: inline-block;\n  width: 100%;\n  padding: 2px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  white-space: nowrap;\n  /* overflow: hidden; */\n  /* Scroll */\n  overflow: auto;\n  vertical-align: middle;\n  -ms-overflow-style: none; /* for Internet Explorer, Edge */\n  scrollbar-width: none; /* for Firefox */\n}\n.mq-math-mode .mq-root-block::-webkit-scrollbar {\n  display: none; /* for Chrome, Safari, and Opera */\n}\n\n.mq-math-mode {\n  font-variant: normal;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 115%;\n  line-height: 1;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-non-leaf,\n.mq-math-mode .mq-scaled {\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode var,\n.mq-math-mode .mq-text-mode,\n.mq-math-mode .mq-nonSymbola {\n  font-family: \"Times New Roman\", Symbola, serif;\n  line-height: 0.9;\n}\n.mq-math-mode * {\n  font-size: inherit;\n  line-height: inherit;\n  margin: 0;\n  padding: 0;\n  border-color: black;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n}\n.mq-math-mode .mq-empty {\n  background: #ccc;\n}\n.mq-math-mode .mq-empty.mq-root-block {\n  background: transparent;\n}\n.mq-math-mode.mq-empty {\n  background: transparent;\n}\n.mq-math-mode .mq-text-mode {\n  display: inline-block;\n  white-space: pre;\n}\n.mq-math-mode .mq-text-mode.mq-hasCursor {\n  box-shadow: inset darkgray 0 0.1em 0.2em;\n  min-width: 1ex;\n  padding: 0.3em 0.2em;\n  margin: -0.3em 0.1em;\n}\n.mq-math-mode .mq-font {\n  font: 1em \"Times New Roman\", Symbola, serif;\n}\n.mq-math-mode .mq-font * {\n  font-family: inherit;\n  font-style: inherit;\n}\n.mq-math-mode b,\n.mq-math-mode b.mq-font {\n  font-weight: bolder;\n}\n.mq-math-mode var,\n.mq-math-mode i,\n.mq-math-mode i.mq-font {\n  font-style: italic;\n}\n.mq-math-mode var.mq-f {\n  margin-right: 0.2em;\n  margin-left: 0.1em;\n}\n.mq-math-mode .mq-roman var.mq-f {\n  margin: 0;\n}\n.mq-math-mode big {\n  font-size: 200%;\n}\n.mq-math-mode .mq-int > big {\n  display: inline-block;\n  -webkit-transform: scaleX(0.7);\n  -moz-transform: scaleX(0.7);\n  -ms-transform: scaleX(0.7);\n  -o-transform: scaleX(0.7);\n  transform: scaleX(0.7);\n  vertical-align: -0.16em;\n}\n.mq-math-mode .mq-int > .mq-supsub {\n  font-size: 80%;\n  vertical-align: -1.1em;\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sup > .mq-sup-inner {\n  vertical-align: 1.3em;\n}\n.mq-math-mode .mq-int > .mq-supsub > .mq-sub {\n  margin-left: -0.35em;\n}\n.mq-math-mode .mq-roman {\n  font-style: normal;\n}\n.mq-math-mode .mq-sans-serif {\n  font-family: sans-serif, Symbola, serif;\n}\n.mq-math-mode .mq-monospace {\n  font-family: monospace, Symbola, serif;\n}\n.mq-math-mode .mq-overline {\n  border-top: 1px solid black;\n  margin-top: 1px;\n}\n.mq-math-mode .mq-underline {\n  border-bottom: 1px solid black;\n  margin-bottom: 1px;\n}\n.mq-math-mode .mq-binary-operator {\n  padding: 0 0.2em;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-supsub {\n  text-align: left;\n  font-size: 90%;\n  vertical-align: -0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only {\n  vertical-align: 0.5em;\n}\n.mq-math-mode .mq-supsub.mq-sup-only .mq-sup {\n  display: inline-block;\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-supsub .mq-sup {\n  display: block;\n}\n.mq-math-mode .mq-supsub .mq-sub {\n  display: block;\n  float: left;\n}\n.mq-math-mode .mq-supsub .mq-binary-operator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-supsub .mq-fraction {\n  font-size: 70%;\n}\n.mq-math-mode sup.mq-nthroot {\n  font-size: 80%;\n  vertical-align: 0.8em;\n  margin-right: -0.6em;\n  margin-left: 0.2em;\n  min-width: 0.5em;\n}\n.mq-math-mode .mq-paren {\n  padding: 0 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: center 0.06em;\n  -moz-transform-origin: center 0.06em;\n  -ms-transform-origin: center 0.06em;\n  -o-transform-origin: center 0.06em;\n  transform-origin: center 0.06em;\n}\n.mq-math-mode .mq-paren.mq-ghost {\n  color: silver;\n}\n.mq-math-mode .mq-paren + span {\n  margin-top: 0.1em;\n  margin-bottom: 0.1em;\n}\n.mq-math-mode .mq-array {\n  vertical-align: middle;\n  text-align: center;\n}\n.mq-math-mode .mq-array > span {\n  display: block;\n}\n.mq-math-mode .mq-operator-name {\n  font-family: Symbola, \"Times New Roman\", serif;\n  line-height: 0.9;\n  font-style: normal;\n}\n.mq-math-mode var.mq-operator-name.mq-first {\n  padding-left: 0.2em;\n}\n.mq-math-mode var.mq-operator-name.mq-last,\n.mq-math-mode .mq-supsub.mq-after-operator-name {\n  padding-right: 0.2em;\n}\n.mq-math-mode .mq-fraction {\n  font-size: 90%;\n  text-align: center;\n  vertical-align: -0.4em;\n  padding: 0 0.2em;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link {\n  display: -moz-groupbox;\n}\n.mq-math-mode .mq-fraction,\n.mq-math-mode .mq-large-operator,\n.mq-math-mode x:-moz-any-link,\n.mq-math-mode x:default {\n  display: inline-block;\n}\n.mq-math-mode .mq-numerator,\n.mq-math-mode .mq-denominator,\n.mq-math-mode .mq-dot-recurring {\n  display: block;\n}\n.mq-math-mode .mq-numerator {\n  padding: 0 0.1em;\n}\n.mq-math-mode .mq-denominator {\n  border-top: 1px solid;\n  float: right;\n  width: 100%;\n  padding: 0.1em;\n}\n.mq-math-mode .mq-dot-recurring {\n  text-align: center;\n  height: 0.3em;\n}\n.mq-math-mode .mq-sqrt-prefix {\n  padding-top: 0;\n  position: relative;\n  top: 0.1em;\n  vertical-align: top;\n  -webkit-transform-origin: top;\n  -moz-transform-origin: top;\n  -ms-transform-origin: top;\n  -o-transform-origin: top;\n  transform-origin: top;\n}\n.mq-math-mode .mq-sqrt-stem {\n  border-top: 1px solid;\n  margin-top: 1px;\n  padding-left: 0.15em;\n  padding-right: 0.2em;\n  margin-right: 0.1em;\n  padding-top: 1px;\n}\n.mq-math-mode .mq-diacritic-above {\n  display: block;\n  text-align: center;\n  line-height: 0.4em;\n}\n.mq-math-mode .mq-diacritic-stem {\n  display: block;\n  text-align: center;\n}\n.mq-math-mode .mq-hat-prefix {\n  display: block;\n  text-align: center;\n  line-height: 0.95em;\n  margin-bottom: -0.7em;\n  transform: scaleX(1.5);\n  -moz-transform: scaleX(1.5);\n  -o-transform: scaleX(1.5);\n  -webkit-transform: scaleX(1.5);\n}\n.mq-math-mode .mq-hat-stem {\n  display: block;\n}\n.mq-math-mode .mq-large-operator {\n  vertical-align: -0.2em;\n  padding: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator big,\n.mq-math-mode .mq-large-operator .mq-to {\n  display: block;\n}\n.mq-math-mode .mq-large-operator .mq-from,\n.mq-math-mode .mq-large-operator .mq-to {\n  font-size: 80%;\n}\n.mq-math-mode .mq-large-operator .mq-from {\n  float: right;\n  width: 100%;\n}\n.mq-math-mode,\n.mq-math-mode .mq-editable-field {\n  cursor: text;\n  font-family: Symbola, \"Times New Roman\", serif;\n}\n.mq-math-mode .mq-overarc {\n  border-top: 1px solid black;\n  -webkit-border-top-right-radius: 50% 0.3em;\n  -moz-border-radius-topright: 50% 0.3em;\n  border-top-right-radius: 50% 0.3em;\n  -webkit-border-top-left-radius: 50% 0.3em;\n  -moz-border-radius-topleft: 50% 0.3em;\n  border-top-left-radius: 50% 0.3em;\n  margin-top: 1px;\n  padding-top: 0.15em;\n}\n.mq-math-mode .mq-overarrow {\n  min-width: 0.5em;\n  border-top: 1px solid black;\n  margin-top: 1px;\n  padding-top: 0.2em;\n  text-align: center;\n}\n.mq-math-mode .mq-overarrow:before {\n  display: block;\n  position: relative;\n  top: -0.34em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  text-align: right;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-left:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both {\n  vertical-align: text-bottom;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty {\n  min-height: 1.23em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both.mq-empty:after {\n  top: -0.34em;\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:before {\n  -moz-transform: scaleX(-1);\n  -o-transform: scaleX(-1);\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n.mq-math-mode .mq-overarrow.mq-arrow-both:after {\n  display: block;\n  position: relative;\n  top: -2.3em;\n  font-size: 0.5em;\n  line-height: 0em;\n  content: \"\\27A4\";\n  visibility: visible;\n  text-align: right;\n}\n.mq-math-mode .mq-selection,\n.mq-editable-field .mq-selection,\n.mq-math-mode .mq-selection .mq-non-leaf,\n.mq-editable-field .mq-selection .mq-non-leaf,\n.mq-math-mode .mq-selection .mq-scaled,\n.mq-editable-field .mq-selection .mq-scaled {\n  background: #b4d5fe !important;\n  background: Highlight !important;\n  color: HighlightText;\n  border-color: HighlightText;\n}\n.mq-math-mode .mq-selection .mq-matrixed,\n.mq-editable-field .mq-selection .mq-matrixed {\n  background: #39f !important;\n}\n.mq-math-mode .mq-selection .mq-matrixed-container,\n.mq-editable-field .mq-selection .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#3399FF') !important;\n}\n.mq-math-mode .mq-selection.mq-blur,\n.mq-editable-field .mq-selection.mq-blur,\n.mq-math-mode .mq-selection.mq-blur .mq-non-leaf,\n.mq-editable-field .mq-selection.mq-blur .mq-non-leaf,\n.mq-math-mode .mq-selection.mq-blur .mq-scaled,\n.mq-editable-field .mq-selection.mq-blur .mq-scaled,\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed {\n  background: #d4d4d4 !important;\n  color: black;\n  border-color: black;\n}\n.mq-math-mode .mq-selection.mq-blur .mq-matrixed-container,\n.mq-editable-field .mq-selection.mq-blur .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='#D4D4D4') !important;\n}\n.mq-editable-field .mq-textarea,\n.mq-math-mode .mq-textarea {\n  position: relative;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n}\n.mq-editable-field .mq-textarea *,\n.mq-math-mode .mq-textarea *,\n.mq-editable-field .mq-selectable,\n.mq-math-mode .mq-selectable {\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  user-select: text;\n  position: absolute;\n  clip: rect(1em 1em 1em 1em);\n  -webkit-transform: scale(0);\n  -moz-transform: scale(0);\n  -ms-transform: scale(0);\n  -o-transform: scale(0);\n  transform: scale(0);\n  resize: none;\n  width: 1px;\n  height: 1px;\n  box-sizing: content-box;\n}\n.mq-math-mode .mq-matrixed {\n  background: white;\n  display: -moz-inline-box;\n  display: inline-block;\n}\n.mq-math-mode .mq-matrixed-container {\n  filter: progid:DXImageTransform.Microsoft.Chroma(color='white');\n  margin-top: -0.1em;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53004,7 +53004,7 @@ const Example = ({}) => {
     const onClick2 = () => {
         clear2.current?.();
     };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "1.4rem" }, children: "Input with all the keyboard keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue, setMathfieldRef: (mathfield) => (mf.current = mathfield) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: () => clear(mf.current), children: "Clear" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { style: { overflow: "auto" }, children: ["Latex produced : ", value] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "1.4rem" }, children: "You can hide the toolbar :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { numericToolbarKeys: [], setValue: setValue2, setClearRef: (f) => (clear2.current = f) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: onClick2, children: "Clear" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["Latex produced : ", value2] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "1.4rem" }, children: "Or you can provide the keys of your choice, even custom ones :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue3, numericToolbarKeys: [
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "1.4rem" }, children: "Input with all the keyboard keys :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue, setMathfieldRef: (mathfield) => (mf.current = mathfield), lang: "en" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: () => clear(mf.current), children: "Clear" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { style: { overflow: "auto" }, children: ["Latex produced : ", value] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "1.4rem" }, children: "You can hide the toolbar :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { numericToolbarKeys: [], setValue: setValue2, setClearRef: (f) => (clear2.current = f) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { onClick: onClick2, children: "Clear" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["Latex produced : ", value2] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "0rem 0.5rem 2rem" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { style: { paddingBottom: "1.5rem", fontSize: "1.4rem" }, children: "Or you can provide the keys of your choice, even custom ones :" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_mathInput_mathInput__WEBPACK_IMPORTED_MODULE_2__.MathInput, { setValue: setValue3, numericToolbarKeys: [
                                 "euro",
                                 {
                                     id: "custom",
@@ -53053,7 +53053,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, }) => {
+const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, }) => {
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_mathInput_mathfieldContext__WEBPACK_IMPORTED_MODULE_3__.MathFieldContext);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         jquery__WEBPACK_IMPORTED_MODULE_2___default()(`#mq-keyboard-${mathfield.id}`).css("bottom", `0px`);
@@ -53066,7 +53066,7 @@ const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKey
         else {
             mathfield.moveToRightEnd();
         }
-        setCurrentLayoutType((prev) => (prev === "numeric" ? "alphabet" : "numeric"));
+        setCurrentLayoutType((prev) => prev === "numeric" ? "alphabet" : "numeric");
     };
     const onMouseDown = (e) => {
         if (e.target instanceof HTMLElement && e.target.nodeName !== "SELECT")
@@ -53075,7 +53075,7 @@ const Keyboard = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKey
     };
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { id: `mq-keyboard-${mathfield.id}`, onMouseDown: onMouseDown, 
         // className="fixed z-[1310] transition-[bottom] duration-300 flex justify-center bottom-[-300px] left-0 first-letter:bottom-0 bg-slate-200 pb-1 m-0 w-full text-slate-900 gap-1 scrollbar"
-        className: "react-math-keyboard-keyboard-container scrollbar", children: [currentLayoutType === "numeric" && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_numericLayout__WEBPACK_IMPORTED_MODULE_5__.NumericLayout, { onSwitch: onSwitch, toolbarKeys: numericToolbarKeys, toolbarTabs: numericToolbarTabs, divisionFormat: divisionFormat, allowAlphabeticKeyboard: allowAlphabeticKeyboard, onHideKeyboard: onHideKeyboard })), currentLayoutType === "alphabet" && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_alphabetLayout__WEBPACK_IMPORTED_MODULE_4__.AlphabetLayout, { onSwitch: onSwitch, toolbarKeys: alphabeticToolbarKeys })] }));
+        className: "react-math-keyboard-keyboard-container scrollbar", children: [currentLayoutType === "numeric" && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_numericLayout__WEBPACK_IMPORTED_MODULE_5__.NumericLayout, { onSwitch: onSwitch, toolbarKeys: numericToolbarKeys, toolbarTabs: numericToolbarTabs, divisionFormat: divisionFormat, allowAlphabeticKeyboard: allowAlphabeticKeyboard, onHideKeyboard: onHideKeyboard, lang: lang })), currentLayoutType === "alphabet" && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_alphabetLayout__WEBPACK_IMPORTED_MODULE_4__.AlphabetLayout, { onSwitch: onSwitch, toolbarKeys: alphabeticToolbarKeys, lang: lang }))] }));
 };
 
 
@@ -53101,7 +53101,7 @@ const algebraKeysProps = [
             content: "=",
             method: "write",
         },
-        group: "algebra",
+        groups: ["algebra"],
     },
     {
         id: "approx",
@@ -53111,7 +53111,7 @@ const algebraKeysProps = [
             content: "\\approx",
             method: "write",
         },
-        group: "algebra",
+        groups: ["algebra"],
     },
     {
         id: "leq",
@@ -53121,7 +53121,7 @@ const algebraKeysProps = [
             content: "\\leq",
             method: "write",
         },
-        group: "algebra",
+        groups: ["algebra"],
     },
     {
         id: "geq",
@@ -53131,7 +53131,7 @@ const algebraKeysProps = [
             content: "\\geq",
             method: "write",
         },
-        group: "algebra",
+        groups: ["algebra"],
     },
     {
         id: "inf",
@@ -53141,7 +53141,7 @@ const algebraKeysProps = [
             content: "<",
             method: "write",
         },
-        group: "algebra",
+        groups: ["algebra"],
     },
     {
         id: "sup",
@@ -53151,7 +53151,17 @@ const algebraKeysProps = [
             content: ">",
             method: "write",
         },
-        group: "algebra",
+        groups: ["algebra"],
+    },
+    {
+        id: "percent",
+        label: "\\%",
+        labelType: "tex",
+        groups: ["algebra"],
+        mathfieldInstructions: {
+            content: "%",
+            method: "write",
+        },
     },
 ];
 
@@ -53298,9 +53308,36 @@ const atomKeysProps = atoms.map((atomData) => {
             content: `\\text{${atomData.formula}}`,
             method: "write",
         },
-        group: "atoms",
+        groups: ["atoms"],
     };
 });
+
+
+/***/ }),
+
+/***/ "./src/keyboard/keys/complexKeys.ts":
+/*!******************************************!*\
+  !*** ./src/keyboard/keys/complexKeys.ts ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "complexKeysProps": () => (/* binding */ complexKeysProps)
+/* harmony export */ });
+const complexKeysProps = [
+    {
+        id: "overline",
+        label: "\\overline{z}",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "overline",
+            method: "cmd",
+        },
+        groups: ["complex"],
+    },
+];
 
 
 /***/ }),
@@ -53325,7 +53362,7 @@ const functionKeysProps = [
             content: "\\log",
             method: "cmd",
         },
-        group: "functions",
+        groups: ["functions"],
     },
     {
         id: "ln",
@@ -53335,7 +53372,7 @@ const functionKeysProps = [
             content: "\\ln",
             method: "cmd",
         },
-        group: "functions",
+        groups: ["functions"],
     },
     {
         id: "exp",
@@ -53345,7 +53382,7 @@ const functionKeysProps = [
             content: "\\exp(",
             method: "typedText",
         },
-        group: "functions",
+        groups: ["functions"],
     },
     {
         id: "epower",
@@ -53355,67 +53392,7 @@ const functionKeysProps = [
             content: "e^",
             method: "typedText",
         },
-        group: "functions",
-    },
-    {
-        id: "sin",
-        label: "sin",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "sin",
-            method: "cmd",
-        },
-        group: "functions",
-    },
-    {
-        id: "cos",
-        label: "cos",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "cos",
-            method: "cmd",
-        },
-        group: "functions",
-    },
-    {
-        id: "tan",
-        label: "tan",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "tan",
-            method: "cmd",
-        },
-        group: "functions",
-    },
-    {
-        id: "arccos",
-        label: "cos^{-1}",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "\\cos^{-1}",
-            method: "write",
-        },
-        group: "functions",
-    },
-    {
-        id: "arcsin",
-        label: "sin^{-1}",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "\\sin^{-1}",
-            method: "write",
-        },
-        group: "functions",
-    },
-    {
-        id: "arctan",
-        label: "tan^{-1}",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "\\tan^{-1}",
-            method: "write",
-        },
-        group: "functions",
+        groups: ["functions"],
     },
     {
         id: "abs",
@@ -53425,7 +53402,7 @@ const functionKeysProps = [
             content: "|",
             method: "cmd",
         },
-        group: "functions",
+        groups: ["functions"],
     },
 ];
 
@@ -53445,14 +53422,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const geometryKeysProps = [
     {
-        id: "degree",
-        label: "°",
-        labelType: "raw",
+        id: "overrightarrow",
+        label: "\\overrightarrow{AB}",
+        labelType: "tex",
         mathfieldInstructions: {
-            content: "°",
-            method: "write",
+            content: "overrightarrow",
+            method: "cmd",
         },
-        group: "geometry",
+        groups: ["geometry"],
     },
 ];
 
@@ -53479,7 +53456,7 @@ const greekLettersKeysProps = [
             content: "\\alpha",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "beta",
@@ -53489,7 +53466,7 @@ const greekLettersKeysProps = [
             content: "\\beta",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "delta",
@@ -53499,7 +53476,7 @@ const greekLettersKeysProps = [
             content: "\\delta",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "Delta",
@@ -53509,7 +53486,7 @@ const greekLettersKeysProps = [
             content: "\\Delta",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "pi",
@@ -53519,7 +53496,7 @@ const greekLettersKeysProps = [
             content: "\\pi",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek", "algebra", "trigo"],
     },
     {
         id: "sigma",
@@ -53529,7 +53506,7 @@ const greekLettersKeysProps = [
             content: "\\sigma",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "theta",
@@ -53539,7 +53516,7 @@ const greekLettersKeysProps = [
             content: "\\theta",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "tau",
@@ -53549,7 +53526,7 @@ const greekLettersKeysProps = [
             content: "\\tau",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "phi",
@@ -53559,7 +53536,7 @@ const greekLettersKeysProps = [
             content: "\\phi",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "Omega",
@@ -53569,7 +53546,7 @@ const greekLettersKeysProps = [
             content: "\\Omega",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "lambda",
@@ -53579,7 +53556,7 @@ const greekLettersKeysProps = [
             content: "\\lambda",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "mu",
@@ -53589,7 +53566,7 @@ const greekLettersKeysProps = [
             content: "\\mu",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "gamma",
@@ -53599,7 +53576,7 @@ const greekLettersKeysProps = [
             content: "\\gamma",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
     {
         id: "omega",
@@ -53609,7 +53586,7 @@ const greekLettersKeysProps = [
             content: "\\omega",
             method: "cmd",
         },
-        group: "greek",
+        groups: ["greek"],
     },
 ];
 
@@ -53655,7 +53632,7 @@ const Key = ({ id, formatedId, label, labelType = "tex", onClick, mathfieldInstr
     const renderLabel = () => {
         switch (labelType) {
             case "raw":
-                return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { id: `mq-keyboard-${mathfield.id}-rawkey-${trueId}`, children: label }));
+                return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { id: `mq-keyboard-${mathfield.id}-rawkey-${trueId}`, children: label });
             case "tex":
                 return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { id: `mq-keyboard-${mathfield.id}-key-${trueId}`, onClick: (e) => e.stopPropagation(), className: "cursor-pointer", children: label }));
             case "svg":
@@ -53699,15 +53676,58 @@ const Key = ({ id, formatedId, label, labelType = "tex", onClick, mathfieldInstr
                 }),
             ...(isTouchDown && { backgroundColor: bgHoverColor }),
             ...(isClicked && { boxShadow: "inset 0 2px 4px rgba(0, 0, 0, 0.2)" }),
-            ...(labelType === "raw" || labelType === "svg"
-                ? { paddingTop: 0 }
-                : { paddingTop: "0.25rem" }),
+            ...(labelType === "raw" || labelType === "svg" ? { paddingTop: 0 } : { paddingTop: "0.25rem" }),
         }, ref: ref, id: `mq-keyboard-${mathfield.id}-button-key-${trueId}`, onMouseDown: onMouseDown, onMouseUp: () => setIsClicked(false), onMouseLeave: () => {
             if (!isClicked)
                 return;
             setIsClicked(false);
         }, onTouchStart: () => setIsTouchDown(true), onTouchEnd: () => setIsTouchDown(false), children: renderLabel() }));
 };
+
+
+/***/ }),
+
+/***/ "./src/keyboard/keys/keyGroup.ts":
+/*!***************************************!*\
+  !*** ./src/keyboard/keys/keyGroup.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "keyGroups": () => (/* binding */ keyGroups)
+/* harmony export */ });
+const keyGroups = [
+    { id: "algebra", label: { fr: "Algèbre", en: "Algebra" } },
+    { id: "otherOperations", label: { fr: "Opérations", en: "Operations" } },
+    { id: "sets", label: { fr: "Ensembles", en: "Sets" } },
+    { id: "trigo", label: { fr: "Trigo", en: "Trigonometry" } },
+    { id: "functions", label: { fr: "Fonctions", en: "Functions" } },
+    { id: "proba", label: { fr: "Probas", en: "Probability" } },
+    {
+        id: "minLetters",
+        label: { fr: "Lettres minuscules", en: "Lowercase letters" },
+    },
+    {
+        id: "majLetters",
+        label: { fr: "Lettres majuscules", en: "Uppercase letters" },
+    },
+    { id: "greek", label: { fr: "Grec", en: "Greek" } },
+    { id: "geometry", label: { fr: "Géométrie", en: "Geometry" } },
+    { id: "units", label: { fr: "Unités", en: "Units" } },
+    { id: "sequences", label: { fr: "Suites", en: "Sequences" } },
+    { id: "complex", label: { fr: "Complexes", en: "Complex" } },
+    { id: "words", label: { fr: "Mots", en: "Words" } },
+    {
+        id: "basicOperations",
+        label: { fr: "Opérations basiques", en: "Basic operations" },
+    },
+    { id: "numbers", label: { fr: "Nombres", en: "Numbers" } },
+    { id: "atoms", label: { fr: "Atomes", en: "Atoms" } },
+    { id: "molecules", label: { fr: "Molécules", en: "Molecules" } },
+    { id: "alphabet", label: { fr: "Alphabet", en: "Alphabet" } },
+];
 
 
 /***/ }),
@@ -53726,18 +53746,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _algebraKeys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./algebraKeys */ "./src/keyboard/keys/algebraKeys.ts");
 /* harmony import */ var _atomKeys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./atomKeys */ "./src/keyboard/keys/atomKeys.ts");
-/* harmony import */ var _functionKeys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functionKeys */ "./src/keyboard/keys/functionKeys.ts");
-/* harmony import */ var _geometryKeys__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./geometryKeys */ "./src/keyboard/keys/geometryKeys.ts");
-/* harmony import */ var _greekLetters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./greekLetters */ "./src/keyboard/keys/greekLetters.ts");
-/* harmony import */ var _letterKeys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./letterKeys */ "./src/keyboard/keys/letterKeys.ts");
-/* harmony import */ var _moleculeKeys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./moleculeKeys */ "./src/keyboard/keys/moleculeKeys.ts");
-/* harmony import */ var _numberKeys__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./numberKeys */ "./src/keyboard/keys/numberKeys.ts");
-/* harmony import */ var _operationKeys__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./operationKeys */ "./src/keyboard/keys/operationKeys.ts");
-/* harmony import */ var _ponctuationKeys__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ponctuationKeys */ "./src/keyboard/keys/ponctuationKeys.ts");
-/* harmony import */ var _setKeys__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./setKeys */ "./src/keyboard/keys/setKeys.ts");
-/* harmony import */ var _unitKeys__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./unitKeys */ "./src/keyboard/keys/unitKeys.ts");
-/* harmony import */ var _utilityKeys__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./utilityKeys */ "./src/keyboard/keys/utilityKeys.tsx");
-/* harmony import */ var _wordKeys__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./wordKeys */ "./src/keyboard/keys/wordKeys.ts");
+/* harmony import */ var _complexKeys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./complexKeys */ "./src/keyboard/keys/complexKeys.ts");
+/* harmony import */ var _functionKeys__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./functionKeys */ "./src/keyboard/keys/functionKeys.ts");
+/* harmony import */ var _geometryKeys__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./geometryKeys */ "./src/keyboard/keys/geometryKeys.ts");
+/* harmony import */ var _greekLetters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./greekLetters */ "./src/keyboard/keys/greekLetters.ts");
+/* harmony import */ var _letterKeys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./letterKeys */ "./src/keyboard/keys/letterKeys.ts");
+/* harmony import */ var _moleculeKeys__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./moleculeKeys */ "./src/keyboard/keys/moleculeKeys.ts");
+/* harmony import */ var _numberKeys__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./numberKeys */ "./src/keyboard/keys/numberKeys.ts");
+/* harmony import */ var _operationKeys__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./operationKeys */ "./src/keyboard/keys/operationKeys.ts");
+/* harmony import */ var _ponctuationKeys__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ponctuationKeys */ "./src/keyboard/keys/ponctuationKeys.ts");
+/* harmony import */ var _probaKeys__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./probaKeys */ "./src/keyboard/keys/probaKeys.ts");
+/* harmony import */ var _sequenceKeys__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./sequenceKeys */ "./src/keyboard/keys/sequenceKeys.ts");
+/* harmony import */ var _setKeys__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./setKeys */ "./src/keyboard/keys/setKeys.ts");
+/* harmony import */ var _trigoKeys__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./trigoKeys */ "./src/keyboard/keys/trigoKeys.ts");
+/* harmony import */ var _unitKeys__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./unitKeys */ "./src/keyboard/keys/unitKeys.ts");
+/* harmony import */ var _utilityKeys__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./utilityKeys */ "./src/keyboard/keys/utilityKeys.tsx");
+/* harmony import */ var _wordKeys__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./wordKeys */ "./src/keyboard/keys/wordKeys.ts");
+
+
+
+
 
 
 
@@ -53753,21 +53781,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const allKeysProps = [
-    ..._numberKeys__WEBPACK_IMPORTED_MODULE_7__.numberKeysProps,
-    ..._letterKeys__WEBPACK_IMPORTED_MODULE_5__.minLettersKeysProps,
-    ..._letterKeys__WEBPACK_IMPORTED_MODULE_5__.majLettersKeysProps,
-    ..._operationKeys__WEBPACK_IMPORTED_MODULE_8__.operationKeysProps,
-    ..._functionKeys__WEBPACK_IMPORTED_MODULE_2__.functionKeysProps,
-    ..._utilityKeys__WEBPACK_IMPORTED_MODULE_12__.utilityKeysProps,
-    ..._setKeys__WEBPACK_IMPORTED_MODULE_10__.setKeysProps,
-    ..._greekLetters__WEBPACK_IMPORTED_MODULE_4__.greekLettersKeysProps,
-    ..._geometryKeys__WEBPACK_IMPORTED_MODULE_3__.geometryKeysProps,
+    ..._numberKeys__WEBPACK_IMPORTED_MODULE_8__.numberKeysProps,
+    ..._letterKeys__WEBPACK_IMPORTED_MODULE_6__.minLettersKeysProps,
+    ..._letterKeys__WEBPACK_IMPORTED_MODULE_6__.majLettersKeysProps,
+    ..._operationKeys__WEBPACK_IMPORTED_MODULE_9__.operationKeysProps,
+    ..._functionKeys__WEBPACK_IMPORTED_MODULE_3__.functionKeysProps,
+    ..._utilityKeys__WEBPACK_IMPORTED_MODULE_16__.utilityKeysProps,
+    ..._setKeys__WEBPACK_IMPORTED_MODULE_13__.setKeysProps,
+    ..._greekLetters__WEBPACK_IMPORTED_MODULE_5__.greekLettersKeysProps,
+    ..._geometryKeys__WEBPACK_IMPORTED_MODULE_4__.geometryKeysProps,
     ..._algebraKeys__WEBPACK_IMPORTED_MODULE_0__.algebraKeysProps,
-    ..._ponctuationKeys__WEBPACK_IMPORTED_MODULE_9__.ponctuationKeysProps,
-    ..._unitKeys__WEBPACK_IMPORTED_MODULE_11__.unitKeysProps,
-    ..._wordKeys__WEBPACK_IMPORTED_MODULE_13__.wordKeysProps,
+    ..._ponctuationKeys__WEBPACK_IMPORTED_MODULE_10__.ponctuationKeysProps,
+    ..._unitKeys__WEBPACK_IMPORTED_MODULE_15__.unitKeysProps,
+    ..._wordKeys__WEBPACK_IMPORTED_MODULE_17__.wordKeysProps,
     ..._atomKeys__WEBPACK_IMPORTED_MODULE_1__.atomKeysProps,
-    ..._moleculeKeys__WEBPACK_IMPORTED_MODULE_6__.moleculesKeysProps,
+    ..._moleculeKeys__WEBPACK_IMPORTED_MODULE_7__.moleculesKeysProps,
+    ..._probaKeys__WEBPACK_IMPORTED_MODULE_11__.probaKeysProps,
+    ..._sequenceKeys__WEBPACK_IMPORTED_MODULE_12__.sequenceKeysProps,
+    ..._complexKeys__WEBPACK_IMPORTED_MODULE_2__.complexKeysProps,
+    ..._trigoKeys__WEBPACK_IMPORTED_MODULE_14__.trigoKeysProps,
     {
         id: "rightarrow",
         label: "\\rightarrow",
@@ -53776,31 +53808,6 @@ const allKeysProps = [
             content: "\\rightarrow",
             method: "write",
         },
-    },
-    {
-        id: "overrightarrow",
-        label: "\\overrightarrow{AB}",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "overrightarrow",
-            method: "cmd",
-        },
-    },
-    {
-        id: "overline",
-        label: "\\overline{z}",
-        labelType: "tex",
-        mathfieldInstructions: {
-            content: "overline",
-            method: "cmd",
-        },
-    },
-    {
-        id: "underscore",
-        label: "\\square_n",
-        labelType: "tex",
-        mathfieldInstructions: { content: "_", method: "cmd" },
-        group: "sequences",
     },
 ];
 const KeysPropsMap = new Map(allKeysProps.map((obj) => {
@@ -53830,7 +53837,7 @@ const LetterKey = ({ letter, isMaj = false, isInMathMode = true }) => {
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: letter, label: displayedLetter, labelType: isInMathMode ? "tex" : "raw", mathfieldInstructions: {
             content: displayedLetter,
             method: "write",
-        } }));
+        }, groups: isMaj ? ["majLetters"] : ["minLetters"] }));
 };
 
 
@@ -53922,7 +53929,7 @@ const minLettersKeysProps = minLettersIds.map((label) => {
         label: label,
         labelType: "tex",
         mathfieldInstructions: { content: label, method: "write" },
-        group: "minLetters",
+        groups: ["minLetters"],
     };
 });
 const majLettersKeysProps = majLettersIds.map((label) => {
@@ -53931,7 +53938,7 @@ const majLettersKeysProps = majLettersIds.map((label) => {
         label: label,
         labelType: "tex",
         mathfieldInstructions: { content: label, method: "write" },
-        group: "majLetters",
+        groups: ["majLetters"],
     };
 });
 
@@ -54067,11 +54074,7 @@ const moleculesData = [
     { name: "Chlorure de magnésium", formula: "MgCl_2" },
 ];
 const getId = (name) => {
-    return name
-        .replaceAll(" ", "-")
-        .replaceAll("(", "-")
-        .replaceAll(")", "")
-        .replaceAll("'", "-");
+    return name.replaceAll(" ", "-").replaceAll("(", "-").replaceAll(")", "").replaceAll("'", "-");
 };
 const molecules = moleculesData.map((molData) => {
     return { ...molData, id: getId(molData.name) };
@@ -54086,7 +54089,7 @@ const moleculesKeysProps = molecules.map((moleculeData) => {
             content: (0,_utils_textifyInLatex__WEBPACK_IMPORTED_MODULE_0__.textifyInLatex)(moleculeData.formula),
             method: "write",
         },
-        group: "molecules",
+        groups: ["molecules"],
     };
 });
 
@@ -54112,7 +54115,7 @@ const numberKeysProps = numbersIds.map((label) => {
         label: label,
         labelType: "tex",
         mathfieldInstructions: { content: label, method: "write" },
-        group: "numbers",
+        groups: ["numbers"],
     };
 });
 
@@ -54139,7 +54142,7 @@ const operationKeysProps = [
             content: "+",
             method: "write",
         },
-        group: "basicOperations",
+        groups: ["basicOperations"],
     },
     {
         id: "minus",
@@ -54149,7 +54152,7 @@ const operationKeysProps = [
             content: "-",
             method: "write",
         },
-        group: "basicOperations",
+        groups: ["basicOperations"],
     },
     {
         id: "times",
@@ -54159,7 +54162,7 @@ const operationKeysProps = [
             content: "\\times",
             method: "cmd",
         },
-        group: "basicOperations",
+        groups: ["basicOperations"],
     },
     {
         id: "frac",
@@ -54169,7 +54172,7 @@ const operationKeysProps = [
             content: "/",
             method: "cmd",
         },
-        group: "basicOperations",
+        groups: ["basicOperations"],
     },
     {
         id: "sqrt",
@@ -54179,7 +54182,7 @@ const operationKeysProps = [
             content: "\\sqrt",
             method: "cmd",
         },
-        group: "basicOperations",
+        groups: ["basicOperations"],
     },
     {
         id: "sqrtCub",
@@ -54189,13 +54192,13 @@ const operationKeysProps = [
             content: "\\nthroot3",
             method: "typedText",
         },
-        group: "basicOperations",
+        groups: ["otherOperations"],
     },
     {
         id: "square",
         label: "\\square^2",
         labelType: "tex",
-        group: "basicOperations",
+        groups: ["basicOperations"],
         mathfieldInstructions: { content: "^2", method: "write" },
     },
     {
@@ -54203,20 +54206,20 @@ const operationKeysProps = [
         label: "\\square^3",
         labelType: "tex",
         mathfieldInstructions: { content: "^3 ", method: "write" },
-        group: "otherOperations",
+        groups: ["otherOperations"],
     },
     {
         id: "power",
         label: "\\square^n",
         labelType: "tex",
-        group: "basicOperations",
+        groups: ["basicOperations"],
         mathfieldInstructions: { content: "^", method: "cmd" },
     },
     {
         id: "leftParenthesis",
         label: "(",
         labelType: "tex",
-        group: "basicOperations",
+        groups: ["basicOperations"],
         mathfieldInstructions: {
             content: "(",
             method: "typedText",
@@ -54226,7 +54229,7 @@ const operationKeysProps = [
         id: "rightParenthesis",
         label: ")",
         labelType: "tex",
-        group: "basicOperations",
+        groups: ["basicOperations"],
         mathfieldInstructions: {
             content: ")",
             method: "typedText",
@@ -54236,7 +54239,7 @@ const operationKeysProps = [
         id: "comma",
         label: "{,}",
         labelType: "tex",
-        group: "basicOperations",
+        groups: ["basicOperations"],
         mathfieldInstructions: {
             content: ",",
             method: "write",
@@ -54246,7 +54249,7 @@ const operationKeysProps = [
         id: "dot",
         label: ".",
         labelType: "tex",
-        group: "basicOperations",
+        groups: ["otherOperations"],
         mathfieldInstructions: {
             content: ".",
             method: "write",
@@ -54256,19 +54259,9 @@ const operationKeysProps = [
         id: "obelus",
         label: "\\div",
         labelType: "tex",
-        group: "basicOperations",
+        groups: ["basicOperations"],
         mathfieldInstructions: {
             content: "\\div",
-            method: "write",
-        },
-    },
-    {
-        id: "percent",
-        label: "\\%",
-        labelType: "tex",
-        group: "otherOperations",
-        mathfieldInstructions: {
-            content: "%",
             method: "write",
         },
     },
@@ -54297,7 +54290,7 @@ const ponctuationKeysProps = [
             content: " ",
             method: "write",
         },
-        group: "alphabet",
+        groups: ["alphabet"],
     },
     {
         id: "guillemet",
@@ -54307,7 +54300,7 @@ const ponctuationKeysProps = [
             content: '"',
             method: "write",
         },
-        group: "alphabet",
+        groups: ["alphabet"],
     },
     {
         id: "quote",
@@ -54317,7 +54310,7 @@ const ponctuationKeysProps = [
             content: "'",
             method: "write",
         },
-        group: "alphabet",
+        groups: ["alphabet"],
     },
     {
         id: "hyphen",
@@ -54327,7 +54320,7 @@ const ponctuationKeysProps = [
             content: "-",
             method: "write",
         },
-        group: "alphabet",
+        groups: ["alphabet"],
     },
     {
         id: "euro",
@@ -54337,7 +54330,108 @@ const ponctuationKeysProps = [
             content: "€",
             method: "write",
         },
-        group: "alphabet",
+        groups: ["alphabet"],
+    },
+];
+
+
+/***/ }),
+
+/***/ "./src/keyboard/keys/probaKeys.ts":
+/*!****************************************!*\
+  !*** ./src/keyboard/keys/probaKeys.ts ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "probaKeysProps": () => (/* binding */ probaKeysProps)
+/* harmony export */ });
+const probaKeysProps = [
+    {
+        id: "overlineProba",
+        label: "\\overline{A}",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "overline",
+            method: "cmd",
+        },
+        groups: ["proba"],
+    },
+    {
+        id: "minProba",
+        label: "p()",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "p(",
+            method: "typedText",
+        },
+        groups: ["proba"],
+    },
+    {
+        id: "majProba",
+        label: "P()",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "P(",
+            method: "typedText",
+        },
+        groups: ["proba"],
+    },
+    {
+        id: "binom",
+        label: "\\binom{a}{b}",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "binom",
+            method: "cmd",
+        },
+        groups: ["proba"],
+    },
+];
+
+
+/***/ }),
+
+/***/ "./src/keyboard/keys/sequenceKeys.ts":
+/*!*******************************************!*\
+  !*** ./src/keyboard/keys/sequenceKeys.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "sequenceKeysProps": () => (/* binding */ sequenceKeysProps)
+/* harmony export */ });
+const sequenceKeysProps = [
+    {
+        id: "underscore",
+        label: "\\square_n",
+        labelType: "tex",
+        mathfieldInstructions: { content: "_", method: "cmd" },
+        groups: ["sequences", "algebra", "proba"],
+    },
+    {
+        id: "un",
+        label: "u_n",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "u_n",
+            method: "write",
+        },
+        groups: ["sequences"],
+    },
+    {
+        id: "unplus1",
+        label: "u_{n+1}",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "u_{n+1}",
+            method: "write",
+        },
+        groups: ["sequences"],
     },
 ];
 
@@ -54357,6 +54451,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const setKeysProps = [
     {
+        id: "belongs",
+        label: "\\in",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\in",
+            method: "write",
+        },
+        groups: ["sets"],
+    },
+    {
+        id: "notin",
+        label: "\\notin",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\notin",
+            method: "write",
+        },
+        groups: ["sets"],
+    },
+    {
         id: "semicolon",
         label: ";",
         labelType: "tex",
@@ -54364,7 +54478,7 @@ const setKeysProps = [
             content: ";",
             method: "write",
         },
-        group: "sets",
+        groups: ["sets"],
     },
     {
         id: "infty",
@@ -54374,7 +54488,7 @@ const setKeysProps = [
             content: "\\infty",
             method: "cmd",
         },
-        group: "sets",
+        groups: ["sets", "functions"],
     },
     {
         id: "cap",
@@ -54384,7 +54498,7 @@ const setKeysProps = [
             content: "cap",
             method: "cmd",
         },
-        group: "sets",
+        groups: ["sets", "proba"],
     },
     {
         id: "cup",
@@ -54394,7 +54508,7 @@ const setKeysProps = [
             content: "cup",
             method: "cmd",
         },
-        group: "sets",
+        groups: ["sets", "proba"],
     },
     {
         id: "lbrace",
@@ -54404,7 +54518,7 @@ const setKeysProps = [
             content: "{",
             method: "typedText",
         },
-        group: "sets",
+        groups: ["sets"],
     },
     {
         id: "rbrace",
@@ -54414,7 +54528,7 @@ const setKeysProps = [
             content: "}",
             method: "typedText",
         },
-        group: "sets",
+        groups: ["sets"],
     },
     {
         id: "lbracket",
@@ -54422,9 +54536,9 @@ const setKeysProps = [
         labelType: "tex",
         mathfieldInstructions: {
             content: "[",
-            method: "write",
+            method: "typedText",
         },
-        group: "sets",
+        groups: ["sets"],
     },
     {
         id: "rbracket",
@@ -54432,9 +54546,9 @@ const setKeysProps = [
         labelType: "tex",
         mathfieldInstructions: {
             content: "]",
-            method: "write",
+            method: "typedText",
         },
-        group: "sets",
+        groups: ["sets"],
     },
     {
         id: "emptyset",
@@ -54444,7 +54558,7 @@ const setKeysProps = [
             content: "\\emptyset",
             method: "cmd",
         },
-        group: "sets",
+        groups: ["sets"],
     },
     {
         id: "naturals",
@@ -54454,7 +54568,7 @@ const setKeysProps = [
             content: "\\mathbb{N}",
             method: "write",
         },
-        group: "sets",
+        groups: ["sets"],
     },
     {
         id: "integers",
@@ -54464,7 +54578,17 @@ const setKeysProps = [
             content: "\\mathbb{Z}",
             method: "write",
         },
-        group: "sets",
+        groups: ["sets"],
+    },
+    {
+        id: "decimals",
+        label: "\\mathrm{D}",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\mathrm{D}",
+            method: "write",
+        },
+        groups: ["sets"],
     },
     {
         id: "rationals",
@@ -54474,7 +54598,7 @@ const setKeysProps = [
             content: "\\mathbb{Q}",
             method: "write",
         },
-        group: "sets",
+        groups: ["sets"],
     },
     {
         id: "reals",
@@ -54484,7 +54608,7 @@ const setKeysProps = [
             content: "\\mathbb{R}",
             method: "write",
         },
-        group: "sets",
+        groups: ["sets"],
     },
     {
         id: "complex",
@@ -54494,7 +54618,7 @@ const setKeysProps = [
             content: "\\mathbb{C}",
             method: "write",
         },
-        group: "sets",
+        groups: ["sets"],
     },
     {
         id: "ast",
@@ -54504,7 +54628,84 @@ const setKeysProps = [
             content: "^\\ast",
             method: "write",
         },
-        group: "sets",
+        groups: ["sets"],
+    },
+];
+
+
+/***/ }),
+
+/***/ "./src/keyboard/keys/trigoKeys.ts":
+/*!****************************************!*\
+  !*** ./src/keyboard/keys/trigoKeys.ts ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "trigoKeysProps": () => (/* binding */ trigoKeysProps)
+/* harmony export */ });
+const trigoKeysProps = [
+    {
+        id: "sin",
+        label: "sin",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "sin",
+            method: "cmd",
+        },
+        groups: ["trigo"],
+    },
+    {
+        id: "cos",
+        label: "cos",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "cos",
+            method: "cmd",
+        },
+        groups: ["trigo"],
+    },
+    {
+        id: "tan",
+        label: "tan",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "tan",
+            method: "cmd",
+        },
+        groups: ["trigo"],
+    },
+    {
+        id: "arccos",
+        label: "cos^{-1}",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\cos^{-1}",
+            method: "write",
+        },
+        groups: ["trigo"],
+    },
+    {
+        id: "arcsin",
+        label: "sin^{-1}",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\sin^{-1}",
+            method: "write",
+        },
+        groups: ["trigo"],
+    },
+    {
+        id: "arctan",
+        label: "tan^{-1}",
+        labelType: "tex",
+        mathfieldInstructions: {
+            content: "\\tan^{-1}",
+            method: "write",
+        },
+        groups: ["trigo"],
     },
 ];
 
@@ -54525,13 +54726,13 @@ __webpack_require__.r(__webpack_exports__);
 const unitKeysProps = [
     {
         id: "degree",
-        label: "^\\circ C",
+        label: "°C",
         labelType: "tex",
         mathfieldInstructions: {
             content: "^\\circ C",
             method: "write",
         },
-        group: "units",
+        groups: ["units", "trigo", "geometry"],
     },
     {
         id: "cm",
@@ -54541,7 +54742,7 @@ const unitKeysProps = [
             content: "\\text{cm}",
             method: "write",
         },
-        group: "units",
+        groups: ["units"],
     },
     {
         id: "cm2",
@@ -54551,7 +54752,47 @@ const unitKeysProps = [
             content: "\\text{cm}^2",
             method: "write",
         },
-        group: "units",
+        groups: ["units"],
+    },
+    {
+        id: "Hz",
+        label: "Hz",
+        labelType: "raw",
+        mathfieldInstructions: {
+            content: "\\text{Hz}",
+            method: "write",
+        },
+        groups: ["units"],
+    },
+    {
+        id: "mol",
+        label: "mol",
+        labelType: "raw",
+        mathfieldInstructions: {
+            content: "\\text{mol}",
+            method: "write",
+        },
+        groups: ["units"],
+    },
+    {
+        id: "kJ",
+        label: "kJ",
+        labelType: "raw",
+        mathfieldInstructions: {
+            content: "\\text{kJ}",
+            method: "write",
+        },
+        groups: ["units"],
+    },
+    {
+        id: "mL",
+        label: "mL",
+        labelType: "raw",
+        mathfieldInstructions: {
+            content: "\\text{mL}",
+            method: "write",
+        },
+        groups: ["units"],
     },
 ];
 
@@ -54583,7 +54824,7 @@ const utilityKeysProps = [
             method: "keystroke",
         },
         isUtilityKey: true,
-        group: "utility",
+        groups: ["utility"],
     },
     {
         id: "right",
@@ -54594,7 +54835,7 @@ const utilityKeysProps = [
             method: "keystroke",
         },
         isUtilityKey: true,
-        group: "utility",
+        groups: ["utility"],
     },
     {
         id: "del",
@@ -54605,7 +54846,7 @@ const utilityKeysProps = [
             method: "keystroke",
         },
         isUtilityKey: true,
-        group: "utility",
+        groups: ["utility"],
     },
 ];
 
@@ -54632,7 +54873,7 @@ const wordKeysProps = [
             content: "\\text{ ou }",
             method: "write",
         },
-        group: "words",
+        groups: ["words"],
     },
     {
         id: "et",
@@ -54642,7 +54883,7 @@ const wordKeysProps = [
             content: "\\text{ et }",
             method: "write",
         },
-        group: "words",
+        groups: ["words"],
     },
 ];
 
@@ -54678,9 +54919,20 @@ const rows = [
     ["q", "s", "d", "f", "g", "h", "j", "k", "l", "m"],
     ["w", "x", "c", "v", "b", "n"],
 ];
-const minToolbarKeys = ["é", "è", "à", "ù", "ç", "ô", "hyphen", "quote", "guillemet", "euro"];
+const minToolbarKeys = [
+    "é",
+    "è",
+    "à",
+    "ù",
+    "ç",
+    "ô",
+    "hyphen",
+    "quote",
+    "guillemet",
+    "euro",
+];
 const majToolbarKeys = ["É", "È", "Ç", "À"];
-const AlphabetLayout = ({ toolbarKeys = [], onSwitch }) => {
+const AlphabetLayout = ({ toolbarKeys = [], onSwitch, lang, }) => {
     const [isMaj, setIsMaj] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const onMaj = () => {
         setIsMaj((prev) => !prev);
@@ -54689,7 +54941,7 @@ const AlphabetLayout = ({ toolbarKeys = [], onSwitch }) => {
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         setShownToolbarKeys(isMaj ? majToolbarKeys : minToolbarKeys);
     }, [isMaj]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-keyboard-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_toolbar_toolbar__WEBPACK_IMPORTED_MODULE_5__.Toolbar, { keys: shownToolbarKeys }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-alphabet-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: {
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-keyboard-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_toolbar_toolbar__WEBPACK_IMPORTED_MODULE_5__.Toolbar, { keys: shownToolbarKeys, lang: lang }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-alphabet-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: {
                             display: "grid",
                             gridTemplateColumns: "repeat(10, minmax(0,1fr))",
                             gap: "0.25rem",
@@ -54718,9 +54970,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const NumericLayout = ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, }) => {
+const NumericLayout = ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, }) => {
     const hideToolbar = !!toolbarKeys && !toolbarKeys.length;
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-keyboard-layout", children: [!hideToolbar && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_toolbar_toolbar__WEBPACK_IMPORTED_MODULE_3__.Toolbar, { keys: toolbarKeys, tabs: toolbarTabs }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-numeric-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: {
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-keyboard-layout", children: [!hideToolbar && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_toolbar_toolbar__WEBPACK_IMPORTED_MODULE_3__.Toolbar, { keys: toolbarKeys, tabs: toolbarTabs, lang: lang })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-numeric-layout", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: {
                             gridTemplateColumns: "repeat(2, minmax(0,1fr))",
                             flexGrow: 1,
                         }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("leftParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("rightParenthesis") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("times") }), divisionFormat === "fraction" ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("frac") })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("obelus") })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("sqrt") }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("square") }), allowAlphabeticKeyboard ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: "switch", label: "abc", labelType: "raw", onClick: onSwitch, isUtilityKey: true })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { id: "close", label: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", { xmlns: "http://www.w3.org/2000/svg", width: "25", height: "25", fill: "currentColor", className: "bi bi-keyboard", viewBox: "0 0 16 16", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { d: "M14 5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12zM2 4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { d: "M13 10.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm0-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5 0A.25.25 0 0 1 8.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 8 8.75v-.5zm2 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-.5zm1 2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5-2A.25.25 0 0 1 6.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 6 8.75v-.5zm-2 0A.25.25 0 0 1 4.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 4 8.75v-.5zm-2 0A.25.25 0 0 1 2.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 8.75v-.5zm11-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0A.25.25 0 0 1 9.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 9 6.75v-.5zm-2 0A.25.25 0 0 1 7.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 7 6.75v-.5zm-2 0A.25.25 0 0 1 5.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 5 6.75v-.5zm-3 0A.25.25 0 0 1 2.25 6h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5A.25.25 0 0 1 2 6.75v-.5zm0 4a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm2 0a.25.25 0 0 1 .25-.25h5.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-5.5a.25.25 0 0 1-.25-.25v-.5z" })] }), labelType: "svg", onClick: onHideKeyboard, isUtilityKey: true })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keys_key__WEBPACK_IMPORTED_MODULE_1__.Key, { ..._keys_keys__WEBPACK_IMPORTED_MODULE_2__.KeysPropsMap.get("power") })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-layout-grid", style: {
@@ -54762,7 +55014,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Toolbar = ({ keys, tabs = _toolbarTabs__WEBPACK_IMPORTED_MODULE_4__.defaultTabs }) => {
+const Toolbar = ({ keys, tabs = _toolbarTabs__WEBPACK_IMPORTED_MODULE_4__.defaultTabs, lang }) => {
     const [shownKeys, setShownKeys] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)();
     const [currentTab, setCurrentTab] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(tabs[0]);
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_mathInput_mathfieldContext__WEBPACK_IMPORTED_MODULE_5__.MathFieldContext);
@@ -54775,7 +55027,7 @@ const Toolbar = ({ keys, tabs = _toolbarTabs__WEBPACK_IMPORTED_MODULE_4__.defaul
         const tab = _toolbarTabs__WEBPACK_IMPORTED_MODULE_4__.toolbarTabs.find((t) => t.id === currentTab);
         setShownKeys(tab?.keys);
     }, [currentTab, keys]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-toolbar-container", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-toolbar", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { overflow: "auto" }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "react-math-keyboard-toolbar-keys-container", children: shownKeys?.map((keyData) => {
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-toolbar-container", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-toolbar", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { overflowX: "auto", overflowY: "hidden" }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "react-math-keyboard-toolbar-keys-container", children: shownKeys?.map((keyData) => {
                                 if (typeof keyData === "string") {
                                     const foundKey = _keys_keys__WEBPACK_IMPORTED_MODULE_3__.KeysPropsMap.get(keyData);
                                     if (foundKey)
@@ -54791,7 +55043,7 @@ const Toolbar = ({ keys, tabs = _toolbarTabs__WEBPACK_IMPORTED_MODULE_4__.defaul
                             }) }) }), !keys?.length && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "react-math-keyboard-select-container", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("select", { onChange: (e) => {
                                     setCurrentTab(e.target.value);
                                     mathfield.focus();
-                                }, className: "react-math-keyboard-select", children: tabs?.map((tabId) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: tabId, children: _toolbarTabs__WEBPACK_IMPORTED_MODULE_4__.toolbarTabs.find((t) => t.id === tabId)?.rawLabel }, tabId))) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", { xmlns: "http://www.w3.org/2000/svg", width: "12", height: "12", fill: "currentColor", className: "bi bi-chevron-right react-math-keyboard-select-arrow", viewBox: "0 0 16 16", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { fillRule: "evenodd", d: "M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" }) })] }))] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("hr", { className: "react-math-keyboard-divider" })] }));
+                                }, className: "react-math-keyboard-select", children: tabs?.map((tabId) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: tabId, children: _toolbarTabs__WEBPACK_IMPORTED_MODULE_4__.toolbarTabs.find((t) => t.id === tabId)?.rawLabel[lang] }, tabId))) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", { xmlns: "http://www.w3.org/2000/svg", width: "12", height: "12", fill: "currentColor", className: "bi bi-chevron-right react-math-keyboard-select-arrow", viewBox: "0 0 16 16", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", { fillRule: "evenodd", d: "M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" }) })] }))] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("hr", { className: "react-math-keyboard-divider" })] }));
 };
 
 
@@ -54809,100 +55061,133 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "defaultTabs": () => (/* binding */ defaultTabs),
 /* harmony export */   "toolbarTabs": () => (/* binding */ toolbarTabs)
 /* harmony export */ });
-const toolbarTabs = [
-    {
-        id: "polynomial",
-        label: "x^n",
-        rawLabel: "x",
-        keys: ["x", "percent", "equal", "approx", "leq", "geq", "inf", "sup", "cube", "y", "t", "n", "z"],
-    },
-    {
-        id: "functions",
-        label: "f(x)",
-        rawLabel: "f(x)",
-        keys: ["abs", "exp", "ln", "log", "epower", "quote"],
-    },
-    {
-        id: "trigo",
-        label: "f(x)",
-        rawLabel: "cos(x)",
-        keys: ["pi", "degree", "sin", "cos", "tan", "arcsin", "arccos", "arctan"],
-    },
-    {
-        id: "greek",
-        label: "\\beta",
-        rawLabel: "β",
-        keys: [
-            "alpha",
-            "beta",
-            "delta",
-            "Delta",
-            "sigma",
-            "theta",
-            "tau",
-            "lambda",
-            "omega",
-            "Omega",
-            "mu",
-            "phi",
-            "gamma",
-        ],
-    },
-    {
-        id: "sets",
-        label: "\\{ ; \\}",
-        rawLabel: "{... ; ...}",
-        keys: [
-            "cap",
-            "cup",
-            "lbrace",
-            "rbrace",
-            "lbracket",
-            "rbracket",
-            "semicolon",
-            "infty",
-            "emptyset",
-            "naturals",
-            "integers",
-            "rationals",
-            "reals",
-            "complex",
-            "ast",
-        ],
-    },
-    {
-        id: "sequences",
-        label: "u_n",
-        rawLabel: "(Un)",
-        keys: [
-            "n",
-            "underscore",
-            {
-                id: "un",
-                label: "u_n",
-                labelType: "tex",
-                mathfieldInstructions: {
-                    content: "u_n",
-                    method: "write",
-                },
-            },
-            {
-                id: "unplus1",
-                label: "u_{n+1}",
-                labelType: "tex",
-                mathfieldInstructions: {
-                    content: "u_{n+1}",
-                    method: "write",
-                },
-            },
-            "u",
-            "v",
-            "w",
-            "z",
-        ],
-    },
-];
-const defaultTabs = ["polynomial", "sets", "trigo", "functions", "greek", "sequences"];
+/* harmony import */ var _keys_keyGroup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../keys/keyGroup */ "./src/keyboard/keys/keyGroup.ts");
+/* harmony import */ var _keys_keys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../keys/keys */ "./src/keyboard/keys/keys.ts");
+
+
+// export const toolbarTabs: ToolbarTab[] = [
+//   {
+//     id: "polynomial",
+//     label: "x^n",
+//     rawLabel: "x",
+//     keys: ["x", "percent", "equal", "approx", "leq", "geq", "inf", "sup", "cube", "y", "t", "n", "z"],
+//   },
+//   {
+//     id: "functions",
+//     label: "f(x)",
+//     rawLabel: "f(x)",
+//     keys: ["abs", "exp", "ln", "log", "epower", "quote"],
+//   },
+//   {
+//     id: "trigo",
+//     label: "f(x)",
+//     rawLabel: "cos(x)",
+//     keys: ["pi", "degree", "sin", "cos", "tan", "arcsin", "arccos", "arctan"],
+//   },
+//   {
+//     id: "greek",
+//     label: "\\beta",
+//     rawLabel: "β",
+//     keys: [
+//       "alpha",
+//       "beta",
+//       "delta",
+//       "Delta",
+//       "sigma",
+//       "theta",
+//       "tau",
+//       "lambda",
+//       "omega",
+//       "Omega",
+//       "mu",
+//       "phi",
+//       "gamma",
+//     ],
+//   },
+//   {
+//     id: "sets",
+//     label: "\\{ ; \\}",
+//     rawLabel: "{... ; ...}",
+//     keys: [
+//       "belongs",
+//       "notin",
+//       "cap",
+//       "cup",
+//       "lbrace",
+//       "rbrace",
+//       "lbracket",
+//       "rbracket",
+//       "semicolon",
+//       "infty",
+//       "emptyset",
+//       "naturals",
+//       "integers",
+//       "decimals",
+//       "rationals",
+//       "reals",
+//       "complex",
+//       "ast",
+//     ],
+//   },
+//   {
+//     id: "proba",
+//     label: "P(A)",
+//     rawLabel: "P(A)",
+//     keys: ["minProba", "majProba", "cap", "cup", "overlineProba", "underscore", "binom"],
+//   },
+//   {
+//     id: "sequences",
+//     label: "u_n",
+//     rawLabel: "(Un)",
+//     keys: [
+//       "n",
+//       "underscore",
+//       {
+//         id: "un",
+//         label: "u_n",
+//         labelType: "tex",
+//         mathfieldInstructions: {
+//           content: "u_n",
+//           method: "write",
+//         },
+//       } as KeyProps,
+//       {
+//         id: "unplus1",
+//         label: "u_{n+1}",
+//         labelType: "tex",
+//         mathfieldInstructions: {
+//           content: "u_{n+1}",
+//           method: "write",
+//         },
+//       } as KeyProps,
+//       "u",
+//       "v",
+//       "w",
+//       "z",
+//     ],
+//   },
+// ];
+const toolbarTabs = _keys_keyGroup__WEBPACK_IMPORTED_MODULE_0__.keyGroups.map((group) => {
+    return {
+        id: group.id,
+        label: group.label,
+        rawLabel: group.label,
+        keys: _keys_keys__WEBPACK_IMPORTED_MODULE_1__.allKeysProps.filter((key) => key.groups?.includes(group.id)),
+    };
+});
+// export const defaultTabs: ToolbarTabIds[] = ["polynomial", "sets", "trigo", "functions", "proba", "greek", "sequences"];
+const defaultTabs = _keys_keyGroup__WEBPACK_IMPORTED_MODULE_0__.keyGroups.filter((group) => ![
+    "basicOperations",
+    "utility",
+    "numbers",
+    "minLetters",
+    "majLetters",
+    "words",
+    "alphabet",
+    "atoms",
+    "molecules",
+].includes(group.id))
+    .map((group) => group.id);
 
 
 /***/ }),
@@ -54932,7 +55217,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style = {}, initialLatex, rootElementId, divisionFormat = "fraction", size = "medium", fullWidth = true, allowAlphabeticKeyboard = true, scrollType = "window", }) => {
+const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style = {}, initialLatex, rootElementId, divisionFormat = "fraction", size = "medium", fullWidth = true, allowAlphabeticKeyboard = true, scrollType = "window", lang = "en", }) => {
     const [loaded, setLoaded] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const [showKeyboard, setShowKeyboard] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const mathfield = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)({});
@@ -55043,7 +55328,7 @@ const MathInput = ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKe
         setShowKeyboard(false);
         // mathfield.current.blur();
     };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: "flex", width: fullWidth ? "100%" : "auto", ...style }, id: `mq-keyboard-${idCounter.current}-container`, className: "react-math-keyboard-input-container", children: [!loaded && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "Loading..." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "react-math-keyboard-input", style: { padding: size === "small" ? "8px 4px" : "12px 6px" }, id: `mq-keyboard-${idCounter.current}-field`, ref: spanRef }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mathfieldContext__WEBPACK_IMPORTED_MODULE_5__.MathFieldContext.Provider, { value: mathfield.current, children: showKeyboard && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keyboard_keyboard__WEBPACK_IMPORTED_MODULE_4__.Keyboard, { divisionFormat: divisionFormat, numericToolbarKeys: numericToolbarKeys, numericToolbarTabs: numericToolbarTabs, alphabeticToolbarKeys: alphabeticToolbarKeys, onHideKeyboard: onForceHideKeyboard, allowAlphabeticKeyboard: allowAlphabeticKeyboard })) })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { display: "flex", width: fullWidth ? "100%" : "auto", ...style }, id: `mq-keyboard-${idCounter.current}-container`, className: "react-math-keyboard-input-container", children: [!loaded && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "Loading..." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "react-math-keyboard-input", style: { padding: size === "small" ? "8px 4px" : "12px 6px" }, id: `mq-keyboard-${idCounter.current}-field`, ref: spanRef }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mathfieldContext__WEBPACK_IMPORTED_MODULE_5__.MathFieldContext.Provider, { value: mathfield.current, children: showKeyboard && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_keyboard_keyboard__WEBPACK_IMPORTED_MODULE_4__.Keyboard, { divisionFormat: divisionFormat, numericToolbarKeys: numericToolbarKeys, numericToolbarTabs: numericToolbarTabs, alphabeticToolbarKeys: alphabeticToolbarKeys, onHideKeyboard: onForceHideKeyboard, allowAlphabeticKeyboard: allowAlphabeticKeyboard, lang: lang })) })] }));
 };
 
 
@@ -55079,7 +55364,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "textifyInLatex": () => (/* binding */ textifyInLatex)
 /* harmony export */ });
-//pour une string du type "CO_2" cette fonction renvoit "\\text{CO}_2"
+/**
+ *
+ * @param s latex
+ * @returns a textified latex version of s, e.g : CO_2 is turned into \\text{CO}_2
+ */
 const textifyInLatex = (s) => {
     let res = "";
     let isInText = false;

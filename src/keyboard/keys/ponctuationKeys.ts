@@ -10,6 +10,7 @@ export const ponctuationKeysProps: Array<KeyProps> = [
       method: "write",
     },
     groups: ["alphabet"],
+    keypressId: " ",
   },
   {
     id: "guillemet",
@@ -21,6 +22,7 @@ export const ponctuationKeysProps: Array<KeyProps> = [
       method: "write",
     },
     groups: ["alphabet"],
+    keypressId: '"',
   },
   {
     id: "quote",
@@ -32,6 +34,7 @@ export const ponctuationKeysProps: Array<KeyProps> = [
       method: "write",
     },
     groups: ["alphabet"],
+    keypressId: "'",
   },
   {
     id: "hyphen",
@@ -43,6 +46,7 @@ export const ponctuationKeysProps: Array<KeyProps> = [
       method: "write",
     },
     groups: ["alphabet"],
+    keypressId: "-",
   },
   {
     id: "euro",
@@ -54,5 +58,6 @@ export const ponctuationKeysProps: Array<KeyProps> = [
       method: "write",
     },
     groups: ["alphabet"],
+    keypressId: "€",
   },
 ];

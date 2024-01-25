@@ -1,4 +1,5 @@
 import { KeyProps } from "./key";
+import { KeyGroupIds } from "./keyGroup";
 import { KeyId } from "./keyIds";
 
 export const minLettersIds: KeyId[] = [
@@ -70,23 +71,42 @@ export const majLettersIds: KeyId[] = [
 ];
 
 export const minLettersKeysProps = minLettersIds.map((label): KeyProps => {
+  const groups: KeyGroupIds[] = ["minLetters"];
+  switch (label) {
+    case "f":
+      groups.push("functions");
+      break;
+    case "n":
+    case "u":
+    case "v":
+      groups.push("sequences");
+      break;
+    case "x":
+    case "y":
+      groups.push("algebra");
+      groups.push("functions");
+      break;
+    case "z":
+      groups.push("complex");
+      break;
+  }
   return {
     id: label,
-
     label: label,
     labelType: "tex",
     mathfieldInstructions: { content: label, method: "write" },
-    groups: ["minLetters"],
+    groups: groups,
+    keypressId: label,
   };
 });
 
 export const majLettersKeysProps = majLettersIds.map((label): KeyProps => {
   return {
     id: label,
-
     label: label,
     labelType: "tex",
     mathfieldInstructions: { content: label, method: "write" },
     groups: ["majLetters"],
+    keypressId: label,
   };
 });

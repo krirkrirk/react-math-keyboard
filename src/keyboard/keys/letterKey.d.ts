@@ -4,4 +4,4 @@ export type LetterKeyProps = {
     isMaj?: boolean;
     isInMathMode?: boolean;
 };
-export declare const LetterKey: ({ letter, isMaj, isInMathMode }: LetterKeyProps) => JSX.Element;
+export declare const LetterKey: ({ letter, isMaj, isInMathMode, }: LetterKeyProps) => JSX.Element;

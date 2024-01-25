@@ -7,10 +7,9 @@ This library provides :
 - a [MathQuill](http://www.mathquill.com) input in which you can write both mathematical expressions (in LaTeX) and raw text
 - a customizable, pretty, mobile-friendly keyboard for this input.
 
-You can try it live here : [Live Demo](https://krirkrirk.github.io/react-math-keyboard/),
-or you can test it in CodeSandbox : [js version](https://codesandbox.io/s/epic-wildflower-v1jlww) or [ts version](https://codesandbox.io/s/react-mat-keyboard-ts-playground-w01638).
+You can test it in CodeSandbox : [js version](https://codesandbox.io/s/epic-wildflower-v1jlww) or [ts version](https://codesandbox.io/s/react-mat-keyboard-ts-playground-w01638).
 
-:warning: This is using a fork of MathQuill in order to use the comma as a decimal separator and the symbol "\\times" instead of "\\cdot" for multiplication. This is not customizable so far, but could be in the future if there are requests for it.
+:warning: This is using a fork of MathQuill in order to use the comma as a decimal separator and the symbol $\times$ instead of $\cdot$ for multiplication. This is not customizable so far, but could be in the future if there are requests for it.
 
 This library is used by [Mathlive.fr](https://www.mathlive.fr).
 
@@ -63,15 +62,15 @@ You can hide the toolbar if you don't need additional keys :
 
 Or you can provide an array of [KeyIds](https://github.com/krirkrirk/react-math-keyboard/tree/main/src/keyboard/keys/keyIds.ts) or KeyProps if you only want certain keys. Here is the format for KeyProps :
 
-| Prop : Type                                     | Default     | Description                                                                                                           |
-| ----------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------- |
-| `id: KeyId \| string`                           | none        | Must be different than all other ids                                                                                  |
-| `label: string \| ReactNode`                    | none        | What's displayed on the keyboard                                                                                      |
-| `labelType: "raw" \| "tex" \| "svg"`            | none        | Type of the label                                                                                                     |
-| `mathfieldInstructions?: MathfieldInstructions` | `undefined` | An objet `{ method , content }`, with content being anything you like and method is one of the MathQuill Api methods. |
-| `onClick?: () => void`                          | `undefined` | To provide custom logic to the key                                                                                    |
-| `fullWidth?: boolean`                           | `true`      | shorthand for `width='100%'`                                                                                          |
-| `isUtilityKey?: boolean`                        | `false`     | Utility keys have a different background                                                                              |
+| Prop : Type                                     | Default     | Description                                                                                                                                 |
+| ----------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id: KeyId`                                     | none        | Use a [KeyId](https://github.com/krirkrirk/react-math-keyboard/tree/main/src/keyboard/keys/keyIds.ts) or "custom" for defining your own key |
+| `label: string \| ReactNode`                    | none        | What's displayed on the keyboard                                                                                                            |
+| `labelType: "raw" \| "tex" \| "svg"`            | none        | Type of the label                                                                                                                           |
+| `mathfieldInstructions?: MathfieldInstructions` | `undefined` | An objet `{ method , content }`, with content being a string and method is one of the MathQuill Api methods.                                |
+| `onClick?: () => void`                          | `undefined` | To provide custom logic to the key                                                                                                          |
+| `fullWidth?: boolean`                           | `true`      | shorthand for `width='100%'`                                                                                                                |
+| `isUtilityKey?: boolean`                        | `false`     | Utility keys have a different background                                                                                                    |
 
 Example :
 
@@ -83,7 +82,7 @@ Example :
     "tan",
     {
       id: "custom",
-      label: "custom",
+      label: "custom label",
       labelType: "raw",
       mathfieldInstructions: {
         method: "write",
@@ -98,12 +97,14 @@ Example :
 
 | Prop: Type                                      | Default value | Description                                                                                                                                                                                                                                                             |
 | ----------------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `lang?: ("en"\|"fr")`                           | `en`          | Defines the language, currently only English and French suppported                                                                                                                                                                                                      |
 | `numericToolbarKeys?: (KeyId \| KeyProps)[]`    | `undefined`   | <ul><li> `undefined` : All the keys </li><li> `Empty array` : No toolbar </li><li> `Otherwise` : the keys you've provided </li></ul>                                                                                                                                    |
-| `numericToolbarTabs?: ToolbarTabIds[]`          | `undefined`   | Choose the options you want in the select menu of the toolbar. Choices available are `"trigo" \| "greek" \| "sets" \| "sequences" \| "functions" \| "polynomial"`                                                                                                       |
+| `numericToolbarTabs?: KeyGroupIds[]`            | `undefined`   | Choose the options you want in the select menu of the toolbar. See [KeyGroup](https://github.com/krirkrirk/react-math-keyboard/tree/main/src/keyboard/keys/keyGroup.ts) for a list of options                                                                           |
+| `allowAlphabeticKeyboard?: boolean`             | `true`        | Hide/show the alphabetic keyboard                                                                                                                                                                                                                                       |
 | `alphabeticToolbarKeys?: (KeyId \| KeyProps)[]` | `undefined`   | Same thing that `numericToolbarKeys` but for the alphabetic keyboard                                                                                                                                                                                                    |
 | `setMathfieldRef?: (mf: MathField) => void`     | `undefined`   | Retrieve the ref to the MathQuill input in order to use the MathQuill Api                                                                                                                                                                                               |
 | `setClearRef?: (f: () => void) => void`         | `undefined`   | Pass it a ref in order to have a shorthand for clearing the input. e.g : `setClearRef( f => myRef.current = f)` then `myRef.current()` somewhere in your App                                                                                                            |
-| `initialLatex?: string`                         | `undefined`   | This latex will be shown in the input at the initial render. Later changes on this prop won't affect the input. You should interact with the MathField ref directly if you want to do stuff with the input.                                                             |
+| `initialLatex?: string`                         | `undefined`   | This latex will be shown in the input at the initial render. Updates of this prop won't affect the input. You should interact with the MathField ref directly if you want to do stuff with the input.                                                                   |
 | `setValue?: (s: string) => void`                | `undefined`   | To retrieve the latex                                                                                                                                                                                                                                                   |
 | `divisionFormat?: "fraction" \| "obelus"`       | `"fraction"`  | Whether to show divisions as fractions or with the division symbol ÷                                                                                                                                                                                                    |
 | `style?: React.CSSProperties`                   | `{}`          | CSS for the input                                                                                                                                                                                                                                                       |
