@@ -22,9 +22,11 @@ export type KeyId =
   | "ou"
   | "et"
   | "aucun"
+
   /**geometry */
   | "overrightarrow"
   | "degree"
+  | "vectorU"
 
   /**operations */
   | "plus"
