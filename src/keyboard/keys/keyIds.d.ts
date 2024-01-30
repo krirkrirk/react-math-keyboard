@@ -6,13 +6,13 @@ export type KeyId =
 /**words */
  | "ou" | "et" | "aucun"
 /**geometry */
- | "overrightarrow" | "degree"
+ | "overrightarrow" | "degree" | "vectorU"
 /**operations */
  | "plus" | "minus" | "times" | "frac" | "obelus" | "sqrt" | "sqrtCub" | "square" | "cube" | "power" | "percent" | "leftParenthesis" | "rightParenthesis" | "equal" | "comma" | "semicolon" | "dot" | "sup" | "inf" | "geq" | "leq" | "approx" | "xsquare" | "xcube"
 /**sets */
  | "belongs" | "notin" | "cap" | "cup" | "lbrace" | "rbrace" | "lbracket" | "rbracket" | "emptyset" | "naturals" | "integers" | "rationals" | "decimals" | "reals" | "complex" | "ast" | "del" | "right" | "left" | "rightarrow" | "overrightarrow" | "infty"
 /**fcts */
- | "log" | "ln" | "exp" | "epower" | "sin" | "cos" | "tan" | "arccos" | "arcsin" | "arctan" | "abs"
+ | "log" | "ln" | "exp" | "epower" | "sin" | "cos" | "tan" | "arccos" | "arcsin" | "arctan" | "abs" | "fx"
 /**sequences */
  | "un" | "unplus1"
 /**probas */
