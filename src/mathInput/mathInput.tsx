@@ -109,11 +109,10 @@ export const MathInput = ({
             : key.keypressId;
         })
       );
-    console.log(keys);
+
     keys = keys.filter((e) => e !== undefined);
 
     const exec = (event: KeyboardEvent) => {
-      console.log(event);
       if (!keys.includes(event.key)) event.preventDefault();
     };
     window.addEventListener("keypress", exec);
@@ -219,6 +218,13 @@ export const MathInput = ({
         $("body").css("padding-bottom", 0);
       }
     }
+    return () => {
+      if (rootElementId) {
+        $(`#${rootElementId}`).css("padding-bottom", 0);
+      } else {
+        $("body").css("padding-bottom", 0);
+      }
+    };
   }, [showKeyboard, rootElementId, scrollType]);
 
   const onForceHideKeyboard = () => {

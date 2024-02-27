@@ -115,12 +115,12 @@ export const setKeysProps: KeyProps[] = [
     groups: ["sets"],
   },
   {
-    id: "emptyset",
-    label: "\\emptyset",
+    id: "varnothing",
+    label: "\\varnothing",
     labelType: "tex",
 
     mathfieldInstructions: {
-      content: "\\emptyset",
+      content: "\\varnothing",
       method: "cmd",
     },
     groups: ["sets"],

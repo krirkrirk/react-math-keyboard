@@ -119,7 +119,11 @@ const moleculesData: { name: KeyId; formula: string }[] = [
 ];
 
 const getId = (name: string) => {
-  return name.replaceAll(" ", "-").replaceAll("(", "-").replaceAll(")", "").replaceAll("'", "-");
+  return name
+    .replaceAll(" ", "-")
+    .replaceAll("(", "-")
+    .replaceAll(")", "")
+    .replaceAll("'", "-");
 };
 const molecules = moleculesData.map((molData) => {
   return { ...molData, id: getId(molData.name) as KeyId };

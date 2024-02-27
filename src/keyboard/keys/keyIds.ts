@@ -63,7 +63,7 @@ export type KeyId =
   | "rbrace"
   | "lbracket"
   | "rbracket"
-  | "emptyset"
+  | "varnothing"
   | "naturals"
   | "integers"
   | "rationals"
