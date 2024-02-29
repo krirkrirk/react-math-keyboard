@@ -98,7 +98,9 @@ export const setKeysProps: KeyProps[] = [
     labelType: "tex",
 
     mathfieldInstructions: {
-      content: "[",
+      content: (currentLatex) => {
+        return !currentLatex ? "[\\ " : "\\ [\\ ";
+      },
       method: "write",
     },
     groups: ["sets"],
@@ -109,7 +111,9 @@ export const setKeysProps: KeyProps[] = [
     labelType: "tex",
 
     mathfieldInstructions: {
-      content: "]",
+      content: (currentLatex) => {
+        return !currentLatex ? "]\\ " : "\\ ]\\ ";
+      },
       method: "write",
     },
     groups: ["sets"],

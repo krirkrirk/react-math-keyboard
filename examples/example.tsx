@@ -53,7 +53,7 @@ export const Example = ({}: ExampleProps) => {
           </p>
           <MathInput
             setValue={setValue3}
-            forbidOtherKeyboardKeys={true}
+            forbidOtherKeyboardKeys={false}
             numericToolbarKeys={[
               "euro",
               {

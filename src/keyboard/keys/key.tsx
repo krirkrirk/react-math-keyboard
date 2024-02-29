@@ -49,7 +49,12 @@ export const Key = ({
 
   const handleClick = () => {
     if (mathfieldInstructions) {
-      mathfield[mathfieldInstructions.method](mathfieldInstructions.content);
+      if (typeof mathfieldInstructions.content === "string")
+        mathfield[mathfieldInstructions.method](mathfieldInstructions.content);
+      else
+        mathfield[mathfieldInstructions.method](
+          mathfieldInstructions.content(mathfield.latex())
+        );
     } else {
       onClick?.();
     }
