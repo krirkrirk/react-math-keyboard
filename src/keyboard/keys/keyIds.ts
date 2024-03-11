@@ -7,6 +7,8 @@ export type KeyId =
   | "mol"
   | "kJ"
   | "mL"
+  | "minutes"
+  | "hours"
 
   /**utility */
   | "custom"
