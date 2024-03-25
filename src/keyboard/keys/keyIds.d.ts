@@ -1,6 +1,6 @@
 export type KeyId = 
 /**units */
-"cm" | "cm2" | "celsius" | "Hz" | "mol" | "kJ" | "mL"
+"cm" | "cm2" | "celsius" | "Hz" | "mol" | "kJ" | "mL" | "minutes" | "hours" | "timesTenPower"
 /**utility */
  | "custom" | "right" | "left" | "rightarrow" | "del" | "close" | "switch" | "maj"
 /**words */
