@@ -91,4 +91,14 @@ export const unitKeysProps: Array<KeyProps> = [
     },
     groups: ["units"],
   },
+  {
+    id: "timesTenPower",
+    label: "\\times10^\\square",
+    labelType: "tex",
+    mathfieldInstructions: {
+      content: "\\times10^",
+      method: "typedText",
+    },
+    groups: ["units"],
+  },
 ];

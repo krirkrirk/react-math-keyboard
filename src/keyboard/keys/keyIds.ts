@@ -9,6 +9,7 @@ export type KeyId =
   | "mL"
   | "minutes"
   | "hours"
+  | "timesTenPower"
 
   /**utility */
   | "custom"
