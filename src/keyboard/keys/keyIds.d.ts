@@ -1,6 +1,8 @@
 export type KeyId = 
+/**quantities */
+"volumeMere" | "volumeFille" | "concentrationMere" | "concentrationFille"
 /**units */
-"cm" | "cm2" | "celsius" | "Hz" | "mol" | "kJ" | "mL" | "minutes" | "hours" | "timesTenPower"
+ | "cm" | "cm2" | "celsius" | "Hz" | "mol" | "kJ" | "mL" | "minutes" | "hours" | "timesTenPower"
 /**utility */
  | "custom" | "right" | "left" | "rightarrow" | "del" | "close" | "switch" | "maj"
 /**words */
