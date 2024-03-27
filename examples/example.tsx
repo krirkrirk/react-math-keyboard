@@ -55,7 +55,15 @@ export const Example = ({}: ExampleProps) => {
             setValue={setValue3}
             forbidOtherKeyboardKeys={false}
             numericToolbarKeys={[
-              "euro",
+              {
+                id: "custom",
+                label: "atome",
+                labelType: "raw",
+                mathfieldInstructions: {
+                  content: "^{}_{}",
+                  method: "typedText",
+                },
+              },
               {
                 id: "custom",
                 label: "wow",

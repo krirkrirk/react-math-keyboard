@@ -1,4 +1,9 @@
 export type KeyId =
+  /**quantities */
+  | "volumeMere"
+  | "volumeFille"
+  | "concentrationMere"
+  | "concentrationFille"
   /**units */
   | "cm"
   | "cm2"
