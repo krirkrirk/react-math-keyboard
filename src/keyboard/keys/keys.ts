@@ -10,6 +10,7 @@ import { majLettersKeysProps, minLettersKeysProps } from "./letterKeys";
 import { moleculesKeysProps } from "./moleculeKeys";
 import { numberKeysProps } from "./numberKeys";
 import { operationKeysProps } from "./operationKeys";
+import { physicalQuantities } from "./physicalQuantities";
 import { ponctuationKeysProps } from "./ponctuationKeys";
 import { probaKeysProps } from "./probaKeys";
 import { sequenceKeysProps } from "./sequenceKeys";
@@ -40,6 +41,7 @@ export const allKeysProps: KeyProps[] = [
   ...sequenceKeysProps,
   ...complexKeysProps,
   ...trigoKeysProps,
+  ...physicalQuantities,
   {
     id: "rightarrow",
     label: "\\rightarrow",
