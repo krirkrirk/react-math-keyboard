@@ -80,7 +80,7 @@ export const Example = ({}: ExampleProps) => {
                 labelType: "raw",
                 onClick: () => alert("Clicked!"),
               },
-              "lbracket",
+              "Mol-H2O",
               "rbracket",
               "lbrace",
               "rbrace",
