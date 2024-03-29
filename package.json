@@ -1,6 +1,6 @@
 {
   "name": "react-math-keyboard",
-  "version": "1.5.14",
+  "version": "1.5.15",
   "private": false,
   "declaration": true,
   "description": "Customizable math keyboard for React",
