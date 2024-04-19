@@ -62,7 +62,7 @@
   padding-bottom: 0.25rem;
   margin: 0px;
   color: #020617;
-  background-color: #e2e8f0;
+  background-color: var(--keyboard-color-extraLight);
   display: flex;
   justify-content: center;
   position: fixed;
@@ -120,13 +120,13 @@
   /* padding-right: 0.25rem; */
   margin-bottom: 0.25rem;
   display: flex;
-  background-color: #f8fafc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); */
   position: relative;
 }
 .react-math-keyboard-select-container:focus-visible {
   outline: none;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 .react-math-keyboard-select {
@@ -155,7 +155,7 @@
 }
 
 .react-math-keyboard-toolbar-container {
-  background-color: #94a3b8;
+  background-color: var(--keyboard-color-main);
   padding-top: 0.5rem;
   /* align-items: center; */
   width: 100%;
@@ -175,7 +175,7 @@
 }
 .react-math-keyboard-divider {
   border: transparent;
-  border-top: 2px solid #64748b;
+  border-top: 2px solid var(--keyboard-color-dark);
   margin-top: 0.25rem;
   margin-bottom: 0px;
 }
@@ -189,7 +189,11 @@
 }
 
 .react-math-keyboard-key {
-  border: none;
+  /* border: none; */
+  /* border: 4px solid var(--keyboard-color-light); */
+  border-style: solid;
+  border-width: 0px 2px 2px 0px;
+  border-color: var(--keyboard-color-light);
   cursor: pointer;
   color: #020617;
   height: 3rem;
@@ -203,23 +207,32 @@
   justify-content: center;
   position: relative;
 
-  background-color: #f8fafc;
+  background-color: #fff;
 }
 
 .react-math-keyboard-key:focus-visible {
-  outline: transparent;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-width: 2px 0px 0px 2px;
+  /* box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 .react-math-keyboard-key-utility {
-  background-color: #94a3b8;
+  color: #fff;
+  background-color: var(--keyboard-color-main);
+  border-color: var(--keyboard-color-dark);
 }
 
 @media not screen and (hover: none) and (pointer: coarse) {
   .react-math-keyboard-key:hover {
-    background-color: #cbd5e1;
+    background-color: var(--keyboard-color-light);
+    border-color: var(--keyboard-color-main);
+  }
+  .react-math-keyboard-toolbar .react-math-keyboard-key:hover {
+    background-color: var(--keyboard-color-extraLight);
+    border-color: var(--keyboard-color-light);
   }
   .react-math-keyboard-key-utility:hover {
-    background-color: #64748b;
+    background-color: var(--keyboard-color-dark);
+    border-color: color-mix(in srgb, black 30%, var(--keyboard-color-dark));
   }
 }
