@@ -57,4 +57,14 @@ export const functionKeysProps: KeyProps[] = [
     },
     groups: ["functions"],
   },
+  {
+    id: "fx",
+    label: "f(x)",
+    labelType: "tex",
+    mathfieldInstructions: {
+      content: "f(x)",
+      method: "write",
+    },
+    groups: ["functions"],
+  },
 ];

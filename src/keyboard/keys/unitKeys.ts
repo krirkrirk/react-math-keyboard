@@ -71,4 +71,34 @@ export const unitKeysProps: Array<KeyProps> = [
     },
     groups: ["units"],
   },
+  {
+    id: "hours",
+    label: "h",
+    labelType: "raw",
+    mathfieldInstructions: {
+      content: "\\text{h}",
+      method: "write",
+    },
+    groups: ["units"],
+  },
+  {
+    id: "minutes",
+    label: "min",
+    labelType: "raw",
+    mathfieldInstructions: {
+      content: "\\text{min}",
+      method: "write",
+    },
+    groups: ["units"],
+  },
+  {
+    id: "timesTenPower",
+    label: "\\times10^\\square",
+    labelType: "tex",
+    mathfieldInstructions: {
+      content: "\\times10^",
+      method: "typedText",
+    },
+    groups: ["units"],
+  },
 ];

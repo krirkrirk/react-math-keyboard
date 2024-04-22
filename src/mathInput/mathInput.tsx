@@ -99,6 +99,7 @@ export const MathInput = ({
   };
 
   useEffect(() => {
+    console.log(forbidOtherKeyboardKeys);
     if (!forbidOtherKeyboardKeys) return;
     let keys: (string | undefined)[] = [...vanillaKeys];
     if (numericToolbarKeys)
@@ -109,15 +110,17 @@ export const MathInput = ({
             : key.keypressId;
         })
       );
-    console.log(keys);
+
     keys = keys.filter((e) => e !== undefined);
 
     const exec = (event: KeyboardEvent) => {
-      console.log(event);
       if (!keys.includes(event.key)) event.preventDefault();
     };
-    window.addEventListener("keypress", exec);
-    return () => window.removeEventListener("keypress", exec);
+    const inputElement = document.getElementById(
+      `mq-keyboard-${idCounter.current}-container`
+    );
+    inputElement?.addEventListener("keypress", exec);
+    return () => inputElement?.removeEventListener("keypress", exec);
   }, [forbidOtherKeyboardKeys, numericToolbarKeys]);
 
   const idCounter = useRef<number>(0);
@@ -219,6 +222,13 @@ export const MathInput = ({
         $("body").css("padding-bottom", 0);
       }
     }
+    return () => {
+      if (rootElementId) {
+        $(`#${rootElementId}`).css("padding-bottom", 0);
+      } else {
+        $("body").css("padding-bottom", 0);
+      }
+    };
   }, [showKeyboard, rootElementId, scrollType]);
 
   const onForceHideKeyboard = () => {

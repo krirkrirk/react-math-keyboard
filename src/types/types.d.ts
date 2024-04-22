@@ -47,5 +47,5 @@ export interface MathField {
 }
 export interface MathfieldInstructions {
     method: "write" | "cmd" | "keystroke" | "typedText";
-    content: string;
+    content: string | ((currentLatex: string) => string);
 }

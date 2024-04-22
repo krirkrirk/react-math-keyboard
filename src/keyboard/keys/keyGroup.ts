@@ -19,7 +19,8 @@ export type KeyGroupIds =
   | "words"
   | "units"
   | "atoms"
-  | "molecules";
+  | "molecules"
+  | "physicalQuantities";
 
 export type Langs = "en" | "fr";
 
@@ -50,6 +51,7 @@ export const keyGroups: KeyGroup[] = [
 
   { id: "geometry", label: { fr: "Géométrie", en: "Geometry" } },
   { id: "units", label: { fr: "Unités", en: "Units" } },
+  { id: "physicalQuantities", label: { fr: "Grandeurs", en: "Quantities" } },
 
   { id: "sequences", label: { fr: "Suites", en: "Sequences" } },
   { id: "complex", label: { fr: "Complexes", en: "Complex" } },
