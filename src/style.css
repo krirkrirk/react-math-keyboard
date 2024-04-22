@@ -2,13 +2,19 @@
   box-sizing: border-box;
 }
 
+.scrollbar {
+  scrollbar-color: var(--keyboard-color-dark) var(--keyboard-color-extraLight);
+}
+
 .scrollbar * {
   scrollbar-width: thin;
 }
+
 .scrollbar * ::-webkit-scrollbar {
   background-color: transparent;
   height: 0.5rem;
 }
+
 .scrollbar * ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 16px;
