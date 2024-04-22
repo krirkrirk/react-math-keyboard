@@ -116,8 +116,11 @@ export const MathInput = ({
     const exec = (event: KeyboardEvent) => {
       if (!keys.includes(event.key)) event.preventDefault();
     };
-    window.addEventListener("keypress", exec);
-    return () => window.removeEventListener("keypress", exec);
+    const inputElement = document.getElementById(
+      `mq-keyboard-${idCounter.current}-container`
+    );
+    inputElement?.addEventListener("keypress", exec);
+    return () => inputElement?.removeEventListener("keypress", exec);
   }, [forbidOtherKeyboardKeys, numericToolbarKeys]);
 
   const idCounter = useRef<number>(0);
