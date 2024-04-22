@@ -1,6 +1,9 @@
-import { KeyboardTheme } from "./keyboardTheme.d";
-
-const black = "#020617";
+type Theme = {
+  extraLight: string;
+  light: string;
+  main: string;
+  dark: string;
+};
 export type KeyboardThemeColor =
   | "grey"
   | "blue"
@@ -9,7 +12,7 @@ export type KeyboardThemeColor =
   | "green"
   | "pink";
 
-export const colors: KeyboardTheme = {
+export const colors: Record<KeyboardThemeColor, Theme> = {
   grey: {
     // extraExtraLight: "#F8FAFC",
     extraLight: "#e2e8f0",

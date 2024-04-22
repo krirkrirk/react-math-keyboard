@@ -29,7 +29,6 @@ export const Example = ({}: ExampleProps) => {
           </p>
           <MathInput
             setValue={setValue}
-            color="grey"
             setMathfieldRef={(mathfield) => (mf.current = mathfield)}
             lang="en"
           />

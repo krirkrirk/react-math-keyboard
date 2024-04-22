@@ -72,7 +72,7 @@ export const MathInput = ({
   initialLatex,
   rootElementId,
   divisionFormat = "fraction",
-  color = "orange",
+  color = "grey",
   size = "medium",
   fullWidth = true,
   allowAlphabeticKeyboard = true,
@@ -82,7 +82,6 @@ export const MathInput = ({
   registerEmbedObjects,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
-
   const [showKeyboard, setShowKeyboard] = useState(false);
 
   const mathfield = useRef<MathField>({} as MathField);
@@ -231,9 +230,11 @@ export const MathInput = ({
       }
     };
   }, [showKeyboard, rootElementId, scrollType]);
+
   useEffect(() => {
     applyTheme(color);
-  }, [color]);
+  }, [color, showKeyboard]);
+
   const onForceHideKeyboard = () => {
     setShowKeyboard(false);
     // mathfield.current.blur();

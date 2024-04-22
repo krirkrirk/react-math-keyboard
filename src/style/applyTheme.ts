@@ -1,5 +1,4 @@
-import { KeyboardTheme, KeyboardThemeColor } from "./keyboardTheme.d";
-import { colors } from "./keyboardTheme";
+import { KeyboardThemeColor, colors } from "./keyboardTheme";
 
 export const applyTheme = (color: KeyboardThemeColor) => {
   document.documentElement.style.setProperty(
