@@ -86,9 +86,9 @@ export const Key = ({
     }
   };
 
-  const bgHoverColor = isUtilityKey ? "#64748b" : "#cbd5e1";
-
-  const innerShadow = "shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]";
+  const bgHoverColor = isUtilityKey
+    ? "var(--keyboard-color-dark)"
+    : "var(--keyboard-color-light)";
 
   //Event states
   const [isTouchDown, setIsTouchDown] = useState(false);
@@ -131,7 +131,9 @@ export const Key = ({
               flexShrink: 0,
             }),
         ...(isTouchDown && { backgroundColor: bgHoverColor }),
-        ...(isClicked && { boxShadow: "inset 0 2px 4px rgba(0, 0, 0, 0.2)" }),
+        ...(isClicked && {
+          "border-width": "2px 0px 0px 2px",
+        }),
         ...(labelType === "raw" || labelType === "svg"
           ? { paddingTop: 0 }
           : { paddingTop: "0.25rem" }),

@@ -9,6 +9,8 @@ import { ToolbarTabIds } from "../keyboard/toolbar/toolbarTabs";
 import { KeyId } from "../keyboard/keys/keyIds";
 import { Langs } from "../keyboard/keys/keyGroup";
 import { KeysPropsMap } from "../keyboard/keys/keys";
+import { KeyboardThemeColor } from "../style/keyboardTheme";
+import { applyTheme } from "../style/applyTheme";
 
 export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
@@ -20,6 +22,7 @@ export type MathInputProps = {
   initialLatex?: string;
   setValue?: (s: string) => void;
   divisionFormat?: "fraction" | "obelus";
+  color?: KeyboardThemeColor;
   style?: React.CSSProperties;
   size?: "small" | "medium";
   rootElementId?: string;
@@ -69,6 +72,7 @@ export const MathInput = ({
   initialLatex,
   rootElementId,
   divisionFormat = "fraction",
+  color = "grey",
   size = "medium",
   fullWidth = true,
   allowAlphabeticKeyboard = true,
@@ -78,7 +82,6 @@ export const MathInput = ({
   registerEmbedObjects,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
-
   const [showKeyboard, setShowKeyboard] = useState(false);
 
   const mathfield = useRef<MathField>({} as MathField);
@@ -231,13 +234,21 @@ export const MathInput = ({
     };
   }, [showKeyboard, rootElementId, scrollType]);
 
+  useEffect(() => {
+    applyTheme(color);
+  }, [color, showKeyboard]);
+
   const onForceHideKeyboard = () => {
     setShowKeyboard(false);
     // mathfield.current.blur();
   };
   return (
     <div
-      style={{ display: "flex", width: fullWidth ? "100%" : "auto", ...style }}
+      style={{
+        display: "flex",
+        width: fullWidth ? "100%" : "auto",
+        ...style,
+      }}
       id={`mq-keyboard-${idCounter.current}-container`}
       className="react-math-keyboard-input-container"
     >
