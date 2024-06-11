@@ -102,7 +102,6 @@ export const MathInput = ({
   };
 
   useEffect(() => {
-    console.log(forbidOtherKeyboardKeys);
     if (!forbidOtherKeyboardKeys) return;
     let keys: (string | undefined)[] = [...vanillaKeys];
     if (numericToolbarKeys)
