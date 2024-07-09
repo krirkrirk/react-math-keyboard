@@ -61,6 +61,10 @@ const vanillaKeys = [
   "/",
 ];
 
+const convertDoubleBackslashes = (str: string) => {
+  return str.replace(/\\\\/g, "\\");
+};
+
 export const MathInput = ({
   numericToolbarKeys,
   numericToolbarTabs,
