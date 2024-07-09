@@ -61,6 +61,10 @@ const vanillaKeys = [
   "/",
 ];
 
+const convertDoubleBackslashes = (str: string) => {
+  return str.replace(/\\\\/g, "\\");
+};
+
 export const MathInput = ({
   numericToolbarKeys,
   numericToolbarTabs,
@@ -195,7 +199,7 @@ export const MathInput = ({
   useEffect(() => {
     if (!loaded || !initialLatex) return;
     if (wasInitialLatexSet.current) return;
-    mathfield.current.latex(initialLatex);
+    mathfield.current.latex(convertDoubleBackslashes(initialLatex));
     wasInitialLatexSet.current = true;
   }, [loaded, initialLatex]);
 
