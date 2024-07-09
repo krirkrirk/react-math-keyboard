@@ -189,13 +189,15 @@ export const MathInput = ({
     window.addEventListener("mousedown", onMouseDown);
     return () => window.removeEventListener("mousedown", onMouseDown);
   }, []);
-
+  const convertDoubleBackslashes = (str: string) => {
+    return str.replace(/\\\\/g, "\\");
+  };
   const spanRef = useRef<HTMLSpanElement | null>(null);
   const wasInitialLatexSet = useRef(false);
   useEffect(() => {
     if (!loaded || !initialLatex) return;
     if (wasInitialLatexSet.current) return;
-    mathfield.current.latex(initialLatex);
+    mathfield.current.latex(convertDoubleBackslashes(initialLatex));
     wasInitialLatexSet.current = true;
   }, [loaded, initialLatex]);
 

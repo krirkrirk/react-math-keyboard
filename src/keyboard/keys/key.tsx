@@ -118,6 +118,7 @@ export const Key = ({
   }, []);
   return (
     <button
+      type="button"
       className={`react-math-keyboard-key ${
         isUtilityKey && "react-math-keyboard-key-utility"
       }`}
