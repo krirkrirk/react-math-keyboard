@@ -105,30 +105,6 @@ export const MathInput = ({
     timeout.current = setTimeout(eventually, 300);
   };
 
-  useEffect(() => {
-    if (!forbidOtherKeyboardKeys) return;
-    let keys: (string | undefined)[] = [...vanillaKeys];
-    if (numericToolbarKeys)
-      keys.push(
-        ...numericToolbarKeys.map((key) => {
-          return typeof key === "string"
-            ? KeysPropsMap.get(key)!.keypressId
-            : key.keypressId;
-        })
-      );
-
-    keys = keys.filter((e) => e !== undefined);
-
-    const exec = (event: KeyboardEvent) => {
-      if (!keys.includes(event.key)) event.preventDefault();
-    };
-    const inputElement = document.getElementById(
-      `mq-keyboard-${idCounter.current}-container`
-    );
-    inputElement?.addEventListener("keypress", exec);
-    return () => inputElement?.removeEventListener("keypress", exec);
-  }, [forbidOtherKeyboardKeys, numericToolbarKeys]);
-
   const idCounter = useRef<number>(0);
   useEffect(() => {
     window.jQuery = $;
@@ -170,6 +146,30 @@ export const MathInput = ({
     setClearRef?.(() => mf.latex(""));
     setLoaded(true);
   }, []);
+
+  useEffect(() => {
+    if (!forbidOtherKeyboardKeys || !loaded) return;
+    let keys: (string | undefined)[] = [...vanillaKeys];
+    if (numericToolbarKeys)
+      keys.push(
+        ...numericToolbarKeys.map((key) => {
+          return typeof key === "string"
+            ? KeysPropsMap.get(key)!.keypressId
+            : key.keypressId;
+        })
+      );
+
+    keys = keys.filter((e) => e !== undefined);
+
+    const exec = (event: KeyboardEvent) => {
+      if (!keys.includes(event.key)) event.preventDefault();
+    };
+    const inputElement = document.getElementById(
+      `mq-keyboard-${idCounter.current}-container`
+    );
+    inputElement?.addEventListener("keypress", exec);
+    return () => inputElement?.removeEventListener("keypress", exec);
+  }, [forbidOtherKeyboardKeys, numericToolbarKeys, loaded]);
 
   useEffect(() => {
     const onMouseDown = (e: MouseEvent) => {
