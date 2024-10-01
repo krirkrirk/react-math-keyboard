@@ -82,8 +82,13 @@ export const Example = ({}: ExampleProps) => {
               },
               "Mol-H2O",
               "rbracket",
+              "lbracket",
               "lbrace",
               "rbrace",
+              "cup",
+              "cap",
+              "S",
+              "equal",
               "x",
               "y",
             ]}
