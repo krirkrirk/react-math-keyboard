@@ -162,6 +162,7 @@ export const MathInput = ({
     keys = keys.filter((e) => e !== undefined);
 
     const exec = (event: KeyboardEvent) => {
+      console.log("exec", event.key, keys);
       if (!keys.includes(event.key)) event.preventDefault();
     };
     const inputElement = document.getElementById(

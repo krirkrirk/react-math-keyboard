@@ -53,17 +53,8 @@ export const Example = ({}: ExampleProps) => {
           </p>
           <MathInput
             setValue={setValue3}
-            forbidOtherKeyboardKeys={false}
+            forbidOtherKeyboardKeys={true}
             numericToolbarKeys={[
-              {
-                id: "custom",
-                label: "atome",
-                labelType: "raw",
-                mathfieldInstructions: {
-                  content: "^{}_{}",
-                  method: "typedText",
-                },
-              },
               {
                 id: "custom",
                 label: "wow",
@@ -80,13 +71,6 @@ export const Example = ({}: ExampleProps) => {
                 labelType: "raw",
                 onClick: () => alert("Clicked!"),
               },
-              "Mol-H2O",
-              "rbracket",
-              "lbracket",
-              "lbrace",
-              "rbrace",
-              "cup",
-              "cap",
               "S",
               "equal",
               "x",
