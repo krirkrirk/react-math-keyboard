@@ -147,30 +147,30 @@ export const MathInput = ({
     setLoaded(true);
   }, []);
 
-  useEffect(() => {
-    if (!forbidOtherKeyboardKeys || !loaded) return;
-    let keys: (string | undefined)[] = [...vanillaKeys];
-    if (numericToolbarKeys)
-      keys.push(
-        ...numericToolbarKeys.map((key) => {
-          return typeof key === "string"
-            ? KeysPropsMap.get(key)!.keypressId
-            : key.keypressId;
-        })
-      );
+  // useEffect(() => {
+  //   if (!forbidOtherKeyboardKeys || !loaded) return;
+  //   let keys: (string | undefined)[] = [...vanillaKeys];
+  //   if (numericToolbarKeys)
+  //     keys.push(
+  //       ...numericToolbarKeys.map((key) => {
+  //         return typeof key === "string"
+  //           ? KeysPropsMap.get(key)!.keypressId
+  //           : key.keypressId;
+  //       })
+  //     );
 
-    keys = keys.filter((e) => e !== undefined);
+  //   keys = keys.filter((e) => e !== undefined);
 
-    const exec = (event: KeyboardEvent) => {
-      console.log("exec", event.key, keys);
-      if (!keys.includes(event.key)) event.preventDefault();
-    };
-    const inputElement = document.getElementById(
-      `mq-keyboard-${idCounter.current}-container`
-    );
-    inputElement?.addEventListener("keypress", exec);
-    return () => inputElement?.removeEventListener("keypress", exec);
-  }, [forbidOtherKeyboardKeys, numericToolbarKeys, loaded]);
+  //   const exec = (event: KeyboardEvent) => {
+  //     console.log("exec", event.key, keys);
+  //     if (!keys.includes(event.key)) event.preventDefault();
+  //   };
+  //   const inputElement = document.getElementById(
+  //     `mq-keyboard-${idCounter.current}-container`
+  //   );
+  //   inputElement?.addEventListener("keypress", exec);
+  //   return () => inputElement?.removeEventListener("keypress", exec);
+  // }, [forbidOtherKeyboardKeys, numericToolbarKeys, loaded]);
 
   useEffect(() => {
     const onMouseDown = (e: MouseEvent) => {
