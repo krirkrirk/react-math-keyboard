@@ -10,5 +10,6 @@ export type KeyboardProps = {
     allowAlphabeticKeyboard: boolean;
     onHideKeyboard?: () => void;
     lang: Langs;
+    parenthesisShouldNotProduceLeftRight?: boolean;
 };
-export declare const Keyboard: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, }: KeyboardProps) => JSX.Element;
+export declare const Keyboard: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, parenthesisShouldNotProduceLeftRight, }: KeyboardProps) => JSX.Element;

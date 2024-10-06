@@ -11,5 +11,6 @@ export type NumericLayoutProps = {
     divisionFormat: "fraction" | "obelus";
     allowAlphabeticKeyboard: boolean;
     lang: Langs;
+    parenthesisShouldNotProduceLeftRight?: boolean;
 };
-export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, }: NumericLayoutProps) => JSX.Element;
+export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, parenthesisShouldNotProduceLeftRight, }: NumericLayoutProps) => JSX.Element;
