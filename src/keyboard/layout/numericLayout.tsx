@@ -14,6 +14,7 @@ export type NumericLayoutProps = {
   divisionFormat: "fraction" | "obelus";
   allowAlphabeticKeyboard: boolean;
   lang: Langs;
+  parenthesisShouldNotProduceLeftRight?: boolean;
 };
 
 export const NumericLayout = ({
@@ -24,6 +25,7 @@ export const NumericLayout = ({
   allowAlphabeticKeyboard,
   onHideKeyboard,
   lang,
+  parenthesisShouldNotProduceLeftRight,
 }: NumericLayoutProps) => {
   const hideToolbar = !!toolbarKeys && !toolbarKeys.length;
 
@@ -40,8 +42,17 @@ export const NumericLayout = ({
             flexGrow: 1,
           }}
         >
-          <Key {...KeysPropsMap.get("leftParenthesis")!} />
-          <Key {...KeysPropsMap.get("rightParenthesis")!} />
+          {parenthesisShouldNotProduceLeftRight ? (
+            <Key {...KeysPropsMap.get("leftParenthesisNoLeft")!} />
+          ) : (
+            <Key {...KeysPropsMap.get("leftParenthesis")!} />
+          )}
+
+          {parenthesisShouldNotProduceLeftRight ? (
+            <Key {...KeysPropsMap.get("rightParenthesisNoRight")!} />
+          ) : (
+            <Key {...KeysPropsMap.get("rightParenthesis")!} />
+          )}
 
           <Key {...KeysPropsMap.get("times")!} />
           {divisionFormat === "fraction" ? (

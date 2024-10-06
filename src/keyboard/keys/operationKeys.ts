@@ -111,6 +111,18 @@ export const operationKeysProps: KeyProps[] = [
     keypressId: "(",
   },
   {
+    id: "leftParenthesisNoLeft",
+    label: "(",
+    labelType: "tex",
+    groups: ["basicOperations"],
+
+    mathfieldInstructions: {
+      content: "(",
+      method: "write",
+    },
+    keypressId: "(",
+  },
+  {
     id: "rightParenthesis",
     label: ")",
     labelType: "tex",
@@ -120,9 +132,18 @@ export const operationKeysProps: KeyProps[] = [
       content: ")",
       method: "typedText",
     },
-    keypressId: ")",
   },
+  {
+    id: "rightParenthesisNoRight",
+    label: ")",
+    labelType: "tex",
+    groups: ["basicOperations"],
 
+    mathfieldInstructions: {
+      content: ")",
+      method: "write",
+    },
+  },
   {
     id: "comma",
     label: "{,}",

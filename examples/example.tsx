@@ -54,6 +54,7 @@ export const Example = ({}: ExampleProps) => {
           <MathInput
             setValue={setValue3}
             forbidOtherKeyboardKeys={true}
+            parenthesisShouldNotProduceLeftRight={true}
             numericToolbarKeys={[
               {
                 id: "custom",

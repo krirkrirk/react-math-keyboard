@@ -31,6 +31,7 @@ export type MathInputProps = {
   scrollType?: "window" | "raw";
   lang?: Langs;
   forbidOtherKeyboardKeys?: boolean;
+  parenthesisShouldNotProduceLeftRight?: boolean;
   registerEmbedObjects?: {
     id: string;
     htmlString: string;
@@ -76,6 +77,7 @@ export const MathInput = ({
   initialLatex,
   rootElementId,
   divisionFormat = "fraction",
+  parenthesisShouldNotProduceLeftRight = false,
   color = "grey",
   size = "medium",
   fullWidth = true,
@@ -272,6 +274,9 @@ export const MathInput = ({
             onHideKeyboard={onForceHideKeyboard}
             allowAlphabeticKeyboard={allowAlphabeticKeyboard}
             lang={lang}
+            parenthesisShouldNotProduceLeftRight={
+              parenthesisShouldNotProduceLeftRight
+            }
           />
         )}
       </MathFieldContext.Provider>
