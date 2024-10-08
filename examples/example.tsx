@@ -72,10 +72,12 @@ export const Example = ({}: ExampleProps) => {
                 labelType: "raw",
                 onClick: () => alert("Clicked!"),
               },
-              "S",
-              "equal",
-              "x",
-              "y",
+              "varnothing",
+              "naturals",
+              "integers",
+              "decimals",
+              "rationals",
+              "reals",
             ]}
           />
           <p>Latex produced : {value3}</p>

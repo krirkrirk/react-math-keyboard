@@ -155,11 +155,11 @@ export const setKeysProps: KeyProps[] = [
   },
   {
     id: "decimals",
-    label: "\\mathrm{D}",
+    label: "\\mathbb{D}",
     labelType: "tex",
 
     mathfieldInstructions: {
-      content: "\\mathrm{D}",
+      content: "\\mathbb{D}",
       method: "write",
     },
     groups: ["sets"],
