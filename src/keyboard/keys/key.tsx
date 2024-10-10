@@ -24,6 +24,8 @@ export type KeyProps = {
   groups?: KeyGroupIds[];
   postKeystrokes?: string[];
   keypressId?: string;
+  onDeleteSequence?: (nodeId: number) => void;
+  backspacesNeededCount?: number;
 };
 
 export const Key = ({
@@ -36,6 +38,8 @@ export const Key = ({
   fullWidth = true,
   isUtilityKey = false,
   postKeystrokes,
+  onDeleteSequence,
+  backspacesNeededCount,
 }: KeyProps) => {
   const mathfield = useContext(MathFieldContext);
   const trueId =
@@ -48,7 +52,28 @@ export const Key = ({
   }, [id, formatedId]);
 
   const handleClick = () => {
-    if (mathfieldInstructions) {
+    if (id === "del") {
+      const cursor = mathfield.__controller.cursor;
+      const prevNodeId = cursor[-1]?.id;
+      console.log("del pressed", prevNodeId);
+      console.log(cursor);
+      //exec deletion
+      let backspaces = backspacesNeededCount || 1;
+      console.log("bs", backspaces);
+      for (let i = 0; i < backspaces; i++) {
+        mathfield.keystroke("Backspace");
+      }
+      console.log(cursor);
+
+      //if it has been deleted, then nothing more to do
+      //if nothing happened, then we should delete a group
+      console.log(cursor[-1]?.id, prevNodeId);
+      // if (cursor[-1]?.id === prevNodeId) {
+      console.log("del seq");
+      // onDeleteSequence?.(cursor[-1]?.id);
+      // }
+      //browse
+    } else if (mathfieldInstructions) {
       if (typeof mathfieldInstructions.content === "string")
         mathfield[mathfieldInstructions.method](mathfieldInstructions.content);
       else

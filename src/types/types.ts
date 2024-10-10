@@ -46,6 +46,7 @@ export interface MathField {
   typedText(text: string): void;
   config(newConfig: MathFieldConfig): void;
   id: number;
+  __controller: any;
 }
 
 export interface MathfieldInstructions {

@@ -12,4 +12,4 @@ export type KeyboardProps = {
     lang: Langs;
     parenthesisShouldNotProduceLeftRight?: boolean;
 };
-export declare const Keyboard: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, parenthesisShouldNotProduceLeftRight, }: KeyboardProps) => JSX.Element;
+export declare const Keyboard: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, parenthesisShouldNotProduceLeftRight, }: KeyboardProps) => import("react/jsx-runtime").JSX.Element;

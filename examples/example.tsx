@@ -29,8 +29,16 @@ export const Example = ({}: ExampleProps) => {
           </p>
           <MathInput
             setValue={setValue}
-            setMathfieldRef={(mathfield) => (mf.current = mathfield)}
-            lang="en"
+            // setMathfieldRef={(mathfield) => (mf.current = mathfield)}
+            // lang="en"
+            // registerEmbedObjects={[
+            //   {
+            //     htmlString: "<p>caca</p>",
+            //     id: "caca",
+            //     latex: "\\text{caca}",
+            //     text: "caca",
+            //   },
+            // ]}
           />
           <button onClick={() => clear(mf.current!)}>Clear</button>
           <p style={{ overflow: "auto" }}>Latex produced : {value}</p>

@@ -18,6 +18,7 @@ export type KeyboardProps = {
   onHideKeyboard?: () => void;
   lang: Langs;
   parenthesisShouldNotProduceLeftRight?: boolean;
+  onDeleteSequence?: (nodeId: number) => void;
 };
 
 export const Keyboard = ({
@@ -29,6 +30,7 @@ export const Keyboard = ({
   onHideKeyboard,
   lang,
   parenthesisShouldNotProduceLeftRight,
+  onDeleteSequence,
 }: KeyboardProps) => {
   const mathfield = useContext(MathFieldContext);
   useEffect(() => {
@@ -72,6 +74,7 @@ export const Keyboard = ({
           parenthesisShouldNotProduceLeftRight={
             parenthesisShouldNotProduceLeftRight
           }
+          onDeleteSequence={onDeleteSequence}
         />
       )}
       {currentLayoutType === "alphabet" && (

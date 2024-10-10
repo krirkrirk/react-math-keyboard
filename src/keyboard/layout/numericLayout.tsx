@@ -15,6 +15,7 @@ export type NumericLayoutProps = {
   allowAlphabeticKeyboard: boolean;
   lang: Langs;
   parenthesisShouldNotProduceLeftRight?: boolean;
+  onDeleteSequence?: (nodeId: number) => void;
 };
 
 export const NumericLayout = ({
@@ -26,6 +27,7 @@ export const NumericLayout = ({
   onHideKeyboard,
   lang,
   parenthesisShouldNotProduceLeftRight,
+  onDeleteSequence,
 }: NumericLayoutProps) => {
   const hideToolbar = !!toolbarKeys && !toolbarKeys.length;
 
@@ -126,7 +128,10 @@ export const NumericLayout = ({
           <Key {...KeysPropsMap.get("minus")!} />
 
           <Key {...KeysPropsMap.get("comma")!} />
-          <Key {...KeysPropsMap.get("del")!} />
+          <Key
+            {...KeysPropsMap.get("del")!}
+            onDeleteSequence={onDeleteSequence}
+          />
         </div>
       </div>
     </div>

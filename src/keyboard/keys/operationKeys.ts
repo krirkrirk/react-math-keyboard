@@ -77,6 +77,7 @@ export const operationKeysProps: KeyProps[] = [
     groups: ["basicOperations"],
     mathfieldInstructions: { content: "^2", method: "write" },
     keypressId: "²",
+    backspacesNeededCount: 3,
   },
 
   {
