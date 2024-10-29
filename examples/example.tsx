@@ -54,7 +54,6 @@ export const Example = ({}: ExampleProps) => {
           <MathInput
             setValue={setValue3}
             forbidOtherKeyboardKeys={true}
-            parenthesisShouldNotProduceLeftRight={true}
             numericToolbarKeys={[
               {
                 id: "custom",
@@ -77,7 +76,8 @@ export const Example = ({}: ExampleProps) => {
               "integers",
               "decimals",
               "rationals",
-              "reals",
+              "equal",
+              "fParenthesis",
             ]}
           />
           <p>Latex produced : {value3}</p>

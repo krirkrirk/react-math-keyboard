@@ -101,6 +101,7 @@ export type KeyId =
   | "arctan"
   | "abs"
   | "fx"
+  | "fParenthesis"
 
   /**sequences */
   | "un"

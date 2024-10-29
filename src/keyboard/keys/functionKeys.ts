@@ -67,4 +67,14 @@ export const functionKeysProps: KeyProps[] = [
     },
     groups: ["functions"],
   },
+  {
+    id: "fParenthesis",
+    label: "f\\left(...\\right)",
+    labelType: "tex",
+    mathfieldInstructions: {
+      content: "f(",
+      method: "typedText",
+    },
+    groups: ["functions"],
+  },
 ];
