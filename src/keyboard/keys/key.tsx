@@ -24,6 +24,7 @@ export type KeyProps = {
   groups?: KeyGroupIds[];
   postKeystrokes?: string[];
   keypressId?: string;
+  tabShouldSkipKeys?: boolean;
 };
 
 export const Key = ({
@@ -36,6 +37,7 @@ export const Key = ({
   fullWidth = true,
   isUtilityKey = false,
   postKeystrokes,
+  tabShouldSkipKeys,
 }: KeyProps) => {
   const mathfield = useContext(MathFieldContext);
   const trueId =
@@ -139,6 +141,7 @@ export const Key = ({
           ? { paddingTop: 0 }
           : { paddingTop: "0.25rem" }),
       }}
+      {...(tabShouldSkipKeys && { tabIndex: -1 })}
       ref={ref}
       id={`mq-keyboard-${mathfield.id}-button-key-${trueId}`}
       onMouseDown={onMouseDown}

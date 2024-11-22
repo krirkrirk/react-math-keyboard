@@ -15,6 +15,7 @@ export type NumericLayoutProps = {
   allowAlphabeticKeyboard: boolean;
   lang: Langs;
   parenthesisShouldNotProduceLeftRight?: boolean;
+  tabShouldSkipKeys?: boolean;
 };
 
 export const NumericLayout = ({
@@ -26,13 +27,19 @@ export const NumericLayout = ({
   onHideKeyboard,
   lang,
   parenthesisShouldNotProduceLeftRight,
+  tabShouldSkipKeys,
 }: NumericLayoutProps) => {
   const hideToolbar = !!toolbarKeys && !toolbarKeys.length;
 
   return (
     <div className="react-math-keyboard-keyboard-layout">
       {!hideToolbar && (
-        <Toolbar keys={toolbarKeys} tabs={toolbarTabs} lang={lang} />
+        <Toolbar
+          keys={toolbarKeys}
+          tabs={toolbarTabs}
+          lang={lang}
+          tabShouldSkipKeys={tabShouldSkipKeys}
+        />
       )}
       <div className="react-math-keyboard-numeric-layout">
         <div
@@ -43,25 +50,52 @@ export const NumericLayout = ({
           }}
         >
           {parenthesisShouldNotProduceLeftRight ? (
-            <Key {...KeysPropsMap.get("leftParenthesisNoLeft")!} />
+            <Key
+              {...KeysPropsMap.get("leftParenthesisNoLeft")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
           ) : (
-            <Key {...KeysPropsMap.get("leftParenthesis")!} />
+            <Key
+              {...KeysPropsMap.get("leftParenthesis")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
           )}
 
           {parenthesisShouldNotProduceLeftRight ? (
-            <Key {...KeysPropsMap.get("rightParenthesisNoRight")!} />
+            <Key
+              {...KeysPropsMap.get("rightParenthesisNoRight")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
           ) : (
-            <Key {...KeysPropsMap.get("rightParenthesis")!} />
+            <Key
+              {...KeysPropsMap.get("rightParenthesis")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
           )}
 
-          <Key {...KeysPropsMap.get("times")!} />
+          <Key
+            {...KeysPropsMap.get("times")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
           {divisionFormat === "fraction" ? (
-            <Key {...KeysPropsMap.get("frac")!} />
+            <Key
+              {...KeysPropsMap.get("frac")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
           ) : (
-            <Key {...KeysPropsMap.get("obelus")!} />
+            <Key
+              {...KeysPropsMap.get("obelus")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
           )}
-          <Key {...KeysPropsMap.get("sqrt")!} />
-          <Key {...KeysPropsMap.get("square")!} />
+          <Key
+            {...KeysPropsMap.get("sqrt")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("square")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
           {allowAlphabeticKeyboard ? (
             <Key
               id="switch"
@@ -69,6 +103,7 @@ export const NumericLayout = ({
               labelType="raw"
               onClick={onSwitch}
               isUtilityKey
+              tabShouldSkipKeys={tabShouldSkipKeys}
             />
           ) : (
             <Key
@@ -89,9 +124,13 @@ export const NumericLayout = ({
               labelType="svg"
               onClick={onHideKeyboard}
               isUtilityKey
+              tabShouldSkipKeys={tabShouldSkipKeys}
             />
           )}
-          <Key {...KeysPropsMap.get("power")!} />
+          <Key
+            {...KeysPropsMap.get("power")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
         </div>
         <div
           className="react-math-keyboard-layout-grid"
@@ -100,18 +139,54 @@ export const NumericLayout = ({
             flexGrow: 2,
           }}
         >
-          <Key {...KeysPropsMap.get("7")!} />
-          <Key {...KeysPropsMap.get("8")!} />
-          <Key {...KeysPropsMap.get("9")!} />
-          <Key {...KeysPropsMap.get("4")!} />
-          <Key {...KeysPropsMap.get("5")!} />
-          <Key {...KeysPropsMap.get("6")!} />
-          <Key {...KeysPropsMap.get("1")!} />
-          <Key {...KeysPropsMap.get("2")!} />
-          <Key {...KeysPropsMap.get("3")!} />
-          <Key {...KeysPropsMap.get("left")!} />
-          <Key {...KeysPropsMap.get("0")!} />
-          <Key {...KeysPropsMap.get("right")!} />
+          <Key
+            {...KeysPropsMap.get("7")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("8")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("9")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("4")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("5")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("6")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("1")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("2")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("3")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("left")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("0")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("right")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
         </div>
 
         <div
@@ -122,11 +197,23 @@ export const NumericLayout = ({
             flexGrow: 1,
           }}
         >
-          <Key {...KeysPropsMap.get("plus")!} />
-          <Key {...KeysPropsMap.get("minus")!} />
+          <Key
+            {...KeysPropsMap.get("plus")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("minus")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
 
-          <Key {...KeysPropsMap.get("comma")!} />
-          <Key {...KeysPropsMap.get("del")!} />
+          <Key
+            {...KeysPropsMap.get("comma")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("del")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
         </div>
       </div>
     </div>

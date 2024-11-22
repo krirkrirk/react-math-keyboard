@@ -13,4 +13,4 @@ export type NumericLayoutProps = {
     lang: Langs;
     parenthesisShouldNotProduceLeftRight?: boolean;
 };
-export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, parenthesisShouldNotProduceLeftRight, }: NumericLayoutProps) => JSX.Element;
+export declare const NumericLayout: ({ toolbarKeys, toolbarTabs, onSwitch, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, parenthesisShouldNotProduceLeftRight, }: NumericLayoutProps) => import("react/jsx-runtime").JSX.Element;

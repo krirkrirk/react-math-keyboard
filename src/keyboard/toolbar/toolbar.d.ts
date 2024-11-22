@@ -7,4 +7,4 @@ export type ToolbarProps = {
     tabs?: ToolbarTabIds[];
     lang: Langs;
 };
-export declare const Toolbar: ({ keys, tabs, lang }: ToolbarProps) => JSX.Element;
+export declare const Toolbar: ({ keys, tabs, lang }: ToolbarProps) => import("react/jsx-runtime").JSX.Element;

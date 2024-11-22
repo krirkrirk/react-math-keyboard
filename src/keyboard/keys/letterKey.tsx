@@ -6,11 +6,13 @@ export type LetterKeyProps = {
   letter: KeyId;
   isMaj?: boolean;
   isInMathMode?: boolean;
+  tabShouldSkipKeys?: boolean;
 };
 export const LetterKey = ({
   letter,
   isMaj = false,
   isInMathMode = true,
+  tabShouldSkipKeys,
 }: LetterKeyProps) => {
   const displayedLetter = isMaj ? letter.toLocaleUpperCase() : letter;
   return (
@@ -24,6 +26,7 @@ export const LetterKey = ({
       }}
       keypressId={displayedLetter}
       groups={isMaj ? ["majLetters"] : ["minLetters"]}
+      tabShouldSkipKeys={tabShouldSkipKeys}
     />
   );
 };

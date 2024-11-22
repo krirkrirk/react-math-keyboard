@@ -18,6 +18,7 @@ export type KeyboardProps = {
   onHideKeyboard?: () => void;
   lang: Langs;
   parenthesisShouldNotProduceLeftRight?: boolean;
+  tabShouldSkipKeys?: boolean;
 };
 
 export const Keyboard = ({
@@ -29,6 +30,7 @@ export const Keyboard = ({
   onHideKeyboard,
   lang,
   parenthesisShouldNotProduceLeftRight,
+  tabShouldSkipKeys,
 }: KeyboardProps) => {
   const mathfield = useContext(MathFieldContext);
   useEffect(() => {
@@ -72,6 +74,7 @@ export const Keyboard = ({
           parenthesisShouldNotProduceLeftRight={
             parenthesisShouldNotProduceLeftRight
           }
+          tabShouldSkipKeys={tabShouldSkipKeys}
         />
       )}
       {currentLayoutType === "alphabet" && (
@@ -79,6 +82,7 @@ export const Keyboard = ({
           onSwitch={onSwitch}
           toolbarKeys={alphabeticToolbarKeys}
           lang={lang}
+          tabShouldSkipKeys={tabShouldSkipKeys}
         />
       )}
     </div>

@@ -6,4 +6,4 @@ export type AlphabetLayoutProps = {
     onSwitch?: () => void;
     lang: Langs;
 };
-export declare const AlphabetLayout: ({ toolbarKeys, onSwitch, lang, }: AlphabetLayoutProps) => JSX.Element;
+export declare const AlphabetLayout: ({ toolbarKeys, onSwitch, lang, }: AlphabetLayoutProps) => import("react/jsx-runtime").JSX.Element;

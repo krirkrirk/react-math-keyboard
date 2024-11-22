@@ -31,6 +31,7 @@ export const Example = ({}: ExampleProps) => {
             setValue={setValue}
             setMathfieldRef={(mathfield) => (mf.current = mathfield)}
             lang="en"
+            forbidPaste
           />
           <button onClick={() => clear(mf.current!)}>Clear</button>
           <p style={{ overflow: "auto" }}>Latex produced : {value}</p>
@@ -71,7 +72,7 @@ export const Example = ({}: ExampleProps) => {
                 labelType: "raw",
                 onClick: () => alert("Clicked!"),
               },
-              "varnothing",
+              "degree",
               "naturals",
               "integers",
               "decimals",

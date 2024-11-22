@@ -38,6 +38,8 @@ export type MathInputProps = {
     text: string;
     latex: string;
   }[];
+  tabShouldSkipKeys?: boolean;
+  forbidPaste?: boolean;
 };
 
 const vanillaKeys = [
@@ -86,6 +88,8 @@ export const MathInput = ({
   lang = "en",
   forbidOtherKeyboardKeys = false,
   registerEmbedObjects,
+  tabShouldSkipKeys = false,
+  forbidPaste = false,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
   const [showKeyboard, setShowKeyboard] = useState(false);
@@ -132,7 +136,7 @@ export const MathInput = ({
 
     const mf = MQ.MathField(spanRef.current, {
       handlers: {
-        edit: function () {
+        edit: function (a: any) {
           setValue?.(mf.latex());
         },
       },
@@ -148,7 +152,6 @@ export const MathInput = ({
     setClearRef?.(() => mf.latex(""));
     setLoaded(true);
   }, []);
-
   useEffect(() => {
     if (!forbidOtherKeyboardKeys || !loaded) return;
     let keys: (string | undefined)[] = [...vanillaKeys];
@@ -172,6 +175,14 @@ export const MathInput = ({
     inputElement?.addEventListener("keypress", exec);
     return () => inputElement?.removeEventListener("keypress", exec);
   }, [forbidOtherKeyboardKeys, numericToolbarKeys, loaded]);
+
+  useEffect(() => {
+    if (!forbidPaste || !loaded) return;
+    const inputElement = document.getElementById(
+      `mq-keyboard-${idCounter.current}-container`
+    );
+    inputElement && (inputElement.onpaste = (e) => e.preventDefault());
+  }, [forbidPaste, loaded]);
 
   useEffect(() => {
     const onMouseDown = (e: MouseEvent) => {
@@ -277,6 +288,7 @@ export const MathInput = ({
             parenthesisShouldNotProduceLeftRight={
               parenthesisShouldNotProduceLeftRight
             }
+            tabShouldSkipKeys={tabShouldSkipKeys}
           />
         )}
       </MathFieldContext.Provider>

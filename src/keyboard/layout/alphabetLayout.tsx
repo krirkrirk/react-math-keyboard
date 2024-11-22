@@ -9,6 +9,7 @@ export type AlphabetLayoutProps = {
   toolbarKeys?: (KeyId | KeyProps)[];
   onSwitch?: () => void;
   lang: Langs;
+  tabShouldSkipKeys?: boolean;
 };
 
 const rows: KeyId[][] = [
@@ -35,6 +36,7 @@ export const AlphabetLayout = ({
   toolbarKeys = [],
   onSwitch,
   lang,
+  tabShouldSkipKeys,
 }: AlphabetLayoutProps) => {
   const [isMaj, setIsMaj] = useState(false);
   const onMaj = () => {
@@ -47,7 +49,11 @@ export const AlphabetLayout = ({
 
   return (
     <div className="react-math-keyboard-keyboard-layout">
-      <Toolbar keys={shownToolbarKeys} lang={lang} />
+      <Toolbar
+        tabShouldSkipKeys={tabShouldSkipKeys}
+        keys={shownToolbarKeys}
+        lang={lang}
+      />
 
       <div className="react-math-keyboard-alphabet-layout">
         <div
@@ -63,6 +69,7 @@ export const AlphabetLayout = ({
               key={letter}
               isInMathMode={false}
               isMaj={isMaj}
+              tabShouldSkipKeys={tabShouldSkipKeys}
             />
           ))}
           {rows[1].map((letter) => (
@@ -71,6 +78,7 @@ export const AlphabetLayout = ({
               key={letter}
               isInMathMode={false}
               isMaj={isMaj}
+              tabShouldSkipKeys={tabShouldSkipKeys}
             />
           ))}
           <div style={{ gridColumn: "span 2" }}>
@@ -91,6 +99,7 @@ export const AlphabetLayout = ({
               labelType="svg"
               onClick={onMaj}
               isUtilityKey
+              tabShouldSkipKeys={tabShouldSkipKeys}
             />
           </div>
           {rows[2].map((letter) => (
@@ -99,10 +108,17 @@ export const AlphabetLayout = ({
               key={letter}
               isInMathMode={false}
               isMaj={isMaj}
+              tabShouldSkipKeys={tabShouldSkipKeys}
             />
           ))}
-          <Key {...KeysPropsMap.get("comma")!} />
-          <Key {...KeysPropsMap.get("dot")!} />
+          <Key
+            {...KeysPropsMap.get("comma")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
+          <Key
+            {...KeysPropsMap.get("dot")!}
+            tabShouldSkipKeys={tabShouldSkipKeys}
+          />
         </div>
         <div style={{ display: "flex", columnGap: "0.25rem" }}>
           <div style={{ flexGrow: 1 }}>
@@ -112,19 +128,32 @@ export const AlphabetLayout = ({
               labelType="raw"
               onClick={onSwitch}
               isUtilityKey
+              tabShouldSkipKeys={tabShouldSkipKeys}
             />
           </div>
           <div style={{ flexGrow: 0.5 }}>
-            <Key {...KeysPropsMap.get("left")!} />
+            <Key
+              {...KeysPropsMap.get("left")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
           </div>
           <div style={{ flexGrow: 4 }}>
-            <Key {...KeysPropsMap.get("space")!} />
+            <Key
+              {...KeysPropsMap.get("space")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
           </div>
           <div style={{ flexGrow: 0.5 }}>
-            <Key {...KeysPropsMap.get("right")!} />
+            <Key
+              {...KeysPropsMap.get("right")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
           </div>
           <div style={{ flexGrow: 1 }}>
-            <Key {...KeysPropsMap.get("del")!} />
+            <Key
+              {...KeysPropsMap.get("del")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
           </div>
         </div>
       </div>

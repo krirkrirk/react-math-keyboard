@@ -15,4 +15,4 @@ export type KeyProps = {
     postKeystrokes?: string[];
     keypressId?: string;
 };
-export declare const Key: ({ id, formatedId, label, labelType, onClick, mathfieldInstructions, fullWidth, isUtilityKey, postKeystrokes, }: KeyProps) => JSX.Element;
+export declare const Key: ({ id, formatedId, label, labelType, onClick, mathfieldInstructions, fullWidth, isUtilityKey, postKeystrokes, }: KeyProps) => import("react/jsx-runtime").JSX.Element;
