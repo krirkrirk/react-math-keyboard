@@ -16,7 +16,7 @@ export const Portal = ({ children, open, style }: Props) => {
           style={{
             position: "absolute",
             display: open ? "block" : "none",
-            zIndex: 1301,
+            zIndex: 1310,
             bottom: 0,
             left: 0,
             width: "100vw",

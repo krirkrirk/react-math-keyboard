@@ -14,5 +14,6 @@ export type KeyProps = {
     groups?: KeyGroupIds[];
     postKeystrokes?: string[];
     keypressId?: string;
+    tabShouldSkipKeys?: boolean;
 };
-export declare const Key: ({ id, formatedId, label, labelType, onClick, mathfieldInstructions, fullWidth, isUtilityKey, postKeystrokes, }: KeyProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Key: ({ id, formatedId, label, labelType, onClick, mathfieldInstructions, fullWidth, isUtilityKey, postKeystrokes, tabShouldSkipKeys, }: KeyProps) => import("react/jsx-runtime").JSX.Element;

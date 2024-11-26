@@ -6,5 +6,6 @@ export type ToolbarProps = {
     keys?: (KeyId | KeyProps)[];
     tabs?: ToolbarTabIds[];
     lang: Langs;
+    tabShouldSkipKeys?: boolean;
 };
-export declare const Toolbar: ({ keys, tabs, lang }: ToolbarProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Toolbar: ({ keys, tabs, lang, tabShouldSkipKeys, }: ToolbarProps) => import("react/jsx-runtime").JSX.Element;

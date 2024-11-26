@@ -11,5 +11,6 @@ export type KeyboardProps = {
     onHideKeyboard?: () => void;
     lang: Langs;
     parenthesisShouldNotProduceLeftRight?: boolean;
+    tabShouldSkipKeys?: boolean;
 };
-export declare const Keyboard: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, parenthesisShouldNotProduceLeftRight, }: KeyboardProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Keyboard: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, divisionFormat, allowAlphabeticKeyboard, onHideKeyboard, lang, parenthesisShouldNotProduceLeftRight, tabShouldSkipKeys, }: KeyboardProps) => import("react/jsx-runtime").JSX.Element;

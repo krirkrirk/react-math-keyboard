@@ -5,5 +5,6 @@ export type AlphabetLayoutProps = {
     toolbarKeys?: (KeyId | KeyProps)[];
     onSwitch?: () => void;
     lang: Langs;
+    tabShouldSkipKeys?: boolean;
 };
-export declare const AlphabetLayout: ({ toolbarKeys, onSwitch, lang, }: AlphabetLayoutProps) => import("react/jsx-runtime").JSX.Element;
+export declare const AlphabetLayout: ({ toolbarKeys, onSwitch, lang, tabShouldSkipKeys, }: AlphabetLayoutProps) => import("react/jsx-runtime").JSX.Element;
