@@ -11,6 +11,7 @@ import { Langs } from "../keyboard/keys/keyGroup";
 import { KeysPropsMap } from "../keyboard/keys/keys";
 import { KeyboardThemeColor } from "../style/keyboardTheme";
 import { applyTheme } from "../style/applyTheme";
+import { Portal } from "../components/portal";
 
 export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
@@ -276,21 +277,23 @@ export const MathInput = ({
         ref={spanRef}
       ></span>
       <MathFieldContext.Provider value={mathfield.current}>
-        {showKeyboard && (
-          <Keyboard
-            divisionFormat={divisionFormat}
-            numericToolbarKeys={numericToolbarKeys}
-            numericToolbarTabs={numericToolbarTabs}
-            alphabeticToolbarKeys={alphabeticToolbarKeys}
-            onHideKeyboard={onForceHideKeyboard}
-            allowAlphabeticKeyboard={allowAlphabeticKeyboard}
-            lang={lang}
-            parenthesisShouldNotProduceLeftRight={
-              parenthesisShouldNotProduceLeftRight
-            }
-            tabShouldSkipKeys={tabShouldSkipKeys}
-          />
-        )}
+        <Portal open={showKeyboard} onClose={onForceHideKeyboard}>
+          {showKeyboard && (
+            <Keyboard
+              divisionFormat={divisionFormat}
+              numericToolbarKeys={numericToolbarKeys}
+              numericToolbarTabs={numericToolbarTabs}
+              alphabeticToolbarKeys={alphabeticToolbarKeys}
+              onHideKeyboard={onForceHideKeyboard}
+              allowAlphabeticKeyboard={allowAlphabeticKeyboard}
+              lang={lang}
+              parenthesisShouldNotProduceLeftRight={
+                parenthesisShouldNotProduceLeftRight
+              }
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
+          )}
+        </Portal>
       </MathFieldContext.Provider>
     </div>
   );
