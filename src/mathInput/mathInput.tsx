@@ -277,7 +277,7 @@ export const MathInput = ({
         ref={spanRef}
       ></span>
       <MathFieldContext.Provider value={mathfield.current}>
-        <Portal open={showKeyboard} onClose={onForceHideKeyboard}>
+        <Portal open={showKeyboard}>
           {showKeyboard && (
             <Keyboard
               divisionFormat={divisionFormat}
