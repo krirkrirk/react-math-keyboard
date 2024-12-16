@@ -98,7 +98,7 @@ export const algebraKeysProps: KeyProps[] = [
     groups: ["algebra"],
   },
   {
-    id: "identity",
+    id: "equivalent",
     label: "≡",
     labelType: "tex",
 
