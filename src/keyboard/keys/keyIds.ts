@@ -63,6 +63,7 @@ export type KeyId =
   | "approx"
   | "xsquare"
   | "xcube"
+  | "identity"
 
   /**sets */
   | "belongs"
