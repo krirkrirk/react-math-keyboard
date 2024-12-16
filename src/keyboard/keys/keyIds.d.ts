@@ -1,4 +1,4 @@
-export type KeyId = 
+export type KeyId =
 /**quantities */
 "volumeMere" | "volumeFille" | "concentrationMere" | "concentrationFille"
 /**units */
@@ -10,7 +10,7 @@ export type KeyId =
 /**geometry */
  | "overrightarrow" | "degree" | "vectorU"
 /**operations */
- | "plus" | "minus" | "times" | "frac" | "obelus" | "sqrt" | "sqrtCub" | "square" | "cube" | "power" | "percent" | "leftParenthesis" | "leftParenthesisNoLeft" | "rightParenthesis" | "rightParenthesisNoRight" | "equal" | "comma" | "semicolon" | "dot" | "sup" | "inf" | "geq" | "leq" | "approx" | "xsquare" | "xcube"
+ | "plus" | "minus" | "times" | "frac" | "obelus" | "sqrt" | "sqrtCub" | "square" | "cube" | "power" | "percent" | "leftParenthesis" | "leftParenthesisNoLeft" | "rightParenthesis" | "rightParenthesisNoRight" | "equal" | "comma" | "semicolon" | "dot" | "sup" | "inf" | "geq" | "leq" | "approx" | "xsquare" | "xcube" | "equivalent"
 /**sets */
  | "belongs" | "notin" | "cap" | "cup" | "lbrace" | "rbrace" | "lbracket" | "rbracket" | "varnothing" | "naturals" | "integers" | "rationals" | "decimals" | "reals" | "complex" | "ast" | "del" | "right" | "left" | "rightarrow" | "overrightarrow" | "infty"
 /**fcts */
