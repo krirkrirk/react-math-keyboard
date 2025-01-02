@@ -3,7 +3,7 @@ import { KeyProps } from "./key";
 export const geometryKeysProps: KeyProps[] = [
   {
     id: "overrightarrow",
-    label: "\\overrightarrow{AB}",
+    label: "\\overrightarrow{\\ \\ \\ \\ \\ }",
     labelType: "tex",
     mathfieldInstructions: {
       content: "overrightarrow",
@@ -31,5 +31,15 @@ export const geometryKeysProps: KeyProps[] = [
       method: "write",
     },
     groups: ["units", "geometry"],
+  },
+  {
+    id: "widehat",
+    label: "\\widehat{\\square}",
+    labelType: "tex",
+    mathfieldInstructions: {
+      content: "widehat",
+      method: "cmd",
+    },
+    groups: ["geometry"],
   },
 ];

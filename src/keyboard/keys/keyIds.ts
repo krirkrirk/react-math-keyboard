@@ -35,6 +35,7 @@ export type KeyId =
   | "overrightarrow"
   | "degree"
   | "vectorU"
+  | "widehat"
 
   /**operations */
   | "plus"

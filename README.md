@@ -23,19 +23,19 @@ npm i react-math-keyboard
 
 Then import the MathInput :
 
-```js
+```jsx
 import MathInput from "react-math-keyboard";
 ```
 
 You can then use it with no configuration :
 
-```js
+```jsx
 <MathInput />
 ```
 
 Getting the value of the input as a LaTeX string :
 
-```js
+```jsx
 const [latex, setLatex] = useState("")
 //...later
 <MathInput setValue={setLatex} />
@@ -43,9 +43,9 @@ const [latex, setLatex] = useState("")
 
 If you need to do more specific stuff with the input, you should retrieve the ref to the MathField, and then the whole [MathQuill API](http://docs.mathquill.com/en/latest/Api_Methods/) is available to use.
 
-```js
+```jsx
 const mf = useRef<MathField>();
-const onClick=()=> mf.current.latex("click!");
+const onClick = () => mf.current.latex("click!");
 
 //...later
 <MathInput setMathfieldRef={(mathfield)=>mf.current=mathfield} />

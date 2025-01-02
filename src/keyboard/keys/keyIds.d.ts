@@ -1,4 +1,4 @@
-export type KeyId =
+export type KeyId = 
 /**quantities */
 "volumeMere" | "volumeFille" | "concentrationMere" | "concentrationFille"
 /**units */
