@@ -12,7 +12,7 @@ export type KeyId =
 /**operations */
  | "plus" | "minus" | "times" | "frac" | "obelus" | "sqrt" | "sqrtCub" | "square" | "cube" | "power" | "percent" | "leftParenthesis" | "leftParenthesisNoLeft" | "rightParenthesis" | "rightParenthesisNoRight" | "equal" | "comma" | "semicolon" | "dot" | "sup" | "inf" | "geq" | "leq" | "approx" | "xsquare" | "xcube" | "equivalent"
 /**sets */
- | "belongs" | "notin" | "cap" | "cup" | "lbrace" | "rbrace" | "lbracket" | "rbracket" | "varnothing" | "naturals" | "integers" | "rationals" | "decimals" | "reals" | "complex" | "ast" | "del" | "right" | "left" | "rightarrow" | "overrightarrow" | "infty"
+ | "belongs" | "notin" | "cap" | "cup" | "lbrace" | "rbrace" | "lbracket" | "lbracketNoSpace" | "rbracket" | "rbracketNoSpace" | "varnothing" | "naturals" | "integers" | "rationals" | "decimals" | "reals" | "complex" | "ast" | "del" | "right" | "left" | "rightarrow" | "overrightarrow" | "infty"
 /**fcts */
  | "log" | "ln" | "exp" | "epower" | "sin" | "cos" | "tan" | "arccos" | "arcsin" | "arctan" | "abs" | "fx" | "fParenthesis"
 /**sequences */

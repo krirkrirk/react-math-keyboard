@@ -141,6 +141,9 @@ export const MathInput = ({
           setValue?.(mf.latex());
         },
       },
+      supSubsRequireOperand: true,
+      maxDepth: 5,
+      restrictMismatchedBrackets: true,
     }) as MathField;
     idCounter.current = MQ(spanRef.current).id;
     mathfield.current = mf;
