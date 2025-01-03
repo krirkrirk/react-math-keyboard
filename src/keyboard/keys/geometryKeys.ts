@@ -32,14 +32,14 @@ export const geometryKeysProps: KeyProps[] = [
     },
     groups: ["units", "geometry"],
   },
-  {
-    id: "widehat",
-    label: "\\widehat{\\square}",
-    labelType: "tex",
-    mathfieldInstructions: {
-      content: "widehat",
-      method: "cmd",
-    },
-    groups: ["geometry"],
-  },
+  // {
+  //   id: "widehat",
+  //   label: "\\widehat{\\square}",
+  //   labelType: "tex",
+  //   mathfieldInstructions: {
+  //     content: "widehat",
+  //     method: "cmd",
+  //   },
+  //   groups: ["geometry"],
+  // },
 ];

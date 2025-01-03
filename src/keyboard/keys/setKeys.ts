@@ -98,9 +98,19 @@ export const setKeysProps: KeyProps[] = [
     labelType: "tex",
 
     mathfieldInstructions: {
-      // content: (currentLatex) => {
-      //   return !currentLatex ? "[\\ " : "\\ [\\ ";
-      // },
+      content: (currentLatex) => {
+        return !currentLatex ? "[\\ " : "\\ [\\ ";
+      },
+      method: "write",
+    },
+    groups: ["sets"],
+  },
+  {
+    id: "lbracketNoSpace",
+    label: "[",
+    labelType: "tex",
+
+    mathfieldInstructions: {
       content: "[",
       method: "write",
     },
@@ -112,9 +122,19 @@ export const setKeysProps: KeyProps[] = [
     labelType: "tex",
 
     mathfieldInstructions: {
-      // content: (currentLatex) => {
-      // return "\\left( a \\right.";
-      // },
+      content: (currentLatex) => {
+        return !currentLatex ? "]\\ " : "\\ ]\\ ";
+      },
+      method: "write",
+    },
+    groups: ["sets"],
+  },
+  {
+    id: "rbracketNoSpace",
+    label: "]",
+    labelType: "tex",
+
+    mathfieldInstructions: {
       content: "]",
       method: "write",
     },

@@ -8,7 +8,7 @@ export type KeyId =
 /**words */
  | "ou" | "et" | "aucun"
 /**geometry */
- | "overrightarrow" | "degree" | "vectorU"
+ | "overrightarrow" | "degree" | "vectorU" | "widehat"
 /**operations */
  | "plus" | "minus" | "times" | "frac" | "obelus" | "sqrt" | "sqrtCub" | "square" | "cube" | "power" | "percent" | "leftParenthesis" | "leftParenthesisNoLeft" | "rightParenthesis" | "rightParenthesisNoRight" | "equal" | "comma" | "semicolon" | "dot" | "sup" | "inf" | "geq" | "leq" | "approx" | "xsquare" | "xcube" | "equivalent"
 /**sets */
