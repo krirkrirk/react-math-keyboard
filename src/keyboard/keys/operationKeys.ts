@@ -30,7 +30,7 @@ export const operationKeysProps: KeyProps[] = [
     labelType: "tex",
 
     mathfieldInstructions: {
-      content: "\\times",
+      content: (latex) => (!latex ? "" : "times"),
       method: "cmd",
     },
     groups: ["basicOperations"],
@@ -75,7 +75,10 @@ export const operationKeysProps: KeyProps[] = [
     label: "\\square^2",
     labelType: "tex",
     groups: ["basicOperations"],
-    mathfieldInstructions: { content: "^2", method: "write" },
+    mathfieldInstructions: {
+      content: (latex) => (!latex ? "" : "^2"),
+      method: "write",
+    },
     keypressId: "²",
   },
 
@@ -84,7 +87,10 @@ export const operationKeysProps: KeyProps[] = [
     label: "\\square^3",
     labelType: "tex",
 
-    mathfieldInstructions: { content: "^3 ", method: "write" },
+    mathfieldInstructions: {
+      content: (latex) => (!latex ? "" : "^3"),
+      method: "write",
+    },
     groups: ["otherOperations"],
   },
 
