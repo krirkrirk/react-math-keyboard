@@ -30,7 +30,7 @@ export const operationKeysProps: KeyProps[] = [
     labelType: "tex",
 
     mathfieldInstructions: {
-      content: (latex) => (!latex ? "" : "times"),
+      content: "times",
       method: "cmd",
     },
     groups: ["basicOperations"],
