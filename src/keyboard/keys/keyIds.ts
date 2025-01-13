@@ -107,6 +107,7 @@ export type KeyId =
   | "fx"
   | "fParenthesis"
   | "lnBrackets"
+  | "logBrackets"
 
   /**sequences */
   | "un"

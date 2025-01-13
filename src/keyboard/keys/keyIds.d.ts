@@ -14,7 +14,7 @@ export type KeyId =
 /**sets */
  | "belongs" | "notin" | "cap" | "cup" | "lbrace" | "rbrace" | "lbracket" | "lbracketNoSpace" | "rbracket" | "rbracketNoSpace" | "varnothing" | "naturals" | "integers" | "rationals" | "decimals" | "reals" | "complex" | "ast" | "del" | "right" | "left" | "rightarrow" | "overrightarrow" | "infty"
 /**fcts */
- | "log" | "ln" | "exp" | "epower" | "sin" | "cos" | "tan" | "arccos" | "arcsin" | "arctan" | "abs" | "fx" | "fParenthesis"
+ | "log" | "ln" | "exp" | "epower" | "sin" | "cos" | "tan" | "arccos" | "arcsin" | "arctan" | "abs" | "fx" | "fParenthesis" | "lnBrackets"
 /**sequences */
  | "un" | "unplus1"
 /**probas */

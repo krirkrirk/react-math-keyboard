@@ -13,6 +13,17 @@ export const functionKeysProps: KeyProps[] = [
     groups: ["functions"],
   },
   {
+    id: "logBrackets",
+    label: "\\log\\left(...\\right)",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "log(",
+      method: "typedText",
+    },
+    groups: ["functions"],
+  },
+  {
     id: "ln",
     label: "\\ln",
     labelType: "tex",
