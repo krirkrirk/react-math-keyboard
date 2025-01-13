@@ -24,6 +24,17 @@ export const functionKeysProps: KeyProps[] = [
     groups: ["functions"],
   },
   {
+    id: "lnBrackets",
+    label: "\\ln\\left(...\\right)",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "ln(",
+      method: "typedText",
+    },
+    groups: ["functions"],
+  },
+  {
     id: "exp",
     label: "\\exp",
     labelType: "tex",
