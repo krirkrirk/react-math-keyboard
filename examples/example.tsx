@@ -32,6 +32,7 @@ export const Example = ({}: ExampleProps) => {
             setMathfieldRef={(mathfield) => (mf.current = mathfield)}
             lang="en"
             forbidPaste
+            withShowKeyboardButton
           />
           <button onClick={() => clear(mf.current!)}>Clear</button>
           <p style={{ overflow: "auto" }}>Latex produced : {value}</p>

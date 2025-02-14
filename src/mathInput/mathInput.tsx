@@ -12,6 +12,7 @@ import { KeysPropsMap } from "../keyboard/keys/keys";
 import { KeyboardThemeColor } from "../style/keyboardTheme";
 import { applyTheme } from "../style/applyTheme";
 import { Portal } from "../components/portal";
+import { ShowKeyboardButton } from "./showKeyboardButton";
 
 export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
@@ -41,6 +42,7 @@ export type MathInputProps = {
   }[];
   tabShouldSkipKeys?: boolean;
   forbidPaste?: boolean;
+  withShowKeyboardButton?: boolean;
 };
 
 const vanillaKeys = [
@@ -91,6 +93,7 @@ export const MathInput = ({
   registerEmbedObjects,
   tabShouldSkipKeys = false,
   forbidPaste = false,
+  withShowKeyboardButton = false,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
   const [showKeyboard, setShowKeyboard] = useState(false);
@@ -106,6 +109,8 @@ export const MathInput = ({
 
     showKeyboardRequest.current = type;
     const eventually = () => {
+      // if (withShowKeyboardButton && showKeyboardRequest.current === "open")
+      //   return;
       setShowKeyboard(showKeyboardRequest.current === "open");
       showKeyboardRequest.current = undefined;
     };
@@ -150,7 +155,7 @@ export const MathInput = ({
     const textarea = mf.el().querySelector("textarea");
     isMobile && textarea?.setAttribute("readonly", "readonly");
     textarea?.addEventListener("focusin", (e) => {
-      request("open");
+      !withShowKeyboardButton && request("open");
     });
     setMathfieldRef?.(mf);
     setClearRef?.(() => mf.latex(""));
@@ -204,7 +209,7 @@ export const MathInput = ({
         }
         if (!isKeyboardClick || isCloseKeyClick) {
           request("close");
-        } else request("open");
+        } else !withShowKeyboardButton && request("open");
       }
     };
     window.addEventListener("mousedown", onMouseDown);
@@ -262,6 +267,11 @@ export const MathInput = ({
     setShowKeyboard(false);
     // mathfield.current.blur();
   };
+
+  const handleShowKeyboardButtonClick = () => {
+    setShowKeyboard(true);
+    mathfield.current.focus();
+  };
   return (
     <div
       style={{
@@ -279,6 +289,9 @@ export const MathInput = ({
         id={`mq-keyboard-${idCounter.current}-field`}
         ref={spanRef}
       ></span>
+      {withShowKeyboardButton && (
+        <ShowKeyboardButton handleClick={handleShowKeyboardButtonClick} />
+      )}
       <MathFieldContext.Provider value={mathfield.current}>
         <Portal open={showKeyboard}>
           {showKeyboard && (
