@@ -33,5 +33,6 @@ export type MathInputProps = {
     }[];
     tabShouldSkipKeys?: boolean;
     forbidPaste?: boolean;
+    withShowKeyboardButton?: boolean;
 };
-export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style, initialLatex, rootElementId, divisionFormat, parenthesisShouldNotProduceLeftRight, color, size, fullWidth, allowAlphabeticKeyboard, scrollType, lang, forbidOtherKeyboardKeys, registerEmbedObjects, tabShouldSkipKeys, forbidPaste, }: MathInputProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MathInput: ({ numericToolbarKeys, numericToolbarTabs, alphabeticToolbarKeys, setValue, setMathfieldRef, setClearRef, style, initialLatex, rootElementId, divisionFormat, parenthesisShouldNotProduceLeftRight, color, size, fullWidth, allowAlphabeticKeyboard, scrollType, lang, forbidOtherKeyboardKeys, registerEmbedObjects, tabShouldSkipKeys, forbidPaste, withShowKeyboardButton, }: MathInputProps) => import("react/jsx-runtime").JSX.Element;
