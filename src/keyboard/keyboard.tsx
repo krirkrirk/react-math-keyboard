@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import $ from "jquery";
 import { MathFieldContext } from "../mathInput/mathfieldContext";
 import { AlphabetLayout } from "./layout/alphabetLayout";
-import { NumericLayout, NumericLayoutProps } from "./layout/numericLayout";
+import { NumericLayout } from "./layout/numericLayout";
 
 import { KeyProps } from "./keys/key";
 import { ToolbarTabIds } from "./toolbar/toolbarTabs";

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Key, KeyProps } from "../keys/key";
 import { KeysPropsMap } from "../keys/keys";
 import { LetterKey } from "../keys/letterKey";
@@ -33,7 +33,7 @@ const minToolbarKeys: KeyId[] = [
 const majToolbarKeys: KeyId[] = ["É", "È", "Ç", "À"];
 
 export const AlphabetLayout = ({
-  toolbarKeys = [],
+  // toolbarKeys = [],
   onSwitch,
   lang,
   tabShouldSkipKeys,
@@ -63,7 +63,7 @@ export const AlphabetLayout = ({
             gap: "0.25rem",
           }}
         >
-          {rows[0].map((letter) => (
+          {rows[0]!.map((letter) => (
             <LetterKey
               letter={letter}
               key={letter}
@@ -72,7 +72,7 @@ export const AlphabetLayout = ({
               tabShouldSkipKeys={tabShouldSkipKeys}
             />
           ))}
-          {rows[1].map((letter) => (
+          {rows[1]!.map((letter) => (
             <LetterKey
               letter={letter}
               key={letter}
@@ -102,7 +102,7 @@ export const AlphabetLayout = ({
               tabShouldSkipKeys={tabShouldSkipKeys}
             />
           </div>
-          {rows[2].map((letter) => (
+          {rows[2]!.map((letter) => (
             <LetterKey
               letter={letter}
               key={letter}

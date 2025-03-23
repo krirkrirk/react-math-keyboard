@@ -1,7 +1,6 @@
 import { Key, KeyProps } from "../keys/key";
 import { KeysPropsMap } from "../keys/keys";
-import { Toolbar, ToolbarProps } from "../toolbar/toolbar";
-import React from "react";
+import { Toolbar } from "../toolbar/toolbar";
 import { ToolbarTabIds } from "../toolbar/toolbarTabs";
 import { KeyId } from "../keys/keyIds";
 import { Langs } from "../keys/keyGroup";

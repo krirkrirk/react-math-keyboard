@@ -1,5 +1,4 @@
 import { Key } from "./key";
-import React from "react";
 import { KeyId } from "./keyIds";
 
 export type LetterKeyProps = {

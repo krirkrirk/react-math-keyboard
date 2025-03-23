@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import $ from "jquery";
 import { isMobile } from "react-device-detect";
-import { Keyboard, KeyboardProps } from "../keyboard/keyboard";
+import { Keyboard } from "../keyboard/keyboard";
 import { MathField } from "../types/types";
 import { MathFieldContext } from "./mathfieldContext";
 import { KeyProps } from "../keyboard/keys/key";
@@ -13,6 +13,7 @@ import { KeyboardThemeColor } from "../style/keyboardTheme";
 import { applyTheme } from "../style/applyTheme";
 import { Portal } from "../components/portal";
 import { ShowKeyboardButton } from "./showKeyboardButton";
+import "./style.css";
 
 export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];

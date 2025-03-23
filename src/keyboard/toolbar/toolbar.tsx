@@ -1,6 +1,6 @@
 import { Key, KeyProps } from "../keys/key";
 import { KeysPropsMap } from "../keys/keys";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ToolbarTabIds, defaultTabs, toolbarTabs } from "./toolbarTabs";
 import { MathFieldContext } from "../../mathInput/mathfieldContext";
 import { KeyId } from "../keys/keyIds";
@@ -19,7 +19,7 @@ export const Toolbar = ({
   tabShouldSkipKeys,
 }: ToolbarProps) => {
   const [shownKeys, setShownKeys] = useState<(KeyId | KeyProps | string)[]>();
-  const [currentTab, setCurrentTab] = useState<ToolbarTabIds>(tabs[0]);
+  const [currentTab, setCurrentTab] = useState<ToolbarTabIds>(tabs[0]!);
   const mathfield = useContext(MathFieldContext);
 
   useEffect(() => {

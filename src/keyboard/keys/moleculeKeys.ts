@@ -556,16 +556,16 @@ const moleculesData: { id: KeyId; formula: string }[] = [
 //   { name: "Chlorure de magnésium", formula: "MgCl_2" },
 // ];
 
-const getId = (s: string) => {
-  return ("Mol-" +
-    s
-      .replaceAll("(", "")
-      .replaceAll(")", "")
-      .replaceAll("_", "")
-      .replaceAll("^", "")
-      .replaceAll("{", "")
-      .replaceAll("}", "")) as KeyId;
-};
+// const getId = (s: string) => {
+//   return ("Mol-" +
+//     s
+//       .replaceAll("(", "")
+//       .replaceAll(")", "")
+//       .replaceAll("_", "")
+//       .replaceAll("^", "")
+//       .replaceAll("{", "")
+//       .replaceAll("}", "")) as KeyId;
+// };
 export const moleculesKeysProps = moleculesData.map(
   (moleculeData): KeyProps => {
     return {

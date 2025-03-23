@@ -1,5 +1,4 @@
 import { KeyProps } from "./key";
-import React from "react";
 export const utilityKeysIds = ["left", "right", "del"];
 export const utilityKeysProps: KeyProps[] = [
   {

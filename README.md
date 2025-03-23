@@ -1,117 +1,321 @@
-# react-math-keyboard
+# My React Library
 
-[![npm](https://badgen.net/npm/v/react-math-keyboard)](https://www.npmjs.com/package/react-math-keyboard)
+This is a React component library built with TypeScript, Rollup, and Storybook.
 
-This library provides :
+## Step-by-Step Guide
 
-- a [MathQuill](http://www.mathquill.com) input in which you can write both mathematical expressions (in LaTeX) and raw text
-- a customizable, pretty, mobile-friendly keyboard for this input.
+### Step 1: Initialize Your Project
 
-You can test it in CodeSandbox : [js version](https://codesandbox.io/s/epic-wildflower-v1jlww) or [ts version](https://codesandbox.io/s/react-mat-keyboard-ts-playground-w01638).
+Create a new project directory and initialize it with NPM:
 
-:warning: This is using a fork of MathQuill in order to use the comma as a decimal separator and the symbol $\times$ instead of $\cdot$ for multiplication. This is not customizable so far, but could be in the future if there are requests for it.
-
-This library is used by [Mathlive.fr](https://www.mathlive.fr).
-
-## Basic usage
-
-Install the package :
-
-```nodejs
-npm i react-math-keyboard
+```bash
+mkdir my-react-library
+cd my-react-library
+npm init -y
 ```
 
-Then import the MathInput :
+### Step 2: Install Dependencies
 
-```jsx
-import MathInput from "react-math-keyboard";
+Install the necessary development dependencies:
+
+```bash
+npm install -D typescript react react-dom
+npm install -D rollup @rollup/plugin-node-resolve @rollup/plugin-typescript @rollup/plugin-commonjs rollup-plugin-dts rollup-plugin-postcss
+npm install -D tslib postcss
+npm install -D @storybook/react-webpack5 @storybook/addon-essentials
+npm install -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript
+npm install -D @types/react
 ```
 
-You can then use it with no configuration :
+### Step 3: Set Up TypeScript
 
-```jsx
-<MathInput />
+Initialize TypeScript configuration:
+
+```bash
+npx tsc --init
 ```
 
-Getting the value of the input as a LaTeX string :
+Edit the tsconfig.json file to match the following configuration:
 
-```jsx
-const [latex, setLatex] = useState("")
-//...later
-<MathInput setValue={setLatex} />
+```json
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": false,
+    "maxNodeModuleJsDepth": 1,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "declarationDir": "types",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "allowUnreachableCode": false,
+    "skipLibCheck": true
+  }
+}
 ```
 
-If you need to do more specific stuff with the input, you should retrieve the ref to the MathField, and then the whole [MathQuill API](http://docs.mathquill.com/en/latest/Api_Methods/) is available to use.
+### Step 4: Create Your Components
 
-```jsx
-const mf = useRef<MathField>();
-const onClick = () => mf.current.latex("click!");
+Create the following directory structure and files:
 
-//...later
-<MathInput setMathfieldRef={(mathfield)=>mf.current=mathfield} />
-<button onClick={onClick}>Click me</button>
+```css
+src
+└── components
+    ├── Button
+    │   ├── Button.tsx
+    │   └── index.ts
+    └── Input
+        ├── Input.tsx
+        └── index.ts
+└── index.ts
 ```
 
-## Customizing the keyboard
+Example Button Component (src/components/Button/Button.tsx):
 
-You can hide the toolbar if you don't need additional keys :
+```tsx
+import React from "react";
 
-```js
-<MathInput numericToolbarKeys={[]} />
+interface ButtonProps {
+  label: string;
+}
+
+const Button: React.FC<ButtonProps> = ({ label }) => {
+  return <button>{label}</button>;
+};
+
+export default Button;
 ```
 
-Or you can provide an array of [KeyIds](https://github.com/krirkrirk/react-math-keyboard/tree/main/src/keyboard/keys/keyIds.ts) or KeyProps if you only want certain keys. Here is the format for KeyProps :
+Button Component Index (src/components/Button/index.ts):
 
-| Prop : Type                                     | Default     | Description                                                                                                                                 |
-| ----------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id: KeyId`                                     | none        | Use a [KeyId](https://github.com/krirkrirk/react-math-keyboard/tree/main/src/keyboard/keys/keyIds.ts) or "custom" for defining your own key |
-| `label: string \| ReactNode`                    | none        | What's displayed on the keyboard                                                                                                            |
-| `labelType: "raw" \| "tex" \| "svg"`            | none        | Type of the label                                                                                                                           |
-| `mathfieldInstructions?: MathfieldInstructions` | `undefined` | An objet `{ method , content }`, with content being a string and method is one of the MathQuill Api methods.                                |
-| `onClick?: () => void`                          | `undefined` | To provide custom logic to the key                                                                                                          |
-| `fullWidth?: boolean`                           | `true`      | shorthand for `width='100%'`                                                                                                                |
-| `isUtilityKey?: boolean`                        | `false`     | Utility keys have a different background                                                                                                    |
+```tsx
+import Button from "./Button";
+export default Button;
+```
 
-Example :
+Example Input Component (src/components/Input/Input.tsx):
 
-```js
-<MathInput
-  numericToolbarKeys={[
-    "cos",
-    "sin",
-    "tan",
-    {
-      id: "custom",
-      label: "custom label",
-      labelType: "raw",
-      mathfieldInstructions: {
-        method: "write",
-        content: "custom content",
+```tsx
+import React from "react";
+
+interface InputProps {
+  placeholder: string;
+}
+
+const Input: React.FC<InputProps> = ({ placeholder }) => {
+  return <input placeholder={placeholder} />;
+};
+
+export default Input;
+```
+
+Input Component Index (src/components/Input/index.ts):
+
+```tsx
+import Input from "./Input";
+export default Input;
+```
+
+Main Index File (src/index.ts):
+
+```tsx
+export { default as Button } from "./components/Button";
+export { default as Input } from "./components/Input";
+```
+
+### Step 5: Set Up Rollup
+
+Create a Rollup configuration file rollup.config.mjs:
+
+```javascript
+import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
+import typescript from "@rollup/plugin-typescript";
+import dts from "rollup-plugin-dts";
+import postcss from "rollup-plugin-postcss";
+import packageJson from "./package.json" assert { type: "json" };
+
+export default [
+  {
+    preserveModules: true,
+    input: "src/index.ts",
+    output: [
+      {
+        file: packageJson.main,
+        format: "cjs",
+        sourcemap: true,
       },
-    },
-  ]}
-/>
+      {
+        file: packageJson.module,
+        format: "esm",
+        sourcemap: true,
+      },
+    ],
+    plugins: [
+      resolve(),
+      commonjs(),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        exclude: ["**/*.test.tsx", "**/*.test.ts", "**/*.stories.ts"],
+      }),
+      postcss({ extensions: [".css"], inject: true, extract: false }),
+    ],
+  },
+  {
+    input: "dist/esm/types/index.d.ts",
+    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    plugins: [dts()],
+    external: [/\.css$/],
+  },
+];
 ```
 
-## All the MathInput Props
+### Step 6: Set Up Storybook
 
-| Prop: Type                                      | Default value | Description                                                                                                                                                                                                                                                             |
-| ----------------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `lang?: ("en"\|"fr")`                           | `en`          | Defines the language, currently only English and French suppported                                                                                                                                                                                                      |
-| `numericToolbarKeys?: (KeyId \| KeyProps)[]`    | `undefined`   | <ul><li> `undefined` : All the keys </li><li> `Empty array` : No toolbar </li><li> `Otherwise` : the keys you've provided </li></ul>                                                                                                                                    |
-| `numericToolbarTabs?: KeyGroupIds[]`            | `undefined`   | Choose the options you want in the select menu of the toolbar. See [KeyGroup](https://github.com/krirkrirk/react-math-keyboard/tree/main/src/keyboard/keys/keyGroup.ts) for a list of options                                                                           |
-| `allowAlphabeticKeyboard?: boolean`             | `true`        | Hide/show the alphabetic keyboard                                                                                                                                                                                                                                       |
-| `alphabeticToolbarKeys?: (KeyId \| KeyProps)[]` | `undefined`   | Same thing that `numericToolbarKeys` but for the alphabetic keyboard                                                                                                                                                                                                    |
-| `setMathfieldRef?: (mf: MathField) => void`     | `undefined`   | Retrieve the ref to the MathQuill input in order to use the MathQuill Api                                                                                                                                                                                               |
-| `setClearRef?: (f: () => void) => void`         | `undefined`   | Pass it a ref in order to have a shorthand for clearing the input. e.g : `setClearRef( f => myRef.current = f)` then `myRef.current()` somewhere in your App                                                                                                            |
-| `initialLatex?: string`                         | `undefined`   | This latex will be shown in the input at the initial render. Updates of this prop won't affect the input. You should interact with the MathField ref directly if you want to do stuff with the input.                                                                   |
-| `setValue?: (s: string) => void`                | `undefined`   | To retrieve the latex                                                                                                                                                                                                                                                   |
-| `divisionFormat?: "fraction" \| "obelus"`       | `"fraction"`  | Whether to show divisions as fractions or with the division symbol ÷                                                                                                                                                                                                    |
-| `style?: React.CSSProperties`                   | `{}`          | CSS for the input                                                                                                                                                                                                                                                       |
-| `size?: "small" \| "medium"`                    | `"medium"`    | Shorthand to change the padding of the input                                                                                                                                                                                                                            |
-| `rootElementId?: string`                        | `undefined`   | By default, the keyboard applies a padding bottom on the \<body\> in order to not overflow the input. You can use this prop to set this padding on another element than the body. For example, you can target Nextjs' root element by doing rootElementId = "\_\_next". |
-| `fullWidth?: boolean`                           | `true`        | Shorthand for `width="100%"`                                                                                                                                                                                                                                            |
+Initialize Storybook:
 
-## Contributing
+```bash
+npx sb init
+```
 
-Don't hesitate to give feedback, and any contribution is welcomed !
+Create a .storybook directory and add main.ts:
+
+```javascript
+import type { StorybookConfig } from "@storybook/react-webpack5";
+
+const config: StorybookConfig = {
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+  ],
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
+  },
+};
+
+export default config;
+```
+
+### Step 7: Configure package.json
+
+Update package.json with the necessary fields:
+
+```json
+{
+  "name": "my-react-library",
+  "version": "0.0.1",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "build": "rollup -c",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "babel": {
+    "sourceType": "unambiguous",
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "chrome": 100,
+            "safari": 15,
+            "firefox": 91
+          }
+        }
+      ],
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ],
+      "@babel/preset-typescript"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "@babel/preset-react": "^7.24.6",
+    "@babel/preset-typescript": "^7.24.6",
+    "@rollup/plugin-commonjs": "^25.0.8",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-essentials": "^8.1.5",
+    "@storybook/addon-links": "^8.1.5",
+    "@storybook/react": "^8.1.5",
+    "@storybook/react-webpack5": "^8.1.5",
+    "@types/react": "^18.3.3",
+    "postcss": "^8.4.38",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rollup": "^4.18.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^8.1.5",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
+```
+
+### Step 8: Build Your Package
+
+To build your package, run:
+
+```bash
+npm run build
+```
+
+### Step 9: Run Storybook
+
+To start Storybook, run:
+
+```bash
+npm run storybook
+```
+
+### Step 10: Publish to NPM
+
+First, log in to your NPM account:
+
+```bash
+npm login
+```
+
+Publish your package:
+
+```bash
+npm publish
+```
+
+If your package is scoped and you want to make it public, use:
+
+```bash
+npm publish --access public
+```
+
+Congratulations!🎉 You've successfully created and published a React component library with TypeScript, Rollup, and Storybook.
