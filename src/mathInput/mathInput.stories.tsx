@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { MathInput, MathInputProps } from "./mathInput";
 import { useRef, useState } from "react";
+import { MathInput } from "./mathInput";
 import { MathField } from "../types/types";
-
 const meta = {
   title: "UI/MathInput",
   component: MathInput,

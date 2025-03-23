@@ -4,11 +4,14 @@ import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import packageJson from "./package.json" assert { type: "json" };
+import { visualizer } from "rollup-plugin-visualizer";
 
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
 export default [
   {
     preserveModules: true,
     input: "src/index.ts",
+    external: ["react", "react-dom"],
     output: [
       {
         file: packageJson.main,
@@ -22,6 +25,7 @@ export default [
       },
     ],
     plugins: [
+      peerDepsExternal(),
       resolve(),
       commonjs(),
       typescript({
@@ -29,6 +33,7 @@ export default [
         exclude: ["**/*.test.tsx", "**/*.test.ts", "**/*.stories.ts"],
       }),
       postcss({ extensions: [".css"], inject: true, extract: false }),
+      visualizer({ open: true }),
     ],
   },
   {
