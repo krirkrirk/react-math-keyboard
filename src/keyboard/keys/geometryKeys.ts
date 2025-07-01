@@ -12,6 +12,16 @@ export const geometryKeysProps: KeyProps[] = [
     groups: ["geometry"],
   },
   {
+    id: "vectorNul",
+    label: "\\overrightarrow{0}",
+    labelType: "tex",
+    mathfieldInstructions: {
+      content: "\\overrightarrow{0}",
+      method: "write",
+    },
+    groups: ["geometry"],
+  },
+  {
     id: "vectorU",
     label: "\\overrightarrow{u}",
     labelType: "tex",

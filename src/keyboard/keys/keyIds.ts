@@ -38,6 +38,7 @@ export type KeyId =
   | "vectorV"
   | "vectorW"
   | "vectorZ"
+  | "vectorNul"
   | "widehat"
 
   /**operations */
