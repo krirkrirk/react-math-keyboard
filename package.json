@@ -65,6 +65,8 @@
     "@types/jquery": "^3.5.32",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "chromatic": "^11.27.0",
     "postcss": "^8.4.38",
     "rollup": "^4.18.0",
