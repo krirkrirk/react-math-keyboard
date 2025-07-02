@@ -44,6 +44,7 @@ export type MathInputProps = {
   tabShouldSkipKeys?: boolean;
   forbidPaste?: boolean;
   withShowKeyboardButton?: boolean;
+  LoadingComponent?: React.FC;
 };
 
 const vanillaKeys = [
@@ -95,6 +96,7 @@ export const MathInput = ({
   tabShouldSkipKeys = false,
   forbidPaste = false,
   withShowKeyboardButton = false,
+  LoadingComponent = () => <div>Loading...</div>,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
   const [showKeyboard, setShowKeyboard] = useState(false);
@@ -283,7 +285,7 @@ export const MathInput = ({
       id={`mq-keyboard-${idCounter.current}-container`}
       className="react-math-keyboard-input-container"
     >
-      {!loaded && <p>Loading...</p>}
+      {!loaded && <LoadingComponent />}
       <span
         className="react-math-keyboard-input"
         style={{ padding: size === "small" ? "8px 4px" : "12px 6px" }}
