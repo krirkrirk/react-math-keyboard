@@ -75,7 +75,7 @@
   bottom: -300px;
   left: 0px;
   z-index: 1310;
-  transition: bottom 300ms ease-in-out;
+  /* transition: bottom 300ms ease-in-out; */
   /* transition: bottom 300ms cubic-bezier(0.4,0,0.2,1); */
 }
 

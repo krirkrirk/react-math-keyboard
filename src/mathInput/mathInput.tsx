@@ -45,6 +45,8 @@ export type MathInputProps = {
   forbidPaste?: boolean;
   withShowKeyboardButton?: boolean;
   LoadingComponent?: React.FC;
+  scrollTriesToShowLastElement?: boolean;
+  closeKeyboardOnGoBack?: boolean;
 };
 
 const vanillaKeys = [
@@ -97,6 +99,8 @@ export const MathInput = ({
   forbidPaste = false,
   withShowKeyboardButton = false,
   LoadingComponent = () => <div>Loading...</div>,
+  scrollTriesToShowLastElement = false,
+  closeKeyboardOnGoBack = false,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
   const [showKeyboard, setShowKeyboard] = useState(false);
@@ -164,6 +168,7 @@ export const MathInput = ({
     setClearRef?.(() => mf.latex(""));
     setLoaded(true);
   }, []);
+
   useEffect(() => {
     if (!forbidOtherKeyboardKeys || !loaded) return;
     let keys: (string | undefined)[] = [...vanillaKeys];
@@ -228,24 +233,77 @@ export const MathInput = ({
     wasInitialLatexSet.current = true;
   }, [loaded, initialLatex]);
 
+  const handlePopState = (event: PopStateEvent) => {
+    console.log(event);
+    // If the keyboard is open, prevent default behavior and close it
+    if (showKeyboard) {
+      request("close");
+      // Since we just went back, push the state forward again
+      window.history.pushState({ keyboardOpen: true }, "");
+    }
+  };
   useEffect(() => {
     if (showKeyboard) {
+      //--- navigator on go back close keyboard
+      const keyboardContainerElements = document.getElementsByClassName(
+        "react-math-keyboard-keyboard-container"
+      );
+      if (keyboardContainerElements.length <= 1) {
+        window.history.pushState({ keyboardOpen: true }, "");
+        if (closeKeyboardOnGoBack) {
+        }
+        window.addEventListener("popstate", handlePopState);
+      }
+      //---
+
       if (rootElementId) {
         $(`#${rootElementId}`).css("padding-bottom", `300px`);
       } else {
         $("body").css("padding-bottom", `300px`);
       }
-      const delta =
-        window.innerHeight - mathfield.current.el().getBoundingClientRect().top;
-      if (delta < 400) {
-        if (scrollType === "window")
-          window.scrollBy({ top: 400 - delta, behavior: "smooth" });
-        else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
+      const currentMathInputTop = mathfield.current
+        .el()
+        .getBoundingClientRect().top;
+      const deltaForCurrent = window.innerHeight - currentMathInputTop;
+
+      const mathInputsList = document.getElementsByClassName(
+        "react-math-keyboard-input"
+      );
+      if (scrollTriesToShowLastElement && mathInputsList.length) {
+        const lastMathInput = mathInputsList[mathInputsList.length - 1];
+        const lastMathInputTop = lastMathInput!.getBoundingClientRect().top;
+        const deltaForLast = window.innerHeight - lastMathInputTop;
+        const deltaBetweenInputs = lastMathInputTop - currentMathInputTop;
+
+        if (deltaForLast < 400) {
+          if (deltaBetweenInputs + 300 > window.innerHeight) {
+            if (scrollType === "window") {
+              window.scrollBy({
+                top: currentMathInputTop,
+                behavior: "smooth",
+              });
+            } else lastMathInput!.scrollIntoView({ behavior: "smooth" });
+          } else {
+            if (scrollType === "window")
+              window.scrollBy({
+                top: window.innerHeight - deltaForLast - 400,
+                behavior: "smooth",
+              });
+            else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      } else {
+        if (deltaForCurrent < 400) {
+          if (scrollType === "window")
+            window.scrollBy({ top: 400 - deltaForCurrent, behavior: "smooth" });
+          else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
+        }
+        if (deltaForCurrent > window.innerHeight - 30) {
+          if (scrollType === "window") {
+            window.scrollBy({ top: -50, behavior: "smooth" });
+          } else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
+        }
       }
-      if (delta > window.innerHeight - 30)
-        if (scrollType === "window")
-          window.scrollBy({ top: -50, behavior: "smooth" });
-        else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
     } else {
       if (rootElementId) {
         $(`#${rootElementId}`).css("padding-bottom", 0);
@@ -254,13 +312,15 @@ export const MathInput = ({
       }
     }
     return () => {
+      window.removeEventListener("popstate", handlePopState);
+
       if (rootElementId) {
         $(`#${rootElementId}`).css("padding-bottom", 0);
       } else {
         $("body").css("padding-bottom", 0);
       }
     };
-  }, [showKeyboard, rootElementId, scrollType]);
+  }, [showKeyboard, rootElementId, scrollType, closeKeyboardOnGoBack]);
 
   useEffect(() => {
     applyTheme(color);
@@ -275,6 +335,7 @@ export const MathInput = ({
     setShowKeyboard(true);
     mathfield.current.focus();
   };
+
   return (
     <div
       style={{
