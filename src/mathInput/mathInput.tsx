@@ -242,6 +242,7 @@ export const MathInput = ({
       window.history.pushState({ keyboardOpen: true }, "");
     }
   };
+
   useEffect(() => {
     if (showKeyboard) {
       //--- navigator on go back close keyboard
@@ -269,12 +270,32 @@ export const MathInput = ({
       const mathInputsList = document.getElementsByClassName(
         "react-math-keyboard-input"
       );
+
       if (scrollTriesToShowLastElement && mathInputsList.length) {
         const lastMathInput = mathInputsList[mathInputsList.length - 1];
         const lastMathInputTop = lastMathInput!.getBoundingClientRect().top;
         const deltaForLast = window.innerHeight - lastMathInputTop;
         const deltaBetweenInputs = lastMathInputTop - currentMathInputTop;
-
+        // console.log(
+        //   "%c tops ",
+        //   "background-color: aquamarine; color: black;",
+        //   currentMathInputTop,
+        //   lastMathInputTop,
+        //   deltaForCurrent < 400
+        // );
+        // console.log(
+        //   "%c delta ",
+        //   "background-color: lightyellow; color: black;",
+        //   deltaForCurrent,
+        //   deltaForLast,
+        //   deltaBetweenInputs
+        // );
+        // console.log(
+        //   "%c window ",
+        //   "background-color: lightskyblue; color: black;",
+        //   window.innerHeight,
+        //   window.scrollY
+        // );
         if (deltaForLast < 400) {
           if (deltaBetweenInputs + 300 > window.innerHeight) {
             if (scrollType === "window") {
@@ -293,14 +314,26 @@ export const MathInput = ({
           }
         }
       } else {
+        console.log(
+          "%c top ",
+          "background-color: aquamarine; color: black;",
+          currentMathInputTop,
+          window.innerHeight,
+          deltaForCurrent,
+          window.scrollY,
+          deltaForCurrent < 400,
+          deltaForCurrent > window.innerHeight,
+          deltaForCurrent > window.innerHeight - 30,
+          scrollType
+        );
         if (deltaForCurrent < 400) {
           if (scrollType === "window")
-            window.scrollBy({ top: 400 - deltaForCurrent, behavior: "smooth" });
+            window.scrollBy({ top: 800 - deltaForCurrent, behavior: "smooth" });
           else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
         }
         if (deltaForCurrent > window.innerHeight - 30) {
           if (scrollType === "window") {
-            window.scrollBy({ top: -50, behavior: "smooth" });
+            window.scrollBy({ top: -100, behavior: "smooth" });
           } else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
         }
       }
