@@ -251,8 +251,8 @@ export const MathInput = ({
       if (keyboardContainerElements.length <= 1) {
         window.history.pushState({ keyboardOpen: true }, "");
         if (closeKeyboardOnGoBack) {
+          window.addEventListener("popstate", handlePopState);
         }
-        window.addEventListener("popstate", handlePopState);
       }
       //---
 
