@@ -12,6 +12,7 @@ export type KeyId =
   | "mol"
   | "kJ"
   | "mL"
+  | "seconds"
   | "minutes"
   | "hours"
   | "timesTenPower"

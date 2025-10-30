@@ -92,6 +92,16 @@ export const unitKeysProps: Array<KeyProps> = [
     groups: ["units"],
   },
   {
+    id: "seconds",
+    label: "s",
+    labelType: "raw",
+    mathfieldInstructions: {
+      content: "\\text{s}",
+      method: "write",
+    },
+    groups: ["units"],
+  },
+  {
     id: "timesTenPower",
     label: "\\times10^\\square",
     labelType: "tex",
