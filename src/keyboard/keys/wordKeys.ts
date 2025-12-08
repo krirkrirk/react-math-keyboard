@@ -6,7 +6,7 @@ export const wordKeysProps: Array<KeyProps> = [
     label: "ou",
     labelType: "raw",
     mathfieldInstructions: {
-      content: "\\text{ ou }",
+      content: "\\embed{tokenOu}",
       method: "write",
     },
     groups: ["words"],
@@ -17,7 +17,7 @@ export const wordKeysProps: Array<KeyProps> = [
     labelType: "raw",
 
     mathfieldInstructions: {
-      content: "\\text{ et }",
+      content: "\\embed{tokenEt}",
       method: "write",
     },
     groups: ["words"],
@@ -28,7 +28,7 @@ export const wordKeysProps: Array<KeyProps> = [
     labelType: "raw",
 
     mathfieldInstructions: {
-      content: "\\text{Aucun}",
+      content: "\\embed{tokenAucun}",
       method: "write",
     },
     groups: ["words"],

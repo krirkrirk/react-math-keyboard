@@ -4,17 +4,34 @@ export type KeyId =
   | "volumeFille"
   | "concentrationMere"
   | "concentrationFille"
-  /**units */
+
+  /******units */
+  /**length units */
+  | "mm"
   | "cm"
+  | "dm"
+  | "meter"
+  | "km"
+
+  /**surface units */
   | "cm2"
+  | "m2"
+  | "km2"
+
+  /**volume units */
+  | "litre"
+  | "mL"
+
+  /**time units */
+  | "seconds"
+  | "minutes"
+  | "hours"
+
+  /**other units */
   | "celsius"
   | "Hz"
   | "mol"
   | "kJ"
-  | "mL"
-  | "seconds"
-  | "minutes"
-  | "hours"
   | "timesTenPower"
 
   /**utility */

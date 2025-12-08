@@ -1,0 +1,98 @@
+export const embedObjects = [
+  {
+    id: "tokenOu",
+    htmlString: `<span class="mq-text-mode"> ou </span>`,
+    text: "ou",
+    latex: "\\text{ ou }",
+  },
+  {
+    id: "tokenEt",
+    htmlString: `<span class="mq-text-mode"> et </span>`,
+    text: "et",
+    latex: "\\text{ et }",
+  },
+  {
+    id: "tokenAucun",
+    htmlString: `<span class="mq-text-mode">Aucun</span>`,
+    text: "Aucun",
+    latex: "\\text{Aucun}",
+  },
+  {
+    id: "tokenHour",
+    htmlString: `<span class="mq-text-mode">h</span>`,
+    text: "h",
+    latex: "\\text{h}",
+  },
+  {
+    id: "tokenMin",
+    htmlString: `<span class="mq-text-mode">min</span>`,
+    text: "min",
+    latex: "\\text{min}",
+  },
+  {
+    id: "tokenSecond",
+    htmlString: `<span class="mq-text-mode">s</span>`,
+    text: "s",
+    latex: "\\text{s}",
+  },
+  {
+    id: "tokenMl",
+    htmlString: `<span class="mq-text-mode">mL</span>`,
+    text: "mL",
+    latex: "\\text{mL}",
+  },
+  {
+    id: "tokenMm",
+    htmlString: `<span class="mq-text-mode">mm</span>`,
+    text: "mm",
+    latex: "\\text{mm}",
+  },
+  {
+    id: "tokenCm",
+    htmlString: `<span class="mq-text-mode">cm</span>`,
+    text: "cm",
+    latex: "\\text{cm}",
+  },
+  {
+    id: "tokenDm",
+    htmlString: `<span class="mq-text-mode">dm</span>`,
+    text: "dm",
+    latex: "\\text{dm}",
+  },
+  {
+    id: "tokenMeter",
+    htmlString: `<span class="mq-text-mode">m</span>`,
+    text: "m",
+    latex: "\\text{m}",
+  },
+  {
+    id: "tokenKm",
+    htmlString: `<span class="mq-text-mode">km</span>`,
+    text: "km",
+    latex: "\\text{km}",
+  },
+  {
+    id: "tokenLitre",
+    htmlString: `<span class="mq-text-mode">L</span>`,
+    text: "L",
+    latex: "\\text{L}",
+  },
+  {
+    id: "tokenCm2",
+    htmlString: `<span class="mq-text-mode">cm</span><span class="mq-supsub mq-non-leaf mq-sup-only"><span class="mq-sup""><span>2</span></span></span>`,
+    text: "cm2",
+    latex: "\\text{cm}^2",
+  },
+  {
+    id: "tokenM2",
+    htmlString: `<span class="mq-text-mode">m</span><span class="mq-supsub mq-non-leaf mq-sup-only"><span class="mq-sup""><span>2</span></span></span>`,
+    text: "cm2",
+    latex: "\\text{m}^2",
+  },
+  {
+    id: "tokenKm2",
+    htmlString: `<span class="mq-text-mode">km</span><span class="mq-supsub mq-non-leaf mq-sup-only"><span class="mq-sup""><span>2</span></span></span>`,
+    text: "km2",
+    latex: "\\text{km}^2",
+  },
+];

@@ -32,31 +32,37 @@ const SomeKeysInput = () => {
   const [value, setValue] = useState("");
   const mf = useRef<MathField>();
   return (
-    <MathInput
-      setValue={setValue}
-      setMathfieldRef={(mathfield) => (mf.current = mathfield)}
-      lang="en"
-      numericToolbarKeys={[
-        {
-          id: "custom",
-          label: "wow",
-          labelType: "raw",
-          mathfieldInstructions: {
-            content:
-              "\\frac{\\int_a^b 2\\pi e^{2ix}\\cos(\\theta) \\gamma}{\\sum_2^9 i^2 - 1}",
-            method: "write",
+    <>
+      {" "}
+      <MathInput
+        setValue={setValue}
+        setMathfieldRef={(mathfield) => (mf.current = mathfield)}
+        lang="en"
+        numericToolbarKeys={[
+          {
+            id: "custom",
+            label: "wow",
+            labelType: "raw",
+            mathfieldInstructions: {
+              content:
+                "\\frac{\\int_a^b 2\\pi e^{2ix}\\cos(\\theta) \\gamma}{\\sum_2^9 i^2 - 1}",
+              method: "write",
+            },
           },
-        },
-        {
-          id: "custom",
-          label: "custom logic",
-          labelType: "raw",
-          onClick: () => alert("Clicked!"),
-        },
-        "rationals",
-        "fParenthesis",
-      ]}
-    />
+          {
+            id: "custom",
+            label: "custom logic",
+            labelType: "raw",
+            onClick: () => alert("Clicked!"),
+          },
+          "ou",
+          "cm2",
+          "cos",
+          "exp",
+        ]}
+      />
+      <div>Latex : {value}</div>
+    </>
   );
 };
 

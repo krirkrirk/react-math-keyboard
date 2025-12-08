@@ -14,6 +14,7 @@ import { applyTheme } from "../style/applyTheme";
 import { Portal } from "../components/portal";
 import { ShowKeyboardButton } from "./showKeyboardButton";
 import "./style.css";
+import { embedObjects } from "./embedObjects";
 
 export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
@@ -130,7 +131,19 @@ export const MathInput = ({
     require("mathquill4keyboard/build/mathquill.css");
     require("mathquill4keyboard/build/mathquill");
     let MQ = window.MathQuill.getInterface(2);
-
+    embedObjects.forEach((obj) => {
+      MQ.registerEmbed(obj.id, function registerObject() {
+        return {
+          htmlString: obj.htmlString,
+          text: function text() {
+            return obj.text;
+          },
+          latex: function latex() {
+            return obj.latex;
+          },
+        };
+      });
+    });
     if (registerEmbedObjects) {
       registerEmbedObjects.forEach((obj) => {
         MQ.registerEmbed(obj.id, function registerObject() {
