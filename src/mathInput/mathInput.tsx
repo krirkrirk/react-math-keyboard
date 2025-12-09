@@ -175,6 +175,7 @@ export const MathInput = ({
     const textarea = mf.el().querySelector("textarea");
     isMobile && textarea?.setAttribute("readonly", "readonly");
     textarea?.addEventListener("focusin", (e) => {
+      // console.log(e);
       !withShowKeyboardButton && request("open");
     });
     setMathfieldRef?.(mf);
@@ -236,6 +237,14 @@ export const MathInput = ({
     window.addEventListener("mousedown", onMouseDown);
     return () => window.removeEventListener("mousedown", onMouseDown);
   }, []);
+
+  const handleKeyDown = (e: any) => {
+    if (e.key === "Escape" && showKeyboard) {
+      request("close");
+
+      return;
+    }
+  };
 
   const spanRef = useRef<HTMLSpanElement | null>(null);
   const wasInitialLatexSet = useRef(false);
@@ -358,6 +367,7 @@ export const MathInput = ({
       }}
       id={`mq-keyboard-${idCounter.current}-container`}
       className="react-math-keyboard-input-container"
+      onKeyDown={handleKeyDown}
     >
       {!loaded && <LoadingComponent />}
       <span
