@@ -59,6 +59,12 @@ export const Key = ({
     }
   };
 
+  const handleKeyDown = (e: any) => {
+    if (e.key === "Enter") {
+      handleClick();
+    }
+  };
+
   const renderLabel = (): ReactNode => {
     switch (labelType) {
       case "raw":
@@ -140,6 +146,7 @@ export const Key = ({
       id={`mq-keyboard-${mathfield.id}-button-key-${trueId}`}
       onMouseDown={onMouseDown}
       onMouseUp={() => setIsClicked(false)}
+      onKeyDown={handleKeyDown}
       onMouseLeave={() => {
         if (!isClicked) return;
         setIsClicked(false);
