@@ -111,6 +111,7 @@ export const MathInput = ({
   const showKeyboardRequest = useRef<"close" | "open">();
   const timeout = useRef<any>(null);
 
+  const suppressNextOpenRef = useRef(false);
   const request = (type: "close" | "open") => {
     if (type === "close" && showKeyboardRequest.current === "open") return;
     if (timeout.current) clearTimeout(timeout.current);
@@ -175,7 +176,10 @@ export const MathInput = ({
     const textarea = mf.el().querySelector("textarea");
     isMobile && textarea?.setAttribute("readonly", "readonly");
     textarea?.addEventListener("focusin", (e) => {
-      // console.log(e);
+      if (suppressNextOpenRef.current) {
+        suppressNextOpenRef.current = false;
+        return;
+      }
       !withShowKeyboardButton && request("open");
     });
     setMathfieldRef?.(mf);
@@ -240,6 +244,7 @@ export const MathInput = ({
 
   const handleKeyDown = (e: any) => {
     if (e.key === "Escape" && showKeyboard) {
+      suppressNextOpenRef.current = true;
       request("close");
 
       return;
