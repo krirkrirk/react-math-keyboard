@@ -48,6 +48,7 @@ export type MathInputProps = {
   LoadingComponent?: React.FC;
   scrollTriesToShowLastElement?: boolean;
   closeKeyboardOnGoBack?: boolean;
+  timesShouldProduceStar?: boolean;
 };
 
 const vanillaKeys = [
@@ -102,6 +103,7 @@ export const MathInput = ({
   LoadingComponent = () => <div>Loading...</div>,
   scrollTriesToShowLastElement = false,
   closeKeyboardOnGoBack = false,
+  timesShouldProduceStar = false,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
   const [showKeyboard, setShowKeyboard] = useState(false);
@@ -398,6 +400,7 @@ export const MathInput = ({
               parenthesisShouldNotProduceLeftRight={
                 parenthesisShouldNotProduceLeftRight
               }
+              timesShouldProduceStar={timesShouldProduceStar}
               tabShouldSkipKeys={tabShouldSkipKeys}
             />
           )}

@@ -87,6 +87,7 @@ export type KeyId =
   | "xsquare"
   | "xcube"
   | "equivalent"
+  | "star"
 
   /**sets */
   | "belongs"

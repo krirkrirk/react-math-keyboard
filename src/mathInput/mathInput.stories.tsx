@@ -21,6 +21,7 @@ const NoKeysInput = () => {
       setMathfieldRef={(mathfield) => (mf.current = mathfield)}
       lang="en"
       numericToolbarKeys={[]}
+      timesShouldProduceStar={true}
     />
   );
 };
