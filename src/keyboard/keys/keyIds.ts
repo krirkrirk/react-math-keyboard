@@ -77,6 +77,7 @@ export type KeyId =
   | "rightParenthesisNoRight"
   | "equal"
   | "comma"
+  | "colon"
   | "semicolon"
   | "dot"
   | "sup"
