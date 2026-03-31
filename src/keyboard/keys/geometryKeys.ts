@@ -66,8 +66,9 @@ export const geometryKeysProps: KeyProps[] = [
     label: "°",
     // keypressId: "°",
     labelType: "tex",
+
     mathfieldInstructions: {
-      content: "^\\circ",
+      content: "\\embed{tokenCirc}",
       method: "write",
     },
     groups: ["units", "geometry"],
