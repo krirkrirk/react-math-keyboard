@@ -60,6 +60,8 @@ const SomeKeysInput = () => {
           "cm2",
           "cos",
           "exp",
+          "km2",
+          "overlineC",
         ]}
       />
       <div>Latex : {value}</div>

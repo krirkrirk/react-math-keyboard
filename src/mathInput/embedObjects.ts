@@ -107,7 +107,7 @@ export const embedObjects = (() => {
   for (let i = 0; i < 26; i++) {
     objs.push({
       id: `tokenOverline${String.fromCharCode(65 + i)}`,
-      htmlString: `<span class="mq-text-mode">${String.fromCharCode(65 + i)}</span>`,
+      htmlString: `<span class="mq-non-leaf mq-overline">${String.fromCharCode(65 + i)}</span>`,
       text: String.fromCharCode(65 + i),
       latex: `\\overline{${String.fromCharCode(65 + i)}}`,
     });
