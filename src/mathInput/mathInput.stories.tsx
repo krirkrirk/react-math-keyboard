@@ -115,3 +115,22 @@ const ManyKeyboardsInput = () => {
 export const ManyKeyboards: Story = {
   render: () => <ManyKeyboardsInput />,
 };
+
+const TableOfKeyboardsInput = () => {
+  return (
+    <table>
+      {[0, 1, 2, 3].map((i) => (
+        <tr style={{ height: 80 }}>
+          {[0, 1, 2].map((i2) => (
+            <td>
+              <NoKeysInput />
+            </td>
+          ))}
+        </tr>
+      ))}
+    </table>
+  );
+};
+export const TableOfKeyboards: Story = {
+  render: () => <TableOfKeyboardsInput />,
+};
