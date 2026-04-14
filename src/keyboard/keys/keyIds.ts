@@ -4,16 +4,34 @@ export type KeyId =
   | "volumeFille"
   | "concentrationMere"
   | "concentrationFille"
-  /**units */
+
+  /******units */
+  /**length units */
+  | "mm"
   | "cm"
+  | "dm"
+  | "meter"
+  | "km"
+
+  /**surface units */
   | "cm2"
+  | "m2"
+  | "km2"
+
+  /**volume units */
+  | "litre"
+  | "mL"
+
+  /**time units */
+  | "seconds"
+  | "minutes"
+  | "hours"
+
+  /**other units */
   | "celsius"
   | "Hz"
   | "mol"
   | "kJ"
-  | "mL"
-  | "minutes"
-  | "hours"
   | "timesTenPower"
 
   /**utility */
@@ -59,6 +77,7 @@ export type KeyId =
   | "rightParenthesisNoRight"
   | "equal"
   | "comma"
+  | "colon"
   | "semicolon"
   | "dot"
   | "sup"
@@ -69,6 +88,7 @@ export type KeyId =
   | "xsquare"
   | "xcube"
   | "equivalent"
+  | "star"
 
   /**sets */
   | "belongs"
@@ -122,6 +142,32 @@ export type KeyId =
   | "majProba"
   | "minProba"
   | "binom"
+  | "overlineA"
+  | "overlineB"
+  | "overlineC"
+  | "overlineD"
+  | "overlineE"
+  | "overlineF"
+  | "overlineG"
+  | "overlineH"
+  | "overlineI"
+  | "overlineJ"
+  | "overlineK"
+  | "overlineL"
+  | "overlineM"
+  | "overlineN"
+  | "overlineO"
+  | "overlineP"
+  | "overlineQ"
+  | "overlineR"
+  | "overlineS"
+  | "overlineT"
+  | "overlineU"
+  | "overlineV"
+  | "overlineW"
+  | "overlineX"
+  | "overlineY"
+  | "overlineZ"
 
   /**complex */
   | "overline"

@@ -21,6 +21,7 @@ const NoKeysInput = () => {
       setMathfieldRef={(mathfield) => (mf.current = mathfield)}
       lang="en"
       numericToolbarKeys={[]}
+      timesShouldProduceStar={true}
     />
   );
 };
@@ -32,31 +33,39 @@ const SomeKeysInput = () => {
   const [value, setValue] = useState("");
   const mf = useRef<MathField>();
   return (
-    <MathInput
-      setValue={setValue}
-      setMathfieldRef={(mathfield) => (mf.current = mathfield)}
-      lang="en"
-      numericToolbarKeys={[
-        {
-          id: "custom",
-          label: "wow",
-          labelType: "raw",
-          mathfieldInstructions: {
-            content:
-              "\\frac{\\int_a^b 2\\pi e^{2ix}\\cos(\\theta) \\gamma}{\\sum_2^9 i^2 - 1}",
-            method: "write",
+    <>
+      {" "}
+      <MathInput
+        setValue={setValue}
+        setMathfieldRef={(mathfield) => (mf.current = mathfield)}
+        lang="en"
+        numericToolbarKeys={[
+          {
+            id: "custom",
+            label: "wow",
+            labelType: "raw",
+            mathfieldInstructions: {
+              content:
+                "\\frac{\\int_a^b 2\\pi e^{2ix}\\cos(\\theta) \\gamma}{\\sum_2^9 i^2 - 1}",
+              method: "write",
+            },
           },
-        },
-        {
-          id: "custom",
-          label: "custom logic",
-          labelType: "raw",
-          onClick: () => alert("Clicked!"),
-        },
-        "rationals",
-        "fParenthesis",
-      ]}
-    />
+          {
+            id: "custom",
+            label: "custom logic",
+            labelType: "raw",
+            onClick: () => alert("Clicked!"),
+          },
+          "ou",
+          "cm2",
+          "cos",
+          "exp",
+          "km2",
+          "overlineC",
+        ]}
+      />
+      <div>Latex : {value}</div>
+    </>
   );
 };
 
@@ -105,4 +114,23 @@ const ManyKeyboardsInput = () => {
 };
 export const ManyKeyboards: Story = {
   render: () => <ManyKeyboardsInput />,
+};
+
+const TableOfKeyboardsInput = () => {
+  return (
+    <table>
+      {[0, 1, 2, 3].map((i) => (
+        <tr style={{ height: 80 }}>
+          {[0, 1, 2].map((i2) => (
+            <td>
+              <NoKeysInput />
+            </td>
+          ))}
+        </tr>
+      ))}
+    </table>
+  );
+};
+export const TableOfKeyboards: Story = {
+  render: () => <TableOfKeyboardsInput />,
 };

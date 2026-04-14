@@ -15,6 +15,7 @@ export type NumericLayoutProps = {
   lang: Langs;
   parenthesisShouldNotProduceLeftRight?: boolean;
   tabShouldSkipKeys?: boolean;
+  timesShouldProduceStar?: boolean;
 };
 
 export const NumericLayout = ({
@@ -26,6 +27,7 @@ export const NumericLayout = ({
   onHideKeyboard,
   lang,
   parenthesisShouldNotProduceLeftRight,
+  timesShouldProduceStar,
   tabShouldSkipKeys,
 }: NumericLayoutProps) => {
   const hideToolbar = !!toolbarKeys && !toolbarKeys.length;
@@ -72,10 +74,17 @@ export const NumericLayout = ({
             />
           )}
 
-          <Key
-            {...KeysPropsMap.get("times")!}
-            tabShouldSkipKeys={tabShouldSkipKeys}
-          />
+          {timesShouldProduceStar ? (
+            <Key
+              {...KeysPropsMap.get("star")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
+          ) : (
+            <Key
+              {...KeysPropsMap.get("times")!}
+              tabShouldSkipKeys={tabShouldSkipKeys}
+            />
+          )}
           {divisionFormat === "fraction" ? (
             <Key
               {...KeysPropsMap.get("frac")!}

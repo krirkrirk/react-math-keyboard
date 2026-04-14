@@ -37,6 +37,18 @@ export const operationKeysProps: KeyProps[] = [
     keypressId: "*",
   },
   {
+    id: "star",
+    label: "\\ast",
+    labelType: "tex",
+
+    mathfieldInstructions: {
+      content: "*",
+      method: "write",
+    },
+    groups: ["basicOperations"],
+    keypressId: "*",
+  },
+  {
     id: "frac",
     label: "\\div",
     labelType: "tex",

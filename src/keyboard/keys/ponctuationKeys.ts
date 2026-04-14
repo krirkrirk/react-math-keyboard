@@ -49,6 +49,18 @@ export const ponctuationKeysProps: Array<KeyProps> = [
     keypressId: "-",
   },
   {
+    id: "colon",
+    label: ":",
+    labelType: "raw",
+
+    mathfieldInstructions: {
+      content: ":",
+      method: "write",
+    },
+    groups: ["alphabet"],
+    keypressId: ":",
+  },
+  {
     id: "euro",
     label: "€",
     labelType: "raw",

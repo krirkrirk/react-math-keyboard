@@ -14,6 +14,7 @@ import { applyTheme } from "../style/applyTheme";
 import { Portal } from "../components/portal";
 import { ShowKeyboardButton } from "./showKeyboardButton";
 import "./style.css";
+import { embedObjects } from "./embedObjects";
 
 export type MathInputProps = {
   numericToolbarKeys?: (KeyId | KeyProps)[];
@@ -47,6 +48,7 @@ export type MathInputProps = {
   LoadingComponent?: React.FC;
   scrollTriesToShowLastElement?: boolean;
   closeKeyboardOnGoBack?: boolean;
+  timesShouldProduceStar?: boolean;
 };
 
 const vanillaKeys = [
@@ -101,6 +103,7 @@ export const MathInput = ({
   LoadingComponent = () => <div>Loading...</div>,
   scrollTriesToShowLastElement = false,
   closeKeyboardOnGoBack = false,
+  timesShouldProduceStar = false,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
   const [showKeyboard, setShowKeyboard] = useState(false);
@@ -110,6 +113,7 @@ export const MathInput = ({
   const showKeyboardRequest = useRef<"close" | "open">();
   const timeout = useRef<any>(null);
 
+  const suppressNextOpenRef = useRef(false);
   const request = (type: "close" | "open") => {
     if (type === "close" && showKeyboardRequest.current === "open") return;
     if (timeout.current) clearTimeout(timeout.current);
@@ -130,7 +134,19 @@ export const MathInput = ({
     require("mathquill4keyboard/build/mathquill.css");
     require("mathquill4keyboard/build/mathquill");
     let MQ = window.MathQuill.getInterface(2);
-
+    embedObjects.forEach((obj) => {
+      MQ.registerEmbed(obj.id, function registerObject() {
+        return {
+          htmlString: obj.htmlString,
+          text: function text() {
+            return obj.text;
+          },
+          latex: function latex() {
+            return obj.latex;
+          },
+        };
+      });
+    });
     if (registerEmbedObjects) {
       registerEmbedObjects.forEach((obj) => {
         MQ.registerEmbed(obj.id, function registerObject() {
@@ -162,6 +178,10 @@ export const MathInput = ({
     const textarea = mf.el().querySelector("textarea");
     isMobile && textarea?.setAttribute("readonly", "readonly");
     textarea?.addEventListener("focusin", (e) => {
+      if (suppressNextOpenRef.current) {
+        suppressNextOpenRef.current = false;
+        return;
+      }
       !withShowKeyboardButton && request("open");
     });
     setMathfieldRef?.(mf);
@@ -178,7 +198,7 @@ export const MathInput = ({
           return typeof key === "string"
             ? KeysPropsMap.get(key)!.keypressId
             : key.keypressId;
-        })
+        }),
       );
 
     keys = keys.filter((e) => e !== undefined);
@@ -187,7 +207,7 @@ export const MathInput = ({
       if (!keys.includes(event.key)) event.preventDefault();
     };
     const inputElement = document.getElementById(
-      `mq-keyboard-${idCounter.current}-container`
+      `mq-keyboard-${idCounter.current}-container`,
     );
     inputElement?.addEventListener("keypress", exec);
     return () => inputElement?.removeEventListener("keypress", exec);
@@ -196,7 +216,7 @@ export const MathInput = ({
   useEffect(() => {
     if (!forbidPaste || !loaded) return;
     const inputElement = document.getElementById(
-      `mq-keyboard-${idCounter.current}-container`
+      `mq-keyboard-${idCounter.current}-container`,
     );
     inputElement && (inputElement.onpaste = (e) => e.preventDefault());
   }, [forbidPaste, loaded]);
@@ -224,6 +244,15 @@ export const MathInput = ({
     return () => window.removeEventListener("mousedown", onMouseDown);
   }, []);
 
+  const handleKeyDown = (e: any) => {
+    if (e.key === "Escape" && showKeyboard) {
+      suppressNextOpenRef.current = true;
+      request("close");
+
+      return;
+    }
+  };
+
   const spanRef = useRef<HTMLSpanElement | null>(null);
   const wasInitialLatexSet = useRef(false);
   useEffect(() => {
@@ -246,7 +275,7 @@ export const MathInput = ({
     if (showKeyboard) {
       //--- navigator on go back close keyboard
       const keyboardContainerElements = document.getElementsByClassName(
-        "react-math-keyboard-keyboard-container"
+        "react-math-keyboard-keyboard-container",
       );
       if (keyboardContainerElements.length <= 1) {
         window.history.pushState({ keyboardOpen: true }, "");
@@ -256,18 +285,21 @@ export const MathInput = ({
       }
       //---
 
-      if (rootElementId) {
-        $(`#${rootElementId}`).css("padding-bottom", `300px`);
-      } else {
-        $("body").css("padding-bottom", `300px`);
-      }
+      setTimeout(() => {
+        if (rootElementId) {
+          $(`#${rootElementId}`).css("padding-bottom", `300px`);
+        } else {
+          $("body").css("padding-bottom", `300px`);
+        }
+      }, 100);
+
       const currentMathInputTop = mathfield.current
         .el()
         .getBoundingClientRect().top;
       const deltaForCurrent = window.innerHeight - currentMathInputTop;
 
       const mathInputsList = document.getElementsByClassName(
-        "react-math-keyboard-input"
+        "react-math-keyboard-input",
       );
       if (scrollTriesToShowLastElement && mathInputsList.length) {
         const lastMathInput = mathInputsList[mathInputsList.length - 1];
@@ -345,6 +377,7 @@ export const MathInput = ({
       }}
       id={`mq-keyboard-${idCounter.current}-container`}
       className="react-math-keyboard-input-container"
+      onKeyDown={handleKeyDown}
     >
       {!loaded && <LoadingComponent />}
       <span
@@ -370,6 +403,7 @@ export const MathInput = ({
               parenthesisShouldNotProduceLeftRight={
                 parenthesisShouldNotProduceLeftRight
               }
+              timesShouldProduceStar={timesShouldProduceStar}
               tabShouldSkipKeys={tabShouldSkipKeys}
             />
           )}
