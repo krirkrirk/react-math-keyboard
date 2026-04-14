@@ -198,7 +198,7 @@ export const MathInput = ({
           return typeof key === "string"
             ? KeysPropsMap.get(key)!.keypressId
             : key.keypressId;
-        })
+        }),
       );
 
     keys = keys.filter((e) => e !== undefined);
@@ -207,7 +207,7 @@ export const MathInput = ({
       if (!keys.includes(event.key)) event.preventDefault();
     };
     const inputElement = document.getElementById(
-      `mq-keyboard-${idCounter.current}-container`
+      `mq-keyboard-${idCounter.current}-container`,
     );
     inputElement?.addEventListener("keypress", exec);
     return () => inputElement?.removeEventListener("keypress", exec);
@@ -216,7 +216,7 @@ export const MathInput = ({
   useEffect(() => {
     if (!forbidPaste || !loaded) return;
     const inputElement = document.getElementById(
-      `mq-keyboard-${idCounter.current}-container`
+      `mq-keyboard-${idCounter.current}-container`,
     );
     inputElement && (inputElement.onpaste = (e) => e.preventDefault());
   }, [forbidPaste, loaded]);
@@ -275,7 +275,7 @@ export const MathInput = ({
     if (showKeyboard) {
       //--- navigator on go back close keyboard
       const keyboardContainerElements = document.getElementsByClassName(
-        "react-math-keyboard-keyboard-container"
+        "react-math-keyboard-keyboard-container",
       );
       if (keyboardContainerElements.length <= 1) {
         window.history.pushState({ keyboardOpen: true }, "");
@@ -285,18 +285,21 @@ export const MathInput = ({
       }
       //---
 
-      if (rootElementId) {
-        $(`#${rootElementId}`).css("padding-bottom", `300px`);
-      } else {
-        $("body").css("padding-bottom", `300px`);
-      }
+      setTimeout(() => {
+        if (rootElementId) {
+          $(`#${rootElementId}`).css("padding-bottom", `300px`);
+        } else {
+          $("body").css("padding-bottom", `300px`);
+        }
+      }, 100);
+
       const currentMathInputTop = mathfield.current
         .el()
         .getBoundingClientRect().top;
       const deltaForCurrent = window.innerHeight - currentMathInputTop;
 
       const mathInputsList = document.getElementsByClassName(
-        "react-math-keyboard-input"
+        "react-math-keyboard-input",
       );
       if (scrollTriesToShowLastElement && mathInputsList.length) {
         const lastMathInput = mathInputsList[mathInputsList.length - 1];
