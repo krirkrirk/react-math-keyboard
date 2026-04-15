@@ -12,7 +12,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const NoKeysInput = () => {
+const NoKeysInput = ({
+  isPaddingPersistent,
+}: {
+  isPaddingPersistent?: boolean;
+}) => {
   const [value, setValue] = useState("");
   const mf = useRef<MathField>();
   return (
@@ -22,11 +26,14 @@ const NoKeysInput = () => {
       lang="en"
       numericToolbarKeys={[]}
       timesShouldProduceStar={true}
+      isPaddingPersistent={isPaddingPersistent}
     />
   );
 };
 export const NoKeys: Story = {
-  render: () => <NoKeysInput />,
+  render: ({ isPaddingPersistent }: { isPaddingPersistent?: boolean }) => (
+    <NoKeysInput isPaddingPersistent={isPaddingPersistent} />
+  ),
 };
 
 const SomeKeysInput = () => {
@@ -123,7 +130,7 @@ const TableOfKeyboardsInput = () => {
         <tr style={{ height: 80 }}>
           {[0, 1, 2].map((i2) => (
             <td>
-              <NoKeysInput />
+              <NoKeysInput isPaddingPersistent />
             </td>
           ))}
         </tr>
@@ -132,5 +139,17 @@ const TableOfKeyboardsInput = () => {
   );
 };
 export const TableOfKeyboards: Story = {
-  render: () => <TableOfKeyboardsInput />,
+  render: () => (
+    <div>
+      {/* <div
+        style={{
+          borderRadius: "1rem",
+          background: "aliceBlue",
+          height: 300,
+          width: "100%",
+        }}
+      /> */}
+      <TableOfKeyboardsInput />
+    </div>
+  ),
 };
