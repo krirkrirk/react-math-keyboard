@@ -49,6 +49,7 @@ export type MathInputProps = {
   scrollTriesToShowLastElement?: boolean;
   closeKeyboardOnGoBack?: boolean;
   timesShouldProduceStar?: boolean;
+  isPaddingPersistent?: boolean;
 };
 
 const vanillaKeys = [
@@ -104,6 +105,7 @@ export const MathInput = ({
   scrollTriesToShowLastElement = false,
   closeKeyboardOnGoBack = false,
   timesShouldProduceStar = false,
+  isPaddingPersistent = false,
 }: MathInputProps) => {
   const [loaded, setLoaded] = useState(false);
   const [showKeyboard, setShowKeyboard] = useState(false);
@@ -285,62 +287,60 @@ export const MathInput = ({
       }
       //---
 
-      setTimeout(() => {
-        if (rootElementId) {
-          $(`#${rootElementId}`).css("padding-bottom", `300px`);
-        } else {
-          $("body").css("padding-bottom", `300px`);
-        }
+      if (rootElementId) {
+        $(`#${rootElementId}`).css("padding-bottom", `300px`);
+      } else {
+        $("body").css("padding-bottom", `300px`);
+      }
 
-        const currentMathInputTop = mathfield.current
-          .el()
-          .getBoundingClientRect().top;
-        const deltaForCurrent = window.innerHeight - currentMathInputTop;
+      const currentMathInputTop = mathfield.current
+        .el()
+        .getBoundingClientRect().top;
+      const deltaForCurrent = window.innerHeight - currentMathInputTop;
 
-        const mathInputsList = document.getElementsByClassName(
-          "react-math-keyboard-input",
-        );
-        if (scrollTriesToShowLastElement && mathInputsList.length) {
-          const lastMathInput = mathInputsList[mathInputsList.length - 1];
-          const lastMathInputTop = lastMathInput!.getBoundingClientRect().top;
-          const deltaForLast = window.innerHeight - lastMathInputTop;
-          const deltaBetweenInputs = lastMathInputTop - currentMathInputTop;
+      const mathInputsList = document.getElementsByClassName(
+        "react-math-keyboard-input",
+      );
+      if (scrollTriesToShowLastElement && mathInputsList.length) {
+        const lastMathInput = mathInputsList[mathInputsList.length - 1];
+        const lastMathInputTop = lastMathInput!.getBoundingClientRect().top;
+        const deltaForLast = window.innerHeight - lastMathInputTop;
+        const deltaBetweenInputs = lastMathInputTop - currentMathInputTop;
 
-          if (deltaForLast < 400) {
-            if (deltaBetweenInputs + 300 > window.innerHeight) {
-              if (scrollType === "window") {
-                window.scrollBy({
-                  top: currentMathInputTop,
-                  behavior: "smooth",
-                });
-              } else lastMathInput!.scrollIntoView({ behavior: "smooth" });
-            } else {
-              if (scrollType === "window")
-                window.scrollBy({
-                  top: window.innerHeight - deltaForLast - 400,
-                  behavior: "smooth",
-                });
-              else
-                mathfield.current.el().scrollIntoView({ behavior: "smooth" });
-            }
-          }
-        } else {
-          if (deltaForCurrent < 400) {
+        if (deltaForLast < 400) {
+          if (deltaBetweenInputs + 300 > window.innerHeight) {
+            if (scrollType === "window") {
+              window.scrollBy({
+                top: currentMathInputTop,
+                behavior: "smooth",
+              });
+            } else lastMathInput!.scrollIntoView({ behavior: "smooth" });
+          } else {
             if (scrollType === "window")
               window.scrollBy({
-                top: 400 - deltaForCurrent,
+                top: window.innerHeight - deltaForLast - 400,
                 behavior: "smooth",
               });
             else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
           }
-          if (deltaForCurrent > window.innerHeight - 30) {
-            if (scrollType === "window") {
-              window.scrollBy({ top: -50, behavior: "smooth" });
-            } else
-              mathfield.current.el().scrollIntoView({ behavior: "smooth" });
-          }
         }
-      }, 100);
+      } else {
+        if (deltaForCurrent < 400) {
+          if (scrollType === "window")
+            window.scrollBy({
+              top: 400 - deltaForCurrent,
+              behavior: "smooth",
+            });
+          else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
+        }
+        if (deltaForCurrent > window.innerHeight - 30) {
+          if (scrollType === "window") {
+            window.scrollBy({ top: -50, behavior: "smooth" });
+          } else mathfield.current.el().scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    } else if (isPaddingPersistent) {
+      return;
     } else {
       if (rootElementId) {
         $(`#${rootElementId}`).css("padding-bottom", 0);
@@ -350,11 +350,12 @@ export const MathInput = ({
     }
     return () => {
       window.removeEventListener("popstate", handlePopState);
-
-      if (rootElementId) {
-        $(`#${rootElementId}`).css("padding-bottom", 0);
-      } else {
-        $("body").css("padding-bottom", 0);
+      if (!isPaddingPersistent) {
+        if (rootElementId) {
+          $(`#${rootElementId}`).css("padding-bottom", 0);
+        } else {
+          $("body").css("padding-bottom", 0);
+        }
       }
     };
   }, [showKeyboard, rootElementId, scrollType, closeKeyboardOnGoBack]);
