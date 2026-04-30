@@ -198,4 +198,16 @@ export const operationKeysProps: KeyProps[] = [
     },
     keypressId: "/",
   },
+  {
+    id: "facto",
+    label: "{!}",
+    labelType: "tex",
+    groups: ["basicOperations"],
+
+    mathfieldInstructions: {
+      content: "!",
+      method: "write",
+    },
+    keypressId: "!",
+  },
 ];
