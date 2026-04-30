@@ -89,6 +89,7 @@ export type KeyId =
   | "xcube"
   | "equivalent"
   | "star"
+  | "facto"
 
   /**sets */
   | "belongs"
