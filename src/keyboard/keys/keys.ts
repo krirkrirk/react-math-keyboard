@@ -19,6 +19,7 @@ import { trigoKeysProps } from "./trigoKeys";
 import { unitKeysProps } from "./unitKeys";
 import { utilityKeysProps } from "./utilityKeys";
 import { wordKeysProps } from "./wordKeys";
+import { matrixKeysProps } from "./matrixKeys";
 
 export const allKeysProps: KeyProps[] = [
   ...numberKeysProps,
@@ -42,6 +43,8 @@ export const allKeysProps: KeyProps[] = [
   ...complexKeysProps,
   ...trigoKeysProps,
   ...physicalQuantities,
+  ...matrixKeysProps,
+
   {
     id: "rightarrow",
     label: "\\rightarrow",
@@ -56,5 +59,5 @@ export const allKeysProps: KeyProps[] = [
 export const KeysPropsMap = new Map<KeyId, KeyProps>(
   allKeysProps.map((obj) => {
     return [obj.id as KeyId, obj];
-  })
+  }),
 );

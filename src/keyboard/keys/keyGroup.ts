@@ -20,7 +20,8 @@ export type KeyGroupIds =
   | "units"
   | "atoms"
   | "molecules"
-  | "physicalQuantities";
+  | "physicalQuantities"
+  | "matrix";
 
 export type Langs = "en" | "fr";
 
@@ -67,4 +68,6 @@ export const keyGroups: KeyGroup[] = [
   { id: "molecules", label: { fr: "Molécules", en: "Molecules" } },
 
   { id: "alphabet", label: { fr: "Alphabet", en: "Alphabet" } },
+
+  { id: "matrix", label: { fr: "Matrices", en: "Matrices" } },
 ];
