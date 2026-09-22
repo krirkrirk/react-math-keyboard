@@ -271,6 +271,10 @@ export type KeyId =
   | "8"
   | "9"
 
+  /**matrixes*/
+  | "mat-2-2"
+  | "det-2-2"
+
   /**atoms */
   | "Hydrogène"
   | "Hélium"
